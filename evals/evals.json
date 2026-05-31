@@ -1,0 +1,29 @@
+{
+  "skill_name": "the-support-machine",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We are a B2B SaaS company evaluating two AI support vendors. Create a vendor scorecard and call out the hidden risks.",
+      "expected_output": "A vendor scorecard that evaluates product fit, retrieval, escalation, read/write action safety, analytics, security, partnership risk, wizard-of-oz risk, and tollbooth risk.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Help me plan a shadow run before launching an AI support system to customers.",
+      "expected_output": "A shadow run scorecard with case types, pass/fail criteria, stop conditions, and launch readiness recommendation.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We launched our AI support machine last month. Build a first 30 days review doc. We have some metrics missing.",
+      "expected_output": "A first-30-days review that does not invent missing metrics, clearly marks placeholders, and focuses on resolution, trust, escalation quality, knowledge fixes, and human work shift.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "We cut over to AI support 48 hours ago. Customers are going silent after answers, a few bots are looping with us, and some employees are forwarding internal emails into the queue. Build the review.",
+      "expected_output": "A first-48-hours evidence review that treats silence as a signal to classify, captures bot-loop and inside-job edge cases, separates blockers from v0.2 fixes, and avoids declaring success from dashboard movement alone.",
+      "files": []
+    }
+  ]
+}
