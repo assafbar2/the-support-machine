@@ -1,0 +1,199 @@
+
+:root {
+  color-scheme: light;
+  --ink: #141414;
+  --muted: #64625d;
+  --line: #d8d2c5;
+  --paper: #fbfaf6;
+  --panel: #f2efe7;
+  --accent: #b13d22;
+  --accent-dark: #772817;
+  --code: #eee8db;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.62;
+}
+a { color: var(--accent-dark); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.home, .skill-page {
+  min-height: 100vh;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 8vh 24px 12vh;
+}
+.eyebrow {
+  margin: 0 0 24px;
+  color: var(--accent-dark);
+  font: 700 13px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+h1 {
+  max-width: 820px;
+  margin: 0;
+  font-size: clamp(56px, 11vw, 124px);
+  line-height: .88;
+  letter-spacing: 0;
+}
+.dek {
+  max-width: 640px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: 26px;
+  line-height: 1.25;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+.actions a, .book-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  border: 1px solid var(--ink);
+  padding: 8px 14px;
+  color: var(--ink);
+  text-decoration: none;
+  font: 700 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-transform: uppercase;
+}
+.actions a:first-child {
+  background: var(--ink);
+  color: var(--paper);
+}
+.thesis {
+  margin-top: 72px;
+  max-width: 760px;
+  border-top: 2px solid var(--ink);
+  padding-top: 26px;
+  font-size: 24px;
+  line-height: 1.36;
+}
+.reader-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+}
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+  border-right: 1px solid var(--line);
+  background: var(--panel);
+  padding: 22px;
+}
+.brand {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--ink);
+  font: 800 15px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+nav a {
+  display: block;
+  padding: 7px 0;
+  color: var(--muted);
+  font: 13px/1.25 ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-decoration: none;
+}
+nav a:hover { color: var(--accent-dark); }
+.toc-l1 { color: var(--ink); font-weight: 800; margin-top: 8px; }
+.toc-l2 { padding-left: 10px; }
+.book {
+  max-width: 820px;
+  padding: 48px 28px 96px;
+  margin: 0 auto;
+}
+.book-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 44px;
+}
+.book h1 {
+  font-size: clamp(44px, 8vw, 84px);
+  line-height: .95;
+  margin-bottom: 24px;
+}
+.book h2 {
+  margin-top: 68px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-size: 34px;
+  line-height: 1.1;
+}
+.book h3 {
+  margin-top: 34px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+.book p, .book li, .skill-page p, .skill-page li {
+  font-size: 19px;
+}
+blockquote {
+  margin: 28px 0;
+  border-left: 4px solid var(--accent);
+  padding: 10px 0 10px 18px;
+  color: var(--accent-dark);
+  background: #f7f0e8;
+  font-weight: 700;
+}
+.part {
+  color: var(--accent-dark);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 18px !important;
+  text-transform: uppercase;
+}
+.table-wrap {
+  overflow-x: auto;
+  margin: 28px 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  background: #fffdf8;
+}
+th, td {
+  border: 1px solid var(--line);
+  padding: 9px 10px;
+  vertical-align: top;
+}
+th {
+  text-align: left;
+  background: var(--code);
+}
+pre {
+  overflow-x: auto;
+  padding: 18px;
+  background: var(--code);
+  border: 1px solid var(--line);
+}
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .9em;
+}
+.back {
+  display: inline-block;
+  margin-bottom: 34px;
+  font: 800 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-transform: uppercase;
+}
+@media (max-width: 860px) {
+  .reader-layout { display: block; }
+  .sidebar {
+    position: relative;
+    height: auto;
+    max-height: 42vh;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .book { padding-top: 28px; }
+  .book-actions { position: sticky; top: 0; background: var(--paper); padding: 10px 0; }
+}
