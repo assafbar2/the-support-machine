@@ -1,6 +1,11 @@
 ---
 name: the-support-machine
-description: Use whenever the user is planning, auditing, launching, or operating AI customer support for a B2B or technical product. This skill turns The Support Machine book into an executable field guide: diagnose support friction, evaluate vendors, design AI support architecture, run a shadow test, prepare launch, review the first 30 days, and define the post-launch operating model. Trigger on phrases like "AI support rollout", "support bot", "customer support AI", "vendor scorecard", "shadow run", "launch runbook", "first 30 days", or "support operating model".
+description: >
+  Use whenever the user is planning, auditing, launching, or operating AI customer support for a B2B or technical product.
+  This skill turns The Support Machine book into an executable field guide: diagnose support friction, evaluate vendors,
+  design AI support architecture, run a shadow test, prepare launch, review the first 30 days, and define the post-launch
+  operating model. Trigger on phrases like "AI support rollout", "support bot", "customer support AI", "vendor scorecard",
+  "shadow run", "launch runbook", "first 30 days", or "support operating model".
 ---
 
 # The Support Machine
