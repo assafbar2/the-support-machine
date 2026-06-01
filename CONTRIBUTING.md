@@ -23,3 +23,12 @@ Open a pull request against `main`.
 For manuscript edits, change `skills/the-support-machine/references/book.md` and describe the intended change to the manuscript. For skill behavior, edit `skills/the-support-machine/SKILL.md`, templates, or evals directly.
 
 Small typo PRs are welcome. Larger structural changes should explain the problem they solve.
+
+## Licensing
+
+By opening a pull request, you agree that your contribution will be licensed under the license that applies to the file you edit.
+
+- Manuscript and book-format outputs use Creative Commons Attribution 4.0 International.
+- Skill, templates, scripts, evals, and repo documentation use the MIT License.
+
+See `LICENSE.md` for the file-by-file split.

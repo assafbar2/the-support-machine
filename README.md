@@ -53,6 +53,9 @@ Core thesis:
 │   ├── book.html
 │   ├── skill.html
 │   └── the-support-machine-v0.2.pdf
+├── LICENSE.md
+├── LICENSE-MANUSCRIPT.md
+├── LICENSE-SKILL.md
 └── evals/
     └── evals.json
 ```
@@ -141,6 +144,15 @@ Pull requests are welcome for typo fixes, clearer examples, stronger templates, 
 For manuscript edits, open a pull request against `skills/the-support-machine/references/book.md` and explain the intended manuscript change. For skill behavior, edit `SKILL.md`, templates, or evals directly.
 
 Please preserve the book's metaphor system and do not turn the voice into generic AI-transformation copy.
+
+## License
+
+This repository uses a split license:
+
+- Manuscript and book-format outputs: [Creative Commons Attribution 4.0 International](LICENSE-MANUSCRIPT.md)
+- Skill, templates, scripts, evals, and repo docs: [MIT License](LICENSE-SKILL.md)
+
+See [LICENSE.md](LICENSE.md) for the file-by-file split.
 
 ## Contact
 

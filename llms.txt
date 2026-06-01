@@ -38,6 +38,7 @@ Useful tasks:
 - [skills/the-support-machine/templates/first-30-days-review.md](skills/the-support-machine/templates/first-30-days-review.md): Post-launch review template.
 - [skills/the-support-machine/templates/operating-model.md](skills/the-support-machine/templates/operating-model.md): Governance and ownership template.
 - [evals/evals.json](evals/evals.json): Starter eval prompts for testing the skill.
+- [LICENSE.md](LICENSE.md): Split license for manuscript and reusable skill materials.
 
 ## Voice And Constraints
 
@@ -55,3 +56,7 @@ cp -R the-support-machine/skills/the-support-machine ~/.codex/skills/
 ```
 
 Restart Codex after installing.
+
+## License
+
+The manuscript and book-format outputs are licensed under Creative Commons Attribution 4.0 International. The skill, templates, scripts, evals, and repo docs are licensed under MIT. See [LICENSE.md](LICENSE.md).
