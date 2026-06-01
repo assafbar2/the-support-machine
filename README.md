@@ -10,6 +10,7 @@ The manuscript is the story and philosophy. The skill is the operating system: i
 - [Download the PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-v0.2.pdf)
 - [Use the skill](https://assafbar2.github.io/the-support-machine/skill.html)
 - [Read the Markdown source](skills/the-support-machine/references/book.md)
+- [Agent-readable llms.txt](https://assafbar2.github.io/the-support-machine/llms.txt)
 
 ## What It Does
 

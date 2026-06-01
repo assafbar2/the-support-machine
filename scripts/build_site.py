@@ -254,6 +254,9 @@ Use The Support Machine to review our first 30 days.</code></pre>
 
     (DOCS / "styles.css").write_text(CSS)
     (DOCS / ".nojekyll").write_text("")
+    llms = ROOT / "llms.txt"
+    if llms.exists():
+        (DOCS / "llms.txt").write_text(llms.read_text())
 
 
 CSS = r"""

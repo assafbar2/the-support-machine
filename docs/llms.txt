@@ -1,0 +1,57 @@
+# The Support Machine
+
+> A book manuscript and executable AI skill for deploying AI in customer support without breaking trust.
+
+The central thesis: AI support is not a chatbot project. It is an operating model migration.
+
+This repository is intended for both humans and agents. Humans can read the web version or PDF. Agents should prefer the Markdown source and skill files below.
+
+## Start Here
+
+- [Read online](https://assafbar2.github.io/the-support-machine/): Human-readable web version.
+- [Download PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-v0.2.pdf): Portable formatted version.
+- [Book Markdown](skills/the-support-machine/references/book.md): Canonical agent-readable book text.
+- [Skill instructions](skills/the-support-machine/SKILL.md): How agents should apply the book as an operating guide.
+
+## Agent Usage
+
+Use this repository when a user is planning, auditing, launching, or operating AI customer support for a B2B or technical product.
+
+Useful tasks:
+
+- Diagnose whether AI support is the right answer.
+- Evaluate AI support vendors.
+- Design support-machine architecture, guardrails, escalation, and read/write boundaries.
+- Plan a shadow run before launch.
+- Build a zero-hour launch runbook.
+- Review the first 48 hours or first 30 days after launch.
+- Define the post-launch AI support operating model.
+
+## Important Files
+
+- [skills/the-support-machine/references/book.md](skills/the-support-machine/references/book.md): Full manuscript as Markdown.
+- [skills/the-support-machine/SKILL.md](skills/the-support-machine/SKILL.md): Skill behavior and workflow.
+- [skills/the-support-machine/templates/ai-support-rollout-plan.md](skills/the-support-machine/templates/ai-support-rollout-plan.md): End-to-end rollout plan template.
+- [skills/the-support-machine/templates/vendor-scorecard.md](skills/the-support-machine/templates/vendor-scorecard.md): Vendor evaluation template.
+- [skills/the-support-machine/templates/shadow-run-scorecard.md](skills/the-support-machine/templates/shadow-run-scorecard.md): Shadow run validation template.
+- [skills/the-support-machine/templates/launch-day-runbook.md](skills/the-support-machine/templates/launch-day-runbook.md): Zero-hour launch runbook.
+- [skills/the-support-machine/templates/first-30-days-review.md](skills/the-support-machine/templates/first-30-days-review.md): Post-launch review template.
+- [skills/the-support-machine/templates/operating-model.md](skills/the-support-machine/templates/operating-model.md): Governance and ownership template.
+- [evals/evals.json](evals/evals.json): Starter eval prompts for testing the skill.
+
+## Voice And Constraints
+
+- Preserve the metaphor system: machine, Rubicon, zero hour, goalkeeper, wizard, tollbooth, shadow run, and launch inventory.
+- Do not treat deflection as success by itself.
+- Do not invent missing customer metrics. Mark gaps clearly and say what evidence is needed.
+- Keep outputs direct, operational, and useful in a real operating meeting.
+
+## Install The Skill
+
+```bash
+mkdir -p ~/.codex/skills
+git clone https://github.com/assafbar2/the-support-machine.git
+cp -R the-support-machine/skills/the-support-machine ~/.codex/skills/
+```
+
+Restart Codex after installing.
