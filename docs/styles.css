@@ -67,6 +67,16 @@ h1 {
   background: var(--ink);
   color: var(--paper);
 }
+.hero-preview {
+  margin: 52px 0 0;
+  max-width: 980px;
+}
+.hero-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ink);
+}
 .thesis {
   margin-top: 72px;
   max-width: 760px;

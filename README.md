@@ -4,6 +4,8 @@ _The Support Machine: How to Deploy AI in Customer Support Without Breaking Trus
 
 The manuscript is the story and philosophy. The skill is the operating system: it helps a reader plan, audit, launch, and operate an AI support migration.
 
+![Building AI support happening now](docs/assets/the-support-machine-social.png)
+
 ## Read It
 
 - [Read the book online](https://assafbar2.github.io/the-support-machine/)
@@ -49,6 +51,8 @@ Core thesis:
 │   ├── build_site.py
 │   └── export_docx_to_markdown.py
 ├── docs/
+│   ├── assets/
+│   │   └── the-support-machine-social.png
 │   ├── index.html
 │   ├── book.html
 │   ├── skill.html

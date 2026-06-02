@@ -12,6 +12,7 @@ This applies to:
 
 - `skills/the-support-machine/references/book.md`
 - `manuscript/`
+- `docs/assets/`
 - `docs/book.html`
 - `docs/the-support-machine-v0.2.pdf`
 

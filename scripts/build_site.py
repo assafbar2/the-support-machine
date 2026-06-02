@@ -137,6 +137,7 @@ def markdown_to_html(markdown: str) -> tuple[str, list[tuple[int, str, str]]]:
 
 
 def page_shell(title: str, body: str, description: str) -> str:
+    preview_image = "https://assafbar2.github.io/the-support-machine/assets/the-support-machine-social.png"
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -144,6 +145,14 @@ def page_shell(title: str, body: str, description: str) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{html.escape(title)}</title>
   <meta name="description" content="{html.escape(description)}">
+  <meta property="og:title" content="{html.escape(title)}">
+  <meta property="og:description" content="{html.escape(description)}">
+  <meta property="og:image" content="{preview_image}">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{html.escape(title)}">
+  <meta name="twitter:description" content="{html.escape(description)}">
+  <meta name="twitter:image" content="{preview_image}">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -187,6 +196,9 @@ def build() -> None:
     <a href="the-support-machine-v0.2.pdf">Download PDF</a>
     <a href="skill.html">Use the skill</a>
   </div>
+  <figure class="hero-preview">
+    <img src="assets/the-support-machine-social.png" alt="Building AI support happening now">
+  </figure>
   <section class="thesis">
     <p>AI support is not a chatbot project. It is an operating model migration.</p>
     <p>A bot answers. A support machine routes, reasons, retrieves, escalates, measures, learns, and changes the work humans do around it.</p>
@@ -327,6 +339,16 @@ h1 {
 .actions a:first-child {
   background: var(--ink);
   color: var(--paper);
+}
+.hero-preview {
+  margin: 52px 0 0;
+  max-width: 980px;
+}
+.hero-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--ink);
 }
 .thesis {
   margin-top: 72px;
