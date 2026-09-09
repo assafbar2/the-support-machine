@@ -4,6 +4,12 @@ _The Support Machine: How to Deploy AI in Customer Support Without Breaking Trus
 
 The manuscript is the story and philosophy. The skill is the operating system: it helps a reader plan, audit, launch, and operate an AI support migration.
 
+## Shadow Run field sheet
+
+**Here for the talk? [Download the one-page field sheet](docs/shadow-run/Shadow-Run-Field-Sheet-v0.9.pdf?raw=1).**
+
+Six checks, five stop conditions, and a plan for Monday. [Preview the sheet and see how to use it](docs/shadow-run/).
+
 ![Building AI support happening now](docs/assets/the-support-machine-social.png)
 
 ## Read It
