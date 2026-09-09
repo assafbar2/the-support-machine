@@ -4,11 +4,11 @@ The one-page take-home from **Shadow running AI: The framework for safer AI adop
 
 ## Download the PDF
 
-**[Download the Shadow Run field sheet (PDF)](Shadow-Run-Field-Sheet-v0.9.pdf?raw=1)**
+**[Download the Shadow Run field sheet (PDF)](https://assafbar2.github.io/the-support-machine/shadow-run/Shadow-Run-Field-Sheet-v0.9.pdf)**
 
 One printable page: six checks, five stop conditions, who fixes each failure, a plan for Monday, and compact metric definitions.
 
-[![Preview of the one-page Shadow Run field sheet](field-sheet-preview.png)](Shadow-Run-Field-Sheet-v0.9.pdf?raw=1)
+[![Preview of the one-page Shadow Run field sheet](field-sheet-preview.png)](https://assafbar2.github.io/the-support-machine/shadow-run/Shadow-Run-Field-Sheet-v0.9.pdf)
 
 ## Use it with your team
 
