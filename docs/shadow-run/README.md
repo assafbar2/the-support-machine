@@ -4,21 +4,21 @@ The one-page take-home from **Shadow running AI: The framework for safer AI adop
 
 ## Download the PDF
 
-**[Download the Shadow Run field sheet (PDF)](https://assafbar2.github.io/the-support-machine/shadow-run/Shadow-Run-Field-Sheet-v0.9.pdf)**
+**[Download the Shadow Run field sheet (PDF)](https://assafbar2.github.io/the-support-machine/shadow-run/Shadow-Run-Field-Sheet-v0.13.pdf)**
 
 One printable page: six checks, five stop conditions, who fixes each failure, a plan for Monday, and compact metric definitions.
 
-[![Preview of the one-page Shadow Run field sheet](field-sheet-preview.png)](https://assafbar2.github.io/the-support-machine/shadow-run/Shadow-Run-Field-Sheet-v0.9.pdf)
+[![Preview of the one-page Shadow Run field sheet](field-sheet-preview.png)](https://assafbar2.github.io/the-support-machine/shadow-run/Shadow-Run-Field-Sheet-v0.13.pdf)
 
 ## Use it with your team
 
 1. Pick one workflow and a person to run the test.
 2. Write down what must pass and what stops a launch.
 3. Include routine and risky cases. Keep some fresh.
-4. Block customer messages and account changes.
+4. Prevent the shadow agent from messaging customers or changing accounts.
 5. Review the answers. Record failures and results.
-6. Fix and retest. Check handoffs and the human fallback.
-7. Launch only the work that passes. Keep reviewing.
+6. Fix and retest. Test load, handoffs and the human fallback.
+7. Start a small rollout of the work that passes. Keep reviewing.
 
 The sheet records what happened inside the test. It does not prove customer resolution or zero risk.
 
@@ -28,4 +28,4 @@ The sheet records what happened inside the test. It does not prove customer reso
 - [Use the editable shadow-run scorecard](../../skills/the-support-machine/templates/shadow-run-scorecard.md)
 - [Back to the repository](../../README.md)
 
-Field sheet v0.9. The PDF is unchanged from the presentation handout.
+Field sheet v0.13, matching the v0.13 presentation. The ownership section now includes agent setup: retrieval, prompts and model behavior. The six checks and five stop conditions are unchanged.

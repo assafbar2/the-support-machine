@@ -6,7 +6,7 @@ The manuscript is the story and philosophy. The skill is the operating system: i
 
 ## Shadow Run field sheet
 
-**Here for the talk? [Download the one-page field sheet](https://assafbar2.github.io/the-support-machine/shadow-run/Shadow-Run-Field-Sheet-v0.9.pdf).**
+**Here for the talk? [Download the one-page field sheet](https://assafbar2.github.io/the-support-machine/shadow-run/Shadow-Run-Field-Sheet-v0.13.pdf).**
 
 Six checks, five stop conditions, and a plan for Monday. [Preview the sheet and see how to use it](docs/shadow-run/).
 
