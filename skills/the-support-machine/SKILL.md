@@ -15,6 +15,8 @@ Keep the book's useful language: machine, Rubicon, goalkeeper and midfield, wiza
 
 ## Load only the relevant material
 
+Read the relevant chapters from the bundled `references/book.md` yourself. Ask the reader for their situation and evidence, not for copied book passages. Resolve chapter or section names against the bundled text. If the book file is missing, explain that the installation needs repair; do not substitute a request to paste chapters.
+
 - Strategy, narrative, or chapter reasoning: `references/book.md` (v0.3; full manuscript exported from DOCX).
 - Full migration: `templates/ai-support-rollout-plan.md`.
 - Vendor capability, availability, continuity, or acquisition: `templates/vendor-scorecard.md`.

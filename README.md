@@ -52,7 +52,7 @@ Invoke `$the-support-machine` with a task. Restart Codex if it does not appear. 
 
 Verify the loaded edition is v0.3 and that the skill can read Chapter 28 and its build-versus-buy template. Reinstall or upload the new package after an edition change; installed copies do not automatically follow GitHub. Keep company-specific notes separately.
 
-The optional [Support AI Evals ZIP](docs/downloads/support-ai-evals.zip) installs separately. Both skills work independently. To use an assistant without skill support, attach the complete Markdown edition and follow Appendix G's opening prompt.
+The optional [Support AI Evals ZIP](docs/downloads/support-ai-evals.zip) installs separately. Both skills work independently. After installation, describe your situation or ask a question. The Support Machine skill reads the relevant chapters from its bundled book; readers supply their own context.
 
 Try:
 

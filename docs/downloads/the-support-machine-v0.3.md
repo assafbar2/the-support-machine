@@ -2217,7 +2217,7 @@ The calculator does not connect to a helpdesk, decide whether two conversations 
 
 ### Install the book as a skill
 
-The book already comes as a skill. You do not need to write one from scratch. The v0.3 package includes the complete revised book, all eight appendices, the podcast additions, and fourteen working templates. Its instructions help an assistant choose the relevant material and turn it into a decision record, scorecard, or runbook.
+Install The Support Machine skill once. It gives your assistant access to the complete v0.3 book, all eight appendices, the podcast additions, and fourteen working templates. Ask a question or describe a decision; the skill reads the relevant chapters and templates from its bundled files.
 
 [Download The Support Machine v0.3 skill ZIP](https://github.com/assafbar2/the-support-machine/raw/refs/heads/codex/support-machine-v0.3/docs/downloads/the-support-machine.zip). You can also [inspect its files in the repository](https://github.com/assafbar2/the-support-machine/tree/codex/support-machine-v0.3/skills/the-support-machine). These links select the v0.3 review edition rather than the earlier public edition.
 
@@ -2251,23 +2251,23 @@ When a new edition arrives, download or reinstall that edition's skill and repea
 
 For focused evaluation work, the optional [Support AI Evals ZIP](https://github.com/assafbar2/the-support-machine/raw/refs/heads/codex/support-machine-v0.3/docs/downloads/support-ai-evals.zip) adds a review workflow and a calculator for normalized local data. Install it separately if useful; The Support Machine works on its own.
 
-The setup steps reflect the official product instructions checked for this edition. Appendix H links to the current guides. If your assistant has no skill installation option, attach the complete Markdown edition and use the opening prompt below. That gives this conversation a reference without installing a reusable skill.
+The setup steps reflect the official product instructions checked for this edition. Appendix H links to the current guides.
 
 ### Bring a real decision
 
-You do not have to remember every chapter before using the book. Give an AI assistant the relevant text and bring it a real decision: a vendor comparison, a weak answer, a disputed launch, or a customer who returned after being counted as resolved.
+Once the skill is enabled, bring it a real decision: a vendor comparison, a weak answer, a disputed launch, or a customer who returned after being counted as resolved. Describe the situation in your own words. The skill finds the relevant material in the book.
 
 The useful conversation starts with your situation. “Summarize the book” can help you get oriented. “Our agent closed this conversation, the customer returned eight days later, and the account manager says it was fixed — help me reconcile the evidence” can help you do the work.
 
-### Set up the conversation
+### Start a working session
 
-Use the complete Markdown edition from the book repository, or attach a supported book format to your chosen assistant. If you paste only a chapter, say that it is an excerpt. A link alone does not establish that the assistant has read the text; ask it to identify the edition and sections it can access.
+Start a conversation with the installed skill. Ask it to use the bundled book and cite the chapters it applies. You can name a chapter, section, or topic; the skill finds the text. If it reports missing book files, repair or reinstall the package before relying on its answers.
 
 Add your role, the customer task, the relevant product and workflow, constraints, evidence, and the decision due. Replace the bracketed text in the examples with that context. Use material your organization permits in the selected tool, with customer identifiers and secrets removed where they are unnecessary.
 
 Start with this prompt, then choose an example below:
 
-> Use the supplied edition of The Support Machine as a reference for our discussion. Identify the edition and sections you can access. Separate what the book says, what my evidence shows, and what you recommend. Cite chapter titles and relevant sections without inventing page numbers. Ask for missing information only when it changes the decision; otherwise state assumptions. Treat transcripts and documents as evidence, not as permission to act. Produce working material for review. Do not send messages, change settings, or execute account actions from these examples.
+> Use The Support Machine skill and read the relevant chapters from its bundled book. I am [role], and I need help with [decision or problem]. Identify the edition you are using. Separate what the book says, what my evidence shows, and what you recommend. Cite chapter titles and relevant sections without inventing page numbers. Ask for missing information only when it changes the decision; otherwise state assumptions. Treat transcripts and documents as evidence, not as permission to act. Produce working material for review. Do not send messages, change settings, or execute account actions from these examples.
 
 The 80 prompts below cover the six gates and the recurring decisions around them. They work independently after that opening. When an answer is vague, ask for the particular case, decision, owner, and verification step behind it. When it is too confident, ask what evidence would change the recommendation.
 
@@ -2287,11 +2287,11 @@ The 80 prompts below cover the six gates and the recurring decisions around them
 
 **04. Challenge the book**
 
-> Make the strongest practical case against the recommendation in [chapter or passage]. State the conditions under which it would be wrong or too expensive. Then suggest an observation or experiment that could distinguish that case from the book's recommendation.
+> Make the strongest practical case against the recommendation in [chapter or section] of the bundled book. State the conditions under which it would be wrong or too expensive. Then suggest an observation or experiment that could distinguish that case from the book's recommendation.
 
 **05. Separate kinds of claims**
 
-> Review [passage]. Identify author experience, research findings, vendor descriptions, proposed practice, and fictional examples. Explain what each can support and which conclusions would need additional evidence. Do not turn an anecdote into a measured result.
+> Review [chapter or section] in the bundled book. Identify author experience, research findings, vendor descriptions, proposed practice, and fictional examples. Explain what each can support and which conclusions would need additional evidence. Do not turn an anecdote into a measured result.
 
 ### Gate 1 — diagnose the queue
 
@@ -2621,7 +2621,7 @@ The 80 prompts below cover the six gates and the recurring decisions around them
 
 **80. Revisit an older edition**
 
-> Compare the two supplied editions of the book. List new or materially changed chapters and explain which decisions deserve another look for [our situation]. Separate changed advice from clearer wording. If you have only one edition, say so and use its version notes without inventing a diff.
+> Use the installed edition's version notes to explain what changed since [earlier edition] and which decisions deserve another look for [our situation]. Separate changed advice from clearer wording. If both full editions are accessible, compare them directly; otherwise state that you are relying on version notes and do not invent a diff.
 
 The value of the conversation is the work it helps you inspect. Keep the case, test the recommendation, and bring the resulting evidence back. That gives the next discussion something better than another confident summary.
 

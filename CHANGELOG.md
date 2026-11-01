@@ -18,6 +18,7 @@ Added:
 
 Refined:
 
+- Appendix G now uses the installed skill throughout: readers bring a question or company context, and the skill reads the bundled book. Removed the conflicting instructions to paste chapters or attach the book.
 - More explicit scope for speed and staffing examples, with knowledge updates treated as reviewed releases.
 - Vendor assessment that separates onboarding requirements from evidence about how the service operates.
 - Build and architecture guidance that considers ownership, maintenance, and composed platforms.
