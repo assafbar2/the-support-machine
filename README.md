@@ -78,4 +78,4 @@ Book text and book-format outputs: [CC BY 4.0](LICENSE-MANUSCRIPT.md). Skills, t
 
 [Website](https://barnir.co) · [Email](mailto:assafbar@gmail.com)
 
-This is a personal project, not an official Sentry support channel.
+This is my personal project. The judgments and recommendations are mine; I do not speak for Sentry. This repository is not an official Sentry support channel.

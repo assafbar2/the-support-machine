@@ -18,6 +18,9 @@ Added:
 
 Refined:
 
+- A personal-authorship note and clearer distinctions among the author's experience, company policy, and recommended practice. Generalized unnecessary employer references, internal operating details, and claims about future plans or guaranteed outcomes.
+- A more precise implementation-partner account focused on delivery, ownership, and knowledge transfer, with credit for the vendor's direct technical involvement.
+- A concise podcast introduction with the public episode links. Removed the promotional thank-you and repeated podcast introductions from the five chapter integrations; the exact published episode title remains in the sources appendix.
 - Appendix G now uses the installed skill throughout: readers bring a question or company context, and the skill reads the bundled book. Removed the conflicting instructions to paste chapters or attach the book.
 - More explicit scope for speed and staffing examples, with knowledge updates treated as reviewed releases.
 - Vendor assessment that separates onboarding requirements from evidence about how the service operates.

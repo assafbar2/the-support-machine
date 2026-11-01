@@ -40,13 +40,15 @@ If you read v0.2, there are six new chapters and substantial revisions across th
 
 The vendor discussion is a snapshot checked on November 1, 2026. Announced, early-access, generally available, and enabled in your workspace are different states. Fin's Operator, Skills, audiences, and customer-success direction widen the questions to ask; they do not remove the need to test your own configuration. Pylon, Salesforce, and Plain provide useful alternative approaches to examine.
 
-The new NIMBY cases are labeled fictional. Hackathon projects are labeled prototypes, with their demonstrated scope and limits. Panel examples keep each participant's account distinct without naming them. Proposed practices are not presented as production results.
+The new NIMBY cases are labeled fictional. Hackathon projects are labeled prototypes, with their demonstrated scope and limits. Panel examples keep each participant’s account distinct without naming them. The migration story keeps my observations distinct from company policy and from practices I recommend. Proposed practices are not presented as production results.
 
 This is v0.3, following the repository's existing v0.2 edition. The previous edition remains available in the [edition archive](https://assafbar2.github.io/the-support-machine/editions.html), including its PDF, DOCX, and Markdown. Release notes explain what changed; the full book contains all of the text.
 
 ## Reader's Note
 
 This book began as a live field journal from inside a real AI support migration. The point was not to write a polished case study after the fact. The point was to capture the work while it was still alive, when the risks were unresolved, the machine was not yet trusted, and every confident sentence could still become a cautionary tale.
+
+This is my personal field guide, shaped by work at Sentry and elsewhere. The judgments and recommendations are mine; I am not speaking for Sentry or describing its official policies. The migration scenes reflect my experience at the time. The playbooks describe how I recommend running the work.
 
 The central argument is simple: AI support is not a chatbot project. It is an operating model migration.
 
@@ -56,9 +58,9 @@ The metaphors in this book are intentional. The Rubicon, the machine, the goalke
 
 ### Hear the conversation
 
-I joined The Prompt Room, from Thunai, for Episode 4, published on October 13, 2026. The conversation is called “Reducing Customer Pain at the Source: Inside Sentry’s AI-Native Support Model.” It brings the book's argument into a conversation about the work: how engineering led me into Support, why the goalkeeper needs to move into midfield, and what changes when the team can spend more time removing customer problems.
+I joined The Prompt Room, from Thunai, for Episode 4 on October 13, 2026, to talk about reducing customer pain at the source. We covered how engineering led me into Support, why the goalkeeper needs to move into midfield, and what changes when the team can spend more time removing customer problems.
 
-We also talked about my own early arrogance as an engineer, the context customers lose between teams, and why asking for a human should be welcome. These are some of the ideas I most wanted to get out of the launch room and discuss with other people. Thank you to the Thunai team for giving them that space. I'm happy to share the conversation here.
+We also talked about my early arrogance as an engineer, the context customers lose between teams, and why asking for a human should be welcome. I'm glad to share this conversation alongside the book.
 
 [Watch Episode 4 on YouTube](https://www.youtube.com/watch?v=JxJb4FDqWdI) or [listen on Spotify](https://open.spotify.com/episode/6x73nZKsh9y1VIw46yCW5q).
 
@@ -220,31 +222,29 @@ Every AI support story starts before AI. It starts with a queue that looks manag
 
 The mirror is a cruel invention.
 
-Sentry exists for one reason: to help developers see what is broken in their code. We are the “truth” platform. The check engine light. The thing you look at when things go sideways.
+Sentry helps developers see what is broken in their code. I like to think of it as the check engine light: the thing you look at when things go sideways.
 
-But when we turn that lens on our own support workflow, the reflection isn’t pretty.
-
-We have a friction problem.
+Turning that lens on the support workflow I worked with made repeated friction easier to see.
 
 ### The “Good Enough” Trap
 
-Here’s the thing about metrics: they can lie by omission. Our CSAT and SLA dashboards looked healthy. The team was meeting the expectations those measures set. That did not tell us how much repeated work the customer experience still created. If you look at a dashboard in a QBR, you nod and move on to the next slide.
+Metrics can lie by omission. The CSAT and SLA dashboards I was watching looked healthy. The team was meeting the expectations those measures set. That did not tell me how much repeated work the customer experience still created. If you look at a dashboard in a QBR, you nod and move on to the next slide.
 
 But doing things “as expected” is death in Silicon Valley.
 
-Beneath the “as expected” metrics, our support team is re-educating customers and prospects on what our documents and onboarding experience already cover well. Our product velocity, the sheer speed at which Product and Engineering ship new features, is outpacing our ability to support them.
+I kept seeing support engineers re-explain material that the documentation and onboarding already covered. The product was moving fast; I wanted customers to find the relevant answers without waiting for a person.
 
-We are throwing bodies at a physics problem.
+Adding people alone would not make those answers easier to find.
 
 ### The Breaking Point
 
-We realize that adding headcount isn’t scaling linearly with ticket volume, or with the increasing quality, sophistication, and urgency our customers require. We are asking brilliant support engineers to answer the same “What is a DSN?” question, instead of thinking about how our developer customers want to find answers on their own (already covered in our DSN documentation).
+The question for me was how to support more demanding work without asking brilliant engineers to keep repeating “What is a DSN?” when a useful answer already existed in the documentation.
 
-That is not Support Engineering; it’s expensive copy-pasting.
+That is expensive copy-pasting.
 
-“What is Sentry?” is something I discuss at dinner parties (I’m a fun guest), but I can’t stop asking myself: why aren’t developers finding the answers already sitting on our product documentation on their own?
+“What is Sentry?” is something I discuss at dinner parties (I’m a fun guest), but I can’t stop asking myself: why aren’t developers finding the answers already sitting in the product documentation on their own?
 
-We have to admit a hard truth: our technical velocity is elite, but much of our tooling is stuck in 2015. We can’t stay still because eventually the wave of customer interactions is going to crash over our heads.
+I wanted the support workflow to keep pace with the product. That meant examining discovery, routing, and handoffs before asking the team to absorb more repeated work.
 
 So we decided to stop buying umbrellas and start changing the weather.
 
@@ -268,7 +268,7 @@ For a long time, I treated that hum as normal. I thought confusion was just the 
 
 Those moments weren’t “friction.” They were warning signs. Looking back, the patterns are identical whether you are selling the tool or buying it.
 
-Here is what I ignored then, and what we are refusing to ignore at Sentry now.
+Here is what I ignored then, and what I now look for in every AI project.
 
 ### The Illusion of Motion
 
@@ -344,7 +344,7 @@ That is a great way to burn a pile of cash and annoy your customers.
 
 In the previous chapter, I listed the warning signs of AI adoption. To avoid those traps, we realized that before we bought a single license or made a single API call, we had to prove the model. We had to move from “vibes” to cold, hard audits.
 
-We realized we didn’t need to look elsewhere for answers. We have years of history and hundreds of thousands of past interactions. We didn’t need to guess; we needed to “consult” our own archives.
+Our past support conversations gave us something more useful than a guess: a record of what customers had asked, tried, and struggled to complete. We needed to consult our own archives.
 
 ### The Great Audit
 
@@ -358,7 +358,7 @@ The Solution Path: Does the answer actually exist?
 
 The Discovery Gap: Could the customer have solved this themselves, but didn’t know how?
 
-The Developer Experience: Was the path clear when onboarding a new functionality, like in Sentry Logs?
+The Developer Experience: Was the path clear when adopting a new feature, such as logging?
 
 The Knowledge Gap: Are the docs up to date? Does searching our Knowledgebase actually work?
 
@@ -368,23 +368,21 @@ The Product Gap: Is the customer asking for a piece of data or action that could
 
 Is the customer experiencing a complex instrumentation issue that requires deep context?
 
-For example: is this a stack trace debugging issue specific to an environment like our Unity/Game Consoles SDK, and does it actually require a code change?
+For example: is this a stack trace debugging issue specific to an environment such as a Unity SDK on a game console, and does it actually require a code change?
 
 ### The Grunt Work
 
-Here is the part nobody puts in the case study because it isn’t sexy: We tagged thousands (and thousands) of conversations.
-
-Yes. Manually.
+We tagged conversations by hand.
 
 As part of our day-to-day, we added a step that enabled us to re-learn what developers ask us, what their pain is, and what the path to resolution looks like.
 
-We spent long hours tagging thousands of tickets. It felt like the opposite of ‘high-tech.’ But you can’t automate a process you don’t actually understand at the atomic level. It was absolutely necessary.
+It took patient, manual work. It felt like the opposite of “high-tech.” But we needed to understand the work before deciding which parts to automate.
 
 ### Evidence Before Intuition
 
 The result wasn’t a hunch. It was a spreadsheet with undeniable gravity.
 
-The data showed that a significant percentage of our volume was purely transactional—questions that didn’t require empathy or deep debugging, just accurate information retrieval.
+The review identified recurring questions that called for accurate information retrieval rather than a new technical investigation. Those were candidates to test, not a measured automation result.
 
 We built an initial business case before choosing the tool. Its assumptions still needed validation in operation. We built the case on the floor of the warehouse, not in the ivory tower.
 
@@ -414,7 +412,7 @@ But that creates a dangerous confusion. It confuses a Library Index with a Libra
 
 ### Retrieval vs. Reasoning vs. Problem-Solving
 
-We need to distinguish three jobs. The following exchanges are illustrative; their technical details are not current Sentry troubleshooting instructions:
+We need to distinguish three jobs. The following exchanges are illustrative, not troubleshooting instructions for a specific product:
 
 Retrieval (Docs Search): This is for the user who knows what they are looking for but doesn’t know where it is.
 
@@ -450,17 +448,17 @@ This is the classic Engineer’s Fallacy.
 
 They aren’t wrong. They could build the prototype in a week. But we don’t want to build a prototype. We want to run a full support operation.
 
-We have to gently remind our own team: We are an Observability Company, not a Support AI Company.
+I kept coming back to the roadmap we were responsible for.
 
-Every hour our engineers spend maintaining a custom RAG pipeline, debugging context windows, or building feedback UIs for support agents is an hour they aren’t building Sentry.
+Maintaining a custom RAG pipeline, debugging context windows, and building support feedback tools all take engineering time. That work needs to justify the product work it displaces.
 
-For the common support platform, buying was our preferred starting point. An internal build can still be justified by a material requirement and funded ownership. Chapter 8 compares the layers, lifecycle costs, and conditions that can change the decision.
+For the common support platform, buying was my preferred starting point. An internal build can still be justified by a material requirement and funded ownership. Chapter 8 compares the layers, lifecycle costs, and conditions that can change the decision.
 
 ### The “Is It Safe?” Trap
 
-This isn’t an objection; it is a requirement. Sentry holds the keys to the castle for the companies that use it. We process their errors. We see their code.
+A technical support workflow can contain stack traces, snippets of code, account details, or secrets pasted by mistake. Access and data handling are requirements to settle before connecting an agent.
 
-The pushback here is different. It is quiet, serious, and non-negotiable. If the tool hallucinated an answer, that’s bad. If the tool hallucinated customer data into a chat window, that’s catastrophic.
+The pushback here is quiet, serious, and non-negotiable. A wrong answer can waste a customer's time. A response that exposes another customer's information can cross an access boundary.
 
 We can’t just “trust” the model. We need a vendor that treats security like a feature, not a footer on their website.
 
@@ -504,7 +502,7 @@ The damage is easy to miss because it lands elsewhere. Support absorbs the extra
 
 ### Four ways good intentions stall progress
 
-These cases are fictional, in the spirit of a Law & Order episode: familiar patterns, invented situations, and no need to interrogate your org chart. They are not accounts of specific colleagues or incidents at Sentry.
+These cases are fictional, in the spirit of a Law & Order episode: familiar patterns, invented situations, and no need to interrogate your org chart. They are not accounts of specific colleagues or incidents.
 
 **The evangelist with a private exemption.** A leader encourages every team to experiment with AI. They celebrate a coding assistant that gets a first draft wrong because an engineer can review it. When Support proposes a bounded pilot with review and a human exit, the same leader demands that every conversation in their business unit remain manual. They cannot name a specific risk that the pilot has failed to address. Their customers are simply "different."
 
@@ -548,7 +546,7 @@ The distinction is observable behavior. Can the objection be examined? Is there 
 
 ### Check your own backyard
 
-On The Prompt Room, I told a story from early in my career as an engineer. I had built software I was proud of. A customer looked at it and asked where to click. My first reaction was to think she did not understand it and that I should speak to her boss.
+Early in my career as an engineer, I built software I was proud of. A customer looked at it and asked where to click. My first reaction was to think she did not understand it and that I should speak to her boss.
 
 That was arrogance. I had delivered what I thought the specification required, and I was treating her difficulty as a problem with her. The experience stayed with me because it exposed the gap between building software and helping somebody get value from it.
 
@@ -778,9 +776,9 @@ A security questionnaire can become a polite dance: we ask, the vendor sends a r
 
 For a technical product, customer messages can contain code, stack traces, account details, or secrets pasted by mistake. We need to know what happens to that material at every step of the service.
 
-### We ask because we build
+### Ask about the actual product
 
-At Sentry, we work with AI capabilities that use debugging context. That makes the question concrete. A useful system needs access to information; earning that access requires a clear explanation of how the information is handled.
+An AI capability that uses debugging context makes these questions concrete. A useful system needs access to information; earning that access requires a clear explanation of how the information is handled.
 
 The Sentry AI privacy and security documentation is an example of the kind of product-specific explanation to inspect. A general assurance that a company takes privacy seriously cannot answer every workflow question.
 
@@ -838,23 +836,23 @@ The purpose: to make the “impossible” feel “inevitable.”
 
 A document is just paper. A Translation Layer is a tool. I realized everyone was looking at the same problem but seeing a different threat. My job was to build the bridge between four distinct worlds:
 
-The Trenches vs. The Tower: There is a massive gap between those in the trenches—feeling the heat of every ticket—and those in the tower who “think they know” because they look at a green dashboard once a week or randomly read a support question on X. I turned the raw, bloody reality of a support shift into data that the “tower” couldn’t ignore.
+The Trenches vs. The Tower: A green dashboard cannot show an executive all the work behind a difficult support shift. I used concrete customer cases and queue evidence to make that work visible in the planning discussion.
 
-Career Aspirations vs. The New Economy: Let’s be real—the 2026 economy is different. My team doesn’t want to be “Human Knowledge Bases” forever. They want to be System Architects. I had to translate our new tools as a career accelerator. We aren’t replacing the team; we are replacing the boring parts of their jobs.
+Career Aspirations vs. The New Economy: My aim was to give support engineers a path beyond being “Human Knowledge Bases.” The vision needed to show how they could become System Architects, and what time and training that would require.
 
-The Metrics Lie vs. Customer Success: Our current metrics are “Good Enough” traps. They measure speed (of all sorts), not resolution. I wrote the new metrics doc to tie Support directly to company growth. We moved from “How many tickets did we close?” to “How much friction did we eliminate?”
+The Metrics Lie vs. Customer Success: Speed tells us part of the story. I wanted the new metrics document to follow customer progress too: “How much friction did we eliminate?”
 
-The DX Gut Check vs. Our Brand: Sentry is a brand built for developers. We pride ourselves on elite Developer Experience (DX). But our internal and support tools? They were a mess of disconnected tabs. I had to ask loudly: “Does this clunky experience fit our brand?” If we wouldn’t sell it, why are we forcing our peers to use it?
+The DX Gut Check: I wanted the support workflow to earn the same care we put into the product experience. Switching among disconnected tools made that question concrete: “Would I be happy asking a customer to work this way?”
 
 ### The Brutal Reality: Gap Analysis & The Theoretical Demo
 
-Then came the cold shower: The Gap Analysis. This was a technical autopsy of our current architecture versus the 2026 volume.
+Then came the Gap Analysis: a comparison of the workflow we had and the customer work we wanted it to handle.
 
-I created a Theoretical Demo—a side-by-side comparison of the “Now” and the “Future.” I didn’t just show slides; I showed the friction. I highlighted the ghouls in our system—the 2015 tools snapping under the weight of our elite product velocity. It could have shown Product exactly if and why new features were being “copy-pasted” into oblivion instead of being supported.
+I created a Theoretical Demo, a side-by-side comparison of the “Now” and the “Future.” I used it to show where repeated explanations and handoffs could be reduced, and what still needed testing.
 
 ### The Human Echo: Mining the Pain
 
-To ensure I wasn’t dreaming in a vacuum, I interviewed our customers and learned from the successes of others. I fed those raw, messy interview transcripts into NotebookLM. I’m an ESL writer, and I needed NotebookLM to be my “Story Architect.” I asked: “Where is the pain the loudest?” and “How do I say this so I sound like a peer, not a manual?” It helped me bridge the gap between my technical intent and the emotional reality of a frustrated developer. It turned data into a before-and-after document that made the reported friction easier to discuss. The generated summary still needed checking against the interviews.
+Customer interviews and other teams’ experiences kept the vision grounded. I used NotebookLM to help organize what I was learning and find clearer language. I’m an ESL writer, and I wanted help connecting the technical argument to the experience of a frustrated developer. The resulting before-and-after document made the reported friction easier to discuss. The generated summary still needed checking against the interviews.
 
 ### The Strategic Hammer
 
@@ -874,19 +872,19 @@ _Field note: One AI strategy has to speak many organizational languages: product
 
 Support can end up buying software in a silo. A tool improves queue handling, while Product barely notices the purchase. That becomes a problem when the tool starts representing the product directly to customers.
 
-But Sentry is not “most companies.” And we aren’t selling socks. We are selling observability to developers.
+At a developer-tool company, support is part of the product experience.
 
-If our product interface is a sleek, dark-mode, high-performance Ferrari, but our Support interface looks and acts like a 1998 Honda Civic with a leaky radiator, we have broken the spell. And that was the limit of my understanding of vehicles.
+If a product interface is a sleek, dark-mode, high-performance Ferrari, but its Support interface looks and acts like a 1998 Honda Civic with a leaky radiator, the spell breaks. And that was the limit of my understanding of vehicles.
 
-We didn’t just ask IT to approve the vendor. We asked the people who built Sentry.
+I wanted Product and Engineering involved in judging the shortlist.
 
 ### The Guardians of DX
 
-Our Product Managers and Engineers are obsessively protective of the Developer Experience (DX). They determine how the product feels, how the APIs respond, and how the docs are structured.
+Product Managers and Engineers shape the Developer Experience (DX): how the product feels, how the APIs respond, and how the docs are structured.
 
-Usually, they view Support tools as “Enterprise Bloatware” - necessary evils that they hope they never have to log into.
+A queue-management purchase may seem distant from that work. A customer-facing AI agent is much closer.
 
-We dragged them into the room and said: “This AI is going to talk to your users. It is going to represent your code. If it sucks, it’s on you too.”
+The case for involving them was blunt: the AI would talk to their users and represent their code. It needed their scrutiny.
 
 ### The Litmus Test: “Does it Speak Code?”
 
@@ -898,11 +896,11 @@ An illustrative engineering objection: “Look at this,” a Senior Frontend Eng
 
 To a normal buyer, that’s a nitpick. To a developer tool company, that is a dealbreaker.
 
-An illustrative product objection: “This bot is too polite,” a Product Lead may say. “It sounds like a bank teller. Sentry isn’t a bank. We are direct. If the user messed up the config, tell them they messed up the config. Don’t apologize for their syntax error.”
+An illustrative product objection: “This bot sounds like a bank teller,” a Product Lead may say. “This is a developer tool. Explain the configuration problem directly and help the user fix it.”
 
 ### Extending the Surface Area
 
-The Product team is helping us realize something critical: DX doesn’t stop at the sentry.io domain.
+The review reinforced a principle I now use: DX extends beyond the product’s website.
 
 We meet customers in the IDE. We meet them in the CLI. We meet them on GitHub. And now, we meet them in this chat window.
 
@@ -1169,11 +1167,11 @@ This is where GiFOC still matters: get in front of customers. Ask them to show t
 
 ### A signature is not a restart
 
-In The Prompt Room conversation, I questioned the sharp boundary we draw between pre-sales and post-sales. A customer may have been working through the technical problem for months before signing. Another may sign now and begin the real implementation much later. The contract date tells us something about the commercial relationship. It does not tell us where the customer is in the work.
+I question the sharp boundary we draw between pre-sales and post-sales. A customer may have been working through the technical problem for months before signing. Another may sign now and begin the real implementation much later. The contract date tells us something about the commercial relationship. It does not tell us where the customer is in the work.
 
 A solutions architect may already understand the customer's people, constraints, design choices, and unresolved gaps. If a handoff discards that context, the customer has to teach the company again. We create another support problem while congratulating ourselves on closing the sale.
 
-The operating idea is continuity of technical context. It is not a claim that we have reorganized Sentry around one role. Keep the customer's goal, decisions, remaining blockers, and next accountable owner connected across the commercial boundary. Where systems can legitimately relate account, user, and conversation records, use that connection to preserve context. Shared identity still needs correct access controls.
+I would organize the handoff around continuity of technical context. Keep the customer's goal, decisions, remaining blockers, and next accountable owner connected across the commercial boundary. Where systems can legitimately relate account, user, and conversation records, use that connection to preserve context. Shared identity still needs correct access controls.
 
 Test the handoff by asking the receiving person to explain the customer's next step without making the customer repeat the whole story. When they cannot, repair the handoff before adding another automated follow-up.
 
@@ -1211,7 +1209,7 @@ I want a scorecard that makes those differences visible. Replacing a survey with
 
 Suppose, as an illustration, that an agent is involved in 40% of all eligible conversations and resolves 40% of the conversations in which it is involved. Its reported automation across that original population is 16%: 0.40 multiplied by 0.40.
 
-That calculation works only if the populations, time window, and definitions line up. The second percentage is conditional on the first. Do not multiply two dashboard percentages simply because they are next to each other. The example is arithmetic, not a reported Sentry result.
+That calculation works only if the populations, time window, and definitions line up. The second percentage is conditional on the first. Do not multiply two dashboard percentages simply because they are next to each other. These percentages are illustrative, not measurements from the migration.
 
 Fin's automation-rate definition makes this relationship useful to examine. The managerial question is how much eligible customer work the system actually handled, and what the platform counts as resolved.
 
@@ -1239,7 +1237,7 @@ Keep CSAT where it adds information. Response bias limits what we can infer from
 
 ### Hear the problem before the survey
 
-On the podcast, I described collecting twelve times as many signals across the customer journey as we had before. That was my account of our operation, not a benchmark another team should expect to reproduce. The useful change was having more opportunities to notice friction and respond while the customer was still working through it.
+I have described a twelvefold increase in the customer signals we collected. That was my account of a particular period, not a benchmark another team should expect to reproduce or a count of distinct customer problems. The useful change was having more opportunities to notice friction and respond while the customer was still working through it.
 
 Direct conversations, community discussions, public issues, and account interactions can reveal problems that a post-conversation survey misses. They also overlap. A frustrated customer may describe the same issue in three places. Count the signals and the distinct customer problems separately, and keep the channels, comparison period, and coverage behind any growth claim visible.
 
@@ -1270,7 +1268,7 @@ _Field note: A metric is a claim about a defined population. Keep its definition
 
 ## 19. The Promotion
 
-We are promoting the team to manage the machine. That sentence needs an operating plan behind it.
+I want to promote the team to manage the machine. That ambition needs an operating plan behind it.
 
 ### The elephant in the Zoom
 
@@ -1284,7 +1282,7 @@ State what work will change, what support the team will receive, and how their p
 
 A support engineer on a panel described recurring confusion around a reporting workflow. In that participant's account, a tooltip change took roughly two hours, and the same company did not return with the issue the following month. That is a useful local observation. It does not establish that all future confusion disappeared or that every tooltip has the same return.
 
-In the same discussion, I described a Sentry teammate proposing a CTA change through a pull request and seeing it live the next day. The significant part is the route from customer evidence to a shipped product improvement. The support engineer did not have to become a separate Product organization to fix a bounded problem.
+In the same discussion, I described one of my teammates proposing a CTA change through a pull request and seeing it live the next day. That route from customer evidence to a shipped product improvement is what I want to make repeatable. The support engineer did not have to become a separate Product organization to fix a bounded problem.
 
 Those are two different stories from two different speakers. Together they make the midfield argument concrete: people who repeatedly explain a confusing experience can help change it.
 
@@ -1302,7 +1300,7 @@ Pair an experienced product engineer with a support engineer for early changes. 
 
 ### Look for debugging judgment
 
-The podcast also gave me a chance to explain what I look for in technical support work. Can someone form a hypothesis, read the relevant trace, reproduce the behavior, and change their mind when the evidence disagrees? A polished AI-generated demo does not answer those questions.
+When I evaluate technical support work, I look for debugging judgment. Can someone form a hypothesis, read the relevant trace, reproduce the behavior, and change their mind when the evidence disagrees? A polished AI-generated demo does not answer those questions.
 
 For hiring or development, use a small broken workflow with enough evidence to investigate it. Let the person use their normal tools, including AI where appropriate. Ask them to explain what they tested, why they rejected an earlier explanation, and what remains unknown. Review the reasoning and the customer explanation as well as the final fix.
 
@@ -1378,9 +1376,9 @@ _Field note: Retire duplicated workflows while preserving a tested way to contai
 
 ## 21. When Your AI Implementation Partner Is Just a Tollbooth
 
-We bought a Ferrari. We threw a party. And then we realized the third-party mechanic assigned to tune the engine was getting paid by the hour to keep it in the shop.
+A powerful platform can still leave you waiting at somebody else’s tollbooth.
 
-Let me tell you a story that has absolutely nothing to do with Artificial Intelligence, but explains exactly why some [AI or not] projects fail.
+Let me start with a pyramid. The dependency in this story can turn up in an AI project too.
 
 It is a tale as old as the first-ever consultant.
 
@@ -1388,45 +1386,43 @@ Here is a deliberately fictional parable. Picture ancient Egypt. The Pharaoh wan
 
 He didn’t build a product; he built a dependency.
 
-The pattern can appear in other industries too. Think about the early days of the internet in the late 1990s. Businesses paid agencies thousands of dollars to build their first websites. A poorly designed maintenance arrangement could make a business dependent on its webmaster for routine changes. They hard-coded the HTML so that every time the bakery wanted to update their phone number, they had to pay the agency a $150 “maintenance fee.”
-
-The technology was revolutionary, but the business model was parasitic.
+The pattern can appear in other industries too. Picture a bakery whose website requires an agency’s help for every routine change. Even updating the phone number becomes a maintenance request. The useful question is how much of that dependency the work actually requires.
 
 ### The Hand-off Illusion
 
-Fast forward to 2026. We are at Sentry. We just ran the gauntlet. We built the business case and questioned what actually powered the demos. We finally signed the contract for a native, cutting-edge AI platform. The adrenaline was high. We were celebrating a massive new direction for our Developer Experience (DX).
+By the time we reached implementation, I had built the business case and questioned the demos. I wanted an onboarding process that could deal with technical support cases and leave the team able to operate the system.
 
 Then came the onboarding kick-off call.
 
 The handoff between sales and implementation can fail at exactly the point when clear ownership matters most.
 
-The Account Executive who wowed us with demos of “complex Python stack trace resolution” was gone. In their place was an external project manager who looked at our intricate, highly technical developer ecosystem and just saw a generic Jira backlog. The vendor sold us a “Weather Control Station,” but the assigned implementation partner only knew how to build umbrellas.
+The gap I saw was between the technical work we needed and the planning process we were given. We needed to examine documentation, integrations, escalation boundaries, and ownership. A generic backlog was not enough to settle those questions.
 
 ### The Drift
 
-At first, we hoped for collaboration. We shared our  vision documents & our scope. But then, instead of asking for API keys to ingest our documentation, the external partner sent us a spreadsheet asking us to manually list our “Top 5 most common issue types.”
+We shared the vision and scope. A request for common issue types could have helped define the work. What I still needed was a concrete plan for configuration, validation, and knowledge transfer.
 
-The drift happened. We realized the implementation partner had the wrong motivation. They were addicted to the “Illusion of Motion,” confusing shipping with working.
+I judged the arrangement by what it let us own and operate. Could the team inspect a workflow, change approved guidance, and diagnose a failure without waiting for the partner?
 
-They were treating our AI deployment like a 1990s website. They wanted to be the gatekeepers of our prompts, the managers of our RAG pipelines, and the only ones who knew how to untangle the workflows. Our massive opportunity to start strong right out of the gate was slipping away (argh) into a mire of weekly status calls that accomplished nothing. Instead of gaining leverage, we were inheriting their limitations, and our roadmap became a negotiation.
+Weekly updates were not answering those questions quickly enough for the migration I was trying to run. When routine changes depend on someone outside the team and the route to independence remains vague, the arrangement starts to feel like a tollbooth.
 
-They weren’t building us a system; they were building themselves a permanent tollbooth.
+That was the dependency I wanted to remove.
 
 ### The Rescue: Co-Ownership and The “System Architect”
 
 Buying the tool is one commitment. Operating it adds integration, knowledge, evaluation, governance, and recovery work. Those responsibilities need owners regardless of the contract structure.
 
-A partner can do valuable work in each of those areas. Define deliverables, access, knowledge transfer, and acceptance criteria so that accountability stays visible. In our case, we needed to take back the keys and change the working relationship.
+A partner can do valuable work in each of those areas. Define deliverables, access, knowledge transfer, and acceptance criteria so that accountability stays visible. In that implementation, I needed more direct technical involvement and a clear path for the team to take ownership.
 
-Fortunately, the vendor’s leadership also realized their assigned partner was fundamentally misaligned with our technical reality (and my character).  To their credit, they didn’t just offer an apology; they offered a rescue. The vendor benched the external agency, ripped up the dependency model, and brought in their own internal, native implementation experts.
+The vendor responded by bringing its own implementation team into the work. I appreciated that change: it gave our support engineers a more direct path to the people configuring the system.
 
 They jumped into the trenches with us.
 
-Instead of relying on an external agency’s translation layer, the vendor’s team worked directly with the people who already know our product best: our Support Engineers. Together, we moved our teams from “Just Ticket Solvers” to Support System Architects. We began defining an AI Ops Lead to monitor trends, and a Knowledge Manager to curate the AI’s brain alongside the vendor’s engineers.
+Working directly with the vendor’s team helped us define the responsibilities we would need: someone to watch operating trends, someone to own knowledge quality, and technical owners for tools and integrations. Support Engineers helped shape the system they would operate.
 
-We lost the opportunity for flawless onboarding, but by the vendor stepping up and bringing their own team to bridge the gap, they saved the day.
+The change made collaboration more useful. I would now put ownership, knowledge transfer, and the route to a self-sufficient team into the implementation agreement from the start.
 
-In the era of AI, our data is our most valuable intellectual property, and true partnership means the people configuring the engine are the same ones helping you drive it. We must own the system, train the machine, and keep the keys to the engine. If we don’t, we are just paying a modern pharaoh’s architect to build a pyramid we don’t know how to maintain.
+Customer knowledge and operating judgment cannot live only in a partner’s head. We need to understand the system, improve the machine, and keep the keys to the engine. Otherwise, we are paying a modern pharaoh’s architect to build a pyramid we don’t know how to maintain.
 
 _Field note: A partner who controls the path without owning the outcome is a tollbooth. Co-ownership is the rescue._
 
@@ -1494,17 +1490,17 @@ In the SaaS world, there is a pervasive, lazy misconception that “Support is S
 
 Engineers trade in two currencies: Truth and Efficiency. They possess a finely tuned, collective “BS detector” that sniffs out marketing-speak and corporate platitudes in milliseconds. If you give a developer a “white-glove” experience that involves three hand-offs and a “hope you’re having a great day” macro, you haven’t provided service; you’ve stolen their time.
 
-When it came time to launch our AI agent, we had to reject (again) the “Relationship Management” model. A developer debugging at 2:00 AM may want a working answer with little ceremony. Another customer may need architectural judgment or a direct human conversation. Make self-service useful and keep an accessible human path.
+When I thought about positioning the agent, useful answers mattered more than ceremony. A developer debugging at 2:00 AM may want a working answer with little interruption. Another customer may need architectural judgment or a direct human conversation. Make self-service useful and keep an accessible human path.
 
 ### Positioning AI as “No-Touch” Luxury
 
-We leaned into Radical Transparency. We didn’t pretend we were launching a human replacement or a “friendly digital assistant.” We positioned the AI as the ultimate “No-Touch” Luxury.
+I thought of useful AI as a kind of “No-Touch” Luxury: help customers make progress without waiting when the task permits it. The promise still has to match the available service.
 
 The customer-facing promise should be specific: which information the agent can use, which actions are enabled, and how to reach a person. Do not advertise an intended billing or configuration workflow as an available capability before it passes the relevant checks. Treat customers as competent partners who deserve an accurate account of what the system can do.
 
 ### Welcome the human handoff
 
-On The Prompt Room, I put it this way: “We are not deflecting, we are solving.” We welcome a request for a person. We also sometimes join a conversation before the customer asks, when we can see that the AI is going nowhere or that a human can add value.
+I want a request for a person to be welcome. A support engineer should also be able to join before the customer asks when the AI is going nowhere or a human can add value.
 
 A useful handoff should carry the customer's goal, what the agent tried, the relevant evidence, and the unresolved question. It should make the next person useful sooner. Requiring the customer to fight through another loop just to preserve an automation percentage defeats the purpose of the service.
 
@@ -1514,7 +1510,7 @@ Keep track of why people take over. A requested human conversation, a required e
 
 If an AI interaction doesn’t save time or increase clarity, it’s just static noise. In a B2D2B environment, “good enough” AI is a liability. If the agent hallucinates an SDK initialization or suggests a deprecated API endpoint, you don’t just lose a ticket—you lose the trust of a developer.
 
-We are building this in the open, tracking every hallucination in a company wide error log, and iterating weekly based on evidence, not intuition. We aren’t selling a feature; we are providing a tool.
+I recommend keeping a shared error log and reviewing recurring failures weekly, with prompt attention to consequential ones. The useful record connects each observed failure to an owner, a repair, and a later check.
 
 _Field note: Give developers a useful path to the result and a clear route to human judgment when they need it._
 
@@ -1546,17 +1542,17 @@ Workflow coverage drafts
 
 Updated future scope (draft)
 
-You can’t automate everything on Day 1. The Workflow coverage drafts act as our perimeter fencing—defining exactly which issues Fin is authorized to resolve and which ones it must instantly pass through. And because code is never “done,” our next deployment scope is already in an active sprint, ready to ingest the errors we haven’t even made yet.
+You can’t automate everything on Day 1. The workflow coverage drafts were our perimeter fencing: the issues Fin was intended to handle and the cases that needed a human. Those boundaries still needed testing. A draft of future scope gives you somewhere to record the next candidate workflows without promising them before the current ones work.
 
 ### 3. The Human Firewall
 
-Fin/Sentry Q&A
+Vendor and support-team Q&A
 
 “Onsite highly personalized” training session with Fin
 
 Post-launch “Support Lead Daily” processes
 
-Your human team cannot be passive observers; they are the Supreme Court to the AI’s lower courts. We ran an onsite, highly personalized training session with Fin to ensure our team didn’t just know how to use the UI, but deeply understood the machine’s logic. The Support Lead Daily processes ensure that the moment we go live, a rigid feedback loop is established to review logs, optimize prompts, and manage the new human-in-the-loop ecosystem.
+Your human team cannot be passive observers; they are the Supreme Court to the AI’s lower courts. We ran an onsite, highly personalized training session with Fin to help the team understand the machine’s logic as well as its UI. The daily support-lead process was meant to carry that learning into operation. Someone still had to own the log review, assign repairs, and check whether each change helped.
 
 ### 4. The Countdown (Zero Hour)
 
@@ -1566,17 +1562,17 @@ Pre-mortem
 
 Launch day Fin cutover plan
 
-Launch day Sentry runbook
+Launch day team runbook
 
 This is where the rubber meets the road. The “Last Breath” legacy metrics capture our historical baseline—the final, frozen-in-time snapshot of our legacy world.
 
-But the crown jewel of our preparation is the Launch day Sentry runbook and pre-mortem. We sat in a room and asked a dark, pragmatic question: “Assuming this entire launch fails spectacularly, how did it happen?” We simulated the nightmare scenarios—the Librarian layer failing under peak load, the Clerk executing mismapped intents, the costs spiking out of control. We engineered the solutions for those failures before they had a chance to manifest.
+The launch runbook and pre-mortem brought the preparation together. We asked: “Assuming this entire launch fails spectacularly, how did it happen?” The scenarios included the Librarian layer failing under load, the Clerk executing mismapped intents, and costs spiking. For each scenario, the useful output was an owner, a containment step, and a way to test the repair.
 
 ### Shipping the Machine
 
 When you launch a traditional product, you control the code. When you launch an AI-driven support operation, you control the infrastructure, but the user interactions are dynamic, fluid, and unpredictable. You aren’t just launching an app; you are releasing an agent into the wild to interact with a highly critical, deeply skeptical audience.
 
-The playbooks are locked. The guardrails are verified. The pre-mortem is signed off. The old metrics are frozen.
+The playbooks and launch checks gave us a basis for proceeding. They could not tell us every failure customers would discover.
 
 And then, the countdown hit zero. Go time arrived.
 
@@ -1590,9 +1586,9 @@ It’s 10:00 AM on a Friday, and this day wasn’t just about flipping a switch;
 
 ### The “Before” State: The Legacy Baseline
 
-For years, our support reality was defined by linear scaling and legacy architecture. Before the cutover, we looked at a landscape of a large historical ticket archive and nearly 200 legacy business rules.
+Before the cutover, we had a substantial ticket history and a long list of routing and business rules to account for.
 
-The Velocity Ceiling: While our SLA achievement rate was stellar, the reality for the developer was often a wait of 1-to-24-hour resolution.
+The Velocity Ceiling: Meeting an SLA could still leave a developer waiting while someone picked up the question.
 
 The Context Tax: Support conversations were fragmented across different channels—dictating a different experience for users based on where they engaged with the team.
 
@@ -1600,19 +1596,19 @@ The Context Tax: Support conversations were fragmented across different channels
 
 At the 12:05 PM PT final cutover step, we could see the interaction pattern change. That was immediate launch-room evidence, not yet a controlled measure of long-term customer outcomes.
 
-1. The End of the “First Response” Race In the old world, fewer tickets were addressed within the first hour. With the activation of the AI agent, we moved the target to immediate resolution. The goal shifted from managing a queue to “assure the right coverage” from the get go, and forever.
+1. The End of the “First Response” Race. I could see replies arriving without waiting for a person to pick up the question. That made the next question more urgent: did the reply help the customer complete the task?
 
-2. Resolution vs. Deflection The most significant trend shift was the “Automation Rate”. We moved away from simple deflection-if-we-find-the-document-for-you toward a model where the AI actively engages with the customers. By syncing knowledge from nearly all public articles, internal documentation, internal notes, and even GitHub, the machine began resolving issues without human escalation.
+2. Resolution vs. Deflection. I began looking beyond whether the agent found a document to whether it helped the customer use it. The conversations needed review even when the platform marked them resolved.
 
-3. The “Human-in-the-Loop” Elevation Perhaps the most telling shift was the implementation of strict “Sentry-isms” and guardrails. The AI was trained to stop troubleshooting and offer a direct escalation to a human Support Engineer the moment a customer indicated (in words, or in tone) a solution failed. This ensured that while the machine handled the high-frequency “Issues” and “Events,” our human experts were reserved for deep technical empathy.
+3. The “Human-in-the-Loop” Elevation. The guidance called for stopping repeated troubleshooting and offering a human when a proposed solution failed. That was an intended behavior to test in real conversations. A written guardrail alone could not establish that every handoff happened at the right moment.
 
 ### The “Direct Accountability” Model
 
-This adoption and launch moved forward because we abandoned “committees” for a model of “one owner per department”. From infrastructure and DNS routing to legal contracts and design, every lane had a single, directly accountable person—an approach that ensured every project task had a name attached (people we truly appreciate) and no orphaned decisions remained.
+For the launch, we used one accountable owner per lane, including infrastructure, routing, contracts, and design. That made the next decision easier to place with a person and gave us a way to surface gaps.
 
-The transition was seamless, and the atmosphere in the room was electric. We had moved from a “Service Team” to an “Operations Team” managing a living system. We watched as the machine began identifying contacts and assigning SLAs in real time.
+From the launch room, I watched a support queue become an operation that needed active monitoring of a new system. We could see contact identification and SLA assignment happening as conversations arrived. It was exciting, and still early.
 
-The machine was live. The data was flowing. The developers were getting answers in seconds.
+The machine was live. Replies were arriving. Now we had to find out where they helped and where the team needed to step in.
 
 And then, the first truly “impossible” edge case hit the queue...
 
@@ -1658,21 +1654,21 @@ We still appreciate thank-yous. But we cannot design the machine around needing 
 
 When you release a living system into the wild, it does not wait politely for your next planning cycle. It walks straight into the blind spots.
 
-The first category was funny because it was absurd: the infinite bot loop. Our AI agent met customer out-of-office responders, automated mail handlers, and in some cases other AI systems. The result was a ping-pong match of extreme automated politeness. Nobody was harmed. Nobody was helped either. It was a useful reminder that the support queue is no longer a place where only humans arrive.
+The first category was funny because it was absurd: the infinite bot loop. Our AI agent met customer out-of-office responders, automated mail handlers, and in some cases other AI systems. The result was a ping-pong match of extreme automated politeness. The exchanges could continue without moving a customer problem forward. It was a useful reminder that the support queue is no longer a place where only humans arrive.
 
-The second category was more human: the inside job. Employees forwarded internal emails into the support queue expecting a familiar colleague to reply. Instead, they got a fast, unsentimental, uninvited AI response. The reaction was immediate and understandable. Getting a robot when you expected your desk-neighbor is a very modern betrayal.
+Another mismatch involved forwarded messages. Someone expecting a familiar colleague could instead receive an unexpected AI reply. It exposed a routing and expectation problem: the sender needed to know who was answering and how to reach the person they intended.
 
-Then came the AI NIMBYs.
+That reaction is worth examining before reaching for the AI NIMBY label.
 
-Some people loved AI in the abstract. They built it, built with it, sold it, pitched it, and expected it to transform every industry. Then it showed up in their own workflow: “Wait, you’re using AI to answer support questions? In my backyard?”. That is a paradox.
+It is possible to welcome AI in principle and object when it reaches your own workflow. It is also possible that the particular workflow is wrong. A surprised customer or colleague deserves a hearing before we decide which one we are seeing.
 
-The lesson is not to mock that reaction. It is to respect what sits underneath it. Customers are not rejecting automation in general. They are asking whether this automation understands the stakes of their problem. The answer cannot be a slogan. The answer has to be visible in the behavior of the system: grounded in the same documentation a human would use, faster than a human could retrieve it, and humble enough to escalate when confidence is no longer earned.
+The useful question is whether this automation fits the stakes of the problem. The answer has to be visible in the system’s behavior: using applicable evidence, helping the customer make progress, and making a human available when needed.
 
 ### When the human was mistaken for AI
 
-Then came the moment that validated the architecture in a way no dashboard could.
+One customer response stayed with me.
 
-A complex ticket bypassed the AI guardrails by design and landed with a veteran Staff Support Engineer. The engineer read the evidence, diagnosed the issue with deep technical judgment, formatted the response cleanly, and sent it quickly.
+A complex case reached an experienced support engineer through the human path. The engineer read the evidence, diagnosed the issue, formatted the response clearly, and sent it quickly.
 
 The customer replied: “Wow, your AI is incredibly impressive. Solved my issue perfectly.”
 
@@ -1680,9 +1676,7 @@ For once, the mistaken identity ran in the other direction.
 
 The engineer was so precise, clear, and fast that the customer credited the machine. Apparently the human needed a name badge.
 
-The point is not that humans and AI had become indistinguishable. The point is that the bar had moved. The machine had changed the customer’s expectation of speed, precision, and structure. A great human response now looked like the best possible version of the machine. A great machine response had to know when to get out of the way for the human.
-
-That is the new standard.
+I took a modest lesson from it: a clear, quick human answer can surprise a customer. It reinforced why I wanted the human path to remain easy to reach.
 
 ### The Next Deployment Started Immediately
 
@@ -2147,7 +2141,7 @@ The operating model is the set of people and decisions that keep customer eviden
 
 **October 13, 2026 — the conversation behind the operating model.** My appearance on The Prompt Room connects the midfield idea with the practical work of reducing customer pain. The conversation adds a personal self-check, continuity across the sales handoff, earlier signals, debugging judgment, and a welcome for customers who want a person. Chapters 5, 17, 18, 19, and 23 carry those ideas forward. The Reader's Note links to the episode; its operational observations remain my account, not an independent outcome study.
 
-**October 21, 2026 — support work reaches the product.** At a support engineering panel, a participant described a tooltip improvement responding to recurring confusion; I described a Sentry teammate's CTA change. Other participants contributed an example of a customer agent supplying incorrect context and an account of stale documentation. These remain distinct panel accounts with different evidence, rather than one measured case study. Chapters 15, 17, 19, and 28 draw the relevant distinctions.
+**October 21, 2026 — support work reaches the product.** At a support engineering panel, a participant described a tooltip improvement responding to recurring confusion; I described a teammate's CTA change. Other participants contributed an example of a customer agent supplying incorrect context and an account of stale documentation. These remain distinct panel accounts with different evidence, rather than one measured case study. Chapters 15, 17, 19, and 28 draw the relevant distinctions.
 
 **November 1, 2026 — prototypes become operating questions.** This edition reviews RECEIPT's interrupted-action demonstration, Promise Ledger's synthetic account promise, and Stage Manager's bounded owner handoff. Their development and demonstrations are not production outcome studies. Use Chapters 16, 17, and 27 to decide which evidence and responsibilities your own operation needs.
 
