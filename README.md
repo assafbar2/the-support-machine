@@ -8,6 +8,8 @@ A free book and practical AI skills for support leaders at API, developer-tool, 
 
 ## Read and review
 
+- [Reading copy for Google Docs with NEW, UPDATED, and LIGHT EDITS chapter labels](review/the-support-machine-v0.3-reading-copy.docx)
+- [Chapter reading guide](review/v0.3-reading-guide.md)
 - [All manuscript additions and deletions](https://github.com/assafbar2/the-support-machine/pull/2/files#diff-84e14219a34f7db72ce51facde9568b51bc20a4d8ff5c9f58525fae1834b34b6)
 - [Complete book in Markdown](skills/the-support-machine/references/book.md)
 - [Complete text for review](review/v0.3-complete-text.md)
