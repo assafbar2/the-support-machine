@@ -2,17 +2,19 @@
   "version": "v0.3",
   "source": "manuscript/The Support Machine - manuscript v0.3.docx",
   "files": {
-    "manuscript/The Support Machine - manuscript v0.3.docx": "708bc7f9e771337f35cabdb2bcce3701218bd82199ade491e5b3a82f2b5b1437",
-    "skills/the-support-machine/references/book.md": "0bfbdd0c3a6a140d9e8da9c44d14b986075c1581286befcc6c2b741fb8b9d396",
-    "docs/the-support-machine-v0.3.pdf": "e2ae966782dd586f646c2aededf1237e003cb1d43458ce0dbb8cc5a12d6cb041",
-    "docs/book.html": "0194cc330e6044a60a63ee533c9d6653d347ebb36e48a68513011177ecbb8e87",
-    "docs/notes.html": "e099345adc42f49b03566dbb63c658a13e802efab093eaf02da34e207dcca9d0",
-    "docs/review.html": "c5b95a7eeed79a59ccc3b74b1f3e4b1a60c5d1dcbe8dd82f5476efd733bcd60d",
-    "review/the-support-machine-v0.3-reading-copy.docx": "69bee072a9c5a3b0cd69efece6edeabdad5cffbe64c8abe485282d979ca4048e",
-    "review/v0.3-reading-guide.md": "f5f6fde7e7e710cac7cd2f38fcd0d3b490c7989cbeceb7825a2aba046454790d",
-    "docs/downloads/the-support-machine-v0.3.docx": "708bc7f9e771337f35cabdb2bcce3701218bd82199ade491e5b3a82f2b5b1437",
-    "docs/downloads/the-support-machine-v0.3.md": "0bfbdd0c3a6a140d9e8da9c44d14b986075c1581286befcc6c2b741fb8b9d396",
-    "docs/downloads/the-support-machine.skill": "399b55ab3cee83533ff10b08da5d3d212384498d9452d8700a6669836a2ddbfd",
-    "docs/downloads/support-ai-evals.skill": "27ba021de216e10e2ba094a62352344fbb91589774c803f6c2d8201d9351d146"
+    "manuscript/The Support Machine - manuscript v0.3.docx": "d89c98d453aad187568ab62819037b3e3485b538dc264f0c1b5b1fe29ebfe0fa",
+    "skills/the-support-machine/references/book.md": "fb4d2941a0bbaa7943f9a7df0f2b5c612c2fd220d378f453eb767a4b1f816301",
+    "docs/the-support-machine-v0.3.pdf": "c80bb7912cba3a663c07f200bc33649ca755031d5e2b617e76ea56a5cb21537c",
+    "docs/book.html": "27abc924bd417117e8a83d5d6276f195383bc5423dca46de7031e73b7361590b",
+    "docs/notes.html": "e2f04dd7d28dd4ffe9c88fdc4a70a4af6b78a3703ececc43971003d43044cd73",
+    "docs/review.html": "35bb457808bcf1b11d4327e0ca46d7cc15f551bdbbc17a67c727b974bbe067c9",
+    "review/the-support-machine-v0.3-reading-copy.docx": "d89c98d453aad187568ab62819037b3e3485b538dc264f0c1b5b1fe29ebfe0fa",
+    "review/v0.3-reading-guide.md": "53e0bfc77c36d7d65ab029676840439317003e1df49fa70209288bcb58dec633",
+    "docs/downloads/the-support-machine-v0.3.docx": "d89c98d453aad187568ab62819037b3e3485b538dc264f0c1b5b1fe29ebfe0fa",
+    "docs/downloads/the-support-machine-v0.3.md": "fb4d2941a0bbaa7943f9a7df0f2b5c612c2fd220d378f453eb767a4b1f816301",
+    "docs/downloads/the-support-machine.skill": "dc5f70141a4b695fbec55dc6f734fff889563492cc9cff904fa6a637f2ae322f",
+    "docs/downloads/the-support-machine.zip": "dc5f70141a4b695fbec55dc6f734fff889563492cc9cff904fa6a637f2ae322f",
+    "docs/downloads/support-ai-evals.skill": "27ba021de216e10e2ba094a62352344fbb91589774c803f6c2d8201d9351d146",
+    "docs/downloads/support-ai-evals.zip": "27ba021de216e10e2ba094a62352344fbb91589774c803f6c2d8201d9351d146"
   }
 }

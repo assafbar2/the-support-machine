@@ -8,7 +8,7 @@ A free book and practical AI skills for support leaders at API, developer-tool, 
 
 ## Read and review
 
-- [Reading copy for Google Docs with NEW, UPDATED, and LIGHT EDITS chapter labels](review/the-support-machine-v0.3-reading-copy.docx)
+- [Complete reading copy for Google Docs](review/the-support-machine-v0.3-reading-copy.docx) — plain chapter titles; discuss edits by chapter and passage in chat.
 - [Chapter reading guide](review/v0.3-reading-guide.md)
 - [All manuscript additions and deletions](https://github.com/assafbar2/the-support-machine/pull/2/files#diff-84e14219a34f7db72ce51facde9568b51bc20a4d8ff5c9f58525fae1834b34b6)
 - [Complete book in Markdown](skills/the-support-machine/references/book.md)
@@ -26,27 +26,33 @@ This edition builds on more use cases I've seen, discussed, researched, and work
 
 Fictional scenarios and prototypes are labeled. Vendor capabilities are a dated snapshot, not a guarantee of access or results.
 
+The Reader's Note celebrates my appearance on **The Prompt Room, Episode 4**: [watch on YouTube](https://www.youtube.com/watch?v=JxJb4FDqWdI) or [listen on Spotify](https://open.spotify.com/episode/6x73nZKsh9y1VIw46yCW5q). The full supplied transcript informs five chapters and a dated field note.
+
 ## Previous edition
 
 v0.2 remains available as [PDF](docs/the-support-machine-v0.2.pdf), [Word](manuscript/The%20Support%20Machine%20-%20manuscript%20v0.2.docx), [Markdown](docs/editions/v0.2/book.md), and [archived HTML](docs/editions/v0.2/book.html). Original PDF, DOCX, and Markdown checksums are retained in the archive. The repository had no v1.0 edition; this release follows its established version sequence.
 
 ## Use the skills
 
-**The Support Machine** covers the full migration and operating model, with fourteen reusable templates.
+Start with [Appendix G](skills/the-support-machine/references/book.md#appendix-g-talk-to-the-book): installation comes first, followed by 80 prompts.
+
+**The Support Machine** includes the full v0.3 book, its podcast additions, all eight appendices, and fourteen reusable templates. [Download the ZIP](docs/downloads/the-support-machine.zip) or the [.skill package](docs/downloads/the-support-machine.skill).
 
 **Support AI Evals** focuses on delayed outcome checks, calibrated review, failure analysis, and knowledge releases. Its local cohort calculator uses Python's standard library and explicit reviewed input. It does not connect to Intercom or infer success from silence.
 
-```bash
-git clone https://github.com/assafbar2/the-support-machine.git
-cd the-support-machine
-# For this review edition before merge:
-git switch codex/support-machine-v0.3
-mkdir -p ~/.codex/skills
-cp -R skills/the-support-machine ~/.codex/skills/
-cp -R skills/support-ai-evals ~/.codex/skills/
+**Claude:** Upload the ZIP through Customize → Skills → + → Create skill → Upload a skill, then enable it. Code execution and file creation must be available under your account's policy. [Official guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+
+**Codex:** Ask the built-in installer:
+
+```text
+$skill-installer Install skills/the-support-machine from GitHub repository assafbar2/the-support-machine, ref codex/support-machine-v0.3.
 ```
 
-Load the installed skills in your agent. Each works independently. ZIP-compatible upload packages are in [docs/downloads](docs/downloads).
+Invoke `$the-support-machine` with a task. Restart Codex if it does not appear. Manual installation uses the complete folder under `~/.agents/skills/`. [Official guide](https://learn.chatgpt.com/docs/build-skills).
+
+Verify the loaded edition is v0.3 and that the skill can read Chapter 28 and its build-versus-buy template. Reinstall or upload the new package after an edition change; installed copies do not automatically follow GitHub. Keep company-specific notes separately.
+
+The optional [Support AI Evals ZIP](docs/downloads/support-ai-evals.zip) installs separately. Both skills work independently. To use an assistant without skill support, attach the complete Markdown edition and follow Appendix G's opening prompt.
 
 Try:
 

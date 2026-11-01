@@ -30,9 +30,11 @@ If you read v0.2, there are six new chapters and substantial revisions across th
 
 - **Evaluation after launch:** Chapter 28 develops seven- and thirty-day outcome checks, calibrated independent review, and a rubric for correct-but-useless answers, missed intent, and impossible fixes.
 
-- **All the field notes:** Appendix E collects the lessons from all 29 chapters alongside eight dated observations from panels, talks, product changes, and prototypes.
+- **All the field notes:** Appendix E collects the lessons from all 29 chapters alongside nine dated observations from panels, talks, a podcast, product changes, and prototypes.
 
-- **Projects and practical conversations:** Appendix F connects the relevant repositories to the chapters. Appendix G offers 80 prompts for applying the book to your own decisions, from a queue audit to a recovery review.
+- **Projects and practical conversations:** Appendix F connects the relevant repositories to the chapters. Appendix G starts with instructions for installing the updated book as a skill, followed by 80 prompts for applying it to your own decisions.
+
+- **The podcast conversation:** My appearance on The Prompt Room adds a personal self-check in Chapter 5, continuity across the sales handoff in Chapter 17, earlier customer signals in Chapter 18, debugging judgment in Chapter 19, and welcomed human handoffs in Chapter 23. The Reader's Note links to the episode.
 
 - **Sources without interrupting the story:** Appendix H groups research and product links by chapter. The main text keeps the reasoning and the limits of each claim visible.
 
@@ -52,6 +54,14 @@ A chatbot answers. A support machine routes, reasons, retrieves, escalates, meas
 
 The metaphors in this book are intentional. The Rubicon, the machine, the goalkeeper, the wizard, the tollbooth, the shadow run, and zero hour are not decorations. They are operating language for decisions teams usually bury under vendor decks and roadmap slides.
 
+### Hear the conversation
+
+I joined The Prompt Room, from Thunai, for Episode 4, published on October 13, 2026. The conversation is called “Reducing Customer Pain at the Source: Inside Sentry’s AI-Native Support Model.” It brings the book's argument into a conversation about the work: how engineering led me into Support, why the goalkeeper needs to move into midfield, and what changes when the team can spend more time removing customer problems.
+
+We also talked about my own early arrogance as an engineer, the context customers lose between teams, and why asking for a human should be welcome. These are some of the ideas I most wanted to get out of the launch room and discuss with other people. Thank you to the Thunai team for giving them that space. I'm happy to share the conversation here.
+
+[Watch Episode 4 on YouTube](https://www.youtube.com/watch?v=JxJb4FDqWdI) or [listen on Spotify](https://open.spotify.com/episode/6x73nZKsh9y1VIw46yCW5q).
+
 ## Who This Book Is For
 
 This book is for support leaders, CX operators, support engineers, customer success leaders, technical founders, and executives who know the AI demo is easy and the launch is hard.
@@ -70,7 +80,7 @@ Each part of the book moves through a different layer of the migration. Part I d
 
 The field notes are deliberately blunt. They are the lines you should be able to repeat in a planning meeting, vendor review, launch room, or executive update. Each one turns the chapter’s story into an operating lesson to carry forward. Appendix E collects them all, followed by the dated observations behind this edition.
 
-Appendix F connects the projects to the chapters. Appendix G gives you 80 prompts for working through your own decisions with the book. Research and product links are collected in [Appendix H](#appendix-h-sources-and-further-reading), organized by chapter, so you can follow the evidence when you need it.
+Appendix F connects the projects to the chapters. Appendix G starts with the steps to install the book as a skill, then gives you 80 prompts for working through your own decisions. Research and product links are collected in [Appendix H](#appendix-h-sources-and-further-reading), organized by chapter, so you can follow the evidence when you need it.
 
 ## The Operating Map
 
@@ -537,6 +547,12 @@ The engineer can show the failure, identify the affected boundary, and describe 
 The distinction is observable behavior. Can the objection be examined? Is there a path to a decision? Does new evidence change the person's view? Is the cost of the existing process included? Sometimes the evidence says to stop the project. That remains a valid decision.
 
 ### Check your own backyard
+
+On The Prompt Room, I told a story from early in my career as an engineer. I had built software I was proud of. A customer looked at it and asked where to click. My first reaction was to think she did not understand it and that I should speak to her boss.
+
+That was arrogance. I had delivered what I thought the specification required, and I was treating her difficulty as a problem with her. The experience stayed with me because it exposed the gap between building software and helping somebody get value from it.
+
+That memory belongs beside the fictional cases. I can defend a design so fiercely that I stop seeing the work it creates for somebody else. Before deciding that a customer or colleague is resisting progress, I need to check whether I have understood what they are trying to do.
 
 Before asking who is blocking you, ask what you are protecting. Would you accept the same requirement if another team imposed it on your project? Have you offered an alternative with an owner and a delivery commitment? Who does the work created by your exception? What result would persuade you to change your mind?
 
@@ -1151,6 +1167,16 @@ Include self-hosted users, prospective customers, and other populations the comp
 
 This is where GiFOC still matters: get in front of customers. Ask them to show the workflow, explain what they expected, and demonstrate what happened. AI summaries can help us choose better questions. They do not remove the need to test our interpretation with the people doing the work.
 
+### A signature is not a restart
+
+In The Prompt Room conversation, I questioned the sharp boundary we draw between pre-sales and post-sales. A customer may have been working through the technical problem for months before signing. Another may sign now and begin the real implementation much later. The contract date tells us something about the commercial relationship. It does not tell us where the customer is in the work.
+
+A solutions architect may already understand the customer's people, constraints, design choices, and unresolved gaps. If a handoff discards that context, the customer has to teach the company again. We create another support problem while congratulating ourselves on closing the sale.
+
+The operating idea is continuity of technical context. It is not a claim that we have reorganized Sentry around one role. Keep the customer's goal, decisions, remaining blockers, and next accountable owner connected across the commercial boundary. Where systems can legitimately relate account, user, and conversation records, use that connection to preserve context. Shared identity still needs correct access controls.
+
+Test the handoff by asking the receiving person to explain the customer's next step without making the customer repeat the whole story. When they cannot, repair the handoff before adding another automated follow-up.
+
 ### Customer success adds a longer clock
 
 The product category is expanding beyond inbound service. Fin's Success offering describes goal-directed onboarding, adoption, and re-engagement over longer periods. Pylon's Account Intelligence describes shared customer context across support and account work. These vendor directions make the promise ledger more relevant, but they do not establish outcomes for our customers.
@@ -1211,6 +1237,14 @@ Do not hide all dimensions inside one executive score. Show applicability, task 
 
 Keep CSAT where it adds information. Response bias limits what we can infer from it; that does not make each response worthless. Combine it with conversation review and product evidence. Remember the customers who never contacted support: the queue cannot describe their experience by itself.
 
+### Hear the problem before the survey
+
+On the podcast, I described collecting twelve times as many signals across the customer journey as we had before. That was my account of our operation, not a benchmark another team should expect to reproduce. The useful change was having more opportunities to notice friction and respond while the customer was still working through it.
+
+Direct conversations, community discussions, public issues, and account interactions can reveal problems that a post-conversation survey misses. They also overlap. A frustrated customer may describe the same issue in three places. Count the signals and the distinct customer problems separately, and keep the channels, comparison period, and coverage behind any growth claim visible.
+
+Inferred sentiment can tell us where to look. Read the underlying exchange before deciding what it means, and ask the customer when the evidence is ambiguous. More collected signals become useful when somebody acts on a supported finding and checks the result. They do not by themselves establish better satisfaction.
+
 ### Measure the work that remains
 
 Automation can make the remaining human queue more complex. A lower number of tickets may coexist with longer investigations, more sensitive decisions, and more responsibility for improving the system. Measure human effort and workload by case mix before concluding that a person or team became less productive.
@@ -1265,6 +1299,14 @@ Build the skills required for the work: reproducing a customer issue, reading re
 Define review authority. A copy correction and a change to account permissions do not require the same process. Give people an explicit path for small changes and a clear route to the appropriate owner for consequential ones. Keep normal code review, tests, and release controls where they apply.
 
 Pair an experienced product engineer with a support engineer for early changes. Make the relationship reciprocal: one brings implementation context; the other brings the customer's repeated failure and the conditions that reproduce it.
+
+### Look for debugging judgment
+
+The podcast also gave me a chance to explain what I look for in technical support work. Can someone form a hypothesis, read the relevant trace, reproduce the behavior, and change their mind when the evidence disagrees? A polished AI-generated demo does not answer those questions.
+
+For hiring or development, use a small broken workflow with enough evidence to investigate it. Let the person use their normal tools, including AI where appropriate. Ask them to explain what they tested, why they rejected an earlier explanation, and what remains unknown. Review the reasoning and the customer explanation as well as the final fix.
+
+The exercise should match the role. A title or a degree is a poor substitute for observing the judgment the work actually requires. Then give the person a way to develop that judgment through paired investigations and reviewed changes.
 
 ### Responsibilities before titles
 
@@ -1459,6 +1501,14 @@ When it came time to launch our AI agent, we had to reject (again) the “Relati
 We leaned into Radical Transparency. We didn’t pretend we were launching a human replacement or a “friendly digital assistant.” We positioned the AI as the ultimate “No-Touch” Luxury.
 
 The customer-facing promise should be specific: which information the agent can use, which actions are enabled, and how to reach a person. Do not advertise an intended billing or configuration workflow as an available capability before it passes the relevant checks. Treat customers as competent partners who deserve an accurate account of what the system can do.
+
+### Welcome the human handoff
+
+On The Prompt Room, I put it this way: “We are not deflecting, we are solving.” We welcome a request for a person. We also sometimes join a conversation before the customer asks, when we can see that the AI is going nowhere or that a human can add value.
+
+A useful handoff should carry the customer's goal, what the agent tried, the relevant evidence, and the unresolved question. It should make the next person useful sooner. Requiring the customer to fight through another loop just to preserve an automation percentage defeats the purpose of the service.
+
+Keep track of why people take over. A requested human conversation, a required escalation, and a preventable agent mistake deserve different follow-up. The handoff itself is not automatically a failure. Inspect whether it arrived at the right time and whether the customer got useful help. Preferences vary by customer and task; a small number of initial requests for a human would not establish that everyone else preferred AI.
 
 ### The Operational Reality
 
@@ -2095,6 +2145,8 @@ The operating model is the set of people and decisions that keep customer eviden
 
 **October 7, 2026 — the customer agent expands its job.** Fin announced Skills, a broader Operator, and customer-success capabilities in Fin 4. As checked for this edition on November 1, the Success page offered early access and some help material retained a coming-soon label. Chapters 7, 17, and 29 address goals, audiences, and longer customer milestones. Confirm access before promising a capability to your own stakeholders.
 
+**October 13, 2026 — the conversation behind the operating model.** My appearance on The Prompt Room connects the midfield idea with the practical work of reducing customer pain. The conversation adds a personal self-check, continuity across the sales handoff, earlier signals, debugging judgment, and a welcome for customers who want a person. Chapters 5, 17, 18, 19, and 23 carry those ideas forward. The Reader's Note links to the episode; its operational observations remain my account, not an independent outcome study.
+
 **October 21, 2026 — support work reaches the product.** At a support engineering panel, a participant described a tooltip improvement responding to recurring confusion; I described a Sentry teammate's CTA change. Other participants contributed an example of a customer agent supplying incorrect context and an account of stale documentation. These remain distinct panel accounts with different evidence, rather than one measured case study. Chapters 15, 17, 19, and 28 draw the relevant distinctions.
 
 **November 1, 2026 — prototypes become operating questions.** This edition reviews RECEIPT's interrupted-action demonstration, Promise Ledger's synthetic account promise, and Stage Manager's bounded owner handoff. Their development and demonstrations are not production outcome studies. Use Chapters 16, 17, and 27 to decide which evidence and responsibilities your own operation needs.
@@ -2159,9 +2211,49 @@ This tool was reviewed for this appendix; the book's evaluation findings do not 
 
 The repository contains the book formats, edition notes, and reusable operating templates. The Support Machine skill helps turn the chapters into decision records and runbooks. Support AI Evals adds a focused evaluation workflow and a calculator for normalized local cohort data.
 
-The calculator does not connect to a helpdesk, decide whether two conversations concern the same issue, or confirm a customer outcome. Those facts must be established before calculating a rate. Appendix G offers prompts for using the book and these materials with your own situation.
+The calculator does not connect to a helpdesk, decide whether two conversations concern the same issue, or confirm a customer outcome. Those facts must be established before calculating a rate. Appendix G begins with installation instructions, followed by prompts for using the book and these materials with your own situation.
 
 ## Appendix G: Talk to the Book
+
+### Install the book as a skill
+
+The book already comes as a skill. You do not need to write one from scratch. The v0.3 package includes the complete revised book, all eight appendices, the podcast additions, and fourteen working templates. Its instructions help an assistant choose the relevant material and turn it into a decision record, scorecard, or runbook.
+
+[Download The Support Machine v0.3 skill ZIP](https://github.com/assafbar2/the-support-machine/raw/refs/heads/codex/support-machine-v0.3/docs/downloads/the-support-machine.zip). You can also [inspect its files in the repository](https://github.com/assafbar2/the-support-machine/tree/codex/support-machine-v0.3/skills/the-support-machine). These links select the v0.3 review edition rather than the earlier public edition.
+
+**In Claude**
+
+1. Download the ZIP above and leave it zipped.
+
+2. Open Customize, then Skills. Choose the plus button, Create skill, then Upload a skill. Upload the ZIP and turn the skill on.
+
+3. If Skills is unavailable, check that code execution and file creation are enabled in Settings. Organization policy may control availability.
+
+4. Start a conversation with: “Use The Support Machine skill to help me with [decision]. First identify the edition of the book you can access.”
+
+**In Codex**
+
+Ask the built-in installer to install the repository's existing skill. Paste this request into Codex:
+
+> $skill-installer Install skills/the-support-machine from GitHub repository assafbar2/the-support-machine, ref codex/support-machine-v0.3.
+
+Then invoke it with `$the-support-machine`, followed by your task. If it does not appear in the available skills, restart Codex and check again. For a manual installation, place the complete `the-support-machine` folder inside `~/.agents/skills/`, retaining its references and templates. Copying only `SKILL.md` leaves the book behind.
+
+**Check that the book is there**
+
+> Use The Support Machine skill. Read its bundled book reference and report the edition, Chapter 28's title, and the purpose of Appendix G. Then identify the template you would use for a build-versus-buy decision. If a file is missing, tell me.
+
+The expected edition is v0.3; Chapter 28 is “Evaluating AI: The Work Is Never Done.” The bundle's `references/book.md` contains the full text. A skill supplies reusable instructions and reference material. Installing it does not train the model on the book or connect it to your helpdesk.
+
+**Keep your copy current**
+
+When a new edition arrives, download or reinstall that edition's skill and repeat the check. A locally installed or uploaded copy does not automatically follow changes in this GitHub repository. Keep any company-specific notes separately so replacing the book does not erase them. The repository's edition notes tell you what changed.
+
+For focused evaluation work, the optional [Support AI Evals ZIP](https://github.com/assafbar2/the-support-machine/raw/refs/heads/codex/support-machine-v0.3/docs/downloads/support-ai-evals.zip) adds a review workflow and a calculator for normalized local data. Install it separately if useful; The Support Machine works on its own.
+
+The setup steps reflect the official product instructions checked for this edition. Appendix H links to the current guides. If your assistant has no skill installation option, attach the complete Markdown edition and use the opening prompt below. That gives this conversation a reference without installing a reusable skill.
+
+### Bring a real decision
 
 You do not have to remember every chapter before using the book. Give an AI assistant the relevant text and bring it a real decision: a vendor comparison, a weak answer, a disputed launch, or a customer who returned after being counted as resolved.
 
@@ -2592,6 +2684,16 @@ Product references were checked for the November 1, 2026 edition. An announcemen
 - [Google SRE guidance on postmortem culture](https://sre.google/workbook/postmortem-culture/) informs incident learning and follow-through on corrective actions.
 
 - [unitQ Support QA](https://www.unitq.com/products/unitq-support-qa/), [Unwrap SupportIQ](https://docs.unwrap.ai/articles/3449954721-supportiq), and [Salesforce Agentforce Testing Center](https://www.salesforce.com/blog/agentforce-testing-center/) are product references for evaluating the evaluator. Their inclusion does not declare a winner or substitute for a comparison using the same cases.
+
+### Appendix G — using the book as a skill
+
+- OpenAI's [Build skills guide](https://learn.chatgpt.com/docs/build-skills) covers skill folders, installation from GitHub, discovery, and invocation in Codex.
+
+- Anthropic's [Use skills in Claude guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) covers ZIP uploads, enabling skills, and account or organization prerequisites. Product interfaces can change; these are the current setup references.
+
+### The podcast conversation
+
+The Prompt Room, Episode 4, was published on YouTube on October 13, 2026. [Watch the conversation](https://www.youtube.com/watch?v=JxJb4FDqWdI) or [listen on Spotify](https://open.spotify.com/episode/6x73nZKsh9y1VIw46yCW5q), where it is titled “Reducing Customer Pain at the Source: Inside Sentry’s AI-Native Support Model.” The full supplied transcript informs Chapters 5, 17, 18, 19, and 23 and the dated note in Appendix E. My operational observations are first-person accounts; the conversation does not establish a controlled comparison between services.
 
 ### The event accounts and prototypes
 

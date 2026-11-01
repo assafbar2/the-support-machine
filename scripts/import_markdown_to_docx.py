@@ -223,20 +223,30 @@ def create(source, destination):
     # These short chapters otherwise leave only their closing lines on a new
     # page. Tighten paragraph spacing without shrinking the body type.
     active_chapter = None
+    active_section = None
     for paragraph in doc.paragraphs:
         if paragraph.style.name == 'Heading 1':
+            active_section = paragraph.text
             match = re.match(r'^(\d+)\.', paragraph.text)
             active_chapter = int(match.group(1)) if match else None
-        if active_chapter in {20,25}:
+        if active_chapter in {19,20,23,25}:
+            compact = active_chapter in {20,23}
             if paragraph.style.name in {'Normal','List Number'}:
-                paragraph.paragraph_format.space_after = Pt(2 if active_chapter == 20 else 4)
-                paragraph.paragraph_format.line_spacing = 1.03 if active_chapter == 20 else 1.05
+                paragraph.paragraph_format.space_after = Pt(2 if compact else 4)
+                paragraph.paragraph_format.line_spacing = 1.03 if compact else 1.05
             elif paragraph.style.name == 'Heading 2':
-                paragraph.paragraph_format.space_before = Pt(10 if active_chapter == 20 else 12)
-                paragraph.paragraph_format.space_after = Pt(6 if active_chapter == 20 else 7)
-            elif paragraph.style.name == 'Heading 1' and active_chapter == 20:
+                paragraph.paragraph_format.space_before = Pt(10 if compact else 12)
+                paragraph.paragraph_format.space_after = Pt(6 if compact else 7)
+            elif paragraph.style.name == 'Heading 1' and compact:
                 paragraph.paragraph_format.space_before = Pt(10)
                 paragraph.paragraph_format.space_after = Pt(7)
+        if active_section in {'Notes for the New Version: v0.3', 'Appendix H: Sources and Further Reading'}:
+            if paragraph.style.name in {'Normal', 'List Bullet'}:
+                paragraph.paragraph_format.space_after = Pt(4)
+                paragraph.paragraph_format.line_spacing = 1.05
+            elif paragraph.style.name == 'Heading 2':
+                paragraph.paragraph_format.space_before = Pt(12)
+                paragraph.paragraph_format.space_after = Pt(6)
     destination.parent.mkdir(parents=True,exist_ok=True)
     doc.save(destination)
 

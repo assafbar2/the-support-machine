@@ -9,10 +9,12 @@ Added:
 - Organizational NIMBY cases, continuing evaluation, and build-versus-buy chapters.
 - Customer-agent verification, action receipts, and an accountable recovery playbook.
 - Customer promise tracking, mature 7/30-day cohorts, definition-aware metrics, support teams shipping fixes, and a reusable shadow release gate.
-- All 29 chapter field notes together with eight dated observations, plus a current vendor snapshot covering Fin, Pylon, Salesforce, and Plain.
+- All 29 chapter field notes together with nine dated observations, plus a current vendor snapshot covering Fin, Pylon, Salesforce, and Plain.
 - A repository appendix, 80 practical prompts for talking to the book, and research/product sources organized by chapter.
 - Eight new templates, revisions to the six existing templates, and a standalone support-ai-evals skill with a tested local cohort calculator.
 - Reader notes, all-format downloads, an editions page, and complete review text.
+- A visible feature celebrating The Prompt Room podcast with YouTube and Spotify links, plus transcript-informed additions in Chapters 5, 17, 18, 19, and 23.
+- Skill installation, verification, and update instructions at the start of Appendix G, with ZIP downloads that contain the revised book.
 
 Refined:
 
@@ -23,6 +25,7 @@ Refined:
 - Migration plans that include tested recovery capacity.
 - Participant descriptions in place of personal names, a lighter fictional-case introduction, and a reader-facing configuration record in the launch inventory.
 - Removed misplaced authoring instructions; moved external research links out of the chapter prose into the sources appendix.
+- Plain chapter titles in the reading copy, which is now identical to the canonical manuscript.
 - One canonical DOCX source and a publishing pipeline that preserves inline links, ordered lists, and unique heading anchors.
 
 Preserved:

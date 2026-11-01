@@ -4,6 +4,8 @@ Account / customer use case / original commitment:
 
 Owner / backup / next update due:
 
+Technical journey across the commercial handoff: current milestone, prior decisions and constraints, unresolved gaps, receiving owner, and confirmation that the context transferred. The contract date does not reset the customer's work or expand data access.
+
 | State | Evidence and authority | Timestamp / version | Gap or contradiction |
 |---|---|---|---|
 | Built | | | |

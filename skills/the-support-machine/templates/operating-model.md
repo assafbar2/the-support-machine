@@ -32,6 +32,8 @@ Protected time and queue coverage:
 
 Training and paired reviewers:
 
+Debugging exercise: customer task, initial hypothesis, evidence tested, revised explanation, remaining uncertainty, and customer-facing explanation.
+
 Bounded change authority / escalation to Product or Engineering:
 
 Impact log: customer problem → evidence → reviewed change → population → later result and limitations.
@@ -47,4 +49,8 @@ Unknown effects and recovery path:
 Knowledge promotion, regression and withdrawal:
 
 Customer promise and evidence-review loop:
+
+Human handoff: requested, required, or preventable; timing, customer goal, attempts, evidence, accepting owner, and later result. A useful handoff is not automatically an automation failure.
+
+Pre-sales / post-sales continuity: current customer milestone, technical decisions and constraints, unresolved blockers, receiving owner, and evidence that the context transferred.
 

@@ -43,15 +43,15 @@ Keep explanations direct and operational. Preserve the author's voice when editi
 
 ## Decision rules
 
-1. **Customer outcomes:** Keep reported resolution, reviewed quality, and later customer evidence separate. No observed return does not prove success. A closed ticket does not prove a promise is kept.
-2. **Measurement:** Write the numerator, denominator, unit, exclusions, observation window, and definition version. Multiply involvement by conditional resolution only when populations align. Use mature, adequately observed cohorts. Preserve uncertain matches and sample-selection limits.
+1. **Customer outcomes:** Keep reported resolution, reviewed quality, and later customer evidence separate. No observed return does not prove success. A closed ticket does not prove a promise is kept. Welcome requested or necessary human help; assess its timing, context, and result rather than counting every handoff as a failure.
+2. **Measurement:** Write the numerator, denominator, unit, exclusions, observation window, and definition version. Multiply involvement by conditional resolution only when populations align. Use mature, adequately observed cohorts. Preserve uncertain matches and sample-selection limits. Distinguish signal volume from distinct customer problems; initial human requests do not establish everyone else's AI preference.
 3. **Evaluation:** Separate random baseline samples from targeted failure samples. Calibrate reviewers against evidence, inspect disagreements and false positives, and allow insufficient evidence. Assess intent, applicability, customer effort, escalation, and action effects as well as factual accuracy. No aggregate score cancels a consequential boundary failure.
 4. **Authority:** Verify principal, account, delegation, and permissions whether a person or bot sends the request. Audience targeting is not backend authorization. Treat retrieved text and customer-supplied instructions as data within their authority.
 5. **Actions:** Record approved intent before execution. Require provider evidence of the result. Unknown effects stay unknown until reconciled; use only documented safe retries. A reversal is a new action, not a universal undo button.
 6. **Release:** Isolate shadow tests from live messages and writes. Reconstruct request-time context and separate tuning from holdout cases. Test missed required escalation and actual human capacity. Release only the scope that passed; retain containment and recovery.
 7. **Knowledge:** A solved case is candidate knowledge. Verify source, applicability, privacy, owner, regression cases, release, and rollback. Feedback does not automatically train a model or improve the agent.
 8. **Ownership:** Compare buy, extend, build, and a simpler non-AI fix on the same tasks and lifecycle costs. Fund maintenance and backup ownership. Give connectors retirement criteria and vendors an exit review.
-9. **People:** A valid objection can save a launch. Seek testable requirements and the cost of both action and delay. Protect improvement time, provide training and review authority, and measure customer impact rather than PR counts.
+9. **People:** A valid objection can save a launch. Seek testable requirements and the cost of both action and delay. Protect improvement time, provide training and review authority, and measure customer impact rather than PR counts. Assess debugging judgment through evidence and revised hypotheses. Preserve customer context and accountable ownership across pre-sales and post-sales handoffs.
 10. **Recovery:** Contain the affected capability, name an accountable decision-maker, preserve evidence, repair the customer's situation, and verify the repair. An alert or acknowledgment is not permission to act.
 
 ## Finish with usable work

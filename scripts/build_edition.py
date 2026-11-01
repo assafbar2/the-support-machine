@@ -32,7 +32,9 @@ def main():
     paths=[source,markdown,pdf,ROOT/"docs/book.html",ROOT/"docs/notes.html",ROOT/"docs/review.html"]
     paths += [ROOT/f"review/the-support-machine-{version}-reading-copy.docx",ROOT/f"review/{version}-reading-guide.md"]
     paths+=sorted((ROOT/"docs/downloads").glob("*"+version+"*"))
-    paths+=[ROOT/"docs/downloads/the-support-machine.skill",ROOT/"docs/downloads/support-ai-evals.skill"]
+    paths += [ROOT/f"docs/downloads/{skill}.{extension}"
+              for skill in ("the-support-machine", "support-ai-evals")
+              for extension in ("skill", "zip")]
     manifest={"version":version,"source":str(source.relative_to(ROOT)),
               "files":{str(p.relative_to(ROOT)):sha(p) for p in paths}}
     (ROOT/f"release-notes/{version}-checksums.json").write_text(json.dumps(manifest,indent=2)+"\n")

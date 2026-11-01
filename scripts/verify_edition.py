@@ -64,6 +64,7 @@ def verify():
     for rel,expected in preserved.items():
         assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==expected,"archive changed: "+rel
     assert (ROOT/f"docs/downloads/the-support-machine-{version}.docx").read_bytes()==source.read_bytes()
+    assert (ROOT/f"review/the-support-machine-{version}-reading-copy.docx").read_bytes()==source.read_bytes(),"reading copy differs from canonical manuscript"
     assert (ROOT/f"docs/downloads/the-support-machine-{version}.md").read_bytes()==book.read_bytes()
     doc=Document(source)
     assert not doc.styles.element.xpath(".//w:pBdr"),"unexpected paragraph border"
@@ -95,9 +96,17 @@ def verify():
                 broken.append((str(path.relative_to(ROOT)),link))
     assert not broken,broken
     for skill in ("the-support-machine","support-ai-evals"):
-        with ZipFile(ROOT/f"docs/downloads/{skill}.skill") as package:
+        archive = ROOT/f"docs/downloads/{skill}.skill"
+        assert (ROOT/f"docs/downloads/{skill}.zip").read_bytes()==archive.read_bytes(),"ZIP alias differs: "+skill
+        with ZipFile(archive) as package:
             assert f"{skill}/SKILL.md" in package.namelist()
             assert not any("__pycache__" in name for name in package.namelist())
+            for path in (ROOT/"skills"/skill).rglob("*"):
+                if path.is_file() and "__pycache__" not in path.parts and path.suffix != ".pyc":
+                    member = str(path.relative_to(ROOT/"skills"))
+                    assert package.read(member)==path.read_bytes(),"stale skill resource: "+member
+            if skill == "the-support-machine":
+                assert package.read(f"{skill}/references/book.md")==book.read_bytes(),"packaged book is stale"
     print(f"Verified {meta['chapters']} chapters, {meta['appendices']} appendices, {len(pdf.pages)} PDF pages, {len(pages)} HTML pages, all local site links, canonical export, downloads, and v0.2 checksums.")
     return len(pdf.pages)
 

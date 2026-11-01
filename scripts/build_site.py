@@ -95,24 +95,25 @@ def build():
     write("review.html","The Support Machine complete review text",reader.replace(actions,actions+review_intro,1),"All of the new edition for review.")
     (ROOT/"review").mkdir(exist_ok=True)
     (ROOT/f"review/{version}-complete-text.md").write_text(book)
-    clone_command="git clone " + (f"--branch codex/support-machine-{version} " if meta["status"]=="review" else "") + "https://github.com/assafbar2/the-support-machine.git"
+    ref = f"codex/support-machine-{version}" if meta["status"]=="review" else "main"
+    install_prompt = f"$skill-installer Install skills/the-support-machine from GitHub repository assafbar2/the-support-machine, ref {ref}."
     write("skill.html","Use The Support Machine Skills",f'''<main class="skill-page" id="main">
 <a class="back" href="index.html">The Support Machine</a><h1>Use the skills</h1>
-<p>Turn the book into decision records, scorecards, and operating plans. Both skills work independently.</p>
+<p>The book is already packaged as a skill. The {version} bundle contains the complete revised manuscript, all eight appendices, podcast additions, and fourteen practical templates. <a href="book.html#appendix-g-talk-to-the-book">Start with Appendix G for setup and 80 prompts.</a></p>
 <h2>The Support Machine</h2><p>For the full migration and operating model: build versus buy, vendors, release gates, action safety, customer promises, recovery, and team design.</p>
-<p><a href="downloads/the-support-machine.skill">Download the skill package</a></p>
+<p><a href="downloads/the-support-machine.zip">Download the skill ZIP</a> · <a href="downloads/the-support-machine.skill">.skill package</a></p>
+<h2>Install in Claude</h2><p>Leave the ZIP zipped. In Customize → Skills, choose + → Create skill → Upload a skill. Upload the ZIP and enable it. Code execution and file creation must be enabled; organization policy may control availability. Start with “Use The Support Machine skill to help me with [decision].”</p>
+<h2>Install in Codex</h2><p>Ask the built-in installer:</p><pre><code>{html.escape(install_prompt)}</code></pre>
+<p>Invoke <code>$the-support-machine</code> followed by your task. Restart Codex if the skill does not appear. For manual installation, copy the complete skill folder, including references and templates, into <code>~/.agents/skills/</code>.</p>
+<h2>Verify and update your copy</h2><p>Ask the skill to read its bundled book reference, identify {version}, and locate Chapter 28 and the build-versus-buy template. Install the new package when a new edition arrives; a local or uploaded copy does not automatically follow the GitHub repository. Keep company-specific notes separately.</p>
 <h2>Support AI Evals</h2><p>For ongoing QA: delayed outcome checks, independent review, calibration, knowledge changes, and a local cohort calculator. It reads normalized local data and does not connect to a helpdesk.</p>
-<p><a href="downloads/support-ai-evals.skill">Download the evaluation skill</a></p>
-<h2>Install locally</h2><pre><code>{clone_command}
-mkdir -p ~/.codex/skills
-cp -R the-support-machine/skills/the-support-machine ~/.codex/skills/
-cp -R the-support-machine/skills/support-ai-evals ~/.codex/skills/</code></pre>
-<p>Load the installed skills in your agent. The review branch contains v0.3 until the edition is merged.</p>
+<p><a href="downloads/support-ai-evals.zip">Download the evaluation skill ZIP</a> · <a href="downloads/support-ai-evals.skill">.skill package</a>. This optional skill works independently; install it separately if useful.</p>
 <h2>Try a concrete task</h2><pre><code>Use The Support Machine to compare buying, extending, and building our support agent.
 Use The Support Machine to rehearse an action whose result is unknown.
 Use Support AI Evals to review our seven-day repeat-contact cohort.
 Use Support AI Evals to design a calibrated comparison of two QA systems.</code></pre>
 <p><a href="https://github.com/assafbar2/the-support-machine">Repository and installation instructions</a></p>
+<p>Current platform guidance: <a href="https://learn.chatgpt.com/docs/build-skills">OpenAI Build skills</a> · <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Use skills in Claude</a>.</p>
 </main>''',"Two focused skills and their practical tools.")
     for skill in ("the-support-machine","support-ai-evals"):
         source=ROOT/"skills"/skill
@@ -130,6 +131,7 @@ Use Support AI Evals to design a calibrated comparison of two QA systems.</code>
                 info.create_system=3
                 info.external_attr=0o100644 << 16
                 bundle.writestr(info,path.read_bytes())
+        shutil.copyfile(DOCS/f"downloads/{skill}.skill", DOCS/f"downloads/{skill}.zip")
     (DOCS/".nojekyll").write_text("")
     (DOCS/"llms.txt").write_text((ROOT/"llms.txt").read_text())
 

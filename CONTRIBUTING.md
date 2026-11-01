@@ -29,11 +29,11 @@ python -m unittest discover -s tests -v
 python scripts/verify_edition.py
 ```
 
-The build exports Markdown, copies the supplied rendered PDF, and regenerates HTML, versioned downloads, complete review text, the chapter-marked reading copy, and skill packages. It does not modify the previous canonical DOCX/PDF. CSS in `docs/styles.css` is maintained directly.
+The build exports Markdown, copies the supplied rendered PDF, and regenerates HTML, versioned downloads, complete review text, the label-free reading copy, and matching ZIP/.skill packages. It does not modify the previous canonical DOCX/PDF. CSS in `docs/styles.css` is maintained directly.
 
 Render and visually inspect every PDF page. Check the cover, contents, chapter starts, tables, field notes, page breaks and links. Text extraction and automated checks do not replace visual review.
 
-Render the separate reading copy too before delivering it. Its labels and cover note are the only text differences from the canonical book; the builder checks that invariant. Keep editorial directions in this file or the research/review records, never in reader-facing chapter endings. Audit names, visible placeholders, and authoring residue when revising the manuscript. Reader prompts in Appendix G are intentional, labeled examples.
+The reading copy is a byte-for-byte copy of the canonical DOCX, so its visual verification uses the same render. The build and edition verifier check that equality. Keep editorial directions in this file or the research/review records, never in reader-facing chapter endings. Audit names, visible placeholders, and authoring residue when revising the manuscript. Reader prompts in Appendix G are intentional examples.
 
 ## Claims and release notes
 
@@ -41,11 +41,13 @@ Check time-sensitive product claims against current primary documentation. Recor
 
 Update `edition.json`, `CHANGELOG.md`, reader notes, and the coverage record. Preserve previous editions and verify the archive checksums. Do not overwrite an old version to save a filename.
 
-v0.3 is a review edition until accepted. Publication is a separate action: update the release status and any review labels, regenerate all formats, merge the reviewed changes, verify Pages, and create a GitHub release with the versioned PDF, DOCX, Markdown and skill packages. Do not create or move a release tag before that decision.
+v0.3 is a review edition until accepted. Publication is a separate action: update the release status and the review-branch installation links in Appendix G and the README, regenerate all formats, merge the reviewed changes, verify Pages, and create a GitHub release with the versioned PDF, DOCX, Markdown and skill packages. Do not create or move a release tag before that decision.
 
 ## Skills and tests
 
 Keep main instructions compact and use references/templates for detail. The evaluation skill remains standalone and its calculator never fetches customer data. Test meaningful cohort boundaries and failures when changing it. The prompts in `evals/evals.json` describe behavioral acceptance cases; they are not claims that a model evaluation has already run.
+
+The main package must include the current canonical Markdown export and every template. ZIP and .skill downloads contain identical bytes; the verifier compares each packaged resource with its source. Keep installation instructions at the start of Appendix G and verify platform-specific steps against current official documentation.
 
 ## Contributions and licensing
 
