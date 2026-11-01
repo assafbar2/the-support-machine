@@ -8,6 +8,7 @@ A free book and practical AI skills for support leaders at API, developer-tool, 
 
 ## Read and review
 
+- [All manuscript additions and deletions](https://github.com/assafbar2/the-support-machine/pull/2/files#diff-84e14219a34f7db72ce51facde9568b51bc20a4d8ff5c9f58525fae1834b34b6)
 - [Complete book in Markdown](skills/the-support-machine/references/book.md)
 - [Complete text for review](review/v0.3-complete-text.md)
 - [PDF](docs/the-support-machine-v0.3.pdf)
@@ -19,7 +20,9 @@ A free book and practical AI skills for support leaders at API, developer-tool, 
 
 Returning readers should start with the version notes. The new material covers organizational NIMBY behavior, continuing evaluation, build versus buy, customer agents, action receipts, recovery, customer promises, honest metrics, and support engineers shipping improvements.
 
-The research challenges the original argument where needed. Fictional scenarios and prototypes are labeled. Vendor capabilities are a dated snapshot, not a guarantee of access or results.
+This edition builds on more use cases I've seen, discussed, researched, and worked through in collaboration with humans and AI since the first version was released.
+
+Fictional scenarios and prototypes are labeled. Vendor capabilities are a dated snapshot, not a guarantee of access or results.
 
 ## Previous edition
 

@@ -13,14 +13,14 @@ Added:
 - Eight new templates, revisions to the six existing templates, and a standalone support-ai-evals skill with a tested local cohort calculator.
 - Reader notes, all-format downloads, an editions page, and complete review text.
 
-Corrected:
+Refined:
 
-- Unsupported precision, placeholders, universal speed/headcount claims, and automatic knowledge-promotion advice.
-- The inference that an onboarding questionnaire alone proves concealed human labor.
-- Blanket objections to composed architectures and unqualified anti-build advice.
-- Claims that silence proves resolution, a separate grader is objective, or a retrieval-score threshold is universally meaningful.
-- Migration language that removed recovery capacity.
-- DOCX/Markdown source-of-truth conflict; lost inline links, ordered-list rendering, and duplicate heading anchors in the publishing pipeline.
+- More explicit scope for speed and staffing examples, with knowledge updates treated as reviewed releases.
+- Vendor assessment that separates onboarding requirements from evidence about how the service operates.
+- Build and architecture guidance that considers ownership, maintenance, and composed platforms.
+- Clearer distinctions between silence, reported resolution, and observed customer outcomes; calibrated evaluation and context-specific retrieval thresholds.
+- Migration plans that include tested recovery capacity.
+- One canonical DOCX source and a publishing pipeline that preserves inline links, ordered lists, and unique heading anchors.
 
 Preserved:
 
