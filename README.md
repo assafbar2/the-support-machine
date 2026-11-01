@@ -4,7 +4,7 @@
 
 A free book and practical AI skills for support leaders at API, developer-tool, and B2B companies, and the executives who work with them.
 
-**v0.3 is the complete review edition:** 29 chapters, five appendices, and two companion skills. The previous public edition is v0.2. This branch prepares the release; it does not change the public website until merged and deployed.
+**v0.3 is the complete review edition:** 29 chapters, eight appendices, and two companion skills. The appendices collect every chapter field note, dated observations, the relevant repositories, 80 practical prompts, and sources by chapter. The previous public edition is v0.2. This branch prepares the release; it does not change the public website until merged and deployed.
 
 ## Read and review
 
@@ -16,7 +16,7 @@ A free book and practical AI skills for support leaders at API, developer-tool, 
 - [PDF](docs/the-support-machine-v0.3.pdf)
 - [Word manuscript](manuscript/The%20Support%20Machine%20-%20manuscript%20v0.3.docx)
 - [Notes for the new version](release-notes/v0.3.md)
-- [All eleven changes and their locations](release-notes/v0.3-coverage.md)
+- [Full scope and chapter locations](release-notes/v0.3-coverage.md)
 - [Changelog](CHANGELOG.md)
 - [Online book](https://assafbar2.github.io/the-support-machine/book.html) — the public site shows the deployed edition.
 

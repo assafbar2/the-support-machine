@@ -61,7 +61,7 @@ def build():
 <a class="brand" href="index.html">The Support Machine</a>
 <p class="edition-label">{html.escape(label)}</p><nav aria-label="Book contents">{toc_html}</nav>
 </aside><main class="book" id="main">{actions}{book_html}</main></div>'''
-    write("book.html","Read The Support Machine "+version,reader,"The complete book, with 29 chapters and five appendices.")
+    write("book.html","Read The Support Machine "+version,reader,f"The complete book, with {meta['chapters']} chapters and {meta['appendices']} appendices.")
     write("index.html","The Support Machine",f'''<main class="home" id="main">
 <p class="eyebrow">Book + practical AI skills · {html.escape(label)}</p>
 <h1>The Support Machine</h1>
@@ -79,7 +79,7 @@ def build():
     notes_html,_=markdown_to_html((ROOT/f"release-notes/{version}.md").read_text())
     write("notes.html","Notes for "+version,f'<main class="book notes-page" id="main">{actions}{notes_html}</main>',"What changed in this edition and why to reread.")
     editions=f'''<main class="skill-page" id="main"><a class="back" href="index.html">The Support Machine</a>
-<h1>Editions</h1><h2>{version} · November 1, 2026</h2><p>{html.escape(label)}. 29 chapters, five appendices, and two companion skills.</p>
+<h1>Editions</h1><h2>{version} · November 1, 2026</h2><p>{html.escape(label)}. {meta['chapters']} chapters, {meta['appendices']} appendices, and two companion skills.</p>
 <div class="actions"><a href="book.html">Read online</a>{downloads(version)}<a href="notes.html">Version notes</a></div>
 <h2>{previous} · Previous edition</h2><p>The original PDF, Word manuscript, and Markdown are preserved. The archived online book keeps the previous text and styling.</p>
 <div class="actions"><a href="editions/{previous}/book.html">Read {previous}</a>{downloads(previous)}</div>

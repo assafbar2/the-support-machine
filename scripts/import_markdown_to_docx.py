@@ -92,6 +92,7 @@ def format_document(doc):
         styles[name].font.color.rgb = RGBColor(0,0,0)
         styles[name].paragraph_format.space_after = Pt(6)
         styles[name].paragraph_format.line_spacing = 1.13
+    styles['Quote'].font.italic = False
     for name in ("Cell Body","Code"):
         if name not in styles:
             styles.add_style(name, WD_STYLE_TYPE.PARAGRAPH)
@@ -187,6 +188,10 @@ def create(source, destination):
                 style = "Subtitle" if content.startswith("How to Deploy") else "Normal"
             p = doc.add_paragraph(style=style)
             add_inline(p,content)
+            if kind == 'paragraph' and re.fullmatch(r'\*\*[^*]+\*\*',content):
+                p.paragraph_format.keep_with_next = True
+            if kind == 'quote':
+                p.paragraph_format.keep_together = True
             if in_contents:
                 p.paragraph_format.line_spacing = 1.0
                 p.paragraph_format.space_after = Pt(2)
@@ -200,7 +205,7 @@ def create(source, destination):
                         props = xml("w:rPr")
                         element.insert(0,props)
                     props.append(xml("w:sz",val=21))
-            if content.startswith("Field note:"):
+            if plain(content).startswith("Field note:"):
                 p.paragraph_format.space_before = Pt(6)
                 p.paragraph_format.keep_together = True
                 if len(doc.paragraphs) > 1:
@@ -215,6 +220,23 @@ def create(source, destination):
                 expected_number = extra+1
     if doc.paragraphs:
         doc.paragraphs[-1].paragraph_format.keep_together = True
+    # These short chapters otherwise leave only their closing lines on a new
+    # page. Tighten paragraph spacing without shrinking the body type.
+    active_chapter = None
+    for paragraph in doc.paragraphs:
+        if paragraph.style.name == 'Heading 1':
+            match = re.match(r'^(\d+)\.', paragraph.text)
+            active_chapter = int(match.group(1)) if match else None
+        if active_chapter in {20,25}:
+            if paragraph.style.name in {'Normal','List Number'}:
+                paragraph.paragraph_format.space_after = Pt(2 if active_chapter == 20 else 4)
+                paragraph.paragraph_format.line_spacing = 1.03 if active_chapter == 20 else 1.05
+            elif paragraph.style.name == 'Heading 2':
+                paragraph.paragraph_format.space_before = Pt(10 if active_chapter == 20 else 12)
+                paragraph.paragraph_format.space_after = Pt(6 if active_chapter == 20 else 7)
+            elif paragraph.style.name == 'Heading 1' and active_chapter == 20:
+                paragraph.paragraph_format.space_before = Pt(10)
+                paragraph.paragraph_format.space_after = Pt(7)
     destination.parent.mkdir(parents=True,exist_ok=True)
     doc.save(destination)
 

@@ -34,9 +34,24 @@ def verify():
     text=book.read_text()
     numbers=[int(n) for n in re.findall(r"^## (\d+)\.",text,re.M)]
     assert numbers==list(range(1,meta["chapters"]+1)),numbers
-    assert len(re.findall(r"^## Appendix [A-E]:",text,re.M))==meta["appendices"]
+    appendix_letters=re.findall(r"^## Appendix ([A-Z]):",text,re.M)
+    assert appendix_letters==[chr(ord('A')+i) for i in range(meta['appendices'])],appendix_letters
     assert len(re.findall(r"^## Part [IVX]+:",text,re.M))==5
     assert not re.search(r"\?\?\?|<[-—]AI|AI-generated phrasing|AI number",text)
+    visible=re.sub(r'\]\([^)]+\)',']',text)
+    assert not re.search(r'\bhorror\b|unstructured thoughts for LLM|Date the next note|Do not put the result of a future demo into the book',visible,re.I),"reader-facing editorial residue"
+    assert not re.search(r'\b(?:Rene|Jordyn|Simon|Kegan|Lahey|Edmondson|Kurzweil|Turing)\b|Hernán|Cortés',visible),"named narrative participant"
+    assert len(re.findall(r'^\*\*\d{2}\. ',text,re.M))==80,"prompt appendix is incomplete"
+    chapters=re.findall(r'^## (\d+)\. ([^\n]+)\n(.*?)(?=^## |\Z)',text,re.M|re.S)
+    chapter_notes=[]
+    for number,title,body in chapters:
+        notes=re.findall(r'^_Field note: (.+)_$',body,re.M)
+        assert len(notes)==1,(number,notes)
+        chapter_notes.append((number,notes[0]))
+    collected=text.split('## Appendix E: All Field Notes\n',1)[1].split('### Dated observations',1)[0]
+    assert len(re.findall(r'^\*\*Chapter \d+ —',collected,re.M))==meta['chapters']
+    for number,note in chapter_notes:
+        assert note in collected,'missing collected field note '+number
     source=ROOT/f"manuscript/The Support Machine - manuscript {version}.docx"
     with TemporaryDirectory() as temp:
         regenerated=Path(temp)/"book.md"
@@ -54,7 +69,7 @@ def verify():
     assert not doc.styles.element.xpath(".//w:pBdr"),"unexpected paragraph border"
     pdf=PdfReader(ROOT/f"docs/the-support-machine-{version}.pdf")
     combined="\n".join(page.extract_text() or "" for page in pdf.pages)
-    for marker in ("AI NIMBYs","Build vs. Buy","When the Customer Is a Bot","Did the Action Actually Happen","When the Agent Gets It Wrong","The Work Is Never Done","Appendix E"):
+    for marker in ("AI NIMBYs","Build vs. Buy","When the Customer Is a Bot","Did the Action Actually Happen","When the Agent Gets It Wrong","The Work Is Never Done","Appendix E","Repositories Behind the Book","Talk to the Book","Sources and Further Reading"):
         assert marker in combined,"missing PDF section: "+marker
     for i,page in enumerate(pdf.pages):
         assert len((page.extract_text() or "").strip())>30,f"empty PDF page {i+1}"

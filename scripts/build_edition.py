@@ -6,6 +6,7 @@ from pathlib import Path
 import shutil
 from export_docx_to_markdown import export_docx
 from build_site import build
+from build_reading_copy import build as build_reading_copy
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -27,7 +28,9 @@ def main():
     if args.pdf.resolve()!=pdf.resolve():
         shutil.copyfile(args.pdf,pdf)
     build()
+    build_reading_copy()
     paths=[source,markdown,pdf,ROOT/"docs/book.html",ROOT/"docs/notes.html",ROOT/"docs/review.html"]
+    paths += [ROOT/f"review/the-support-machine-{version}-reading-copy.docx",ROOT/f"review/{version}-reading-guide.md"]
     paths+=sorted((ROOT/"docs/downloads").glob("*"+version+"*"))
     paths+=[ROOT/"docs/downloads/the-support-machine.skill",ROOT/"docs/downloads/support-ai-evals.skill"]
     manifest={"version":version,"source":str(source.relative_to(ROOT)),
