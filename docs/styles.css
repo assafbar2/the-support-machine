@@ -206,4 +206,20 @@ code {
   }
   .book { padding-top: 28px; }
   .book-actions { position: sticky; top: 0; background: var(--paper); padding: 10px 0; }
+  .book h2, .book h3 { scroll-margin-top: 132px; }
 }
+
+/* Edition navigation and readable small screens. */
+.book-actions { flex-wrap: wrap; }
+.edition-links { margin-top: 24px; }
+.edition-summary { margin-top: 48px; max-width: 760px; font-size: 20px; }
+.edition-summary h2 { font-size: 32px; line-height: 1.2; }
+.skill-page h1 { font-size: clamp(42px, 8vw, 76px); line-height: 1; margin-bottom: 36px; }
+.skill-page h2 { margin-top: 48px; }
+.edition-label { color: var(--muted); font: 12px/1.4 ui-monospace, monospace; }
+.review-notice { border-left: 3px solid var(--accent); padding-left: 16px; }
+.notes-page { max-width: 900px; }
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { position: fixed; top: 8px; left: 8px; z-index: 10; background: white; padding: 12px; }
+.book p, .book li, td { overflow-wrap: anywhere; }
+@media (max-width: 500px) { .book { padding-left: 18px; padding-right: 18px; } .book-actions a { font-size: 11px; padding: 7px 9px; } .book h2 { font-size: 28px; } }

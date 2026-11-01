@@ -1,86 +1,60 @@
 # AI Support Rollout Plan
 
-## 1. Thesis
+## Decision and friction
 
-What are we actually migrating?
+Customer task, current failure, relevant populations and exclusions:
 
-## 2. Current Friction
+Queue evidence, product evidence, and customer interviews:
 
-What is broken or unsustainable in the current support model?
+Simpler product/docs/workflow improvement worth testing:
 
-## 3. Queue Audit
+## Ownership and selection
 
-| Question | Answer |
-|---|---|
-| What repeat questions dominate volume? |  |
-| Which questions are solvable with existing knowledge? |  |
-| Which require human judgment? |  |
-| Which reveal docs gaps? |  |
-| Which reveal product gaps? |  |
+Decision owner and backup:
 
-## 4. Vendor / Tool Decision
+Buy / extend / build boundaries, lifecycle costs, and connector retirement:
 
-Chosen path:
+Vendor capabilities, actual availability, contractual promises, and exit assumptions:
 
-Why:
+Objections, evidence that would change the decision, and cost of delay:
 
-Risks:
+## Machine design
 
-## 5. Machine Architecture
+Knowledge authority and access:
 
-Retrieval:
+Reasoning, missing context, audiences and goal conflicts:
 
-Reasoning:
+Tools, enforced permissions, operation IDs and receipts:
 
-Escalation:
+Unknown-effect reconciliation, retry limits and human handoff:
 
-Read/write actions:
+Reviewer calibration and error ownership:
 
-Audit:
+## Release and migration
 
-Human override:
+Isolated shadow environment and request-time cases:
 
-## 6. Guardrails
+Holdout tests, hard stops, repeated trials and allowed scope:
 
-What the machine can say:
+Human capacity and tested fallback:
 
-What it can do:
+Legacy retirement conditions and retained records:
 
-What it must never do:
+Launch inventory, owners, customer language and cutover:
 
-When it stops:
+## Operate
 
-## 7. Shadow Run
+Baseline with versioned definitions:
 
-Test set:
+First forty-eight hours and first thirty days review:
 
-Pass criteria:
+Rolling 7/30-day cohorts, independent review and current failure rubric:
 
-Stop conditions:
+Knowledge change control and incident recovery:
 
-## 8. Launch Inventory
+Customer promise ledger and deliberate customer contact:
 
-- [ ] Owners
-- [ ] Baseline
-- [ ] Monitoring
-- [ ] Rollback
-- [ ] Escalation
-- [ ] Customer language
-- [ ] First 30 days cadence
+Protected support improvement time, training, review authority and impact log:
 
-## 9. First 30 Days
-
-Daily review:
-
-Weekly changes:
-
-Metrics:
-
-## 10. Operating Model
-
-Who owns the machine after launch?
-
-What rituals keep it healthy?
-
-How does the support team get promoted into system work?
+Next decision, required evidence, owner and date:
 

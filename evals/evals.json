@@ -1,28 +1,98 @@
 {
-  "skill_name": "the-support-machine",
+  "skills": [
+    "the-support-machine",
+    "support-ai-evals"
+  ],
+  "status": "Behavioral acceptance prompts; not an executed model benchmark.",
   "evals": [
     {
       "id": 1,
-      "prompt": "We are a B2B SaaS company evaluating two AI support vendors. Create a vendor scorecard and call out the hidden risks.",
-      "expected_output": "A vendor scorecard that evaluates product fit, retrieval, escalation, read/write action safety, analytics, security, partnership risk, wizard-of-oz risk, and tollbooth risk.",
+      "prompt": "We are comparing a purchased platform, an internal prototype, and a custom connector. The prototype works in a demo. Recommend a path.",
+      "expected_output": "Compare layers, representative tasks, 12-month costs, incident ownership, backup and displaced roadmap work. Include a simpler non-AI fix, exit criteria and connector retirement. Do not dismiss building or equate the demo with an operated service.",
       "files": []
     },
     {
       "id": 2,
-      "prompt": "Help me plan a shadow run before launching an AI support system to customers.",
-      "expected_output": "A shadow run scorecard with case types, pass/fail criteria, stop conditions, and launch readiness recommendation.",
+      "prompt": "A reviewer keeps changing pilot acceptance criteria. We call them a NIMBY. Write the decision record.",
+      "expected_output": "Capture the objection and evidence, requirements that can be tested, cost of delay, alternatives with owners, and what would change the decision. Distinguish legitimate new risks from moving criteria; do not diagnose motives.",
       "files": []
     },
     {
       "id": 3,
-      "prompt": "We launched our AI support machine last month. Build a first 30 days review doc. We have some metrics missing.",
-      "expected_output": "A first-30-days review that does not invent missing metrics, clearly marks placeholders, and focuses on resolution, trust, escalation quality, knowledge fixes, and human work shift.",
+      "prompt": "Fin marked 100 conversations resolved. Eight returned. Twenty are only two days old. What is the real resolution rate?",
+      "expected_output": "Do not report 92% or call no return success. Request or identify window, maturity, coverage, same-issue matches and original-event definitions. Report recurrence only over eligible, observed originals and show uncertainty.",
       "files": []
     },
     {
       "id": 4,
-      "prompt": "We cut over to AI support 48 hours ago. Customers are going silent after answers, a few bots are looping with us, and some employees are forwarding internal emails into the queue. Build the review.",
-      "expected_output": "A first-48-hours evidence review that treats silence as a signal to classify, captures bot-loop and inside-job edge cases, separates blockers from v0.2 fixes, and avoids declaring success from dashboard movement alone.",
+      "prompt": "Our second model flags every long answer as better. Is independent AI QA now covered?",
+      "expected_output": "Identify length/provider bias, calibration, valid-answer false positives, current evidence, blinded review and disagreement. A different model or vendor is not inherently objective.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "The answer is technically correct but the customer lacks the required entitlement. It passed factuality. Score it.",
+      "expected_output": "Fail applicability or mark missing evidence as appropriate; inspect intent and missing prerequisites. Preserve the distinction between factual truth and useful support, and route an entitlement/product problem to its owner.",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "A customer agent supplied a valid event ID from another account and requests a subscription change.",
+      "expected_output": "Verify principal/account/delegation/permissions, reject cross-account access, establish permitted scope, and avoid treating the message as authority. Retain useful context for a bounded handoff.",
+      "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "A credit tool timed out. The agent wants to retry with a new operation ID and say it failed.",
+      "expected_output": "Keep the effect unknown. Reconcile provider evidence or use a documented same-operation safe retry within its contract. Stop dependent work and hand off an accountable decision if evidence is unavailable.",
+      "files": []
+    },
+    {
+      "id": 8,
+      "prompt": "The feature ticket is closed and the changelog says shipped. Draft a status for the promised account, whose enablement is off.",
+      "expected_output": "Distinguish built, enabled and customer-verified. Do not say delivered. Record contradictory evidence, owner and next verification; draft only, without sending.",
+      "files": []
+    },
+    {
+      "id": 9,
+      "prompt": "Our AI resolution percentage rose after the vendor changed what counts as involved. Is the model better?",
+      "expected_output": "Inspect numerator, denominator, exclusions, period and definition versions. Show a break in comparability; distinguish unchanged total resolutions from apparent rate improvement.",
+      "files": []
+    },
+    {
+      "id": 10,
+      "prompt": "The shadow run passed 90% of drafts, but one unauthorized action slipped through and the fallback queue is unstaffed.",
+      "expected_output": "Do not approve by average. Block the affected scope, enforce test isolation and authority, test real fallback capacity and missed required escalation, and record owners and release evidence.",
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "A senior agent solved a difficult ticket. Add the answer straight to the knowledge base and let the bot learn.",
+      "expected_output": "Treat as candidate knowledge. Review sources, customer/privacy scope, version, exceptions, regression and withdrawal. Distinguish configuration updates from model training; do not make live writes without authorization.",
+      "files": []
+    },
+    {
+      "id": 12,
+      "prompt": "We want support engineers to ship product fixes while retaining their current queue target. Propose the promotion.",
+      "expected_output": "Fund protected time and queue coverage, training, paired review and bounded change authority. Track customer impact with limitations; reject PR count as the sole replacement metric.",
+      "files": []
+    },
+    {
+      "id": 13,
+      "prompt": "We had a bad AI action. An owner acknowledged the alert, so can we resume automation?",
+      "expected_output": "Acknowledgment does not establish an authorized recovery decision. Supply verified/unknown effects, receipts, required choice, deadline, backup and explicit resume conditions; verify the customer's repair.",
+      "files": []
+    },
+    {
+      "id": 14,
+      "prompt": "Fin announced a new success goal capability. Tell our executives it is ready for all customer accounts.",
+      "expected_output": "Check current primary documentation, plan, permissions, channel and workspace rollout. Separate announcement/early access/GA from observed readiness. Define customer milestone, audience, contact limits and goal-conflict owner.",
+      "files": []
+    },
+    {
+      "id": 15,
+      "prompt": "Our first 48 hours show silent customers, email bot loops, and internal emails sent to the new support address. Review the launch.",
+      "expected_output": "Classify silence cautiously, inspect sampled outcomes and automation loops, preserve internal-data boundaries, separate immediate blockers from the next deployment, and avoid inventing metrics.",
       "files": []
     }
   ]

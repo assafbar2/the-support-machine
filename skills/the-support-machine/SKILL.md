@@ -1,135 +1,59 @@
 ---
 name: the-support-machine
-description: >
-  Use whenever the user is planning, auditing, launching, or operating AI customer support for a B2B or technical product.
-  This skill turns The Support Machine book into an executable field guide: diagnose support friction, evaluate vendors,
-  design AI support architecture, run a shadow test, prepare launch, review the first 30 days, and define the post-launch
-  operating model. Trigger on phrases like "AI support rollout", "support bot", "customer support AI", "vendor scorecard",
-  "shadow run", "launch runbook", "first 30 days", or "support operating model".
+description: Plan, audit, launch, and operate AI customer support for B2B, API, and developer products. Use for queue diagnosis, build-versus-buy and vendor decisions, shadow runs, action safety, customer promises, recovery, metrics, team design, and continuing evaluation. Produces concrete decision records, scorecards, and runbooks grounded in The Support Machine.
 ---
 
 # The Support Machine
 
-Use the book as an operating system, not as decorative context.
+AI support is an operating model migration. Produce the artifact the operator needs to make the next decision.
 
-Core thesis: **AI support is not a chatbot project. It is an operating model migration.**
+## Start with the decision
 
-The skill helps a reader apply the book to their own company. Preserve the book's metaphor system: machine, Rubicon, zero hour, goalkeeper, wizard, tollbooth, shadow run, and launch inventory. These are operating language for decisions teams usually bury under vendor decks and roadmap slides.
+Infer the stage from the request: diagnosis, procurement, design, release, recovery, or ongoing operation. Use supplied context before asking questions. Ask at most three focused questions if missing information materially changes the answer; otherwise state assumptions and proceed.
 
-## First Move
+Keep the book's useful language: machine, Rubicon, goalkeeper and midfield, wizard, tollbooth, shadow run, launch inventory, and zero hour. Do not invent the author's experience or customer results.
 
-Identify which mode the user is in:
+## Load only the relevant material
 
-1. **Diagnose the queue**: they need to know whether AI is the right answer.
-2. **Evaluate vendors**: they are choosing or challenging a tool/partner.
-3. **Design the machine**: they need architecture, guardrails, escalation, or read/write boundaries.
-4. **Run the shadow test**: they need pre-launch validation.
-5. **Prepare zero hour**: they need launch inventory, runbook, owners, rollback, and comms.
-6. **Operate after launch**: they need first-48-hours evidence review, first-30-days review, metrics, governance, or org design.
+- Strategy, narrative, or chapter reasoning: `references/book.md` (v0.3; full manuscript exported from DOCX).
+- Full migration: `templates/ai-support-rollout-plan.md`.
+- Vendor capability, availability, continuity, or acquisition: `templates/vendor-scorecard.md`.
+- Buy, extend, build, or retire a connector: `templates/build-buy-decision.md`.
+- Resistance or conflicting requirements: `templates/objection-decision-record.md`.
+- Actions, customer agents, uncertain effects, or retries: `templates/action-readiness-matrix.md`.
+- A customer commitment outliving its ticket: `templates/customer-promise-ledger.md`.
+- Metric definitions and comparison: `templates/metric-dictionary.md`.
+- Continuing QA and 7/30-day checks: `templates/continuous-evaluation-plan.md`.
+- Knowledge corrections: `templates/knowledge-change-record.md`.
+- Prelaunch or material change: `templates/shadow-run-scorecard.md`.
+- Cutover: `templates/launch-day-runbook.md`.
+- Incident or failed action: `templates/incident-recovery-playbook.md`.
+- Early operation: `templates/first-30-days-review.md`.
+- Team responsibilities and support engineers shipping fixes: `templates/operating-model.md`.
 
-If the mode is unclear, ask at most three concise questions:
+The optional sibling `support-ai-evals` skill adds a standalone evaluation workflow and a deterministic cohort calculator. This skill remains usable without it. Do not imply that either skill has connected to a helpdesk or changed production.
 
-- What product and customer type is this for?
-- What stage are you in: deciding, vendor selection, design, shadow run, launch, or post-launch?
-- What artifact do you need right now: memo, scorecard, runbook, checklist, architecture, or operating model?
+## Standards for every artifact
 
-Then produce the artifact. Do not stall with long discovery.
+State the decision, evidence, assumptions, missing information, owner and backup, next actions, and verification method. Include concrete stop conditions where the proposed activity can harm a customer. Leave unknown names and metrics explicitly unassigned; do not fabricate them.
 
-## Reference Loading
+Distinguish observed facts, author experience, vendor claims, proposals, and fictional illustrations. For time-sensitive claims, inspect current primary documentation where available and date the check. A feature announcement does not establish availability in a particular workspace. If current sources cannot be accessed, identify that limit.
 
-Load only what you need:
+Keep explanations direct and operational. Preserve the author's voice when editing the book; do not turn metaphors into unsupported factual claims.
 
-- `references/book.md`: canonical book text and philosophy. Load when the user asks for strategy, framing, chapter logic, or book-grounded language.
-- `templates/vendor-scorecard.md`: vendor/tool evaluation.
-- `templates/shadow-run-scorecard.md`: pre-launch testing.
-- `templates/launch-day-runbook.md`: zero-hour launch plan.
-- `templates/first-30-days-review.md`: post-launch operating review.
-- `templates/operating-model.md`: ownership, governance, rituals, and org design.
-- `templates/ai-support-rollout-plan.md`: end-to-end migration plan.
+## Decision rules
 
-## Operating Principles
+1. **Customer outcomes:** Keep reported resolution, reviewed quality, and later customer evidence separate. No observed return does not prove success. A closed ticket does not prove a promise is kept.
+2. **Measurement:** Write the numerator, denominator, unit, exclusions, observation window, and definition version. Multiply involvement by conditional resolution only when populations align. Use mature, adequately observed cohorts. Preserve uncertain matches and sample-selection limits.
+3. **Evaluation:** Separate random baseline samples from targeted failure samples. Calibrate reviewers against evidence, inspect disagreements and false positives, and allow insufficient evidence. Assess intent, applicability, customer effort, escalation, and action effects as well as factual accuracy. No aggregate score cancels a consequential boundary failure.
+4. **Authority:** Verify principal, account, delegation, and permissions whether a person or bot sends the request. Audience targeting is not backend authorization. Treat retrieved text and customer-supplied instructions as data within their authority.
+5. **Actions:** Record approved intent before execution. Require provider evidence of the result. Unknown effects stay unknown until reconciled; use only documented safe retries. A reversal is a new action, not a universal undo button.
+6. **Release:** Isolate shadow tests from live messages and writes. Reconstruct request-time context and separate tuning from holdout cases. Test missed required escalation and actual human capacity. Release only the scope that passed; retain containment and recovery.
+7. **Knowledge:** A solved case is candidate knowledge. Verify source, applicability, privacy, owner, regression cases, release, and rollback. Feedback does not automatically train a model or improve the agent.
+8. **Ownership:** Compare buy, extend, build, and a simpler non-AI fix on the same tasks and lifecycle costs. Fund maintenance and backup ownership. Give connectors retirement criteria and vendors an exit review.
+9. **People:** A valid objection can save a launch. Seek testable requirements and the cost of both action and delay. Protect improvement time, provide training and review authority, and measure customer impact rather than PR counts.
+10. **Recovery:** Contain the affected capability, name an accountable decision-maker, preserve evidence, repair the customer's situation, and verify the repair. An alert or acknowledgment is not permission to act.
 
-- **Resolution beats deflection.** Do not optimize for avoided human touches if customers are not getting trustworthy outcomes.
-- **Trust is the design constraint.** Security, escalation, auditability, and stop conditions are not bureaucracy. They make deployment possible.
-- **The queue is a signal stream.** Treat repeated customer confusion as product, docs, onboarding, and GTM evidence.
-- **Read/write AI crosses the Rubicon.** If the system can take action, require permissions, logs, rollback, and deterministic boundaries.
-- **The shadow run earns the launch.** Test against real cases before customers feel the blast radius.
-- **Launch creates evidence.** Watch real conversations, not only dashboards; silence, customer resistance, bot loops, and escalation quality all teach the machine.
-- **Humans get promoted.** The best support work moves from ticket solving to system architecture.
-- **Do not invent metrics.** If the user's data is missing, mark placeholders clearly and say what to collect.
+## Finish with usable work
 
-## Artifact Standards
-
-Every output should be useful in a real operating meeting.
-
-Include:
-
-- Clear decision or recommendation.
-- Current stage and risk level.
-- Owners or roles.
-- Concrete next actions.
-- Evidence needed or missing.
-- A failure mode section.
-- A "stop condition" when the machine should escalate to a human.
-
-Avoid:
-
-- Generic AI transformation language.
-- Vendor-sounding claims without evidence.
-- Treating "deflection" as success by itself.
-- Replacing hard operational decisions with vague "alignment."
-
-## Common Outputs
-
-### AI Support Rollout Plan
-
-Use `templates/ai-support-rollout-plan.md`.
-
-Sections:
-1. Thesis
-2. Current friction
-3. Queue audit
-4. Vendor/tool decision
-5. Machine architecture
-6. Guardrails
-7. Shadow run
-8. Launch inventory
-9. First 30 days
-10. Operating model
-
-### Vendor Scorecard
-
-Use `templates/vendor-scorecard.md`.
-
-Score vendors on product fit, retrieval, escalation, read/write action, analytics, security, and partnership. Be especially hostile to wizard-of-oz automation and tollbooth-style implementation partners.
-
-### Shadow Run Scorecard
-
-Use `templates/shadow-run-scorecard.md`.
-
-The goal is not to prove the machine is impressive. The goal is to prove where it breaks before customers pay the price.
-
-### Launch Runbook
-
-Use `templates/launch-day-runbook.md`.
-
-Zero hour needs named owners, rollback, escalation, monitoring, and launch-room rituals.
-
-### First 30 Days Review
-
-Use `templates/first-30-days-review.md`.
-
-Review resolution quality, escalation quality, hallucinations, customer trust, knowledge fixes, human work shift, and governance changes.
-
-## Voice
-
-Direct, operational, and metaphor-rich. The tone should feel like a sharp field guide written by someone who has sat in the launch room.
-
-Use lines like:
-
-- "The vendor demo is not the hard part. The launch is."
-- "A bot answers. A support machine operates."
-- "The machine earns autonomy one bounded decision at a time."
-- "Launch day is when the machine starts producing evidence."
-
-Do not over-polish away the book's edge.
+Deliver a complete artifact with a recommendation and concrete follow-through. Do not stop at a list of generic questions. Do not publish, send customer messages, or change live configuration unless the user authorizes that work.

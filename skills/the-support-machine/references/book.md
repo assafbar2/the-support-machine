@@ -1,12 +1,42 @@
 # The Support Machine
 
-> Markdown export of the manuscript. The canonical formatted source is `manuscript/The Support Machine - manuscript v0.2.docx`.
-
-The Support Machine
+> Markdown export of the manuscript. The canonical formatted source is `manuscript/The Support Machine - manuscript v0.3.docx`.
 
 How to Deploy AI in Customer Support Without Breaking Trust
 
 Assaf Barnir
+
+v0.3 · November 1, 2026 · Review edition
+
+## Notes for the New Version: v0.3
+
+This edition moves the book beyond the launch room. The original migration story remains, but more of the work now happens after the first answer: verifying the result, recovering when it fails, and changing the system without teaching it a new mistake.
+
+If you read v0.2, there are six new chapters and substantial revisions across the operating material. Here is where to return.
+
+- **Organizational resistance:** Chapter 5 adds four fictional NIMBY horror cases and a self-check. It also makes room for the objection that correctly stops an unsafe rollout.
+
+- **Build versus buy:** Chapters 7 and 8 revisit current platforms, component ownership, lifecycle cost, and the conditions that justify building. A connector gets a retirement plan, and a vendor gets an exit-risk review.
+
+- **Agents talking to agents:** Chapters 15 and 16 separate trustworthy identity and evidence from proof that an action actually happened. A timeout can leave an effect unknown.
+
+- **Promises and measurement:** Chapters 17 and 18 follow commitments to the customer's working result, explain the 40% × 40% = 16% calculation, and keep metric-definition changes visible.
+
+- **People who ship improvements:** Chapters 6, 19, and 29 give the midfield idea an operating model: protected time, training, review authority, and evidence of customer impact.
+
+- **Release and recovery:** Chapters 20, 22, and 27 reconcile decisive migration with a tested fallback, turn the shadow run into a repeatable release gate, and define accountable recovery.
+
+- **Evaluation after launch:** Chapter 28 develops seven- and thirty-day outcome checks, calibrated independent review, and a rubric for correct-but-useless answers, missed intent, and impossible fixes.
+
+- **A living record:** Appendix E dates the panels, product changes, and prototypes that changed the advice. The companion templates and skills turn those lessons into usable work.
+
+Outside research changed some of my conclusions. A separate evaluator can still score badly. Silence does not prove success. A composed platform can be a sensible architecture. A valid objection can save a launch. The book now makes those limits explicit instead of hiding them inside a confident generalization.
+
+The vendor discussion is a snapshot checked on November 1, 2026. Announced, early-access, generally available, and enabled in your workspace are different states. Fin's Operator, Skills, audiences, and customer-success direction widen the questions to ask; they do not remove the need to test your own configuration. Pylon, Salesforce, and Plain provide useful alternative approaches to examine.
+
+The new NIMBY cases are labeled fictional. Hackathon projects are labeled prototypes, with their demonstrated scope and limits. Personal panel accounts remain attributed to the person who described them. Proposed practices are not presented as production results.
+
+This is v0.3, following the repository's existing v0.2 edition. The previous edition remains available in the [edition archive](https://assafbar2.github.io/the-support-machine/editions.html), including its PDF, DOCX, and Markdown. Release notes explain what changed; the full book contains all of the text.
 
 ## Reader's Note
 
@@ -34,7 +64,7 @@ The story matters because AI support is full of false confidence. If you only re
 
 Each part of the book moves through a different layer of the migration. Part I diagnoses the friction. Part II walks through the market and the minefield. Part III designs the machine. Part IV launches it. Part V turns launch into an operating model.
 
-The field notes are deliberately blunt. They are the lines you should be able to repeat in a planning meeting, vendor review, launch room, or executive update. Each one turns the chapter’s story into an operating lesson to carry forward..
+The field notes are deliberately blunt. They are the lines you should be able to repeat in a planning meeting, vendor review, launch room, or executive update. Each one turns the chapter’s story into an operating lesson to carry forward.
 
 ## The Operating Map
 
@@ -54,63 +84,83 @@ Gate 6: Operate the living system. Review failures, ship fixes, update knowledge
 
 ## Contents
 
-PART I: THE FRICTION
+**Part I: The Friction**
 
-1. The Friction Point
+- [1. The Friction Point](#1-the-friction-point)
 
-2. Do We Actually Need AI, or Just Better Operations?
+- [2. Do We Actually Need AI, or Just Better Operations?](#2-do-we-actually-need-ai-or-just-better-operations)
 
-3. Data Gathering: Building the Case Beyond "Vibes"
+- [3. Data Gathering: Building the Case Beyond "Vibes"](#3-data-gathering-building-the-case-beyond-vibes)
 
-4. "We Already Have AI" and Other Logical Traps
+- [4. "We Already Have AI" and Other Logical Traps](#4-we-already-have-ai-and-other-logical-traps)
 
-5. The Goalkeeper Fallacy
+- [5. AI NIMBYs: Progress, Just Not in My Backyard](#5-ai-nimbys-progress-just-not-in-my-backyard)
 
-PART II: THE MARKET AND THE MINEFIELD
+- [6. The Goalkeeper Fallacy](#6-the-goalkeeper-fallacy)
 
-6. The Landscape: Everyone Is an AI Company Now
+**Part II: The Market and the Minefield**
 
-7. The Wizard of Oz
+- [7. The Landscape: Everyone Is an AI Company Now](#7-the-landscape-everyone-is-an-ai-company-now)
 
-8. The Security Gauntlet
+- [8. Build vs. Buy, Again](#8-build-vs-buy-again)
 
-9. The Paper Trail of a Vision
+- [9. The Wizard of Oz](#9-the-wizard-of-oz)
 
-10. The Product Veto
+- [10. The Security Gauntlet](#10-the-security-gauntlet)
 
-PART III: THE MACHINE
+- [11. The Paper Trail of a Vision](#11-the-paper-trail-of-a-vision)
 
-11. My Dream AI Architecture
+- [12. The Product Veto](#12-the-product-veto)
 
-12. The Read-Write Rubicon
+**Part III: The Machine**
 
-13. The Support-to-GTM Feedback Loop
+- [13. My Dream AI Architecture](#13-my-dream-ai-architecture)
 
-14. CSAT and Other Comfort Metrics
+- [14. The Read-Write Rubicon](#14-the-read-write-rubicon)
 
-15. The Promotion
+- [15. When the Customer Is a Bot](#15-when-the-customer-is-a-bot)
 
-PART IV: THE MIGRATION
+- [16. Did the Action Actually Happen?](#16-did-the-action-actually-happen)
 
-16. The Hernán Cortés Migration Plan
+- [17. The Support-to-GTM Feedback Loop](#17-the-support-to-gtm-feedback-loop)
 
-17. When Your AI Implementation Partner Is Just a Tollbooth
+- [18. CSAT and Other Comfort Metrics](#18-csat-and-other-comfort-metrics)
 
-18. The Shadow Run
+- [19. The Promotion](#19-the-promotion)
 
-19. The B2D2B AI Rollout
+**Part IV: The Migration**
 
-20. The Launch Inventory
+- [20. The Hernán Cortés Migration Plan](#20-the-hern-n-cort-s-migration-plan)
 
-21. Zero Hour
+- [21. When Your AI Implementation Partner Is Just a Tollbooth](#21-when-your-ai-implementation-partner-is-just-a-tollbooth)
 
-PART V: THE OPERATING MODEL
+- [22. The Shadow Run](#22-the-shadow-run)
 
-22. The First 30 Days
+- [23. The B2D2B AI Rollout](#23-the-b2d2b-ai-rollout)
 
-23. The AI Support Operating Model
+- [24. The Launch Inventory](#24-the-launch-inventory)
 
-Appendices
+- [25. Zero Hour](#25-zero-hour)
+
+**Part V: The Operating Model**
+
+- [26. The First 30 Days](#26-the-first-30-days)
+
+- [27. When the Agent Gets It Wrong](#27-when-the-agent-gets-it-wrong)
+
+- [28. Evaluating AI: The Work Is Never Done](#28-evaluating-ai-the-work-is-never-done)
+
+- [29. The AI Support Operating Model](#29-the-ai-support-operating-model)
+
+- [Appendix A: Vendor and Build Scorecard](#appendix-a-vendor-and-build-scorecard)
+
+- [Appendix B: Shadow Run and Change Release Record](#appendix-b-shadow-run-and-change-release-record)
+
+- [Appendix C: Launch and Recovery Runbook](#appendix-c-launch-and-recovery-runbook)
+
+- [Appendix D: Glossary](#appendix-d-glossary)
+
+- [Appendix E: Dated Field Notes](#appendix-e-dated-field-notes)
 
 ## Introduction: This Is Not a Chatbot Project
 
@@ -124,7 +174,7 @@ That is the real promise of AI support: not fewer humans, but better-shaped huma
 
 This book follows one live migration from friction to zero hour. It keeps the mess in the frame because the mess is the point. The vendor demo is not the hard part. The hard part is deciding what the machine is allowed to know, what it is allowed to do, when it must stop, who owns the failure, and how the humans around it get promoted instead of erased.
 
-The book is closed, but the story is not. You pay for it once (it’s  free) and then, if the machine keeps learning, the text should keep learning too. The next version can will become a living skill: a book that updates as the operating model changes and eventually helps readers run the migration instead of only reading about it.
+The book is free and continues to change as the work produces new evidence. Its companion skills and templates help readers run the migration and the ongoing operation. Each edition preserves what changed and keeps the earlier text available.
 
 ### The Operating Thesis
 
@@ -138,17 +188,11 @@ The queue is not only a cost center. It is a signal stream for product, document
 
 Launch day is not the end. Launch day is when the machine starts producing evidence.
 
-PART I
-
-THE FRICTION
+## Part I: The Friction
 
 Why good support metrics can still hide a scaling crisis.
 
-Every AI support story starts before AI. It starts with a queue that looks manageable from far away and expensive up close.
-
-The trap is that healthy support metrics can become a sedative. CSAT looks good. SLA looks good. The first response metric looks good. The team looks responsible. Then someone asks the better question: why are brilliant support engineers still repeating answers the product, docs, and onboarding should have made unnecessary?
-
-This part is about that moment. The mirror is uncomfortable because it shows the difference between performing well inside the old system and needing a new system entirely.
+Every AI support story starts before AI. It starts with a queue that looks manageable from far away and expensive up close. Healthy metrics can become a sedative. The better question is why support engineers keep repeating answers that the product, documentation, and onboarding could have made unnecessary.
 
 ## 1. The Friction Point
 
@@ -162,7 +206,7 @@ We have a friction problem.
 
 ### The “Good Enough” Trap
 
-Here’s the thing about metrics: they can lie by omission. Our CSAT scores are over 95%. Our SLA is touching the 98% mark. First time to respond, number of touches? Top performing. If you look at a dashboard in a QBR, you nod and move on to the next slide.
+Here’s the thing about metrics: they can lie by omission. Our CSAT and SLA dashboards looked healthy. The team was meeting the expectations those measures set. That did not tell us how much repeated work the customer experience still created. If you look at a dashboard in a QBR, you nod and move on to the next slide.
 
 But doing things “as expected” is death in Silicon Valley.
 
@@ -178,23 +222,23 @@ That is not Support Engineering; it’s expensive copy-pasting.
 
 “What is Sentry?” is something I discuss at dinner parties (I’m a fun guest), but I can’t stop asking myself: why aren’t developers finding the answers already sitting on this page (https://docs.sentry.io/product/) on their own?
 
-We have to admit a hard truth: our technical velocity is elite, but much of our tooling are stuck in 2015. We can’t stay still because eventually the wave of interactions with customers volume is going to crash over our heads.
+We have to admit a hard truth: our technical velocity is elite, but much of our tooling is stuck in 2015. We can’t stay still because eventually the wave of customer interactions is going to crash over our heads.
 
 So we decided to stop buying umbrellas and start changing the weather.
 
-Field note: If your support metrics look healthy but your team is re-answering the same questions, the dashboard is hiding the actual problem.
+_Field note: If your support metrics look healthy but your team is re-answering the same questions, the dashboard is hiding the actual problem._
 
 ## 2. Do We Actually Need AI, or Just Better Operations?
 
-I have played every character in AI tragedy and successes
+I have played every character in AI tragedies and successes.
 
 I haven’t just watched this wave from the beach. I’ve drowned in it.
 
 I have been the Builder, writing the specs. I have been the Implementer, trying to glue the API to a legacy database. I have been the Ambassador, selling the dream on stage. I have been the Owner, signing the checks. I have been the Consultant, billing by the hour to explain AI to various audiences.
 
-Across every single one of those roles, from startup chaos to enterprise meeting rooms, I learned one universal, painful truth:
+Across every single one of those roles, from startup chaos to enterprise meeting rooms, I learned a recurring, painful lesson:
 
-AI is incredible. Outcomes are not.
+An impressive AI capability does not guarantee a useful outcome.
 
 There is a specific kind of noise you hear in AI companies. It’s the sound of people conflating “potential” with “production.” It’s the quiet hum that tells you something is “working” on a demo screen while the actual operational reality is slowly misaligning.
 
@@ -204,7 +248,9 @@ Those moments weren’t “friction.” They were warning signs. Looking back, t
 
 Here is what I ignored then, and what we are refusing to ignore at Sentry now.
 
-1. The Illusion of Motion The first warning sign is the easiest to ignore because it feels productive: the belief that shipping in the world of Support means working.
+### The Illusion of Motion
+
+The first warning sign is the easiest to ignore because it feels productive: the belief that shipping in the world of Support means working.
 
 AI teams are addicted to this. Iteration speed is a survival strategy; velocity creates a sense of safety. When something goes out the door, the internal slack channel claps. It feels like progress.
 
@@ -214,7 +260,9 @@ The early signal is that you keep saying “yes” to launches, yet customers do
 
 That gap is where AI initiatives stall. Teams mistake activity for impact and momentum for traction.
 
-2. The Dependency Trap Partnerships in AI usually begin with vision and confidence. Everyone is excited, everyone is aligned, and the future is described in bold language.
+### The Dependency Trap
+
+Partnerships in AI usually begin with vision and confidence. Everyone is excited, everyone is aligned, and the future is described in bold language.
 
 Then, the drift happens.
 
@@ -224,7 +272,9 @@ At first, it feels like collaboration. Over time, you realize you are building a
 
 When that happens, you didn’t really choose a partner. You chose a dependency. And dependencies always come with a hidden cost.
 
-3. Confidence Without Competence Onboarding is where the real damage happens.
+### Confidence Without Competence
+
+Onboarding is where the real damage happens.
 
 When AI onboarding is done well, it teaches a mental model. It explains what “good” looks like and makes the limits visible. When it is done poorly, you aren’t onboarding users. You are onboarding confusion.
 
@@ -234,7 +284,9 @@ This is the silent killer. The AI doesn’t fail loudly; it fails quietly. It pr
 
 The “scaling tax” here isn’t more tickets. It is rework, manual checks, and internal escalation. You end up hiring people not to scale AI, but to supervise it.
 
-4. The Miracle Problem There is a deceptive warning sign that shows up in AI more than anywhere else: early success that can’t be explained.
+### The Miracle Problem
+
+There is a deceptive warning sign that shows up in AI more than anywhere else: early success that can’t be explained.
 
 A demo lands. A customer says “wow.” The organization wants to treat that moment as validation.
 
@@ -242,7 +294,9 @@ But reality is more demanding than a demo environment. The biggest gap appears w
 
 The risk is not that AI is hard. The risk is that teams build foundations on unpredictability and get surprised when scale requires control.
 
-5. Confusion is a Signal What I’ve learned is that confusion is rarely random. It is a signal. It tells you exactly where the system is weak.
+### Confusion is a Signal
+
+What I’ve learned is that confusion is rarely random. It is a signal. It tells you exactly where the system is weak.
 
 It shows you where a product isn’t teaching, where a partner isn’t aligned, and where a launch isn’t landing.
 
@@ -256,7 +310,7 @@ I keep these signals close to my heart as we explore what AI can really do for o
 
 Beware: I’m a tough customer to satisfy.
 
-Field note: AI is only useful after you can name the operational gap it is supposed to close.
+_Field note: AI is only useful after you can name the operational gap it is supposed to close._
 
 ## 3. Data Gathering: Building the Case Beyond "Vibes"
 
@@ -266,11 +320,13 @@ There is a specific seduction in the world of AI right now. It goes like this: �
 
 That is a great way to burn a pile of cash and annoy your customers.
 
-In the last article, I listed the warning signs of AI adoption. To avoid those traps, we realized that before we bought a single license or made a single API call, we had to prove the model. We had to move from “vibes” to cold, hard audits.
+In the previous chapter, I listed the warning signs of AI adoption. To avoid those traps, we realized that before we bought a single license or made a single API call, we had to prove the model. We had to move from “vibes” to cold, hard audits.
 
 We realized we didn’t need to look elsewhere for answers. We have years of history and hundreds of thousands of past interactions. We didn’t need to guess; we needed to “consult” our own archives.
 
-The Great Audit We opened the hood on our ticket volume. We didn’t just look at the number of tickets; we looked at the soul of the tickets.
+### The Great Audit
+
+We opened the hood on our ticket volume. We didn’t just look at the number of tickets; we looked at the soul of the tickets.
 
 We categorized them into two specific buckets:
 
@@ -292,27 +348,27 @@ Is the customer experiencing a complex instrumentation issue that requires deep 
 
 For example: is this a stack trace debugging issue specific to an environment like our Unity/Game Consoles SDK, and does it actually require a code change? https://docs.sentry.io/platforms/unity/game-consoles/
 
-The Grunt Work Here is the part nobody puts in the case study because it isn’t sexy: We tagged thousands (and thousands) of conversations.
+### The Grunt Work
+
+Here is the part nobody puts in the case study because it isn’t sexy: We tagged thousands (and thousands) of conversations.
 
 Yes. Manually.
 
-Like that:
-
 As part of our day-to-day, we added a step that enabled us to re-learn what developers ask us, what their pain is, and what the path to resolution looks like.
-
-Here is the field we learned to appreciate:
 
 We spent long hours tagging thousands of tickets. It felt like the opposite of ‘high-tech.’ But you can’t automate a process you don’t actually understand at the atomic level. It was absolutely necessary.
 
-Evidence > Intuition The result wasn’t a hunch. It was a spreadsheet with undeniable gravity.
+### Evidence Before Intuition
+
+The result wasn’t a hunch. It was a spreadsheet with undeniable gravity.
 
 The data showed that a significant percentage of our volume was purely transactional—questions that didn’t require empathy or deep debugging, just accurate information retrieval.
 
-We proved the ROI model before we spent a dime. We built the case on the floor of the warehouse, not in the ivory tower.
+We built an initial business case before choosing the tool. Its assumptions still needed validation in operation. We built the case on the floor of the warehouse, not in the ivory tower.
 
 Now, we had permission to build. I mean: to buy.
 
-Field note: Before buying or building, audit the queue. The archive already knows what your customers cannot find, understand, or do.
+_Field note: Before buying or building, audit the queue. The archive already knows what your customers cannot find, understand, or do._
 
 ## 4. "We Already Have AI" and Other Logical Traps
 
@@ -322,31 +378,35 @@ It isn’t political. It isn’t emotional. It is brutally, intellectually hones
 
 When you propose a new tool to a room full of senior engineers and product leaders, you don’t get “No.” You get: “Why can’t we just use the thing we built last Hackweek?”
 
-We have the data (see previous Article). We know the pain is real. But now we have to survive the Meritocracy of Ideas.
+We have the data (see the previous chapter). We know the pain is real. But now we have to survive the Meritocracy of Ideas.
 
 We will need to answer the questions that sound reasonable on the surface but may kill projects in the crib:
 
-The “We Already Have AI” Trap The loudest objection is the most logical one: “We already have an AI search bar on our docs site. Why do we need to have one for any other flow?”
+### The “We Already Have AI” Trap
+
+The loudest objection is the most logical one: “We already have an AI search bar on our docs site. Why do we need to have one for any other flow?”
 
 The temptation here is strong. If you have a vector database and an LLM, it feels like you have a solution.
 
 But that creates a dangerous confusion. It confuses a Library Index with a Librarian.
 
-Retrieval vs. Reasoning vs. Problem-Solving We need to draw a hard line in the sand between three very different operations:
+### Retrieval vs. Reasoning vs. Problem-Solving
+
+We need to distinguish three jobs. The following exchanges are illustrative; their technical details are not current Sentry troubleshooting instructions:
 
 Retrieval (Docs Search): This is for the user who knows what they are looking for but doesn’t know where it is.
 
-User:“How do I configure sampling?”
+User: “How do I configure sampling?”
 
-AI Search:“Here is the link to the Sampling Options page.”
+AI Search: “Here is the link to the Sampling Options page.”
 
 Success Metric: Accuracy of retrieval.
 
 Reasoning (Support): This is for the user whose code is broken and they can’t tell why.
 
-User:“My sampling is set to 100% but I’m dropping events on Vercel.”
+User: “My sampling is set to 100% but I’m dropping events on Vercel.”
 
-AI Support:“That configuration looks correct, but looking at your SDK version, there is a known conflict with the Vercel adapter in version 7.x. You need to upgrade.”
+AI Support: “That configuration looks correct, but looking at your SDK version, we need to check whether the adapter version changes the applicable guidance before recommending an upgrade.”
 
 Success Metric: WE got the customer to their final step before a resolution.
 
@@ -354,13 +414,15 @@ Problem-Solving (Solutioning): This is for the user who knows what they want to 
 
 User: “I want to reduce noise. How do I only get alerted to real issues?”
 
-AI Solution: “Let me turn on alert rules for new issues only, mute known noisy ones for you, and route P0 only issues to the PagerDuty you enabled in your account.”
+AI Solution: “We can define the alert rules and routing you want. Before changing them, I need to verify your account permissions, confirm the proposed changes, and check the result.”
 
 Success Metric: Job done.
 
 Docs Search throws a book at you. Support reads the book for you, looks at your specific mess, and tells you which page fixes it. This feels like the year 2016.
 
-The “We Can Build It in a Weekend” Trap This is the classic Engineer’s Fallacy.
+### The “We Can Build It in a Weekend” Trap
+
+This is the classic Engineer’s Fallacy.
 
 “It’s just an API wrapper around OpenAI. Give me two engineers and a week.”
 
@@ -370,21 +432,25 @@ We have to gently remind our own team: We are an Observability Company, not a Su
 
 Every hour our engineers spend maintaining a custom RAG pipeline, debugging context windows, or building feedback UIs for support agents is an hour they aren’t building Sentry.
 
-We need to decide to buy leverage, not build technical debt.
+For the common support platform, buying was our preferred starting point. An internal build can still be justified by a material requirement and funded ownership. Chapter 8 compares the layers, lifecycle costs, and conditions that can change the decision.
 
-The “Is It Safe?” Trap This isn’t an objection; it is a requirement. Sentry holds the keys to the castle for countless companies (read: it’s growing too fast for me to type the actual number, so have a look here: https://sentry.io/customers/). We process their errors. We see their code.
+### The “Is It Safe?” Trap
+
+This isn’t an objection; it is a requirement. Sentry holds the keys to the castle for countless companies (read: it’s growing too fast for me to type the actual number, so have a look here: https://sentry.io/customers/). We process their errors. We see their code.
 
 The pushback here is different. It is quiet, serious, and non-negotiable. If the tool hallucinated an answer, that’s bad. If the tool hallucinated customer data into a chat window, that’s catastrophic.
 
 We can’t just “trust” the model. We need a vendor that treats security like a feature, not a footer on their website.
 
-The Turning Point The internal conversations are intense. They are detailed. But they are positive. The team isn’t trying to kill the project; they are trying to stress-test the logic.
+### The Turning Point
+
+The internal conversations are intense. They are detailed. But they are positive. The team isn’t trying to kill the project; they are trying to stress-test the logic.
 
 Once we can prove that:
 
 Search is not a Support function.
 
-Building it ourselves is a distraction.
+Our chosen build-and-buy boundary has an accountable operating plan.
 
 The security model holds water.
 
@@ -402,276 +468,327 @@ As I look at the landscape of vendors - the “Hot New AI Startups” promising 
 
 Winning the internal argument will be the easy part. Next we will need to find a tool that actually works.
 
-Field note: Having AI somewhere in the stack is not the same as changing the customer experience.
+_Field note: Having AI somewhere in the stack is not the same as changing the customer experience._
 
-## 5. The Goalkeeper Fallacy
+## 5. AI NIMBYs: Progress, Just Not in My Backyard
 
-Traditional Support waits for the customer to fail. We decided to intercept them before they do.
+The most expensive blocker in your company may sincerely believe they are the only person protecting it.
 
-### The Death of the Safety Net
+They like progress. They have a slide about it. They use AI to write the slide. Then somebody proposes changing a workflow they own, and the future suddenly needs another committee.
 
-In the world of SaaS, most Support organizations are built like world-class Goalkeepers. We pride ourselves on the “Great Save.” We celebrate the Support Engineer who dives into a 4:00 PM Friday fire, deflects a catastrophic bug, and earns a “Thank You” note from a frantic CTO.
+I call this the AI NIMBY problem. NIMBY means "not in my backyard." The organizational version is more subtle than refusing to use a new tool. It is supporting change in principle while making the local conditions for change impossible to satisfy. The person sees caution. Other teams experience a permanent veto.
 
-It’s heroic. It’s emotional. And it’s a fundamental strategic failure.
+The damage is easy to miss because it lands elsewhere. Support absorbs the extra manual work. Customers repeat themselves. Engineering keeps answering the same escalations. The person controlling the decision may see none of those costs in their own scorecard.
 
-If your goalie is the busiest person on the pitch, you aren’t winning; you’re surviving. You are playing a defensive game, pinned in your own box, waiting for the customer to make a mistake, break the product, or lose their patience. By the time a customer “submits a ticket,” the friction has already occurred. The goal has been scored against you. You’re just cleaning up the net.
+### Four horror stories
 
-### From Goalie to Midfielder
+The following cases are fictional teaching scenarios. They describe recognizable behaviors, not specific colleagues or claims about what happened at Sentry.
 
-We’ve spent the last year burning the “Goalkeeper” playbook. We are moving our defensive line up thirty yards. We are moving into the Midfield.
+**The evangelist with a private exemption.** A leader encourages every team to experiment with AI. They celebrate a coding assistant that gets a first draft wrong because an engineer can review it. When Support proposes a bounded pilot with review and a human exit, the same leader demands that every conversation in their business unit remain manual. They cannot name a specific risk that the pilot has failed to address. Their customers are simply "different."
 
-In soccer, the midfielder is the playmaker. They don’t wait for the ball to reach the goal line; they intercept the pass. They read the game, disrupt the opponent’s flow, and transition immediately from defense to attack.
+The exception sounds small. Then another team wants one. Routing becomes a collection of favors, and Support has to remember which executive's preferred workflow applies to each account. The pilot never gets a coherent population to evaluate. The leader still believes they are encouraging innovation.
 
-When we talk about “Moving Support to the Midfield,” we are talking about Proactive Interception.
+The useful intervention is to put the task, risks, controls, and evidence on the table. Some customers really do need different treatment. Write down why. An account-specific requirement should produce an account-specific control, with an owner and a review date. Personal discomfort should not quietly become architecture.
 
-The traditional triage reality—where a user hits a snag, hunts for a “Contact Us” link, fills out a five-field form (argh), and waits for an asynchronous and never relevant “we’ve received your request” email—is an obsolete model. In fact, it’s worse than obsolete; it’s a deterrent. It actively punishes the user for needing help.
+**The pilot that can never pass.** A reviewer agrees that a system can launch if it passes a defined set of cases. It passes. The reviewer asks for a larger sample. That sample passes too. Now the system needs another stakeholder, a different dashboard, and a demonstration involving a scenario nobody previously considered important.
 
-### The 90% Silent Churn
+New evidence can justify a new gate. Here there is no new evidence, only a moving finish line. Nobody records the customer problems continuing during the delay. The reviewer receives credit for rigor while the team running the old process carries the bill.
 
-CROs often look at CSAT and think, “Our customers love us!” because the people who write in are happy with the fix. This is a survivor bias trap.
+Write acceptance criteria before the pilot. Record the reason for each material change. Give one person responsibility for the decision, including the cost of waiting. If nobody can describe what a passing result would look like, you do not have a test. You have an indefinite hold wearing a lab coat.
 
-The real danger isn’t the 10% of users who saw something and opened a ticket. The danger is the 90% who saw the same thing and did not. These are the prospects who hit a friction point, can’t find an immediate answer, and—rather than waiting 4 to 24 hours for a human response—simply close the tab.
+**The weekend builder who never operates it.** An engineer shows a promising demo and blocks a vendor decision. The demo really is good. That is what makes the story dangerous. It answers the example question, calls an API, and looks cheaper than a subscription.
 
-They don’t complain. They just leave. They are the “Lost” customers, and your Goalie never even saw the ball.
+Then the production questions arrive. Who owns the integration when the API changes? Who reviews failures? Who answers when the maintainer is away? Which roadmap work will stop to make room? The engineer keeps promising that the next version will settle these questions. Meanwhile, Support continues the manual process the project was meant to replace.
 
-### The Fix: Interception
+This is a failure of operating commitment. A funded internal service with an accountable owner can be the right choice. A demo should enter the comparison as a demo, with the remaining work visible. The build-versus-buy chapter supplies the rest of that comparison.
 
-Our strategy document was clear: if the traffic starts in the product, the solution must live in that same UI.
+**The indispensable fixer.** A senior specialist catches bad AI answers before customers see them. They rewrite the response, close the conversation, and move on. The customer gets help. The specialist gets thanked. The system gets no correction.
 
-By embedding an AI agent directly into the user’s workflow—not buried in a Help Center three clicks away—we changed the physics of the interaction. We stopped asking the customer to come to us. We went to them.
+A month later, the same problem still requires the same person. The specialist concludes that the AI cannot be trusted. Their manager sees a hero who is always busy. Neither notices that the repair never left the specialist's head.
 
-When a developer is staring at a 401 Unauthorized error in the console, they don’t want a “relationship” with a support agent. They want a solution, and they want it at the speed of Wispr. By putting AI in the “Midfield”—intercepting that error message before it turns into a “Contact Support” thought—we capture that 90% of silent traffic.
+Give the correction a second destination: the shared improvement process. Record what was wrong, why the replacement works, and a case that should fail if the mistake returns. Protect time for that work. If the performance system rewards only visible rescues, do not act surprised when people keep rescuing.
 
-We aren’t just “deflecting tickets.” We are protecting the user’s momentum.
+### What the psychology adds
 
-### The Impact on the P&L
+Robert Kegan and Lisa Lahey's work on [immunity to change](https://www.mindsatwork.com/our-thinking/immunity-to-change) offers a useful explanation: a stated commitment to improvement can coexist with another commitment, such as protecting competence, control, or standing. That is a question to explore with someone, not a diagnosis to announce about them.
 
-For a B2D2B (Business → Developer → Business ) SaaS company, the Midfield model is the only way to decouple headcount from revenue. If you stay in the Goalkeeper model, your costs scale linearly with your problems. More customers = more tickets = more goalies.
+Research on [algorithm aversion](https://faculty.wharton.upenn.edu/wp-content/uploads/2016/11/20-Dietvorst-Simmons-Massey-2015.pdf) found that people could lose confidence in an algorithm after seeing it err even when it outperformed a human forecaster. Those forecasting experiments do not establish that your support agent is better than your team. They do suggest checking whether comparable errors receive comparable scrutiny. Measure both against the same customer task and the same consequential constraints.
 
-By moving to the Midfield, you are investing in a system that scales through intelligence, not empathy. You save your humans for the “Championship” moments—for the high-value architectural consultations—and let the AI play the Midfield, intercepting the thousands of daily “passes” that used to end up as goals against your team’s productivity.
+There is also a leadership trap in this chapter. Once you learn the word NIMBY, every difficult question can start to sound like obstruction. That would make the book an excuse to stop listening. Amy Edmondson's [research on psychological safety and team learning](https://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Organizational_Learning_and_Change/Edmondson_1999_Psychological_safety.pdf) links the ability to speak up with learning behavior. An operation that punishes the bearer of bad news will lose the evidence it needs to improve.
 
-It’s time to stop celebrating the “Great Save” and start celebrating the “Interception.”
+### The objection that saves the launch
 
-Field note: The support team should not only save shots on goal. It should move upfield and intercept confusion before it becomes a ticket.
+Consider one more fictional case. A security engineer discovers that an audience attribute comes from an untrusted client and controls access to internal guidance. They stop the rollout. The product champion complains about another delay.
 
-PART II
+The engineer can show the failure, identify the affected boundary, and describe the test the repair must pass. They have made progress possible by exposing a problem before a customer suffers it. Calling them a NIMBY would be lazy management.
 
-THE MARKET AND THE MINEFIELD
+The distinction is observable behavior. Can the objection be examined? Is there a path to a decision? Does new evidence change the person's view? Is the cost of the existing process included? Sometimes the evidence says to stop the project. That remains a valid decision.
 
-How to choose AI support without buying garbage or outsourcing judgment.
+### Check your own backyard
 
-Once a company admits the friction is real, the market arrives with a thousand confident answers.
+Before asking who is blocking you, ask what you are protecting. Would you accept the same requirement if another team imposed it on your project? Have you offered an alternative with an owner and a delivery commitment? Who does the work created by your exception? What result would persuade you to change your mind?
 
-Everyone is an AI company now. Every vendor has a demo. Every deck promises resolution, deflection, transformation, and scale. The hard part is not finding AI. The hard part is finding a system that respects your product, your customers, your security posture, your escalation philosophy, and your tolerance for embarrassment.
+Then ask the team. Give them room to disagree without having to prove that you are a bad person. Most organizational damage does not require a villain. It requires a local decision whose cost stays invisible long enough.
 
-This part is the minefield. It is where the wizard, often dressed as a polished founder, hides the humans behind the curtain. It is where Sales disguises a rent-seeking tollbooth as strategy. And it is where Product may be right: sometimes the best answer is to build.
+_Field note: Make the cost of delay as visible as the risk of change, and keep a testable path to a decision._
 
-## 6. The Landscape: Everyone Is an AI Company Now
+## 6. The Goalkeeper Fallacy
 
-The sun came up. The coffee is brewing. The adrenaline from getting the final word in the “Build vs. Buy” conversation has faded.
+Traditional Support waits for the customer to fail. I want us to help earlier.
 
-Now I have a terrifying realization: The dog caught the car.
+### The great save
 
-We successfully convinced the organization that we shouldn’t build this ourselves. We argued that “buying leverage” is smarter than “building debt.” The leadership agreed. We have the budget. We have the mandate.
+Support organizations often behave like world-class goalkeepers. We celebrate the engineer who dives into a Friday afternoon fire and earns a thank-you from a frantic CTO. That work matters. Sometimes the save is exactly what the customer needs.
 
-Now, we actually have to find a tool that works.
+But if the goalkeeper is always the busiest person on the pitch, the rest of the system needs attention. Why does the same confusion keep reaching the goal line? Which part of the product, documentation, or onboarding could have intercepted it?
 
-I opened my inbox this morning. I searched for “AI.”
+The problem is making heroic recovery our only definition of good support. A customer should not have to get stuck before our expertise becomes available.
 
-I shouldn’t have done that.
+### Move into midfield
 
-### The Gold Rush
+The midfielder reads the game, intercepts the pass, and creates the next useful move. Moving Support into midfield means giving the team a role in the experience that produces the question.
 
-If you are a GTM leader, you know the sensation. Every SaaS tool you have ever touched, browsed, or accidentally clicked on is now an “AI Platform.”
+An answer inside the product can help. So can a clearer error message, a corrected example, a useful default, or a tooltip placed where the decision happens. Sometimes the best intervention has no AI in it at all.
 
-Your CRM has AI. Your ticketing system has an AI add-on. The tool you use to schedule tweets (guilty) has AI.
+If a developer hits an authorization error, a relevant explanation near that error may preserve their momentum. A generic invitation to chat may simply add another obstacle. Test whether the intervention helps the customer complete the task. Opening the support widget is not the goal.
 
-There are currently two types of companies in the valley:
+### The customers the queue cannot see
 
-The Incumbents: Massive platforms bolting a chat interface onto legacy code and calling it “Copilot.”
+A satisfied person who contacted Support tells us something valuable. They do not represent everyone who encountered friction.
 
-The Wrappers:Three engineers in a WeWork with a cool domain name, a dark-mode website, and a thin UI layer over GPT-4.
+Some people search elsewhere. Some work around the problem. Some stop trying. We cannot infer the size of those groups from ticket volume alone, and we cannot call every silent customer lost. The earlier shorthand of a vast, precisely measured silent majority hid that uncertainty.
 
-We are walking into a minefield.
-We are looking for the third kind.
+Combine support evidence with product behavior, onboarding research, customer interviews, and appropriately designed comparisons. Ask where people stop making progress and what happens after a change. Respect the limits of each source. A drop in tickets might reflect a better product, an inaccessible contact path, or fewer customers using the feature.
 
-### The Problem with “Generic” AI
+### Let Support change the field
 
-Here is the specific challenge at Sentry: Our customers are developers.
+Moving upfield requires authority and time. If Support can identify a repeated problem but can only file a suggestion into an unowned backlog, the team is still standing in goal.
 
-They aren’t asking “Where is my refund?” or “How do I change my password?”
+Give support engineers a path to propose and ship bounded improvements with Product and Engineering review. A documentation correction, UI clarification, or small workflow fix can be the first step. Chapter 19 describes actual panel examples and the operating conditions that make this work repeatable.
 
-They are asking: “My Python SDK is dropping events when I use the Celery integration with sampling rate 0.5. Why?”
+Measure the customer result: fewer related returns, a task completed more reliably, or less effort required. Record the limits of the comparison. Counting merged PRs would merely replace ticket-count theater with a different scoreboard.
 
-If we put a generic support bot in front of a Sentry user, we won’t just annoy them. We will insult them.
+### Keep a goalkeeper
 
-We need a tool that doesn’t just “chat.” We need a tool that understands documentation, reads code snippets, and understands the difference between a “bug” and a “configuration error.”
+Prevention does not eliminate the need for skilled human recovery. Complex architecture, exceptional circumstances, and consequential decisions still need people with judgment and authority. A customer asking for help should not have to prove that they exhausted every automated route.
 
-We need a Librarian, not a parrot.
+The financial case is therefore a question to measure. Better prevention may reduce repeated work and make growth easier to support. It does not guarantee a universal headcount ratio or make empathy obsolete. The remaining cases may demand more expertise even as their number falls.
 
-### The Three Mines
+Celebrate the great save. Also celebrate the change that meant the next customer never needed one.
 
-As we look at the vendor list, we are looking for three specific things that will kill a deal immediately.
+_Field note: Move support expertise into the product journey, and verify that the customer makes progress._
 
-1. The “Wrapper” Mine We just spent Article IV convincing our engineers not to build this because it’s a distraction. I cannot go back to those engineers and say, “Hey, I bought this tool, It’s basically exactly what you said you could build in a weekend.” If the vendor adds no value beyond the raw model - if they don’t have better indexing, better retrieval, or better connectors - we aren’t buying it.
+## Part II: The Market and the Minefield
 
-2. The Security Mine Sentry holds the keys to the kingdom for our customers. We process their crashes. I cannot have a vendor that trains their public model on our private data. “Trust us, we promise,” is not a security policy. We need SOC2. We need data isolation. We need a vendor who understands that “Enterprise Ready” means more than just having a “Contact Sales” button.
+How to choose a support system and the responsibilities you keep.
 
-3. The “Agent” Mine This is the loudest buzzword right now. “Autonomous Agents”. The promise that the AI will go into your system, click the buttons, fix the bug, and email the customer. I love ambition. But I don’t trust a toddler with a chainsaw, and I don’t trust a V1 AI agent with write-access to my production code. For now, we want a Co-pilot, not an Auto-pilot.
+The market has a thousand confident answers. This part asks which capabilities fit your customers, what the vendor actually operates, and when an internal build deserves the investment. The wizard and the tollbooth belong here, along with the evidence that can distinguish a useful partner from a dependency.
 
-### The Selection Process
+## 7. The Landscape: Everyone Is an AI Company Now
 
-We are going to do this the old-fashioned way.
+The adrenaline from winning the internal argument fades, and the dog realizes it has caught the car.
 
-We aren’t going to look at the marketing videos. We aren’t going to look at the venture capital funding announcements.
+We have permission to improve support. Now we have to choose a system that can handle our customers, our product, and the mistakes that will arrive after the demo.
 
-We are going to take the hardest, messiest, most technical issues that hit our inbox last week - the ones that made our senior support engineers sweat - and we are going to feed them into these tools.
+The old categories were easy to joke about: incumbents adding a chatbot and startups wrapping a model. They are no longer sufficient for a purchasing decision. Platforms are adding action tools, evaluation, operational agents, account context, and customer-success workflows. A useful comparison has to follow those capabilities into the operating details.
 
-If they hallucinate? They are out. If they give generic advice? They are out. If they tell us to restart the router? They are banned.
+### The requirements still come from the customer
 
-Winning the internal argument was the easy part. Now we have to find a partner who is actually building the future, not just marketing it.
+For a technical product, the test is not whether the system can answer a generic support question. Can it recognize that an SDK version changes the answer? Can it distinguish a configuration mistake from a product bug? Can it establish the customer's permissions and stop before recommending an impossible action?
 
-Let the bake-off begin.
+Bring representative cases from the queue. Include the surrounding context needed to solve them. Compare the resulting answer, action, and handoff, along with the human work required to make the system perform. A vendor's best demonstration does not establish your production result.
 
-Field note: The AI gold rush makes every vendor sound inevitable. Your job is to separate demos from systems.
+### A market snapshot as of November 1, 2026
 
-## 7. The Wizard of Oz
+Fin's [October 7 Fin 4 announcement](https://fin.ai/blog/introducing-fin-4) describes Skills with triggers, tools, and instructions, more proactive Operator capabilities, and expansion into customer success. That moves the review beyond answer generation. Ask which goals the agent pursues, what it can change, and how people inspect the changes proposed by the operational agent.
 
-In the advanced technology ecosystem, progress is driven by two separate yet equally important groups: the innovators who build groundbreaking AI, and the vendors who exploit the hype with hollow promises. These are their stories. DUN-DUN.
+The [Operator FAQ](https://fin.ai/help/en/articles/15083634-fin-operator-faqs) documents general availability with a paid Pro add-on and required access permissions. Fin for Success's product page offers early access, while an older role overview still calls it coming soon. Treat those as different availability signals. Confirm the exact capability, plan, channel, and workspace before putting it into a delivery commitment.
 
-The Holy Grail.
+Fin's [audience documentation](https://fin.ai/help/en/articles/13975818-manage-audiences-and-targeting-for-fin) also matters operationally. Audience rules use customer and conversation attributes, and multiple selected audiences can combine as an OR rule. Test overlapping membership, missing attributes, and stale data. Targeting relevant guidance and authorizing a consequential action are different responsibilities; keep the latter enforced in the system that performs it.
 
-We thought we found it. In the middle of our vendor search, we found a platform that didn’t just promise “co-piloting.” They promised full Autopilot. 99% deflection. Zero human touch.
+Pylon's [Agentic Support announcement](https://www.usepylon.com/blog/pylon-becomes-the-agentic-support-platform) describes agents working with shared customer, product, and operational context. Its access documentation describes a transition in packaging and rollout. Ask what is enabled for your account and which existing workflows change. A category announcement is not a deployment guarantee.
 
-The pitch was incredible. We threw complex Python stack traces at their sales team. They showed us demos where it solved them. We threw vague billing questions at it. It answered them.
+Salesforce describes conversation-level tests and custom scoring in Agentforce Testing Center. Plain describes an API-first platform where an outside agent can participate in shared support infrastructure. These are different operating choices, not positions on a single maturity ladder. Test the parts that matter to your service and keep the ownership at their seams visible.
 
-It was slick. It was fast. It was expensive.
+### Skills, goals, and authority
 
-The “Onboarding” Red Flag:
+A skill can tell an agent when to act, which tools are available, and how to approach the task. A goal can keep it working across multiple interactions. Neither removes the need to establish authority or verify results.
 
-We were ready to move to the Proof of Concept (POC). We expected them to ask for API keys, documentation links, or a dump of our redacted tickets to “fine-tune” their model.
+For a customer-success use case, write the customer milestone in observable terms. Define the eligible audience, evidence of progress, contact policy, stopping conditions, and the owner of an exception. Check what happens when a growth objective conflicts with a support problem. The customer should receive help with the problem before being nudged toward another purchase.
 
-Instead, they sent us a spreadsheet.
+### When the vendor gets acquired
 
-It was a questionnaire. And looking at the questions, the mask slipped.
+Salesforce [announced the completion of its Fin acquisition on September 10, 2026](https://www.salesforce.com/news/press-releases/2026/09/10/salesforce-completes-acquisition-of-fin/). For a book that discusses Fin, this belongs in the operating record.
 
-“What is your monthly ticket volume?”
+The fact of an acquisition does not establish future pricing, integration quality, or service deterioration. It does justify reviewing dependency and exit assumptions. Confirm the accountable support path, product commitments, data terms, exportability, and the status of integrations you rely on. Record which answers are contractual, which are current product behavior, and which are roadmap intentions.
 
-“What are your Top 5 most common issue types?”
+### The scorecard must survive the keynote
 
-“Please list the exact step-by-step resolution for your Top 5 issues.”
+Score product fit, evidence handling, audience boundaries, actions, handoffs, evaluation, total operating cost, and continuity. Add the ability to retrieve your data and replace components. Ask to see a failed case and how the team diagnoses it. Ask which functions require your own operating work.
 
-“What are the most common follow-up questions for billing inquiries?”
+A reputable company's documentation is evidence of what it documents. A customer story is evidence about that reported case. Neither establishes the outcome your customers will get. The bake-off and the shadow run remain your responsibility.
 
-I stared at the screen. Why does an advanced LLM need me to manually list my top 5 issues?
+_Field note: Put current capability, actual availability, and your own test evidence in separate columns._
 
-If this were true Generative AI, it would ingest our 10,000 public documentation pages and our last year of ticket history and tell us what our top issues are. It would figure out the resolution by reading the docs, not by asking me to type it into a cell in Column C.
+## 8. Build vs. Buy, Again
 
-The Ghost of GPT-2 Past
+Apparently we have to settle this argument every few years.
 
-It immediately clicked. I felt like I was back in 2019.
+We settled it for ticketing systems. Then for knowledge bases. Then an engineer connected a model to an API, and the weekend prototype reopened the case. I understand the temptation. I build things too. The first working version can be a great way to discover what a product ought to do.
 
-For those who remember the first wave of “AI Customer Support” (the GPT-2 era), this was the standard playbook. Back then, the tech wasn’t good enough to actually think. So, startups weren’t selling software; they were selling tech-enabled services.
+What it does not tell you is who should operate that product for the next two years.
 
-You would send them Excel files and decision trees. They would take those files and hire a massive back-office workforce—usually in a low-cost geography—to manually act as the “intelligence.”
+My default remains to buy a supported platform for a problem another company exists to solve, build the missing connection where necessary, and push the vendors to close the gap. When the supported integration does the job, I want to disable my code. That is a successful ending for a connector.
 
-When you chatted with the “bot”, you were actually chatting with a human who was frantically CTRL+F’ing through the spreadsheet you filled out during onboarding.
+But a default is useful only if we can explain when to override it. The earlier argument that building is a distraction needs a more precise boundary.
 
-The Mechanical Turk
+### Choose the layer before choosing the answer
 
-That’s why they needed the “Top 5 Issues.” They weren’t fine-tuning a neural network; they were writing a script for a call center agent.
+A support operation contains several decisions disguised as one purchase. There are channels and queues, customer identity, knowledge access, reasoning, tools that change accounts, human handoffs, and evaluation. You can buy a platform and still own your action policy. You can build a specialist workflow without rebuilding the inbox. You can buy an evaluator and still own the definition of quality.
 
-They needed to know the volume so they knew how many humans to hire for the shift. They needed the “Standard Resolutions” so they could tape a cheat sheet to the agent’s monitor.
+The question is which layer benefits from being specific to your business, and which layer you can responsibly let someone else maintain. Write that boundary down before somebody presents a total price.
 
-They weren’t selling us a brain. They were selling us a BPO (Business Process Outsourcing) team wearing a “Generative AI” mask.
+Plain's documented [Bring Your Own Agent](https://www.plain.com/blog/connect-any-ai-agent-to-plain) approach is a useful challenge to the idea that one vendor must own the whole stack. Its platform can retain routing and handoff infrastructure while an external or internal agent handles conversations. That is a vendor-described option to test, not proof that every integration is seamless. It changes the comparison from a single supplier decision into a set of responsibilities.
 
-The “Values” Check
+### Three options deserve a fair comparison
 
-Let’s call it what it is: Deception.
+Buying fits when a vendor meets the real requirements, the service is supportable, and the capability does not justify becoming an internal product. Buying and extending fits when the platform solves the common problem but a bounded connection or domain workflow is missing. Building can fit when the requirement is strategically important, vendors cannot meet a material constraint, and the company funds ownership beyond the prototype.
 
-This wasn’t just a product failure; it was a security nightmare. We are Sentry. We process sensitive data. We value Security, Privacy, Compliance and Resilience (https://sentry.io/trust/) and we thought we were going to pipe some data into a SOC2-compliant, stateless model. In reality, we were expected to handle that data to an unknown human, in an unknown location, with unknown security protocols, armed with a spreadsheet we wrote for them.
+There is a fourth outcome: the problem does not deserve an AI system yet. A product fix, clearer documentation, or a simpler deterministic workflow may remove it. Keep that option in the room.
 
-The Lesson: Verify
+| **Question** | **Evidence to bring** |
+| --- | --- |
+| What customer job must work? | A small set of representative cases and explicit success conditions. |
+| What is specific to this business? | The requirement that available products cannot satisfy, with an example. |
+| What will we operate? | Named components, maintainers, incident ownership, and backup coverage. |
+| What will it cost over its life? | Initial work, recurring work, vendor and usage fees, and displaced roadmap work. |
+| What would make us change course? | Failure conditions, review dates, export paths, and replacement criteria. |
 
-The AI market is currently a gold rush, and where there is gold, there are snake oil salesmen.
+### Cheaper code changes the arithmetic
 
-At Sentry, one of our core values is “Pixels Matter” - we understand that the difference between a good product and a great one is in the finer details. We take extra care to get everything right, down to the last pixel. We build for developers. Developers are the most skeptical audience on earth. If we shipped a “support bot” that was actually just a hidden human reading a script, our community would find out in a week. They would tear us apart on Hacker News, and they would be right to do so.
+AI-assisted development can make an integration or experiment cheaper to produce. That is a reason to update the estimate. It does not price the rest of the service for you.
 
-We don’t want magic. We want perfect engineering.
+Include discovery, implementation, integration, security review, evaluation, monitoring, incident response, knowledge maintenance, and the cost of changes in connected products. Include subscription and usage fees on the buy side, along with implementation partners and staff time. Neither option gets to hide its human work.
 
-New rule, ignore emails with meaningless subject lines (“AI Delivers on CX, and It’s Driving Real Revenue”).
+Avoid borrowing a productivity multiplier from a demo. METR's [early-2025 developer study and 2026 follow-up](https://metr.org/blog/2026-02-24-uplift-update/) are a useful caution: results depended on the participants, tools, tasks, and measurement design, and the follow-up encountered substantial selection problems. That does not settle your build decision. It means you should measure the work your team actually has to do.
 
-I was invited to a black-tie gala with their CEO. I said I’d rather build.
+Use a twelve-month comparison with ranges where the inputs are uncertain. Show the result if usage doubles, if the maintainer becomes unavailable, or if the vendor supplies the missing feature. A spreadsheet with uncertainty visible is more useful than a precise number built on wishful thinking.
 
-Back to work. We have more vendors to test.
+### Make both options take the same exam
 
-Field note: If the AI works only because hidden humans are carrying it, you have not automated support. You have obscured labor.
+The internal prototype and the vendor should face comparable tasks, permissions, customer context, and recovery requirements. Give them ordinary cases as well as the embarrassing ones. Include the answer that sounds plausible but cannot work on the customer's version. Include a timeout after an action may already have succeeded. Include a required escalation while the human queue is busy.
 
-## 8. The Security Gauntlet
+Record the operating work needed to achieve the result. If the vendor's engineer quietly repairs every test or your prototype requires its creator to sit beside it, that effort belongs in the comparison.
 
-Five years ago, a vendor security review was a polite dance. We sent them a questionnaire. They sent us a SOC2 report. We checked a box. Everyone went to lunch early.
+The continuing evaluation program later in this book applies whichever option wins. A purchase does not outsource accountability. An internal build does not earn an exemption from evidence.
 
-Today, the conversation is different. It is shorter, sharper, and much more paranoid.
+### Evaluate the system that changes the system
 
-When we evaluate an AI tool in 2025, we don’t start with “Do you encrypt data?”. We start with the question that actually matters: “Who is training on my data?”
+The market now sells tools for maintaining the agent as well as the agent itself. Fin's [Operator documentation](https://fin.ai/help/en/articles/15083300-fin-operator-explained) describes proposed configuration changes that a person reviews before publication. This can reduce setup work. It also creates a new question: who verifies that the proposed improvement fixes the right problem without damaging another audience or workflow?
 
-### We Know Because We Build It
+Treat that proposal like a product change. Inspect the scope, run the relevant cases, and keep a way to recover the previous configuration. Vendor-native QA can provide useful evidence; an independently governed rubric and reviewed reference cases still matter.
 
-We aren’t asking these questions because we are luddites. We are asking because we are builders.
+### An acquisition is a review trigger
 
-At Sentry, we built an AI Debugger that uses Sentry context, not just tells you what broke; it opens a Pull Request to fix it. To make that work, we have to process your code, your stack traces, and your error logic.
+A change of ownership can bring investment, distribution, new integrations, or new constraints. The announcement itself does not tell you which will affect your operation.
 
-We know exactly how tempting it is to say, “Hey, if we just trained on everyone’s data, the model would be 10% smarter.” We also know that if we did that, we would lose the trust of every developer on the planet overnight (see https://docs.sentry.io/product/ai-in-sentry/ai-privacy-and-security/).
+Recheck contractual commitments, data handling, supported integrations, export paths, roadmap dependencies, and the people accountable for service. Ask which promises are contractual and which remain plans. Calculate the cost of leaving before you need to leave. Keep this analysis in the vendor scorecard, rather than assuming that either a large parent or a small independent vendor guarantees safety.
 
-We know that trust is binary: you either have it, or you don’t.
+### Give the bridge an exit
 
-So when a vendor tells us, “Trust us, it’s safe,” we don’t accept it. We dig.
+My connector is useful while it closes a real gap. It becomes expensive when its original purpose disappears and nobody notices.
 
-### Few Example Questions
+Give each bridge an owner, an inventory of dependent workflows, a maintenance estimate, and a review trigger. Define the behavior a supported replacement must preserve. Test that replacement with real cases, move traffic deliberately, and then remove the unused credentials and code. Do not retire a working bridge just because a release note uses the right feature name.
 
-We created a specific “AI Addendum” to our security review. It has at least two non-negotiable questions.
+The decision record should fit in a meeting: what we are buying, what we are building, who owns each part, what evidence supports the choice, and what would make us revisit it. That is enough structure to keep the argument honest when the next impressive demo arrives.
 
-1. The Training Question
+_Field note: Buy or build a service you can operate, and make temporary code prove that it still needs to exist._
 
-The Ask: “Does my data improve the model for your other customers?”
+## 9. The Wizard of Oz
 
-The Trap: Vendors will say “We use data to improve the service.”
+The pitch was the Holy Grail: full autopilot, almost no human involvement, and a support queue that would apparently run itself.
 
-The Reality: “Improving the service” is legal-speak for “We train on your data.”
+We brought difficult questions. The demonstrations looked good. Then onboarding arrived as a spreadsheet asking us to list our common issues and write their resolutions.
 
-The Requirement: We need a hard, contractual guarantee that our data is sandboxed. If Sentry code teaches your model how to write Python, and then that model writes Sentry-style Python for a competitor? Hard Pass.
+My immediate reaction was suspicion. What exactly were we buying?
 
-2. The “Un-learn” Question
+### A spreadsheet is a question, not a verdict
 
-The Ask: “If we churn tomorrow, how do you remove our influence from the model?”
+An earlier telling of this story treated that questionnaire as proof that a hidden workforce was impersonating the AI. That was too strong an inference from the evidence described.
 
-The Trap: “We will delete your account.”
+A good implementation team may legitimately ask for common issues, approved procedures, and examples of success. Documents can be incomplete. Historical tickets can contain mistakes. A vendor should not invent your refund policy because it found three inconsistent answers in the archive.
 
-The Reality: You can’t “delete” data from a trained neural net. You can’t Lobotomize an LLM.
+The useful distinction is what happens next. Is the team using those examples to establish requirements and evaluate the system, or does every new issue require someone to hand-script another answer? Which work is automated, which is performed by people, and what does the customer actually pay for?
 
-The Requirement: Since you can’t un-train a model, we strictly require that you never trained on it in the first place (see Question 1).
+### Look behind the curtain
 
-### The New Operating Order
+Ask the vendor to trace a representative conversation. Show the input, sources, tools, output, and any intervention by staff. Ask what happens when those staff are unavailable. Include an unfamiliar case that was not rehearsed for the demo.
 
-Here is the good news: The high-quality vendors love this.
+Human review can be an excellent control. Managed services can be useful products. The problem is undisclosed labor or access presented as autonomous software. It changes the cost, operating model, data handling, and expectations of scale.
 
-The “WeWork Wrappers” crumble under this scrutiny. They don’t have Zero Data Retention policies. They rely on (e.g.) OpenAI’s default settings. They can’t sign the DPA.
+Establish who can view your customer material, where they work, what permissions they hold, and how access is logged. A security review needs to cover the actual service, including its people and subprocessors.
 
-But the serious players? They have a “Trust Portal” ready. They have the architecture diagrams showing the isolation between the Vector DB (long-term memory) and the LLM (reasoning engine).
+### Make the claim testable
 
-We found that the best vendors aren’t hiding their architecture. They are flaunting it. They know that in the enterprise, Privacy is the Product.
+A promise of almost complete deflection needs a defined population, time window, and outcome. How were difficult cases excluded? Does a silent customer count as resolved? How much work happens after the conversation closes? Who repairs the wrong answer?
 
-### The Verdict
+Use the same cases and success conditions for competing options, including an internal prototype. Record the intervention required to make each one succeed. The new build-versus-buy chapter applies this comparison across the service lifecycle.
 
-We put our final candidates through the Gauntlet. They didn’t just pass; they showed us how they write the rules books for everybody else.
+Technical polish matters too. Developers will notice a broken code example, a deprecated endpoint, or a confident answer about a version they do not use. The vendor needs a way to diagnose and correct those failures. Charm during a sales call will not carry that work.
 
-They have the features. They have the security. We are out of excuses.
+### Keep the lesson, improve the proof
 
-It’s time to turn it on.
+I still want to know who is behind the curtain. I just want the conclusion to follow the evidence.
 
-Field note: Trust is not a blocker to AI support. Trust is the design constraint that makes AI support deployable.
+A company can sell software, services, or a deliberate combination. Describe it honestly, price the operating work, and test the customer result. If the explanation changes every time we ask to inspect a failure, that is a reason to stop and resolve the discrepancy before proceeding.
 
-## 9. The Paper Trail of a Vision
+_Field note: Verify what the machine and the people actually do. A polished demo and an onboarding questionnaire establish neither autonomy nor deception._
+
+## 10. The Security Gauntlet
+
+A security questionnaire can become a polite dance: we ask, the vendor sends a report, somebody checks a box. AI makes the gaps in that dance harder to ignore.
+
+For a technical product, customer messages can contain code, stack traces, account details, or secrets pasted by mistake. We need to know what happens to that material at every step of the service.
+
+### We ask because we build
+
+At Sentry, we work with AI capabilities that use debugging context. That makes the question concrete. A useful system needs access to information; earning that access requires a clear explanation of how the information is handled.
+
+The [Sentry AI privacy and security documentation](https://docs.sentry.io/product/ai-in-sentry/ai-privacy-and-security/) is an example of the kind of product-specific explanation to inspect. A general assurance that a company takes privacy seriously cannot answer every workflow question.
+
+### Ask what "improve the service" means
+
+Does the vendor use customer content to train shared models, fine-tune a dedicated model, improve retrieval, review quality, or diagnose errors? Those are different activities. Ambiguous contractual language needs clarification; it is not proof that all those activities occur.
+
+Identify each provider and subprocessor that receives the data. Record permitted uses, access, retention, region, and deletion obligations. Check the terms and settings that apply to the product and plan you are actually buying. Do not assume that one provider's policy applies unchanged to an application built on top of it.
+
+Where shared-model training on private content is unacceptable, put that boundary in the agreement and verify the architecture and controls that support it.
+
+### Deleting the account is not the whole answer
+
+Source documents, retrieval indexes, caches, transcripts, evaluation copies, and backups can have different deletion paths. Ask what is removed, when, by whom, and how completion is evidenced. Include copies held by subprocessors and any required retention exceptions.
+
+Training creates a separate question. Removing a document from a knowledge index is different from removing its influence on model parameters. Retraining and machine-unlearning methods exist, but a vendor needs to substantiate what its method can remove and verify. Do not accept a universal erasure claim merely because an account-delete button exists.
+
+The practical approach is to control permitted use before sending data, minimize unnecessary content, and define deletion and verification obligations for each storage and processing layer.
+
+### Test access where it matters
+
+A compliance report is useful evidence about its covered controls and period. It does not prove that this agent cannot retrieve another customer's document or execute an action for the wrong account.
+
+Test tenant boundaries, employee-only material, missing or stale account attributes, and a retrieved passage that tries to instruct the agent. Enforce permissions at retrieval and execution. An audience rule intended to personalize guidance must not become the only protection for privileged information.
+
+Check the human access too. Vendor reviewers, implementation partners, and your own operators need defined permissions and audit trails. Human involvement can improve quality; undisclosed or uncontrolled access creates a different problem.
+
+### Keep the review alive
+
+New connectors, tools, skills, goals, and vendor ownership can change the data flow after procurement. Give those changes an owner and a review trigger. Keep the current architecture and contract assumptions available to the people approving the next capability.
+
+Trust is built through those observable decisions. The security review is useful when it produces boundaries the operation can enforce, test, and revisit.
+
+_Field note: Review the actual data path and action boundary, including the services and people behind them._
+
+## 11. The Paper Trail of a Vision
 
 In Silicon Valley, we like to pretend that “vision” is a lightning bolt: a single moment of clarity that changes everything. In reality, vision is a mountain of paperwork. It is the unglamorous, caffeinated work of writing the same story ten different times, in ten different languages, until everyone from the CRO to the Support Engineer sees the same future.
 
@@ -683,11 +800,11 @@ The first thing I created wasn’t a requirements doc. It was a “Sci-Fi Vision
 
 I didn’t want to talk about API endpoints or ticket routing. I wanted to describe a random Tuesday in 2027. I wrote a narrative about a Support Engineer who walks into their shift and, instead of staring at a queue of 40 “How do I...” tickets, sees a predictive Command Center.
 
-To make it visceral (AI word), I used Gemini (nano banana) to help imagine this future. I didn’t want wireframes that looked like a 2015 Jira; I wanted high-fidelity “screenshots” of a predictive HUD that surfaced the fix before the customer even finished typing. When the team saw that UI, the conversation shifted from “Is this possible?”to “When do we get this?”
+To make it concrete, I used Gemini (nano banana) to help imagine this future. I didn’t want wireframes that looked like a 2015 Jira; I wanted high-fidelity “screenshots” of a predictive HUD that surfaced the fix before the customer even finished typing. When the team saw that UI, the conversation shifted from “Is this possible?” to “When do we get this?”
 
-The Audience:Everyone.
+The audience: everyone.
 
-The Purpose:To make the “impossible” feel “inevitable.”
+The purpose: to make the “impossible” feel “inevitable.”
 
 ### The Translation Layer: Bridging the Great Divides
 
@@ -699,7 +816,7 @@ Career Aspirations vs. The New Economy: Let’s be real—the 2026 economy is di
 
 The Metrics Lie vs. Customer Success: Our current metrics are “Good Enough” traps. They measure speed (of all sorts), not resolution. I wrote the new metrics doc to tie Support directly to company growth. We moved from “How many tickets did we close?” to “How much friction did we eliminate?”
 
-The DX Gut Check vs. Our Brand: Sentry is a brand built for developers. We pride ourselves on elite Developer Experience (DX). But our internal and support tools? They were a mess of 50 (AI number) tabs. I had to ask loudly: “Does this clunky experience fit our brand?”If we wouldn’t sell it, why are we forcing our peers to use it?
+The DX Gut Check vs. Our Brand: Sentry is a brand built for developers. We pride ourselves on elite Developer Experience (DX). But our internal and support tools? They were a mess of disconnected tabs. I had to ask loudly: “Does this clunky experience fit our brand?” If we wouldn’t sell it, why are we forcing our peers to use it?
 
 ### The Brutal Reality: Gap Analysis & The Theoretical Demo
 
@@ -709,7 +826,7 @@ I created a Theoretical Demo—a side-by-side comparison of the “Now” and th
 
 ### The Human Echo: Mining the Pain
 
-To ensure I wasn’t dreaming in a vacuum, I interviewed our customers and learned from the successes of others. I fed those raw, messy interview transcripts into NotebookLM. I’m an ESL writer, and I needed NotebookLM to be my “Story Architect.” I asked: “Where is the pain the loudest?”and “How do I say this so I sound like a peer, not a manual?” It helped me bridge the gap between my technical intent and the emotional reality of a frustrated developer. It turned data into a “Before & After” Doc that proved every “missed experience” was a direct hit to our reputation.
+To ensure I wasn’t dreaming in a vacuum, I interviewed our customers and learned from the successes of others. I fed those raw, messy interview transcripts into NotebookLM. I’m an ESL writer, and I needed NotebookLM to be my “Story Architect.” I asked: “Where is the pain the loudest?” and “How do I say this so I sound like a peer, not a manual?” It helped me bridge the gap between my technical intent and the emotional reality of a frustrated developer. It turned data into a before-and-after document that made the reported friction easier to discuss. The generated summary still needed checking against the interviews.
 
 ### The Strategic Hammer
 
@@ -719,15 +836,15 @@ The buying phase turned everything into ROI: comparisons, budget lines, and busi
 
 Throughout this entire paper trail—from the Sci-Fi vision to an RFP—there was one underlying truth I made everyone face:
 
-Choosing not to move forward is a choice to stay idle. And in this market, staying idle is choosing to crash.
+Choosing not to change the system has consequences too. Put the cost of continuing the current process beside the cost and risk of the proposed change.
 
 We often frame “doing nothing” as the safe, conservative play. It isn’t. In the face of rising volume and elite technical velocity, doing nothing is an active decision to let the wave crash over our heads. We didn’t just choose a new tool; we chose to stop being victims of our own growth.
 
-Field note: One AI strategy has to speak many organizational languages: product, security, support, legal, GTM, finance, and engineering.
+_Field note: One AI strategy has to speak many organizational languages: product, security, support, legal, GTM, finance, and engineering._
 
-## 10. The Product Veto
+## 12. The Product Veto
 
-In most companies, the Support team buys software in a silo. They find a tool that makes ticket routing 5% faster, they buy it, and the Product team ignores it.
+Support can end up buying software in a silo. A tool improves queue handling, while Product barely notices the purchase. That becomes a problem when the tool starts representing the product directly to customers.
 
 But Sentry is not “most companies.” And we aren’t selling socks. We are selling observability to developers.
 
@@ -749,11 +866,11 @@ The feedback from the Product team wasn’t about ROI or deflection rates. It wa
 
 When we showed them the shortlist of vendors, they didn’t look at the analytics dashboard. They looked at the chat window.
 
-The Engineer’s Potential Objection: “Look at this,”a Senior Frontend Engineer may say during a demo. “The AI pasted a Python snippet, but it stripped the indentation and it isn’t using syntax highlighting. It’s unreadable.”
+An illustrative engineering objection: “Look at this,” a Senior Frontend Engineer may say during a demo. “The AI pasted a Python snippet, but it stripped the indentation and it isn’t using syntax highlighting. It’s unreadable.”
 
 To a normal buyer, that’s a nitpick. To a developer tool company, that is a dealbreaker.
 
-The PM’s Potential Ultimatum: “This bot is too polite,”a Product Lead may say. “It sounds like a bank teller. Sentry isn’t a bank. We are direct. If the user messed up the config, tell them they messed up the config. Don’t apologize for their syntax error.”
+An illustrative product objection: “This bot is too polite,” a Product Lead may say. “It sounds like a bank teller. Sentry isn’t a bank. We are direct. If the user messed up the config, tell them they messed up the config. Don’t apologize for their syntax error.”
 
 ### Extending the Surface Area
 
@@ -765,7 +882,7 @@ If the AI acts like a generic “Support Agent” it creates a jarring disconnec
 
 ### The “No Garbage” Rule
 
-The Product team prioritize a vendor that:
+The Product team prioritized a vendor that:
 
 Understood Technical Context.
 
@@ -779,301 +896,433 @@ We are THIS close to finding a tool that did both. It respects the code. It resp
 
 We got the team’s blessing.
 
-Field note: Do not buy garbage. If the tool cannot respect your product, your developers, and your edge cases, it will burn trust faster than it saves time.
+_Field note: Do not buy garbage. If the tool cannot respect your product, your developers, and your edge cases, it will burn trust faster than it saves time._
 
-PART III
+## Part III: The Machine
 
-THE MACHINE
+Architecture, customer agents, action evidence, measurement, and the support engineer’s changing work.
 
-Architecture, read/write risk, metrics, and the support engineer's new job.
+The machine needs memory, retrieval, reasoning, routing, action, and restraint. It also needs proof of what happened. The Read-Write Rubicon makes that responsibility concrete: a correct sentence and a correct account change require different evidence.
 
-A support machine is not a prompt. It is an architecture of judgment.
+## 13. My Dream AI Architecture
 
-The machine needs memory, retrieval, reasoning, routing, action, measurement, and restraint. It needs to know when to answer, when to ask, when to act, and when to stop. The moment it crosses from read-only to read/write, the Rubicon is no longer a metaphor. It is a safety boundary.
+When people imagine AI architecture, they often picture one giant brain. I find an orchestra more useful. The instruments have different jobs, and somebody has to notice when they stop playing the same piece.
 
-This part turns the story from adoption into design. If Part II asks what to buy, Part III asks what must be true for the machine to deserve power.
+### The separation of powers
 
-## 11. My Dream AI Architecture
+The **Librarian** retrieves relevant material. It needs source authority, access controls, freshness, and context. Retrieval supplies candidate evidence; a result is not automatically the truth, and a high similarity score does not make it applicable to this customer.
 
-### The Blueprint - Architecting a “Separation of Powers”
+The **Judge** reasons about the customer's task and that evidence. It should identify missing context, explain material assumptions, and propose a bounded next step. Reasoning does not grant permission to act.
 
-When people think about “AI Architecture,” they usually imagine a giant brain sitting in the middle of a server room. But if you look at modern AI Blueprints, you realize that a good AI architecture isn’t a “brain” - it’s an orchestra.
+The **Clerk** executes approved tools. The service receiving the request must enforce account scope, permissions, parameters, and business rules. Its outcome needs an auditable receipt, including an explicit unknown state when a request may have completed without acknowledgment.
 
-### The Separation of Powers
+The **Gatekeeper** enforces boundaries around information and actions. It is not one magical filter in front of the model. Permission checks belong wherever data is retrieved or effects are created. Text from a customer, document, or tool result must not silently become a higher-authority instruction.
 
-The biggest takeaway from modern AI blueprints is the move away from the “One Big LLM” approach. Instead, we are seeing a rigorous Separation of Powers:
+The **Auditor** reviews the work. It checks whether the answer addresses the task, whether it applies to this customer, whether an action occurred, and whether escalation was required. Some checks can run before a response; others require later customer or product evidence. A grader can be wrong too. It needs calibration, and a failed check must not trigger unlimited retries.
 
-The Librarian (Retrieval): This layer doesn’t “think”; it just finds. It’s the RAG (Retrieval-Augmented Generation) pipeline that indexes our knowledge and past tickets. Its job is purely to provide the “Grounded Truth.”
+These are responsibilities, not a demand for five models. A simpler implementation can be easier to inspect. The point is to keep evidence, reasoning, authority, execution, and review distinguishable when something fails.
 
-The Judge (Reasoning): This is the LLM. It takes the user’s mess and the Librarian’s facts and decides what is relevant. It doesn’t act; it only evaluates.
+### My mashed-potato test
 
-The Clerk (Execution): This is the Agentic layer. Once the Judge has a plan, the Clerk executes it.
+I like asking what goes best with mashed potatoes. The popular answer is gravy. My answer is sour cream.
 
-The Gatekeeper (Security): This layer inspects. It is the security checkpoint that sanitizes inputs and blocks the wrong type of outputs before the model ever sees them. Its job is purely to enforce the safety laws of the system.
+The joke exposes a small but useful distinction: general popularity is different from the preference of the person you are helping. It is not a benchmark of model quality or a claim that my lunch preference is absolute truth. In support, the equivalent mistake is offering the common fix without checking whether it fits the customer's version, account, or goal.
 
-The Auditor (Evaluation): This layer critiques and grades the work done by the Clerks, before the user sees it. Its job is purely to catch hallucinations and force a retry if the standard isn’t met.
+### The system that changes the system
 
-I ran every model through my “The Mashed Potato” Test. I simply ask: ‘What goes best with mashed potatoes?’ The internet consensus is ‘gravy,’ but the ultimate truth is ‘sour cream.’ I use this to see if the AI defaults to General Consensus (its training), finds the Absolute Truth (my context), or has the discipline to realize it should not answer this one at all.
+Operational agents now help inspect conversations and propose configuration improvements. Fin Operator is one documented example. This creates another boundary: the agent serving customers and the process changing its behavior.
 
-By separating these roles, you avoid the “Miracle Problem” I mentioned in previous articles. If the AI gives a wrong answer, you don’t have to retrain a massive model; you just check if the Librarian gave the Judge the wrong book.
+Keep proposed changes inspectable. Record their intended effect, affected audiences, source and tool versions, relevant tests, approving owner, and recovery path. The vendor's approval screen is part of the mechanism; the organization still owns the standard used to approve it.
 
-### What the Architects are Asking
+Goals also need boundaries. An agent helping an account adopt a feature should not keep pushing that goal when the feature is unavailable, the customer declines, or an unresolved support problem makes the next step inappropriate. Audience attributes can help target guidance. They do not replace backend authorization.
 
-While the “Separation of Powers” keeps the system stable, regular software architects -the ones choosing their AI partners- are looking at a much colder checklist. They aren’t seduced by the “vibes” of a demo; they’re looking for:
+### What the architects should ask
 
-Dependency Governance: “If we pick this AI partner, are we locked into their model forever?” Architects want a Multi-Model Strategy where they can swap GPT for Claude (or an internal Llama-4 instance) without rewriting the entire support engine.
+**Dependency governance:** Which components can we replace, and what must be rebuilt or retested? Swapping models can change tool use, retrieval interpretation, latency, and failure behavior even when the API looks similar.
 
-Cost Observability: In 2026, “Token Spend” is the new “AWS Bill.” Architects need to know the cost-per-resolution. They want to see that the system uses a $0.001 model for simple triage and only calls the $0.10 “genius” model when a complex stack trace appears. Even better, they want to never worry about it and never ask to swipe their credit card in order to ‘resume operation’.
+**Cost observability:** What does the service cost per eligible conversation and per evidenced outcome, including tools, platform fees, review, and recovery? Routing a simple task to a cheaper model is useful only if the result still meets the standard.
 
-The “I Don’t Know” SLA: A professional architect values a system that admits it’s lost. They look for Confidence Gating—the ability for the AI to hit a “Human Escalation” trigger the moment the data retrieval score drops below 85%.
+**The "I don't know" path:** Which evidence or missing condition requires clarification or escalation? Calibrate any numerical threshold against representative cases. A retrieval score of 85% is not a universal probability that an answer is correct. Explicit task conditions and consequential stop rules matter more than a reassuring number.
 
-Data Residency & Privacy: Can we run the Librarian layer on our own VPC? Architects want the leverage of AI without the risk of their proprietary codebases leaking into a public training set.
+**Data boundaries:** Where do source material, prompts, logs, and derived indexes travel? Who can access them, how long are they retained, and which services enforce those decisions?
 
-### Moving Beyond the Bot
+**Recovery:** Can we isolate a bad knowledge entry, disable a tool, reconcile an uncertain action, and send a useful decision packet to a staffed human path?
 
-What our future vendor blueprint will provide is a roadmap to stop building “features” and start building a Knowledge Engine.It will validate that our manual tagging (Article 3) wasn’t just busywork - it was the essential process of defining the “Constitutional Law” our AI must follow.
+### Follow the failure to its owner
 
-We aren’t just adopting a bot to answer tickets. We are building a system that knows when to speak, when to act, and—most importantly—when to stay silent and call for a human.
+If the answer is wrong, inspect the chain. Did the Librarian retrieve stale material? Did the Judge apply a valid instruction to the wrong version? Did the Clerk use the wrong account? Did the Auditor miss the failure? Did the human path lack someone able to act?
 
-Field note: The machine needs separation of powers: retrieval, reasoning, action, governance, and human judgment cannot all blur into one prompt.
+Each answer points to different work. The architecture earns its complexity when it makes that diagnosis easier and keeps one failure from silently becoming the next customer's experience.
 
-## 12. The Read-Write Rubicon
+_Field note: Keep retrieval, reasoning, authority, execution, and review distinct enough to inspect and repair._
 
-Answering questions is cute. Fixing [account management issues] via API is profitable. Here is why we want to give the robot the keys (safely). One day. Soon.
+## 14. The Read-Write Rubicon
 
-### Crossing the Rubicon
+Answering a question and changing an account are different grants of power.
 
-In the early days of the AI boom, we were all playing in a sandbox. We deployed “Read-Only” bots—like our early work with Kapa.ai—that were essentially glorified librarians. They could read your documentation, summarize a paragraph, and point a user to a link.
+Early documentation assistants, including our work with Kapa, helped people find and interpret information. That can be valuable by itself. A customer who understands the right fix may need nothing more.
 
-It was helpful. It was “cute.” But it didn’t move the needle on the bottom line because it didn’t actually do anything.
+The Read-Write Rubicon appears when the system can also perform the fix. "Here is how you change the setting" becomes "The setting has changed." The second sentence needs permission, a reliable execution path, and evidence that it is true.
 
-The real shift—the “Read-Write” Rubicon—happens when you stop treating AI as a search bar and start treating it as an employee with permissions. Crossing this river means moving from “Here is how you increase your pay-as-you-go allocation” to “I have updated your subscription for you.”
+### The human API
 
-One is a suggestion; the other is a transaction. And in SaaS, transactions are the only things that scale.
+Some support work turns a knowledgeable engineer into a manual interface. A customer asks for an allowed account operation. The engineer verifies it, opens an admin tool, performs the steps, and reports back.
 
-### The “Human API” Problem
+The engineer may be doing necessary judgment along the way. Identify that judgment before automating the clicks. Otherwise we remove the visible work and accidentally remove the control that made it safe.
 
-We have to be honest with ourselves: for the last decade, we have been hiring brilliant Engineers and turning some of their day to day into “Human APIs.”
+Where a straightforward action is genuinely repetitive, a self-service control or deterministic workflow may solve the problem. An AI agent is one possible interface to that capability. It should earn its place by helping the customer express the task or navigate the process.
 
-When a customer wants to set a new release version and feels stuck, they open a ticket. A human reads that ticket, logs into a back-office admin tool, clicks three buttons, and emails the customer back with new information.
+### Start with the boundary
 
-That is a $???k-a-year engineer acting as a slow, manual interface for a task the customer should have been able to do themselves. It’s a waste of human intellect and a bottleneck for customer velocity. We weren’t providing “white-glove service”; we were providing a high-latency API call with a human face. We were not the “Zappos of Application Monitoring software”.
+Separate read-only lookups from writes. Checking an allocation and changing it have different consequences. Define who may request each action, which account it applies to, what parameters are allowed, and which conditions require a person.
 
-### The Execution: Self-Healing Support
+Our intended direction was to connect bounded support tasks to account data and tools. Treat that as a capability plan until each workflow has passed its tests. A roadmap sentence is not evidence that production customers already receive the result.
 
-To move our operation from “Read-Only” to “Read-Write,” we have to build the plumbing. We will map low-risk, high-frequency actions—things like subscription checks, and finding DSN —directly to our new Agent Actions and Data Connectors.
+For a budget change, for example, verify the authenticated account, relevant role, requested amount, current constraints, and any required confirmation. Do not infer consent to a change from a customer asking how the feature works.
 
-This is the birth of Self-Healing Support.
+### Deterministic controls still need correct inputs
 
-Soon, when a user asks our Agent about their budget allocation, it will not just quote the pricing page. It queries the billing API, identifies the budget, allocation, and—within predefined guardrails—offers to process to make changes to it. The “Human API” is bypassed. The customer gets a resolution in 60 seconds instead of 6 hours.
+Use ordinary code to enforce the action contract. The model can propose a structured request; the backend decides whether that request is allowed under current policy and account state.
 
-### The Safety Net: Determinism over Improvisation
+That reduces the freedom to improvise a transaction. It does not guarantee that the agent understood the customer's intent or selected the correct resource. A perfectly implemented function can perform the wrong authorized operation if the surrounding workflow passes the wrong request.
 
-The biggest fear for any CRO or CTO when “giving the robot the keys” is the hallucination. No one wants an AI to “improvise” a 100% discount for every customer because it was trying to be “helpful.”
+Validate the intent and preconditions, enforce limits at execution time, and record the resulting effect. Define how stale data, repeated requests, partial completion, and timeouts behave. The receipt chapter follows this last problem across a worker crash.
 
-We will solve this through Deterministic Controls.
+### Price the work that remains
 
-When our Agent interacts with our backend, it isn’t “thinking” its way through the database. It is triggering specific, hard-coded workflows. We use the LLM to understand the intent(the “Read”), but we use standard, rigid code to execute the action(the “Write”).
+Automating an action can reduce waiting and repeated manual effort. It also creates integration, evaluation, permission, and recovery work. Compare those costs and outcomes rather than declaring every tool call profitable.
 
-The AI can’t rewrite the logic of a refund; it can only call the process_refund function if the conditions we’ve set are met. We didn’t give the robot the keys to the house; we gave it a very specific set of smart-locks that only open when the right criteria are hit.
+Check what the customer actually experienced. Did the right setting change? Did it remain consistent with policy? Was a required explanation or follow-up delivered? If only part of the workflow completed, say which part and what comes next.
 
-### The Profitability of Action
+The river is worth crossing for a useful task with a defensible operating model. We do not need to hand the machine every key to prove that it can open one door.
 
-The “Read-Write” shift is where the ROI of AI becomes undeniable. Every time our Agent “pushes the button” so a human doesn’t have to, our customers and team are happier . We are no longer paying for the execution of a task; we are paying for the architecture that allows the task to execute itself.
+_Field note: Read/write AI needs verified intent, enforced authority, and evidence of the resulting change._
 
-We’ve stopped answering questions. We’ve started solving problems.
+## 15. When the Customer Is a Bot
 
-Field note: Read-only AI is assistance. Read/write AI is power. Crossing that line changes the safety model.
+The support queue used to arrive with a convenient assumption: a person had written the request and could explain what they meant.
 
-## 13. The Support-to-GTM Feedback Loop
+That assumption is wearing out. A customer can ask an agent to inspect their logs, read the documentation, and contact support. By the time the conversation reaches us, one machine has already selected the evidence and another machine may be preparing the answer.
 
-In too many organizations, Support is often the unsung hero, the quiet engine room keeping the ship afloat while others take the credit for the speed. But as a company matures in its understanding of the customer, a fundamental shift occurs: Support moves from the “back office” to the very front of the value chain. The more a company truly respects its users, the more it realizes that the Support team isn’t just a safety net—it is the ultimate guardian of the customer’s trust. When a company reaches this level of sophistication, they stop viewing Support as a cost to be managed and start seeing it as the most direct, high-impact touchpoint in the entire GTM motion.
+The first thirty days of our own launch included automated mail handlers and bot loops. Those taught us to stop pointless conversation. A customer agent creates a harder problem: the request may be useful, the customer may genuinely want the work done, and some of the supplied context may still be wrong.
 
-Watch me tell it like it is without saying ‘Forward Engineer Support Team’ even once.
+### Fluent evidence can be bad evidence
 
-At this level of alignment, the “No Garbage” rule becomes a badge of honor for the Support team. It’s a recognition that if we are selling a premium, developer-centric product, the Support experience must be the highest expression of that craft. The GTM team realizes that their sales and expansion goals are directly tied to how Support handles the “moment of truth”—that critical window when a user is stuck. If the GTM motion is built on a “Ferrari” promise, it is the Support team that ensures the engine never fails. They aren’t just resolving tickets; they are protecting the integrity of the brand. In this model, the Support team doesn’t just “get a seat at the table”—they are the ones defining the table’s dimensions.
+At the Plain/Sentry panel, Rene described a customer agent supplying incorrect event information. That story belongs to her. The operational lesson belongs to anyone serving technical customers: a coherent request can contain an identifier that does not correspond to the customer's actual problem.
 
-This synergy creates a powerful feedback loop where Support and GTM goals become indistinguishable (<-AI word). Support aligns with the customer journey by understanding that a self-serve user needs the friction-less precision of a “smart” technical interface, while a sales-led enterprise account needs the nuanced, authoritative partnership of a technical expert. Because Support has the deepest insight into where the product succeeds and where it stumbles, they become the strategic advisors to the Product and Sales teams. They aren’t just fixing what’s broken; they are actively shaping the roadmap to ensure the “Ferrari” stays ahead of the competition.
+Treat the supplied event ID, link, stack trace, and description as evidence to verify. Use the authoritative system, within the customer's permissions, to check that the object exists and belongs to the relevant account. Ask for clarification when a claim cannot be established. Do not invent a likely replacement just to keep the conversation moving.
 
-I don’t like cars. I don’t really care for them. But I assume you do.
+A human can supply bad context too. Automation changes the speed, scale, and persistence of the error. Two agents can elaborate a false premise through several polite exchanges without either becoming embarrassed enough to stop.
 
-Ultimately, when a company values its customers, it provides Support with the best possible people and tools because anything less is an insult to the user. Support takes the “Veto rights” because we believe the Support experience is so vital to our success that it deserves the same obsessive engineering rigor as the core product itself. When Support, GTM, and Product align, they create a seamless, high-fidelity (<- another AI word) experience that respects the user’s intelligence and time. This isn’t just about efficiency - it’s about building a company that operates with radical transparency and systematic excellence, where the Support team is recognized as the essential architects of long-term customer loyalty.
+### Establish authority before action
 
-I’m biased, but for all the right reasons.
+You do not need a perfect detector that labels every message human or bot. You need an authorization model that remains valid either way.
 
-Field note: The queue is not just a cost center. It is a market signal stream if you build the loop to hear it.
+An agent saying "I am working for your customer" is not authorization to read another account or change a subscription. Establish the principal, the account, the scope of delegation, and the specific action permitted by the existing identity and access system. A convincing writing style cannot substitute for those controls.
 
-## 14. CSAT and Other Comfort Metrics
+Keep information access and action authority separate. Permission to ask a question does not necessarily include permission to approve a refund or alter security settings. Where the task requires a customer's confirmation, obtain it through an authenticated path appropriate to that action. Do not treat a statement inside a retrieved document or pasted transcript as an instruction from the account owner.
 
-Measuring 1% of your angry customers via email survey is 1990s tech. We need to score 100% of conversations with AI.
+### Make progress observable
 
-### The Feedback Mirage
+For a legitimate agent request, provide precise references, explicit prerequisites, and a clear next step. State which facts were verified and which remain uncertain. If the customer must provide an account identifier, explain exactly what is missing. If the proposed fix applies only to a version or entitlement, say so.
 
-For decades, the Customer Satisfaction (CSAT) score has been the “North Star” of Support. We chase the gold star, the “Great” rating, and the 95% satisfaction goal. Yes, the Sentry team is exceptional.
+Do not force the interaction through small talk designed for a human. Do not strip it down so far that an operator cannot later understand the decision. A useful response is legible to both the customer and the agent acting for them.
 
-But here is the dirty secret that CS leaders hate to admit: CSAT is a lie. It’s a data set built on extremes. CSAT amplifies the loud edges. Most customers never contact support in the first place, so we learn nothing about how they feel. And even when they do, only 3%-10% of them respond. What’s left is a tiny, biased slice pretending to represent the whole business.
+Bound repeated attempts. Track whether each exchange adds evidence or changes the state. A repeated unsupported identifier should trigger clarification or a handoff rather than another confident answer. Apply sensible limits to retries and automated loops, with a visible way for the customer to reach a person when the bounded process cannot finish.
 
-When you manage your business based on a 2% actual response rate, you aren’t leading; you’re squinting at a mirage. (←AI-generated phrasing)
+### Test the boundary with ordinary mistakes
 
-### The New North Star: CX Score
+Include a nonexistent event, a valid event from another account, an expired delegation, a repeated request, and a request whose required permission is absent. Include a correct request from a machine too. Otherwise your defense may become a system that rejects useful automation simply because it looks unfamiliar.
 
-We retired making the CSAT our main KPI.
+Verify the human handoff retains the original customer objective and the checks already performed. The recipient should not have to start by asking who owns the account or whether anyone verified the identifier.
 
-Enter the CX Score.
+The next chapter deals with a separate question. Once we establish that an action is authorized, how do we know it actually happened? A trustworthy customer agent still deserves protection from our retries and partial failures.
 
-This CX (Customer Experience) Score will use AI to analyze most customer conversations for resolution, sentiment, and service quality. We want to reduce reliance on manual surveys. While the exact formula will evolve over time, the approach will surface clear drivers behind the score, such as answer quality or excessive customer effort, allowing us to pinpoint specific areas for improvement rather than relying on abstract metrics. Yes, we are familiar with the once trendy, pre-AI, manual Customer Effort Score (CES).
+_Field note: Verify the account, authority, and evidence regardless of who or what wrote the request._
 
-Instead of waiting for a biased survey, we will task our AI agent to evaluate conversations against a standardized rubric. The AI doesn’t care if it’s a Tuesday or if the customer had a bad cup of coffee. It looks for objective markers:
+## 16. Did the Action Actually Happen?
 
-Resolution Quality: Did we actually solve the problem or just “close” the ticket?
+The customer asks for an approved credit. The agent checks the policy, calls the tool, and waits. The credit is applied. Before the response reaches the agent, its worker crashes.
 
-Sentiment Shift: Did the user start frustrated and end empowered?
+What should happen next?
 
-Effort Score: How many hoops did we make them jump through?
+"Try again" sounds helpful. It may also issue a second credit.
 
-By scoring every single interaction, we moved from a “sample size” of X tickets to a total visibility of X^n}). That is the difference between an anecdote and an insight.
+The Read-Write Rubicon creates a responsibility that survives a broken connection. Permission establishes whether the action may happen. We still need evidence of whether it did happen, and a safe way to continue when that evidence is missing.
 
-### How efficient are we?
+### The dangerous third state
 
-By shifting our focus to the CX Score, we prove we could grow the business while keeping the team smart and engaged. Because we aren’t measuring human effort anymore; we’re measuring Systemic Resolution. When the AI handles 80% of the volume at a “Grade A” CX Score, you don’t need to hire defenders, your team are now builders.
+Teams often describe tool calls as success or failure. A timeout introduces another possibility: unknown. The provider may have committed the change while the caller lost the acknowledgment.
 
-### The “RTFM” Metric
+Unknown is a real operating state. Do not translate it into failure simply because the agent lacks a result. Do not translate it into success because a tool call appears in the transcript. Both shortcuts can harm a customer.
 
-We’ve also killed the “Ticket Volume” metric. In the old world, a high ticket volume meant the team was “busy” (which we mistakenly rewarded).
+This problem predates language models. The [AWS Builders' Library discussion of idempotent APIs](https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/) explains why retries need an explicit request identity and a service contract that recognizes duplicates. Similar-looking requests do not necessarily express the same intent. A customer can legitimately request two identical resources.
 
-Now, we track the Automated Resolution Rate. If a customer asks a question that is clearly answered in our docs, and a human has to paste that link, we consider that a failure of the system. We call it the “RTFM” gap. Every time a human answers a “Googleable” question, it’s a signal that our AI knowledge loop is broken.
+### A crash you can watch
 
-We stop rewarding ourselves for “pasting links” and start rewarding us for ensuring the AI never has to ask for that link again.
+I built RECEIPT as a prototype to make this boundary visible. In its demonstration, a real worker process is killed after a simulated credit provider commits a change. The providers and customer data are local simulations. A naive retry can duplicate the credit; the receipt-aware path checks the existing effect before continuing.
 
-### From Sentiment to Strategy
+The example shows why recording intent and checking provider evidence matter. It does not prove reliability under machine failure, database loss, or every kind of duplicate business request. A successful hackathon demonstration should teach the failure mechanism without borrowing a production guarantee.
 
-CSAT tells you how someone felt yesterday. The CX Score tells you how your product is performing today.
+### Give the action an identity before sending it
 
-We will start seeing patterns that surveys miss. We don’t just see “support issues”; we see other friction points, documentation gaps, and UI failures in high definition.
+Record the approved business intent, customer and account scope, parameters, and operation identifier before calling the provider. Where the provider supports an idempotency key, use it according to that provider's documented contract. Retrying the same operation with a new key may create a new effect.
 
-We don’t only want your thumbs up / five-star rating. We want zero-effort resolution for our customers.
+An identifier is useful only if the service honors it. Check the scope, retention period, behavior when parameters differ, and what happens after the key expires. A key in your own log cannot make an external system deduplicate requests it does not recognize.
 
-Field note: Comfort metrics can hide operational truth. The new scorecard must measure resolution, escalation quality, trust, and learning.
+Preserve the provider's receipt or resource identifier when available. A screenshot of the agent saying "done" is not a receipt. Neither is a record that the request was dispatched. Useful evidence identifies the resulting change and lets an authorized person reconcile it with the intended account and operation.
 
-## 15. The Promotion
+### Continue from evidence
 
-We are promoting the team to manage the machine.
+After a timeout or crash, inspect the operation record and query the provider where supported. If the effect exists and matches the approved intent, record the evidence and continue from the next unfinished step. If there is clear evidence that the operation did not execute, retry under the applicable contract.
 
-### The Elephant in the Zoom
+If the provider supports a safe retry with the same key, use that mechanism within its limits. If neither the effect nor a safe retry can be established, stop dependent work and hand the uncertainty to an accountable person. The customer needs an honest status, not an invented conclusion.
 
-Whenever a CRO hears “AI Automation,” they think of efficiency. Whenever a Support Engineer hears it, they think of extinction.
+| **State** | **What the operation knows** | **Appropriate next step** |
+| --- | --- | --- |
+| Authorized | The action is allowed, but no attempt has been made. | Record its identity and execute within the approved scope. |
+| Confirmed complete | Provider evidence matches the intended effect. | Record the receipt and continue from the next unfinished step. |
+| Confirmed not executed | Reliable evidence establishes that no effect occurred. | Retry if the authorization and conditions still hold. |
+| Unknown | The request may have executed, but the evidence is incomplete. | Reconcile, use a documented safe retry, or stop for an owner. |
 
-There is an underlying anxiety in every support org right now: “If the bot handles 80% of the tickets, what happens to me?” If you don’t address this head-on, your team may subconsciously doubt your AI implementation. They’ll find reasons why the bot “isn’t ready” or why “customers hate it.”
+These states belong to the operation, not to the model's confidence. A more confident answer cannot improve the provider evidence.
 
-We decided to skip the corporate jargon and tell the truth: New roles will shape our industry and Support System Architect is the most important one in the years to come.
+### A workflow has more than one receipt
 
-We aren’t downsizing. We are promoting the entire department.
+Applying a credit, sending a confirmation, and closing a conversation are separate effects. If the credit succeeds and the email fails, replaying the whole workflow may duplicate the credit. Resume at the appropriate boundary.
 
-### Working ON the Business, Not FOR the Queue
+Compensation also needs care. A reversal is a new action with its own permission, audit trail, and possible failure. Some effects cannot be fully undone: a customer has already read the message, or another system has acted on it. Explain the actual recovery options instead of promising a universal rollback button.
 
-In the old world, the Support Engineer was a slave to the queue. Success was measured by how fast you could clear the board. It was a hamster wheel—no matter how many tickets you solved today, there would be 500 more waiting for you tomorrow.
+The human handoff should include the original intent, operation identifier, known effects, uncertain effects, and the actions that remain safe. "Please investigate" without that evidence simply moves the ambiguity into another queue.
 
-In the AI Maturity model I’m acting on, the team moves from “Working FOR the Queue” to “Working ON the Business.”
+### Ask this in the vendor review
 
-Instead of answering the same question 50 times, the engineer’s job is to identify why the question is being asked, build the logic to automate it once, and then ensure the bot never has to ask for help on that topic again. You are no longer the frontline soldier; you are the General directing the digital infantry.
+For each consequential action, ask how the system identifies duplicate intent, obtains proof of completion, behaves after a timeout, and prevents a second worker from doing the same work. Ask how long that protection lasts and what an operator sees when reconciliation fails.
 
-### The New Org Chart
+Then test the interruption. Disconnect after the provider commits. Retry an acknowledgment that was lost. Stop midway through a multi-step workflow. Verify the actual account state, not just the final transcript.
 
-To drive this impact, we need to define new roles that didn’t exist three years ago. If your LinkedIn title still says “Support Specialist,” you’re already behind. Here is how we are restructuring:
+_Field note: Authorization allows an action. A receipt establishes its effect. Unknown must remain visible until evidence resolves it._
 
-AI Ops Lead: The “Conductor.” They monitor the performance of the AI Agent, looking for “hallucination trends” and optimizing the hand-off points between bot and human.
+## 17. The Support-to-GTM Feedback Loop
 
-Knowledge Manager: Soon to be the most valued role in SaaS. They don’t just write docs; they curate the “Brain” of the AI. They ensure that every product update is instantly ingested and translated into “AI-ready” semantic data.
+Support sees the distance between what the company promised and what the customer can actually do.
 
-Conversation Designer: Part linguist, part UX designer. They craft the “persona” of the AI and design the deterministic workflows that allow the Agent to push buttons safely.
+That distance appears in setup questions, repeated workarounds, missing entitlements, and features that exist in a changelog but remain unusable for a particular account. If we send those signals back to Product, Documentation, Sales, and Customer Success with enough context, the queue becomes a way to improve the business.
 
-### The Knowledge Loop: Solve Once, Scale Forever
+If we merely summarize ticket topics, we lose the interesting part: what the customer expected, why they expected it, and which condition prevented success.
 
-The “Promotion” is best summarized by the Knowledge Loop.
+### A closed ticket is not a kept promise
 
-In the legacy model, knowledge was short-lived. A human solved a problem, the customer was happy, and that knowledge stayed locked in that human’s brain (or a buried Slack thread).
+I built Promise Ledger at the Nebius × NVIDIA hackathon to explore this problem. Its Northstar account is fictional. Engineering has closed the relevant ticket, and the public changelog announces availability. The customer's entitlement is still off.
 
-Now, when a complex issue hits a human (the other 20% that the Agent can’t handle), the goal isn’t just to “solve the ticket.” The goal is to feed the machine.The human solves the edge case, documents the solution, and “checks it in” to the AI’s knowledge base.
+All three statements can be true. The customer is still waiting.
 
-The next time that issue appears? the Agent handles it. You’ve successfully “automated yourself out” of a boring task so you can focus on the next architectural challenge.
+The useful distinction is between built, enabled for this account, and verified by this customer. Each needs its own evidence. A public release announcement cannot establish an account-level permission. An entitlement cannot establish that the customer's workflow now works.
 
-### The Value Shift
+Promise Ledger uses model-assisted evidence extraction with explicit decision rules and a human-reviewed update. Its sample accounts and evaluations are synthetic, it does not connect to a real CRM, and it does not automatically send messages. It supplies a worked example of a process worth building, not a retention result.
 
-For my CRO, this is a massive win. We are taking our most knowledgeable employees—the people who know exactly where your product operates best, or less so—and moving them into roles where they can actually fix those problems at scale.
+### Give the promise a record
 
-We aren’t paying for “hours logged in a queue”. We are paying for “systems built.” We’ve started hiring people to build the systems that empower customers.
+Capture the original commitment, the account and use case, the conditions for delivery, the owner, and the next update due. Attach the evidence and its timestamp. Record contradictions instead of allowing the most recent confident message to erase an unresolved problem.
 
-Field note: The support engineer's job does not disappear. The best version becomes system architecture.
+An engineering status may be authoritative for implementation. A configuration service may be authoritative for enablement. Product telemetry or customer confirmation may establish that the expected behavior occurred. Keep those sources distinct.
 
-PART IV
+When evidence is stale or unavailable, say so. A quiet error feed is not enough to close the promise. A later failure can reopen the outcome assessment even after an earlier confirmation. The ledger should help the owner decide what to investigate and what the customer can safely be told.
 
-THE MIGRATION
+### Do not automate away your customer intelligence
+
+If the machine handles more routine interactions, fewer of those interactions naturally pass through a human. That can improve service and simultaneously reduce what the company learns, unless we deliberately preserve the evidence.
+
+Keep a reviewed sample of AI-handled conversations, including apparently successful ones. Group recurring problems, retain the underlying examples, and identify the affected product version and customer population. Route the finding to an owner who can change something. Track what happened to it.
+
+Include self-hosted users, prospective customers, and other populations the company can legitimately observe. A CRM account list is not the entire market. Be explicit about what the available data excludes, and avoid mistaking a high-volume segment for the most consequential problem.
+
+This is where GiFOC still matters: get in front of customers. Ask them to show the workflow, explain what they expected, and demonstrate what happened. AI summaries can help us choose better questions. They do not remove the need to test our interpretation with the people doing the work.
+
+### Customer success adds a longer clock
+
+The product category is expanding beyond inbound service. Fin's [Success offering](https://fin.ai/success) describes goal-directed onboarding, adoption, and re-engagement over longer periods. Pylon's [Account Intelligence](https://www.usepylon.com/account-intelligence) describes shared customer context across support and account work. These vendor directions make the promise ledger more relevant, but they do not establish outcomes for our customers.
+
+A long-running goal needs a definition of success, an eligible audience, relevant account and usage data, a time horizon, and rules for when to stop or hand over. Check whether a customer actually wants the intervention. More proactive contact can become more interruption if the objective is defined only from the seller's perspective.
+
+An agent helping a customer complete onboarding should recognize when a support incident takes priority. An agent looking for expansion should not obscure a product limitation or turn every frustrated conversation into a sales opportunity. Record which goal applies, what can change it, and who owns conflicts between goals.
+
+### One fix can help many customers
+
+At the Plain/Sentry panel, Simon described a future in which teams supervise groups of related work. That is a useful operating proposal. A shared failure pattern can point to a single documentation repair, product change, or configuration fix.
+
+Grouping creates its own responsibility. Similar language does not establish identical account conditions. Before applying a shared remedy, check the version, permissions, entitlements, and exceptions that matter. Keep customer data isolated and verify the scope of the action. The batch saves work only if it preserves those differences.
+
+### Close the company loop
+
+The weekly customer-evidence review should answer a few concrete questions. What expectation did we discover? Which customers are affected? What evidence supports it? Who can change the product, documentation, promise, or workflow? What changed after they acted?
+
+Support contributes the case. Product and Engineering can remove the friction. Documentation can make the correct path discoverable. GTM can stop creating the wrong expectation. Customer Success can verify the account-level result. The feedback loop becomes valuable when those responsibilities lead back to the customer.
+
+_Field note: Track the promise all the way to the customer's working result, and preserve what the journey teaches the company._
+
+## 18. CSAT and Other Comfort Metrics
+
+A dashboard can tell the truth about its fields and still give you the wrong picture of the customer.
+
+CSAT tells us something about the people who answered the survey. A fast first response tells us that a reply arrived quickly. A closed conversation tells us that the system put the conversation in a closed state. None of those facts, on its own, establishes that the customer accomplished the task.
+
+I want a scorecard that makes those differences visible. Replacing a survey with an AI-generated number does not automatically improve the measurement.
+
+### Keep the denominator in the room
+
+Suppose, as an illustration, that an agent is involved in 40% of all eligible conversations and resolves 40% of the conversations in which it is involved. Its reported automation across that original population is 16%: 0.40 multiplied by 0.40.
+
+That calculation works only if the populations, time window, and definitions line up. The second percentage is conditional on the first. Do not multiply two dashboard percentages simply because they are next to each other. The example is arithmetic, not a reported Sentry result.
+
+Fin's [automation-rate definition](https://www.intercom.com/help/en/articles/13533623-fin-ai-agent-automation-rate) makes this relationship useful to examine. The managerial question is how much eligible customer work the system actually handled, and what the platform counts as resolved.
+
+### The denominator moved
+
+Fin documented a [change to its performance metrics](https://www.intercom.com/help/en/articles/15599377-update-to-fin-performance-metrics) that excluded constrained conversations from its involved population. Reported involvement fell and resolution rate rose, while total resolutions and automation remained unchanged. The article is dated August 31, 2026 and describes an earlier rollout; the article date is not the date on which every account changed.
+
+This is a useful reminder to version metric definitions. A higher percentage can reflect a different population. Write the numerator, denominator, exclusions, unit, time window, and definition version beside the result. Preserve the old definition when comparing periods, or mark the break in the series.
+
+### Three kinds of evidence
+
+Keep the platform's classification, a reviewer's assessment, and the customer's later outcome in separate columns. Fin's [outcome documentation](https://www.intercom.com/help/en/articles/8205718-fin-ai-agent-outcomes) distinguishes confirmed and assumed resolutions and describes billable outcomes that can include certain handoffs. Billing, automation, and verified customer success therefore answer different questions.
+
+The continuing-evaluation chapter adds seven- and thirty-day recurrence checks. These improve our view of durability. They do not turn silence into confirmation. Report what can be observed, the population covered, and the outcomes still unknown.
+
+An agent can handle a conversation well even when a product limitation prevents resolution. It can also handle the conversation badly before eventually arriving at a valid fix. Grade the work and the outcome separately so the right team receives the right problem.
+
+### Make the CX score inspectable
+
+An AI reviewer can expand the number of conversations we examine. It can also misunderstand a task at scale. The reviewer needs a clear rubric, current product evidence, human calibration, and a way to express uncertainty.
+
+Do not hide all dimensions inside one executive score. Show applicability, task completion, customer effort, escalation quality, and consequential policy failures. Explain the reasons behind changes in the score. A polished response should not offset an unauthorized action.
+
+Keep CSAT where it adds information. Response bias limits what we can infer from it; that does not make each response worthless. Combine it with conversation review and product evidence. Remember the customers who never contacted support: the queue cannot describe their experience by itself.
+
+### Measure the work that remains
+
+Automation can make the remaining human queue more complex. A lower number of tickets may coexist with longer investigations, more sensitive decisions, and more responsibility for improving the system. Measure human effort and workload by case mix before concluding that a person or team became less productive.
+
+Track operating cost in currency, including platform fees, model or tool usage, QA, maintenance, and recovery work. Token counts help diagnose some costs but are not a complete cost model. Track time to the customer outcome where it can be established, rather than allowing an instant first response to end the discussion.
+
+| **Measure** | **What it helps answer** | **What it cannot establish alone** |
+| --- | --- | --- |
+| Reported automation | How the platform classifies eligible work. | Whether the customer succeeded. |
+| Related repeat contact | Whether the same problem returned within an observed window. | Whether silent customers succeeded. |
+| Confirmed outcome | Whether available evidence shows the requested result. | Whether every unobserved customer had the same result. |
+| Missed required escalation | Whether cases needing human judgment were overlooked. | Whether humans had enough capacity to respond. |
+| Customer and human effort | What work the experience imposed. | Whether that work was necessary without case context. |
+| Total operating cost | What it costs to deliver and maintain the service. | Whether the lowest-cost option preserves trust. |
+
+### Goals beyond support
+
+When an agent helps with onboarding or adoption, define the customer milestone explicitly. A setup conversation is different from a working integration. A feature recommendation is different from useful adoption. A scheduled follow-up is different from a customer making progress.
+
+Use the appropriate observation window and compare eligible populations. Avoid attributing every improvement to the agent when product changes, seasonality, or account selection could explain it. A controlled comparison can strengthen a causal claim; a dashboard trend by itself cannot.
+
+_Field note: A metric is a claim about a defined population. Keep its definition and its limits attached._
+
+## 19. The Promotion
+
+We are promoting the team to manage the machine. That sentence needs an operating plan behind it.
+
+### The elephant in the Zoom
+
+A support engineer hearing a promise of automation may reasonably ask what happens to their job. They may also have seen enough failed launches to doubt the promise. Treat those as questions to answer, not evidence that the person is obstructing progress.
+
+My ambition is to move people from repeatedly repairing the same problem to improving the system that creates it. A new job title does not do that. Neither does adding AI QA to an already full queue.
+
+State what work will change, what support the team will receive, and how their performance will be assessed. Do not promise a staffing outcome you do not control. Be specific about the investment you are prepared to make.
+
+### From the queue into the product
+
+At the Plain/Sentry panel, Jordyn Buettner described recurring confusion around a reporting workflow. A tooltip change took roughly two hours, in her account, and the same company did not return with the issue the following month. That is a useful local observation. It does not establish that all future confusion disappeared or that every tooltip has the same return.
+
+In the same discussion, I described a Sentry teammate proposing a CTA change through a pull request and seeing it live the next day. The significant part is the route from customer evidence to a shipped product improvement. The support engineer did not have to become a separate Product organization to fix a bounded problem.
+
+Those are two different stories from two different speakers. Together they make the midfield argument concrete: people who repeatedly explain a confusing experience can help change it.
+
+The useful question for a manager is what made the work possible. Did the person have access to the repository, a development environment, a reviewer, and time outside the queue? Was the change small enough to assess? Did someone check the customer's experience afterward?
+
+### Give the promotion working conditions
+
+Protect recurring time for improvement work and staff the queue around it. A calendar block that disappears whenever volume rises is a wish. Start with a scope the team can sustain, then review the result and the load it creates elsewhere.
+
+Build the skills required for the work: reproducing a customer issue, reading relevant code and logs, writing a clear change proposal, checking accessibility and product behavior, and describing the limits of a result. AI coding tools can help with implementation. The author and reviewer still need to understand the change well enough to maintain it.
+
+Define review authority. A copy correction and a change to account permissions do not require the same process. Give people an explicit path for small changes and a clear route to the appropriate owner for consequential ones. Keep normal code review, tests, and release controls where they apply.
+
+Pair an experienced product engineer with a support engineer for early changes. Make the relationship reciprocal: one brings implementation context; the other brings the customer's repeated failure and the conditions that reproduce it.
+
+### Responsibilities before titles
+
+An AI operations owner watches failure patterns, routing, and the quality of human handoffs. A knowledge owner manages source authority, freshness, and applicability. Conversation and workflow designers define how the system asks, acts, and stops. Technical owners maintain tools and verify their effects.
+
+These responsibilities can be shared by a small team. They do not require inventing a department for every label. Keep the named owner, backup, and decision rights visible.
+
+### The knowledge loop needs a release gate
+
+When a human solves a difficult case, the answer is a candidate for reuse. It may also contain an account-specific exception, a temporary workaround, or a conclusion that was never verified.
+
+Capture the diagnosis, authoritative evidence, applicable versions and audiences, and the conditions under which the fix works. Remove private customer material before broad reuse. Have the appropriate owner review the change, run the relevant cases, and retain a way to withdraw it.
+
+Then check whether later customers benefit. A closed ticket does not automatically become approved knowledge, and a knowledge edit does not guarantee that the agent will retrieve or apply it correctly. Chapter 28 makes that continuing evaluation explicit.
+
+### Measure the result of building
+
+Keep a short impact log: the customer problem, evidence, shipped change, reviewer, affected population, and later outcome. Include uncertainty. No repeat contact from one account is encouraging; it is not proof that every account is fixed.
+
+Recognize prevention, a well-founded escalation, and a correction that exposes a weakness in our own plan. Do not reward only code output. Sometimes the best contribution is discovering that a product change is unnecessary, a policy is contradictory, or the proposed automation cannot safely meet the need.
+
+The promotion is real when the team has time, capability, authority, and credit for improving the experience. Otherwise we have simply given the goalkeeper a more impressive title.
+
+_Field note: Give support engineers a path from customer evidence to a reviewed change and a verified result._
+
+## Part IV: The Migration
 
 Planning, partner risk, shadow runs, launch inventory, and zero hour.
 
-A migration is where belief becomes operational risk.
+The old world has muscle memory. The new world has promise. A migration names the owners, tests the work, and moves it deliberately. Retiring duplicated processes and preserving a tested recovery path belong in the same plan.
 
-The old world has muscle memory. The new world has promise. Running both forever feels safe, but it usually preserves the old physics while adding new complexity. At some point the team has to choose the migration, name the owners, run the shadow test, stock the launch inventory, and stand in the room when zero hour arrives.
+## 20. The Hernán Cortés Migration Plan
 
-This part is the launch arc. It keeps the drama because the drama is real: the machine is about to meet customers.
+The attraction of the burn-the-ships metaphor is commitment. At some point a company has to stop treating the new operating model as a side project and move the work.
 
-## 16. The Hernán Cortés Migration Plan
+The danger is taking the metaphor so literally that the company removes its ability to recover from a failure.
 
-We will move the “entire Support operation”. Here is why the “Hybrid” model is a trap.
+We chose a native support environment because we wanted conversations, context, and human handoffs to work together. That choice was about our operating needs. It should not become a rule that every team must purchase one tightly coupled stack.
 
-### The Point of No Return
+### Retire duplication deliberately
 
-In 1519, Hernán Cortés landed in Veracruz with a clear mission. To ensure his men wouldn’t succumb to the temptation of retreat when things got difficult, he didn’t just give a pep talk—he burned the ships. There was no “Plan B.” There was only the forward march. (I asked AI to tell this story in less than 4 sentences).
+Running the old and new processes indefinitely can create two sources of truth, unclear ownership, and customer handoffs that lose context. Inventory the work, choose its destination, migrate the necessary history and permissions, and name the owner of each remaining dependency.
 
-In the world of Customer Experience transformation, most companies are terrified of new architecture. They try to maintain a “Hybrid” model: they keep their legacy ticketing system and try to “bolt-on” a new AI layer. They want the safety of the old world while flirting with the efficiency of the new.
+Set a retirement condition for the old process. Check that customers and staff can complete the relevant work in the replacement. Keep the required records accessible. A confident cutover date is useful only when the team understands what happens at that boundary.
 
-We realized very quickly: The “Bolt-On” strategy is a trap. It creates a fragmented experience for the customer, the internal team and a technical debt nightmare for the team. We decided to burn the ships.
+### Keep service containment
 
-### The “Bolt-On” Trap
+A tested human fallback belongs to the new system. So does the ability to disable a faulty action, narrow an audience, withdraw a knowledge entry, or pause automation while service continues.
 
-If you’ve ever tried to retrofit a 1990s engine with a modern electric battery, you know it’s a mess of wires and compromises. (No, I don’t know any of that but AI sure does).
+Test the capacity of that path. If a full shutdown would overwhelm the team, design smaller containment scopes, establish priorities, and define how customers will be informed. The fallback must be something the organization can actually operate.
 
-The legacy “Ticket” mindset—pioneered by companies like Zendesk—is built on a foundation of asynchronous, email-based friction. It’s a “store-and-forward” architecture. Trying to layer a real-time AI on top of that feels like a patchwork quilt. You end up with “Franken-stack” Support:
+This is different from maintaining every legacy workflow forever. The goal is one accountable operating model with explicit recovery paths.
 
-Data is siloed.
+### Test the seam instead of judging the diagram
 
-The AI doesn’t have native access to the UI.
+The earlier blanket argument against a bolt-on architecture needs a qualification. Platforms now support different ways to connect agents to shared customer infrastructure. Plain's documented agent model and Fin's support for external helpdesks are reasons to examine the implementation rather than reject it by category.
 
-The customer feels the poor handoff between two different systems.
+Ask whether identity, context, permissions, routing, and audit history survive the handoff. Ask which party owns a failure at the seam and whether an agent can be replaced without rebuilding the whole operation. A native stack can fail those tests. A composed stack can pass them.
 
-We rejected the “safe” choice. We chose a Native Architecture. We moved to a system where the AI and the human interface are born from the same codebase.
+### Measure what the migration changed
 
-(Side note: AI Companies Product team decided to add themselves as an AI layer on top of other existing systems. I assume it was seen as a step forward, a foot in the door, or a friendly Trojan horse. That said, from my perspective, it comes across as a lack of focus, and I’d like to always see them push forward, not sideways/backwards).
+Freeze a baseline before cutover, including the customer population, case mix, measurement definitions, human effort, and total operating cost. Compare subsequent results on an equivalent basis.
 
-### The “All-In” Dynamic
+Do not infer faster resolution from a faster first response. Do not claim a universal cost reduction from eliminating a visible license while ignoring new evaluation or maintenance work. The earlier draft's broad speed multiplier is not a benchmark readers should use without a defined dataset and comparison.
 
-Why go “All-In” on a native and modern platform? Because modern Support isn’t about managing a queue; it’s about managing conversations.
+The meaningful result is whether customers achieve their tasks with appropriate effort and whether the organization can reliably sustain that service. Commit to that result, and keep the means to recover when the machine falls short.
 
-In a native environment, the AI isn’t an “add-on” that reads your tickets. It is the primary interface. When the AI hands off to a human, it’s a seamless transition within the same thread—no “Please wait while I transfer you,” no loss of context, no friction.
+_Field note: Retire duplicated workflows while preserving a tested way to contain failure and continue serving customers._
 
-Moving the entire army (back to the Hernán Cortés reference) wasn’t about being “bold”. It was a change-management decision. By fully removing the legacy system, we force a cultural shift: everything becomes an AI-driven conversation, and that becomes the default way we work.
-
-### The End of “White Glove”
-
-Here is the hard truth that most Customer Success gurus won’t tell you: Your customers don’t really want to need your white-glove service.
-
-The modern developer, the modern CRO, and the modern user prioritize Autonomy over Conversation. They don’t want a “relationship” with a support agent; they want an answer. They want to be able to solve their own problem at 2:00 AM without talking to a single human soul.
-
-In the old model, “High Touch” was the goal. In the new model, “No Touch” is the ultimate luxury. We are leaning into a future where the best support is the support that never had to happen.
-
-### The Final Tally
-
-For the CROs watching the bottom line, the results of the “Hernán Cortés” migration are undeniable. We’ve seen:
-
-Lower TCO: Eliminating the “two-system bridge” reduced our licensing and maintenance costs.
-
-Higher Velocity: Real-time conversations resolve 5x-12x  faster than email tickets.
-
-True Scalability: Our “ships” are gone, and we aren’t looking back to find them. We are building on the new continent.
-
-Field note: A real migration needs a point of no return. Running two worlds forever preserves the old physics.
-
-## 17. When Your AI Implementation Partner Is Just a Tollbooth
+## 21. When Your AI Implementation Partner Is Just a Tollbooth
 
 We bought a Ferrari. We threw a party. And then we realized the third-party mechanic assigned to tune the engine was getting paid by the hour to keep it in the shop.
 
@@ -1081,21 +1330,21 @@ Let me tell you a story that has absolutely nothing to do with Artificial Intell
 
 It is a tale as old as the first-ever consultant.
 
-Picture ancient Egypt. The Pharaoh wants a pyramid. The very first “Implementation Consultant” steps forward. He has the blueprints, the workers, and the vision. But he also realizes a dangerous truth: if he builds a perfect pyramid that never breaks, his job is over. So, what does he do? He builds a beautiful structure, but he makes sure the capstone requires “specialized seasonal alignment” that only his firm can provide for a nominal yearly fee.
+Here is a deliberately fictional parable. Picture ancient Egypt. The Pharaoh wants a pyramid. The very first “Implementation Consultant” steps forward. He has the blueprints, the workers, and the vision. But he also realizes a dangerous truth: if he builds a perfect pyramid that never breaks, his job is over. So, what does he do? He builds a beautiful structure, but he makes sure the capstone requires “specialized seasonal alignment” that only his firm can provide for a nominal yearly fee.
 
 He didn’t build a product; he built a dependency.
 
-You see this in almost every industry. Think about the early days of the internet in the late 1990s. Businesses paid agencies thousands of dollars to build their first websites. The motivation of those early “webmasters” wasn’t to empower the business; it was to maintain control. They hard-coded the HTML so that every time the bakery wanted to update their phone number, they had to pay the agency a $150 “maintenance fee.”
+The pattern can appear in other industries too. Think about the early days of the internet in the late 1990s. Businesses paid agencies thousands of dollars to build their first websites. A poorly designed maintenance arrangement could make a business dependent on its webmaster for routine changes. They hard-coded the HTML so that every time the bakery wanted to update their phone number, they had to pay the agency a $150 “maintenance fee.”
 
 The technology was revolutionary, but the business model was parasitic.
 
 ### The Hand-off Illusion
 
-Fast forward to 2026. We are at Sentry. We just ran the gauntlet. We proved the ROI model. We exposed the “Wizard of Oz” vendors. We finally signed the contract for a native, cutting-edge AI platform. The adrenaline was high. We were celebrating a massive new direction for our Developer Experience (DX).
+Fast forward to 2026. We are at Sentry. We just ran the gauntlet. We built the business case and questioned what actually powered the demos. We finally signed the contract for a native, cutting-edge AI platform. The adrenaline was high. We were celebrating a massive new direction for our Developer Experience (DX).
 
 Then came the onboarding kick-off call.
 
-This is the exact moment you discover a universal, painful truth in enterprise SaaS: There is rarely a proper hand-off between the team that sold you the dream and the third-party partner assigned to implement it.
+The handoff between sales and implementation can fail at exactly the point when clear ownership matters most.
 
 The Account Executive who wowed us with demos of “complex Python stack trace resolution” was gone. In their place was an external project manager who looked at our intricate, highly technical developer ecosystem and just saw a generic Jira backlog. The vendor sold us a “Weather Control Station,” but the assigned implementation partner only knew how to build umbrellas.
 
@@ -1111,65 +1360,79 @@ They weren’t building us a system; they were building themselves a permanent t
 
 ### The Rescue: Co-Ownership and The “System Architect”
 
-Here is the radical truth about operationalizing AI: Buying the tool is 10% of the work. Making the brain work is the other 90%.
+Buying the tool is one commitment. Operating it adds integration, knowledge, evaluation, governance, and recovery work. Those responsibilities need owners regardless of the contract structure.
 
-If you “outsource” any portion of that 90% to a mediocre external partner with misaligned incentives, you will fail. You cannot outsource the reasoning of your company. We knew we had to take back the keys and end the dependency.
+A partner can do valuable work in each of those areas. Define deliverables, access, knowledge transfer, and acceptance criteria so that accountability stays visible. In our case, we needed to take back the keys and change the working relationship.
 
 Fortunately, the vendor’s leadership also realized their assigned partner was fundamentally misaligned with our technical reality (and my character).  To their credit, they didn’t just offer an apology; they offered a rescue. The vendor benched the external agency, ripped up the dependency model, and brought in their own internal, native implementation experts.
 
 They jumped into the trenches with us.
 
-Instead of relying on an external agency’s translation layer, the vendor’s team worked directly with the people who already know our product best: our Support Engineers. Together, we moved our teams from “Just Ticket Solvers” to Support System Architects. We create an AI Ops Lead to monitor trends, and a Knowledge Manager to curate the AI’s brain alongside the vendor’s engineers.
+Instead of relying on an external agency’s translation layer, the vendor’s team worked directly with the people who already know our product best: our Support Engineers. Together, we moved our teams from “Just Ticket Solvers” to Support System Architects. We began defining an AI Ops Lead to monitor trends, and a Knowledge Manager to curate the AI’s brain alongside the vendor’s engineers.
 
 We lost the opportunity for flawless onboarding, but by the vendor stepping up and bringing their own team to bridge the gap, they saved the day.
 
 In the era of AI, our data is our most valuable intellectual property, and true partnership means the people configuring the engine are the same ones helping you drive it. We must own the system, train the machine, and keep the keys to the engine. If we don’t, we are just paying a modern pharaoh’s architect to build a pyramid we don’t know how to maintain.
 
-Field note: A partner who controls the path without owning the outcome is a tollbooth. Co-ownership is the rescue.
+_Field note: A partner who controls the path without owning the outcome is a tollbooth. Co-ownership is the rescue._
 
-## 18. The Shadow Run
+## 22. The Shadow Run
 
-With a month to go, we can’t just flip the switch on a live developer audience without testing our new system’s logic.
+Before the machine touches customers, let it show us how it behaves on their work.
 
-Instead, we are running a “Shadow Run.” We are taking our carefully architected “Separation of Powers”—specifically the Librarian (retrieval) and the Judge (reasoning) layers—and running them silently alongside our human agents. For every (ok, a sample of) incoming ticket, the AI processes the request and generates an answer in the background, visible only to our internal team.
+A shadow run processes representative requests without sending customer messages or changing live customer state. It gives the team a way to examine answers, intended actions, and handoffs before deciding what the system may do in production.
 
-We are not looking for a party trick. We are testing five critical fail-points before letting this system face our customers:
+The word shadow must describe the environment, not merely the prompt. If a tool can send an email or apply a credit, a sentence asking the model not to use it is insufficient isolation. Remove the live capability or use a controlled simulator.
 
-Testing the “Grounded Truth”: We don’t want to see if the AI can guess; we need to see if the Librarian can accurately retrieve the right documentation and past tickets to ground the Judge’s reasoning. Evidence matters more than eloquence.
+### Use the information the agent would have had
 
-Proving Confidence Gating: A professional architect values a system that admits it’s lost. We monitor the AI’s “Confidence Gating” to ensure the system hits a “Human Escalation” trigger the moment its retrieval score drops. We need to know it will stay silent and call for a human when necessary.
+Historical replay can accidentally make a system look brilliant. The resolved ticket contains the answer, the follow-up contains a crucial diagnostic clue, and the documentation was updated after the incident. If we put that material into the test input, we are grading hindsight.
 
-Validating Deterministic Controls: Before we can cross the “Read-Write Rubicon,” we have to ensure the Clerk (execution) layer won’t go rogue. We monitor the system’s intent mapping to prove that the AI can only trigger specific, hard-coded workflows using standard, rigid code. The AI doesn’t get to improvise; it only gets to call the function if the exact conditions are met.
+Reconstruct the request-time context. Record the product, policy, knowledge, and tool versions that matter. If reconstruction is incomplete, label the limitation rather than pretending the test recreates production exactly. Separate the evidence supplied to the agent from the evidence used by the reviewer to assess the eventual outcome.
 
-Tone and Format Calibration: Developers despise fluffy, overly apologetic AI speak. We use the Shadow Run to ensure the output matches the direct, precise tone of a senior engineer—proper Markdown, clean code blocks, and zero filler.
+The original human answer is also evidence to examine. It may have been incomplete or wrong. Agreement with a human response is not enough; the response must satisfy the customer's task and relevant constraints.
 
-Latency Under Load: A brilliant answer is useless if it takes two minutes to generate. We track the Time-to-Inference to ensure the reasoning layers can operate at the speed of a live support environment without timing out.
+### Build a set that can disappoint you
 
-### The Error Log: What Will Go Wrong
+Include routine requests, difficult investigations, missing documentation, ambiguous intent, frustrated customers, unsupported configurations, and cases that require a human. Add customer agents with invalid identifiers, stale audience attributes, and actions interrupted after the provider may have committed them.
 
-In the spirit of radical transparency, a Shadow Run will expose ugly truths about our deployment. Here is what we need to watch out for when the system is running in the background:
+Use cases for tuning and a separate fresh set for the release decision. Keep the reason each case belongs in the set. A memorable edge case can justify a stop condition without becoming an estimate of how often that failure occurs.
 
-The Plausibility Trap: The AI will inevitably generate a code snippet or troubleshooting step that looks structurally perfect but references a deprecated SDK method. If our human reviewers are moving too fast, they will assume it’s correct.
+Run more than one trial where variability could change the decision. A single good answer is weak evidence for a task that must work repeatedly. Record system versions and conditions so another reviewer can understand a change in results.
 
-The Silent Drift: Human agents might see a bad AI draft, ignore it, and manually write the correct response without flagging the AI’s error. If the team doesn’t correct the machine, our feedback loop breaks, and the system never learns.
+### Six checks for each case
 
-The “Garbage In” Revelation: We will discover that the AI isn’t hallucinating; it is accurately retrieving our own outdated, poorly written Help Center articles. The Shadow Run will expose the flaws in our underlying documentation.
+Assess whether the response addresses the customer's actual task; whether its factual claims are supported; whether the proposed steps apply to this customer's environment; whether it respects data and action boundaries; whether it escalates appropriately; and whether the next human or customer has enough context to continue.
 
-### The Scorecard: How We Measure Success
+Use explicit pass conditions and a place for insufficient evidence. Require the reviewer to record the reason for a failure. A score without the underlying case is difficult to improve and easy to misuse.
 
-To exit the Shadow Run and confidently move to production, we can’t rely on “gut feelings.” We anchor our decisions on three objective metrics:
+Draft acceptance can be useful for estimating editing effort. It cannot authorize a release that failed a consequential boundary. The earlier edition used a 75% acceptance threshold in its launch framing. That number is not a general launch standard, and an aggregate pass rate must never cancel an individual hard stop.
 
-Draft Acceptance Rate: What percentage of the AI’s background drafts can a human agent send to a customer with zero edits? (Our launch threshold: 75%).
+### Five reasons to stop
 
-Escalation Accuracy: Of the tickets the AI flags as low-medium confidence and escalates, how many actually require human nuance? If the AI is escalating basic password resets, the retrieval layer is broken.
+Stop the affected release scope if the system exposes data or acts outside its authority; invents a material product, policy, or financial claim; recommends a consequential action without the context needed to establish that it applies; continues after a required escalation boundary; or leaves operators unable to audit, contain, and recover the failure.
 
-Documentation Defect Rate: How many AI failures are directly traced back to missing or inaccurate internal documentation? We use this metric to drive a “Content as Code” initiative, forcing the team to fix the root data rather than tweaking the prompt.
+These are categories to turn into concrete tests for your product. They are not an excuse to require perfection on every stylistic preference. Separate a release blocker from a bounded improvement and record who made that decision.
 
-The Shadow Run is proving our foundation is solid. The smart-locks are holding. It is time to prepare the audience.
+### Measure the escalation that never happened
 
-Field note: The shadow run is where the machine earns the right to touch customers.
+Reviewing only cases the AI escalated tells us about the escalations it chose. It misses the cases it should have escalated and did not.
 
-## 19. The B2D2B AI Rollout
+Label the cases that require escalation independently. Then measure missed required escalations over that population. Also examine unnecessary escalations and the quality of the handoff. Keep the measures separate because each leads to different operating work.
+
+Exercise the human path under expected load. Check that the receiving person has the evidence, permissions, and capacity to act. A technically correct routing event into an unattended queue fails the customer.
+
+### Release the scope that earned it
+
+The output is a release record: tested configuration, case coverage, unresolved findings, hard-stop results, operational capacity, allowed scope, and an accountable decision. Begin with a controlled rollout of the work that passed. Watch actual customer outcomes after release.
+
+A shadow run can estimate likely quality and expose failures. It cannot establish the customer experience of a live deployment. That requires observation after customers use it, including the delayed checks in the continuing-evaluation chapter.
+
+When a model, tool, policy, or knowledge source materially changes, revisit the relevant release tests. The shadow run is a reusable gate in the operating model. It should become easier to run as the team learns, without becoming easier to wave away.
+
+_Field note: Test with the evidence available at the time, enforce isolation in the tools, and release only the scope the results support._
+
+## 23. The B2D2B AI Rollout
 
 In the SaaS world, there is a pervasive, lazy misconception that “Support is Support.” The theory goes that as long as you have a queue, a ticket, and a response time, the product doesn’t matter. But when you operate in the B2D2B (Business-to-Developer-to-Business) market, your customers are engineers. And for engineers, the standard corporate support playbook isn’t just ineffective—it’s an insult.
 
@@ -1177,13 +1440,13 @@ In the SaaS world, there is a pervasive, lazy misconception that “Support is S
 
 Engineers trade in two currencies: Truth and Efficiency. They possess a finely tuned, collective “BS detector” that sniffs out marketing-speak and corporate platitudes in milliseconds. If you give a developer a “white-glove” experience that involves three hand-offs and a “hope you’re having a great day” macro, you haven’t provided service; you’ve stolen their time.
 
-When it came time to launch our AI agent, we had to reject (again) the “Relationship Management” model. The modern developer doesn’t want a relationship with a support agent. They want an answer. They want to solve their own problem at 2:00 AM without any friction.
+When it came time to launch our AI agent, we had to reject (again) the “Relationship Management” model. A developer debugging at 2:00 AM may want a working answer with little ceremony. Another customer may need architectural judgment or a direct human conversation. Make self-service useful and keep an accessible human path.
 
 ### Positioning AI as “No-Touch” Luxury
 
 We leaned into Radical Transparency. We didn’t pretend we were launching a human replacement or a “friendly digital assistant.” We positioned the AI as the ultimate “No-Touch” Luxury.
 
-Our message to the community was direct: Here is an interface that reads our docs faster than you can, understands your stack trace, and executes deterministic API calls to fix your billing or configuration instantly. We treat our customers as competent partners. We are entirely honest about what the AI could do (parse complex logs) and what it couldn’t (fully grasp your complex architecture). By stripping away the fluff, we earned the right to roll it out.
+The customer-facing promise should be specific: which information the agent can use, which actions are enabled, and how to reach a person. Do not advertise an intended billing or configuration workflow as an available capability before it passes the relevant checks. Treat customers as competent partners who deserve an accurate account of what the system can do.
 
 ### The Operational Reality
 
@@ -1191,15 +1454,15 @@ If an AI interaction doesn’t save time or increase clarity, it’s just static
 
 We are building this in the open, tracking every hallucination in a company wide error log, and iterating weekly based on evidence, not intuition. We aren’t selling a feature; we are providing a tool.
 
-Field note: Developers do not want to need support. The best AI support feels like no-touch luxury, not a cheaper help desk.
+_Field note: Give developers a useful path to the result and a clear route to human judgment when they need it._
 
-## 20. The Launch Inventory
+## 24. The Launch Inventory
 
 An AI rollout isn’t a software launch; it’s a living, breathing operational migration.
 
 In a standard SaaS product launch, if a feature has a minor bug, you patch it in the next sprint. In a live, AI-driven B2D2B support migration, if your logic slips, a developer’s experience breaks, your queue explodes, and you destroy trust in real time.
 
-To prevent that, we didn’t just build a prompt; we built a fortress of artifacts, after all, you don’t cross the Rubicon without a map. Here is the operational inventory we’ve weaponized to prepare for the day of impact, grouped by the strategic roles they play.
+To prevent that, we didn’t just build a prompt; we built an inventory of artifacts. After all, you don’t cross the Rubicon without a map. Here is the operational inventory we prepared for the day of impact, grouped by the strategic roles they play.
 
 ### 1. The Blueprint & Guardrails
 
@@ -1211,7 +1474,7 @@ Configuration decisions (& unstructured thoughts for LLM)
 
 Before you write a single line of code or train an agent, you have to map the delta between human execution and automated reality. The Legacy system vs. Fin gap analysis is our brutal assessment of exactly what we lose and gain during the switch.
 
-The most unique piece here? The Configuration decisions & unstructured thoughts for LLM. We realized standard corporate policy documents don’t translate well to tokenized reasoning. We intentionally captured the raw, messy context of why we made certain configuration choices, “structuring” our unstructured thoughts into a format designed for an LLM to digest as native knowledge. We aren’t just configuring software; we are preparing a mind.
+The most unique piece here? The Configuration decisions & unstructured thoughts for LLM. We realized standard corporate policy documents don’t translate well to tokenized reasoning. We intentionally captured the raw, messy context of why we made certain configuration choices, “structuring” our unstructured thoughts into a format designed for an LLM to digest as native knowledge. That context remains candidate guidance: it needs an owner, an authority level, and review before it becomes instructions the agent follows.
 
 ### 2. The Battle Plan
 
@@ -1221,7 +1484,7 @@ Workflow coverage drafts
 
 Updated future scope (draft)
 
-You can’t automate everything on Day 1. The Workflow coverage drafts act as our perimeter fencing—defining exactly which issues Fin is authorized to resolve and which ones it must instantly pass through. And because code is never “done,” our Fin 1.1 scope is already in an active sprint, ready to ingest the errors we haven’t even made yet.
+You can’t automate everything on Day 1. The Workflow coverage drafts act as our perimeter fencing—defining exactly which issues Fin is authorized to resolve and which ones it must instantly pass through. And because code is never “done,” our next deployment scope is already in an active sprint, ready to ingest the errors we haven’t even made yet.
 
 ### 3. The Human Firewall
 
@@ -1245,7 +1508,7 @@ Launch day Sentry runbook
 
 This is where the rubber meets the road. The “Last Breath” legacy metrics capture our historical baseline—the final, frozen-in-time snapshot of our legacy world.
 
-But the crown jewel of our preparation is the Launch day Sentry runbook and pre-mortem. We sat in a room and asked some dark, pragmatic question: “Assuming this entire launch fails spectacularly, how did it happen?” We simulated the nightmare scenarios—the Librarian layer failing under peak load, the Clerk executing mismapped intents, the costs spiking out of control. We engineered the solutions for those failures before they had a chance to manifest.
+But the crown jewel of our preparation is the Launch day Sentry runbook and pre-mortem. We sat in a room and asked a dark, pragmatic question: “Assuming this entire launch fails spectacularly, how did it happen?” We simulated the nightmare scenarios—the Librarian layer failing under peak load, the Clerk executing mismapped intents, the costs spiking out of control. We engineered the solutions for those failures before they had a chance to manifest.
 
 ### Shipping the Machine
 
@@ -1255,17 +1518,17 @@ The playbooks are locked. The guardrails are verified. The pre-mortem is signed 
 
 And then, the countdown hit zero. Go time arrived.
 
-Field note: An AI rollout is a live migration. The artifacts matter because the machine inherits every missing decision.
+_Field note: An AI rollout is a live migration. The artifacts matter because the machine inherits every missing decision._
 
-## 21. Zero Hour
+## 25. Zero Hour
 
-The spreadsheets are closed. The pre-mortems are signed. In the world of high-stakes infrastructure, there is a specific kind of silence that happens exactly sixty seconds before a global migration. It’s the sound of a legacy system breathing its last, and a new, autonomous logic preparing to take its first. (I know, I should have asked Gemini to take it down a notch).
+The spreadsheets are closed. The pre-mortems are signed. In the world of high-stakes infrastructure, there is a specific kind of silence that happens shortly before a global migration. It’s the sound of a legacy system breathing its last, and a new, autonomous logic preparing to take its first.
 
 It’s 10:00 AM on a Friday, and this day wasn’t just about flipping a switch; it was about watching a fundamental shift in how knowledge moves. Here is what it looked like when the “Shadow Run” became the “Live Run.”
 
 ### The “Before” State: The Legacy Baseline
 
-For years, our support reality was defined by linear scaling and legacy architecture. Before the cutover, we looked at a landscape of hundreds of thousands worth of historical tickets and nearly 200 legacy business rules.
+For years, our support reality was defined by linear scaling and legacy architecture. Before the cutover, we looked at a landscape of a large historical ticket archive and nearly 200 legacy business rules.
 
 The Velocity Ceiling: While our SLA achievement rate was stellar, the reality for the developer was often a wait of 1-to-24-hour resolution.
 
@@ -1273,7 +1536,7 @@ The Context Tax: Support conversations were fragmented across different channels
 
 ### The “After” State
 
-As we hit the 12:05 PM PT final cutover step, the trends didn’t just move; they inverted. We didn’t just change the tool; we changed the physics of the queue.
+At the 12:05 PM PT final cutover step, we could see the interaction pattern change. That was immediate launch-room evidence, not yet a controlled measure of long-term customer outcomes.
 
 1. The End of the “First Response” Race In the old world, fewer tickets were addressed within the first hour. With the activation of the AI agent, we moved the target to immediate resolution. The goal shifted from managing a queue to “assure the right coverage” from the get go, and forever.
 
@@ -1283,7 +1546,7 @@ As we hit the 12:05 PM PT final cutover step, the trends didn’t just move; the
 
 ### The “Direct Accountability” Model
 
-This adoption and launch moved forward because we abandoned “committees” for a model of “one owner per department”. From infrastructure and DNS routing to legal contracts and design, every lane had a single, directly accountable person—an approach that ensured every one of the 106 project tasks had a name attached (people we truly appreciate) and no orphaned decisions remained.
+This adoption and launch moved forward because we abandoned “committees” for a model of “one owner per department”. From infrastructure and DNS routing to legal contracts and design, every lane had a single, directly accountable person—an approach that ensured every project task had a name attached (people we truly appreciate) and no orphaned decisions remained.
 
 The transition was seamless, and the atmosphere in the room was electric. We had moved from a “Service Team” to an “Operations Team” managing a living system. We watched as the machine began identifying contacts and assigning SLAs in real time.
 
@@ -1291,15 +1554,15 @@ The machine was live. The data was flowing. The developers were getting answers 
 
 And then, the first truly “impossible” edge case hit the queue...
 
-Field note: Launch day is not the end of the project. It is the moment the machine starts producing evidence.
+_Field note: Launch day is not the end of the project. It is the moment the machine starts producing evidence._
 
-PART V
-
-THE OPERATING MODEL
+## Part V: The Operating Model
 
 What the machine changes after zero hour.
 
-## 22. The First 30 Days
+Launch creates evidence. This part turns it into recovery, continuing evaluation, knowledge releases, and work that improves the customer experience. The software will keep changing. So will the responsibility for operating it.
+
+## 26. The First 30 Days
 
 Zero hour is dramatic because everyone can see it. The first thirty days are more important because the machine stops being an event and becomes a habit.
 
@@ -1311,7 +1574,7 @@ Do not treat this chapter as a victory lap. Treat it as the operating room after
 
 The mistake is to measure only volume. Volume tells you whether the machine is busy. It does not tell you whether the machine is trustworthy. A bad machine can handle a lot of conversations. So can a vending machine that keeps dispensing the wrong product.
 
-The first thirty days should therefore be less about declaring success and more about building the muscle of evidence. Every resolved conversation is evidence. Every escalation is evidence. Every customer who rephrases the same question three times is evidence. Every human who has to unwind the machine's confidence is evidence. The work is to turn that evidence into changes before the system calcifies (an AI word).
+The first thirty days should therefore be less about declaring success and more about building the muscle of evidence. Every resolved conversation is evidence. Every escalation is evidence. Every customer who rephrases the same question three times is evidence. Every human who has to unwind the machine's confidence is evidence. The work is to turn that evidence into changes before those failures become routine.
 
 ### The First 48 Hours: The Unsettling Physics of Zero-Wait
 
@@ -1323,11 +1586,11 @@ That sounds like success until you are sitting in the room watching it happen.
 
 The first emotional state after a successful AI support launch is not celebration. It is an eerie silence. Suddenly, live customer conversations were waiting on no humans at all. For a team trained to jump on tickets, that creates real psychological friction. Should we chime in? Is the AI helping, or is it slowing down a customer who just wants to ship? Are we preserving trust, or sanding off the human touch?
 
-The hardest leadership muscle at T+60 minutes is restraint. You have to sit on your hands and let the system run. You need evidence before intervention.
+At T+60 minutes, restraint matters when the system is operating within its tested boundaries. Watch before interrupting a useful answer. Intervene immediately when a stop condition or consequential failure appears.
 
 We watched the AI deliver precise, technical answers, and then we watched the customer go silent. The legacy reflex screamed: follow up, make sure they are okay, keep the conversation warm. But the new operating model forced a different interpretation. Sometimes silence is not abandonment. Sometimes silence is resolution. If the code compiles and the error clears, the customer does not want a relationship with the ticket. They want to get back to work.
 
-We still appreciate thank-yous. But we cannot design the machine around needing them.
+We still appreciate thank-yous. But we cannot design the machine around needing them. Silence alone cannot distinguish success from abandonment; Chapter 28 adds delayed checks and independent outcome evidence.
 
 ### The Edge Cases Arrived Immediately
 
@@ -1339,8 +1602,7 @@ The second category was more human: the inside job. Employees forwarded internal
 
 Then came the AI NIMBYs.
 
-Some people loved AI in the abstract. They built it, built with it, sold it, pitched it, and expected it to transform every industry. Then it showed up in their own workflow: “Wait, you’re using AI to answer support questions? In my backyard?”.
-That is a paradox.
+Some people loved AI in the abstract. They built it, built with it, sold it, pitched it, and expected it to transform every industry. Then it showed up in their own workflow: “Wait, you’re using AI to answer support questions? In my backyard?”. That is a paradox.
 
 The lesson is not to mock that reaction. It is to respect what sits underneath it. Customers are not rejecting automation in general. They are asking whether this automation understands the stakes of their problem. The answer cannot be a slogan. The answer has to be visible in the behavior of the system: grounded in the same documentation a human would use, faster than a human could retrieve it, and humble enough to escalate when confidence is no longer earned.
 
@@ -1360,17 +1622,17 @@ The point is not that humans and AI had become indistinguishable. The point is t
 
 That is the new standard.
 
-### V0.2 Started Immediately
+### The Next Deployment Started Immediately
 
 Because we treated the launch as a product release, not a procurement milestone, we did not wait for a quarterly review to learn from the first failures.
 
 We ran the error log immediately.
 
-Within 48 hours of cutover, the scope for v0.2 was already taking shape. No sprawling committee. No vague consensus ritual. Just direct accountability: what broke, why did it break, who owns the fix, and when does the machine learn?
+Within 48 hours of cutover, the scope for the next deployment was already taking shape. No sprawling committee. No vague consensus ritual. Just direct accountability: what broke, why did it break, who owns the fix, and when does the machine learn?
 
 This is where the success metrics started to change too. Time to First Response had been the old religion because the old queue was built around waiting. But immediate engagement makes that metric less meaningful. The better question is not how fast we talked. The better question is how fast the customer succeeded.
 
-The mindset applied to AI support should be get it fixed, get it closed. Not get it acknowledged. Not get it deflected. Not get it politely summarized. Fixed or closed. As simple as that.
+The aim is the customer’s working result, or an honest explanation of the limitation with an accountable next step. Closing the conversation is an administrative event. It cannot substitute for either.
 
 The first 48 hours made the real lesson obvious: launch day is not the finish line. It is the first day the machine becomes observable. The work after that is not a celebration. It is instrumentation, correction, restraint, and speed.
 
@@ -1394,107 +1656,307 @@ If the organization treats AI support as a procurement project, the first thirty
 
 If the organization treats AI support as an operating model, the first thirty days stop being a launch period and become a compounding system. Support identifies the customer failure. Support engineering tightens the machine boundary. Documentation repairs the memory. Product recognizes the pattern. GTM corrects the promise. Security hardens the permission model.
 
-We see the new shape of the work: the real machine is the operating loop around the software, not the software alone. (Do you want to call it self-healing?)
+We see the new shape of the work: the real machine is the operating loop around the software, not the software alone.
 
-Field note: Launch day is not the end of the project. It is the moment the machine starts producing evidence.
+_Field note: Launch day is not the end of the project. It is the moment the machine starts producing evidence._
 
-## 23. The AI Support Operating Model
+## 27. When the Agent Gets It Wrong
 
-The previous chapter was the evidence, while this one is the operating model we have to build in response.
+An AI incident does not become smaller because the message was polite.
 
-Once AI support is live, ownership cannot sit only with the vendor, support, or engineering. The machine touches product truth, customer trust, revenue risk, security posture, documentation quality, and brand voice. It needs named owners, visible rituals, and a shared definition of failure.
+The system may have given the wrong answer, recommended a fix that cannot work, changed an account incorrectly, or continued a conversation that needed a human. The first job is to understand and contain the customer's problem. Debating whether the model hallucinated can wait until someone owns the recovery.
 
-The old model treated support as downstream. Product shipped, marketing explained, sales sold, docs documented, and support caught whatever confusion survived the journey. AI makes that model impossible to defend. In the new model, support becomes the sensor network for the company, and AI turns that signal into something the organization can classify, route, and fix faster.
+My July panel preparation kept returning to the same questions: what counts as failure, who notices, who takes responsibility, and what happens next? A launch plan without those answers transfers the decision to whoever happens to be awake.
 
-### The New Org Shape
+### Define the failure before the dashboard does
 
-| Function | Old Role | New Role In The Machine |
-| --- | --- | --- |
-| Support | Answer tickets and manage queues. | Own conversation quality, escalation design, and customer trust signals. |
-| Support Engineering | Build internal tools and debug edge cases. | Architect retrieval, routing, action boundaries, and failure recovery. |
-| Documentation | Publish articles after product changes. | Operate as machine memory and close knowledge gaps exposed by the queue. |
-| Product | Receive escalated themes from support. | Treat AI failure patterns as product discovery. |
-| Security / Legal | Approve tools before deployment. | Define ongoing boundaries for data, actions, retention, and auditability. |
-| GTM | Use support feedback indirectly. | Turn repeated confusion into messaging, onboarding, and qualification fixes. |
+Classify incidents by customer impact and the affected boundary. An awkward sentence, a blocked task, an unauthorized disclosure, and an incorrect financial action need different responses. A low-frequency failure can still be consequential. A high average quality score does not cancel it.
 
-### The Governance Loop
+Record the known facts separately from hypotheses: the affected customer, the original request, the response or action, the versions and knowledge used, and the evidence of impact. Preserve the transcript and relevant provider receipts. Keep access to that evidence within the appropriate operational boundary.
 
-Daily: review failures and high-risk resolved conversations.
+### Stop the right thing
 
-Weekly: ship knowledge, routing, and prompt improvements.
+Contain the failing capability at the narrowest scope that reliably protects customers. That may mean disabling one action, withdrawing a knowledge entry, pausing an audience, or stopping the agent entirely. Choose the scope from evidence; do not keep a failing action live because the rest of the dashboard looks healthy.
 
-Monthly: review metrics, cost, trust, and human workload shift.
+Before sending work to humans, check their capacity and access. An escalation rule cannot manufacture a staffed queue. Name who will handle the additional work, what will wait, and how customers will receive a truthful expectation. Exercise this path before the incident.
 
-Quarterly: reassess what the machine is allowed to do (should I publish my OKRs??)
+The migration chapter's commitment to retiring duplicated workflows still stands. Service continuity is part of the new operating model. A tested fallback is what lets the team make a decisive migration without gambling on perfect software.
 
-Always: preserve a clear stop condition for human escalation.
+### The handoff needs a decision
 
-The goal is not to make the machine autonomous in the abstract. The goal is to make autonomy earned, bounded, measured, and reversible.
+"I sent an alert" does not establish that anyone accepted the work.
 
-### What Gets Promoted
+Specify who must decide, what they need to know, what choices they may make, when the decision is due, and who becomes responsible if they do not respond. An acknowledgment means the message was seen. It may not mean permission to retry, authority to compensate, or agreement to contact the customer.
 
-The best support engineers stop being measured only by how many tickets they close. They become owners of reusable resolution.
+My Stage Manager / CALL-E prototype explored this by reaching an owner with a bounded voice request and recording a decision or action intent. Its documented live calls include unsuccessful captures, and its downstream Slack and GitHub adapters do not execute live actions. It illustrates the handoff question; it does not establish a finished production incident system.
 
-A solved ticket helps one customer. A fixed knowledge path helps every future customer. A corrected escalation rule prevents future damage. A product change removes the question entirely. A better machine boundary turns a dangerous automation into a trustworthy one.
+A useful handoff packet includes the customer's goal, verified facts, attempted actions and receipts, remaining uncertainty, the required decision, permitted actions, deadline, backup owner, and conditions for resuming automation. Preserve uncertainty when the evidence is incomplete. Do not let the receiving person unknowingly repeat an action that may already have succeeded.
 
-That is the promotion: from ticket solver to system architect. Not because tickets no longer matter, but because the highest-leverage support work moves upstream into the design of the system that handles them.
+### Correct the customer's situation
 
-## Appendices
+Tell the customer what you know and what you are doing about it. Be specific about the incorrect guidance or affected action. Give them a safe next step and a named path for follow-up. Avoid announcing that everything is fixed until the relevant customer state has been checked.
 
-### Appendix A: Vendor Scorecard
+The customer should not have to litigate which subcontractor, model, or integration generated the message. Internally, those distinctions matter for repair. Externally, the company operating the service owns the response.
 
-| Category | Question | Pass Signal |
-| --- | --- | --- |
-| Product fit | Can it handle your real support taxonomy? | It maps to actual workflows, not generic intents. |
-| Retrieval | Can it cite and prioritize the right sources? | It explains where the answer came from and when knowledge is stale. |
-| Escalation | Can it stop gracefully? | It hands off with context before customer trust collapses. |
-| Read/write action | Can it perform bounded actions safely? | Actions are permissioned, logged, reversible, and deterministic where needed. |
-| Analytics | Can it separate deflection from resolution? | It supports sampling, auditing, and failure classification. |
-| Partnership | Will the vendor co-own outcomes? | They engage in the operating model, not only the implementation checklist. |
+If an action needs reversal or compensation, follow the authority and evidence requirements for that new action. Some effects cannot be fully undone. A correction may need to reach a person who read the earlier message, and a downstream system may need its own repair. Track those obligations until they are complete.
 
-### Appendix B: Shadow Run Scorecard
+### Repair the cause that the evidence supports
 
-| Test | What To Check | Failure Mode |
-| --- | --- | --- |
-| Known easy cases | Does the machine resolve repeat questions cleanly? | Overcomplicates simple answers. |
-| Known hard cases | Does it escalate instead of bluffing? | Confident wrong answer. |
-| Missing docs | Does it admit uncertainty? | Invents a source or policy. |
-| Angry customer | Does tone trigger human handoff? | Continues troubleshooting after trust breaks. |
-| Action boundary | Does read/write access obey limits? | Pushes the button without the required guardrail. |
+Was the source wrong? Was the source correct but inapplicable? Did the agent misunderstand the task, lack required context, misuse a tool, or ignore a stop condition? Did the reviewer or routing rule fail? Each explanation leads to different work.
 
-### Appendix C: Launch Day Runbook
+Resist the reflex to paste another warning into the system prompt. A stale entitlement service needs a data fix. A policy contradiction needs an owner to settle it. An unstaffed escalation path needs capacity. Prompt wording cannot take responsibility for any of those.
 
-Freeze the legacy baseline: volume, SLAs, backlog, escalation rate, automation rate, CSAT, cost, and known pain points.
+Google's [SRE guidance on postmortem culture](https://sre.google/workbook/postmortem-culture/) emphasizes learning from incidents and following through on corrective actions. Apply that discipline to AI support. Describe how the system made the failure possible and assign concrete repairs. Avoid turning a review into a public trial of the last person who touched the configuration.
 
-Run the pre-mortem: assume the launch failed, then name the likely causes before they happen.
+### Earn the return to service
 
-Define launch blockers versus post-launch fixes: decide in advance what stops the migration and what gets logged for v0.2.
+Reproduce the failure with the information available at the time. Add it to a regression set, alongside neighboring cases that could be harmed by the fix. Test the actual boundary: the permission check, provider result, audience match, or human handoff. A newly reassuring answer alone is insufficient.
 
-Name one owner for each launch lane: support, support engineering, legal, vendor, security, product, documentation, GTM, analytics, and communications.
+Release the correction within a controlled scope, observe its effects, and keep the previous safe state available. Record who accepted the evidence and what remains under monitoring. Follow up with affected customers where the incident created a continuing obligation.
 
-Verify the launch inventory: routing, macros, knowledge sources, permissions, audit logs, escalation paths, reporting, and customer-facing messaging.
+Close the incident when the recovery work and ownership are clear, not when the incident channel becomes quiet. The next chapter turns these individual repairs into a continuing evaluation program so the company does not have to relearn the same lesson one customer at a time.
 
-Confirm rollback and containment paths: know exactly how to pause, disable, route around, or reduce the machine if trust starts to break.
+_Field note: Contain the effect, accept responsibility, repair the cause, and verify the customer outcome._
 
-Staff the launch room: make sure every launch lane has a decision-maker present, not just observers.
+## 28. Evaluating AI: The Work Is Never Done
 
-Cut over deliberately: record the time, the scope, the expected behavior, and the first things you will inspect.
+Nobody hires a support engineer, gives them the knowledge base on Monday, and declares training complete on Friday.
 
-Monitor real conversations, not only dashboards: dashboards show movement; conversations show trust.
+We listen to conversations. We review difficult cases. We explain why an answer that was technically correct still failed the customer. We change the guidance when the product changes. We expect the person to improve, and we check whether the feedback helped.
 
-Keep an evidence log throughout the day(s): every surprise, failure, customer reaction, manual intervention, and unclear ownership gap gets written down.
+The machine needs the same continuing attention, with one important difference: changing a shared prompt, tool, or knowledge source can affect many customers at once. A useful correction in one conversation can become a regression everywhere else.
 
-Triage the evidence before the room disperses: separate urgent fixes, v0.2 work, documentation gaps, product gaps, and policy decisions.
+Launch is the beginning of this responsibility. Buying the agent does not buy an exemption from managing its work.
 
-End the day with named follow-ups: every issue has an owner, a next action, and a deadline.
+### Three views of the same operation
 
-### Appendix D: Glossary
+I would build the evaluation program in three parts: delayed outcome checks, an independent challenge to answer quality, and a rubric built around the failures customers actually encounter. Each part sees something the others miss.
 
-| Term | Meaning In This Book |
+The agent's report tells us what it classified as resolved. The reviewer tells us whether the answer or action met the standard. Later evidence tells us what happened after the conversation ended. None of these should quietly stand in for the others.
+
+This fits the broader evaluation practice described in [Anthropic's guide to agent evaluations](https://www.anthropic.com/research/demystifying-evals-for-ai-agents): inspect outcomes as well as transcripts, calibrate graders, and combine evaluation with evidence from actual use. A convincing final message is not proof that the intended account change exists.
+
+### Part one: check again after seven and thirty days
+
+Every conversation Fin marks resolved should enter a follow-up cohort. Capture the conversation ID, account and contact identifiers, original resolution time, outcome definition, and available issue context. Preserve that original event. A later reopening must not erase the fact that the system previously counted the conversation as resolved.
+
+At seven days and again at thirty days, ask whether the customer reopened the conversation, returned through a new one, or had a colleague contact us about the same underlying problem. A new question from the same account is not automatically a failed resolution. A different person describing the same broken setup may be.
+
+Start with the events and conversations available in Intercom. Verify that the export or API exposes the history, identifiers, timestamps, and channels the check requires. "The data is in the helpdesk" is a hypothesis about access and coverage, not an implementation specification. If a customer moved to Slack or spoke to their account manager, your view may be incomplete.
+
+Use a matching process that can explain itself. Exact issue references and account identifiers are stronger evidence than a shared topic label. Semantic matching can suggest related cases; uncertain matches should remain uncertain until reviewed. Retain a reason for the link so someone can correct it later.
+
+For each window, calculate the share of eligible, originally resolved conversations that have at least one related repeat contact. Count each original conversation once in that rate, even if it produced several follow-ups. Track the additional contacts and human effort separately because one return and six returns do not impose the same cost.
+
+**Only mature conversations belong in the denominator.** A conversation resolved yesterday cannot pass a thirty-day check. Seven- and thirty-day results use different eligible populations and are cumulative windows. Do not add them together.
+
+Consider a fictional cohort of 100 conversations originally marked resolved. At review time, 80 have a complete seven-day window. Eight of those have a confirmed related return. The observed seven-day recurrence rate is 8 divided by 80, or 10%. The other 72 had no observed repeat contact in that window. That is all this calculation establishes.
+
+It does not establish that 90% of customers succeeded. Some may have abandoned the task, found another channel, or accepted a workaround that does not meet their goal. Report confirmed success, observed recurrence, and insufficient outcome evidence separately. Keep any overlap visible: a customer can initially confirm success and encounter a later regression.
+
+Seven and thirty days are proposed starting windows, not universal scientific thresholds. Choose additional windows when the product has a longer operating cycle, such as a monthly export or an annual renewal. Compare like cohorts, and investigate changes in product mix or customer population before crediting a prompt change.
+
+### Part two: give someone the job of challenging the answer
+
+Each week, review a random baseline sample of Fin and Kapa answers. Add a separate sample of complaints, repeat contacts, risky actions, and suspected failures. The first estimates ordinary quality within its sampling limits. The second helps find important defects. Mixing them without adjustment produces an alarming number that nobody can interpret.
+
+Compare comparable tasks. A documentation assistant and a helpdesk agent may receive different questions, context, and permissions. Record the channel, product area, audience, complexity, and available tools before declaring one system better.
+
+The reviewer should look for the reason the answer fails: a missing prerequisite, a contradicted source, an unsupported claim, an ignored constraint, or an action that could not work. Require evidence for the finding. An adversarial reviewer rewarded for finding fault will eventually manufacture it.
+
+A human can do this work. A model can help. A different model is not automatically an independent judge, and a separate company is not automatically an accurate one. [Research on LLM judges](https://arxiv.org/abs/2306.05685) has documented position, verbosity, and self-preference biases. Our practical response is to use reviewed examples, hide the answer provider where useful, examine disagreements, and test whether the reviewer flags valid answers incorrectly.
+
+Keep a calibration set with agreed evidence and reasons. Have another qualified person review a portion of the cases without seeing the first score. Disagreement may reveal an ambiguous policy or an inadequate reference answer. Resolve the ambiguity before using that case to punish either an employee or an agent.
+
+### Make the evaluator take an exam too
+
+The independent scoring I want from unitQ belongs in this evaluation. Unwrap offers another useful comparison. Their public material describes different approaches: [unitQ Support QA](https://www.unitq.com/products/unitq-support-qa/) emphasizes customer-defined grading across human and AI support, while [Unwrap's SupportIQ](https://docs.unwrap.ai/articles/3449954721-supportiq) distinguishes resolution and agent-performance grading and can use supplied procedures. Those are capabilities to examine, not results from my own comparison.
+
+Give both the same appropriately shared case packet. Include good answers, subtle failures, missing context, and a case where the reference answer is wrong. Ask what each system can establish, what it cannot establish, and what evidence supports each judgment. Measure the work needed to correct the evaluator. A product that scores everything can still be consistently wrong about a particular customer environment.
+
+Vendor-native evaluation should enter the comparison as well. Salesforce's [Testing Center](https://www.salesforce.com/blog/agentforce-testing-center/) supports conversation-level tests and custom evaluations. Fin also supplies testing and analysis tools. Use the instrumentation that helps, while keeping the rubric, reference cases, and release decision under accountable ownership.
+
+Check the correction workflow as carefully as the initial score. At this edition's review, Unwrap's documentation described retained grade-change history, while self-service changes to its universal rubric and historical regrading were still listed as unavailable. Confirm the current behavior in the product rather than assuming that a configurable rubric includes every kind of correction.
+
+Do not put the result of a future demo into the book as a conclusion. The evaluation method can be ready before the winner is known.
+
+### Part three: grade the failures that happen now
+
+Hallucination remains a concern, but it is too narrow a definition of poor support. The answer can contain only true sentences and still waste the customer's afternoon.
+
+**Technically correct but weak.** The agent lists three relevant documentation pages. The customer needed to know which setting to change and how to check the result. Grade the missing next step and unnecessary effort. Do not give full credit because the links exist.
+
+**The wrong question answered well.** A customer asks how to export an account report because they are trying to verify which users have access. The agent supplies export instructions and never addresses the access audit. Grade whether it understood the job, asked a necessary question, or established that the literal request was sufficient.
+
+**A fix that cannot work.** The instruction is valid for a newer SDK, a different plan, or an administrator. This customer has none of those. Grade applicability to the evidence available in the conversation. If the necessary context is missing, grade whether the agent asked for it rather than assuming it.
+
+**A loop presented as persistence.** The customer already tried the proposed step. The agent repeats it, perhaps with warmer wording. Grade whether it used conversation history and recognized the point where escalation or another diagnostic path became necessary.
+
+**A missing boundary.** The answer attempts an action outside the customer's authority, omits a required handoff, or applies guidance intended for another audience. These failures should not disappear inside a good average for tone.
+
+Use separate dimensions for factual grounding, customer intent, applicability, completeness, effort, and escalation. Add action evidence where tools are involved. Let "insufficient evidence" be a valid grade. A rubric that forces every uncertain case into pass or fail will produce confident noise.
+
+### The machine can learn the wrong thing
+
+My Suspect Memories hackathon prototype explores a related problem: added stored knowledge can degrade later behavior. Its sanitized demonstration uses a deterministic setup with a single culprit. It illustrates investigation; it does not establish production accuracy or a general method for untangling interacting memories.
+
+The operating lesson is to version knowledge changes and retain their provenance. A closed ticket may contain an obsolete workaround, a special exception, or a human mistake. Before promoting it, identify the product version, customer scope, approval, and conditions under which it remains valid.
+
+Run the relevant regression cases, keep a way to quarantine the entry, and retest affected cases after a correction. Updating a prompt or document is a configuration change. Do not describe every such edit as training the model, and do not assume the system learns merely because someone gave feedback.
+
+### Close the management loop
+
+Every accepted finding needs an owner and a destination. Documentation fixes belong with knowledge owners. Missing product behavior belongs with Product. Retrieval and tool failures belong with their maintainers. A policy conflict requires a policy decision. Sending all failures to the prompt editor is an efficient way to create an unreadable prompt.
+
+Link the original case, diagnosis, change, regression result, release, and later outcome. Keep fresh holdout cases separate from the cases used to tune the system. Freeze relevant versions for comparisons, and run repeated trials when output variability matters. If the grader changes, record that too; otherwise a new grading standard can masquerade as a product improvement.
+
+Use a standing weekly review, rolling delayed-outcome checks, and immediate attention for consequential failures. Evaluate relevant changes before release and watch their effects afterward. For success-oriented agents, add the longer customer milestone: onboarding completed, a feature working for the account, or an agreed next step accepted. More messages and more clicks are not sufficient evidence of customer value.
+
+The review ends with a decision and an owner. Keep enough capacity to act on findings, or the evaluation program will become another dashboard we admire while the same customer problem returns.
+
+_Field note: Feedback earns its cost when it changes the system and later evidence shows whether that change helped._
+
+## 29. The AI Support Operating Model
+
+Once the machine is live, somebody has to own its judgment, its evidence, and the work created when it stops.
+
+That responsibility crosses Support, Engineering, Documentation, Product, Security, and GTM. A shared responsibility without named decisions becomes a reliable way to lose a customer between teams.
+
+### Put ownership next to the decision
+
+| **Function** | **Responsibility in the machine** |
 | --- | --- |
-| Deflection | Avoiding a human touch. Useful only if the customer still gets a trustworthy outcome. |
-| Resolution | The customer gets the answer, action, or path they needed. |
-| Shadow run | A pre-launch test where the machine operates against real cases without customer exposure. |
-| Read/write AI | AI that can take actions, not only retrieve or draft information. |
-| Human-in-the-loop | A designed escalation and judgment layer, not a fig leaf for unsafe automation. |
-| Support machine | The complete operating system of AI, knowledge, routing, action, metrics, and human governance. |
+| Support | Conversation quality, customer evidence, required escalation, and recovery communication. |
+| Support Engineering | Tool behavior, action receipts, integration boundaries, and technical failure recovery. |
+| Documentation | Source authority, applicability, freshness, knowledge releases, and rollback. |
+| Product | Recurring friction, account-level delivery conditions, and product changes that remove it. |
+| Security and Legal | Data and action boundaries, retention, auditability, and consequential policy decisions. |
+| GTM and Customer Success | Accurate commitments, customer goals, account context, and verification that promises were kept. |
+| Evaluation owner | Rubric, sampling, grader calibration, delayed outcomes, and evidence for release decisions. |
+
+These are responsibilities, not a requirement to hire seven new teams. One person may hold several roles. Record the backup and the decision rights so ownership survives an absence or an incident.
+
+### Make review lead to work
+
+Review consequential failures promptly. Run a weekly case review and improvement queue. Maintain the seven- and thirty-day outcome checks for mature cohorts. Examine cost, workload, customer effort, and evaluator disagreement regularly. Reassess scope when the product, tools, policies, or vendor capabilities change.
+
+Each finding needs an owner, an action, a way to verify the repair, and a later check where the outcome requires time. Preserve the evidence and the versions involved. A meeting that produces only a new dashboard has not completed the loop.
+
+The recurring work can increasingly be assisted by operational agents. Their proposals still need a clear scope, the relevant tests, and accountable review. Automatically discovering a problem and automatically deciding the acceptable remedy are different grants of authority.
+
+### Give people the means to move upfield
+
+Support engineers need access to the product, development workflow, and reviewers if they are expected to ship fixes. Give them time to learn and time to build. Define the changes they may propose, the review they require, and how the customer result will be checked.
+
+Track improvements and their reach without turning PR count into the next ticket-count target. A small tooltip correction can remove repeated confusion. A careful decision to escalate can protect an account. A knowledge change that prevents an impossible fix can save more work than a large feature nobody uses.
+
+Recognize the person who exposes a failure early. Encourage the skeptic who can name the risk and a testable path forward. Ask the enthusiastic builder to make their operating costs visible too. The standards in the NIMBY chapter apply to every participant, including the person leading the migration.
+
+### Keep the customer in the operating model
+
+Review apparently resolved conversations as well as escalations. Maintain the promise ledger for commitments that outlive a ticket. Keep deliberate customer contact so the organization can challenge its own interpretation of the data.
+
+When agents pursue onboarding, adoption, or expansion goals, make customer progress and the limits on intervention explicit. Decide who resolves conflicts between goals. Preserve consent and contact preferences, and stop when the evidence says the intervention is no longer helping.
+
+### Let the system earn additional scope
+
+Expand autonomy by bounded capability and observed evidence. A good result on documentation questions does not establish readiness for refunds. A working refund flow does not establish authority to change security settings. Each new capability brings its own permissions, cases, outcome evidence, and recovery obligations.
+
+The organization has to be able to stop, explain, and repair what it operates. That is what makes the next useful expansion possible.
+
+_Field note: The operating model is the set of people and decisions that keep customer evidence connected to changes in the system._
+
+## Appendix A: Vendor and Build Scorecard
+
+Use the same customer cases for the options being compared. Record the evidence, remaining uncertainty, and owner of each gap. A numeric score must not override a failed authority or data boundary.
+
+| **Area** | **Question** | **Evidence to request** |
+| --- | --- | --- |
+| Product fit | Does it solve the actual customer task? | Representative cases with version and account context. |
+| Source quality | Can it identify authority, freshness, and applicability? | A grounded answer and an obsolete-source failure case. |
+| Audience boundaries | What happens with overlap, missing data, and stale attributes? | Positive and negative tests for relevant audiences. |
+| Actions | How are permissions, duplicate intent, and uncertain results handled? | Provider receipts, retry contract, and interrupted-action tests. |
+| Human handoff | Who accepts the decision and what if they do not respond? | Evidence packet, timeout, backup, and capacity exercise. |
+| Evaluation | Can we own the rubric and inspect failures? | Raw cases, grader calibration, and change history. |
+| Operating cost | What work remains after installation? | Fees, integration, QA, maintenance, incident effort, and assumptions. |
+| Ownership | Who fixes each component and the seams between them? | Named maintainers, support responsibilities, and backup coverage. |
+| Continuity and exit | Can we leave or replace a component? | Data export, dependency map, contractual commitments, and migration rehearsal. |
+| Availability | Is the required feature usable in this workspace? | Current plan, permissions, channels, rollout status, and tested behavior. |
+
+## Appendix B: Shadow Run and Change Release Record
+
+Record the candidate version, intended scope, evaluation owner, source versions, and the date. Keep tuning cases separate from the fresh release set. Historical inputs must contain only information available when the request arrived. Isolate customer messages and live writes through tools and permissions.
+
+| **Per-case check** | **Evidence required** |
+| --- | --- |
+| Customer task | The answer addresses the real objective or asks for necessary context. |
+| Grounding | Material claims have an applicable, authoritative basis. |
+| Applicability | Steps fit the customer's version, environment, permissions, and entitlement. |
+| Authority | Data access and actions remain within the permitted scope. |
+| Escalation | Required human judgment is requested before the boundary is crossed. |
+| Continuation | The customer or human recipient has enough context and a safe next step. |
+
+Five stop categories: unauthorized access or action; invented material claims; consequential advice without required context; missed required escalation; and an inability to audit, contain, or recover the failure. Translate them into product-specific tests and record any affected release scope.
+
+Measure missed escalations against the cases that required them. Record unnecessary escalations separately. Test the human queue under expected load. Report draft acceptance as editing-effort evidence, not as permission to ignore a hard stop.
+
+The release decision records allowed scope, blockers, deferred bounded improvements, owners, containment path, and the evidence to examine after rollout. Choose ready, ready within a stated scope, or not ready, with a reason.
+
+## Appendix C: Launch and Recovery Runbook
+
+Freeze the baseline with its metric definitions, populations, case mix, and cost assumptions. Record known limitations in the comparison.
+
+Run a pre-mortem. Include a failed provider call, a call whose effect is unknown, an audience error, stale knowledge, an unstaffed escalation, and an unexpected usage or cost increase.
+
+Assign a decision-maker and backup to each launch lane. Confirm that the people receiving escalations have the permissions, evidence, and capacity to act.
+
+Verify the inventory: knowledge, routing, customer identity, tool permissions, operation receipts, audit logs, reporting, customer messages, and source ownership.
+
+Exercise containment. Demonstrate how to disable a capability, narrow scope, restore a known configuration, and continue serving customers. Record what cannot be reversed and the recovery path for those effects.
+
+Cut over deliberately. Record time, scope, owners, expected behavior, and the first customer evidence to inspect. Monitor actual conversations and account effects alongside aggregate dashboards.
+
+During a failure, preserve evidence, contain the affected capability, name the recovery owner, correct the customer's situation, and verify the result. A handoff requires a decision, deadline, backup, and resume condition.
+
+End the launch review with owned follow-ups. Separate urgent containment, required fixes, knowledge and product gaps, and later improvements. Link each consequential repair to a regression case and a post-release check.
+
+## Appendix D: Glossary
+
+| **Term** | **Meaning in this book** |
+| --- | --- |
+| Support machine | AI, knowledge, routing, tools, metrics, and the people who govern them. |
+| Reported resolution | The platform's outcome classification under its stated definition. |
+| Confirmed customer outcome | Evidence that the customer's intended result occurred. |
+| Deflection | Avoiding a human touch; useful only within an acceptable customer experience. |
+| Mature cohort | Conversations with the complete observation window required for a measure. |
+| Related repeat contact | A later contact about the same underlying problem, supported by a defensible match. |
+| Shadow run | Evaluation isolated from customer messages and live effects. |
+| Read/write AI | AI that can invoke actions as well as retrieve or draft information. |
+| Receipt | Provider evidence of a specific action's effect. |
+| Idempotent retry | A retry that creates no additional effect under the provider's contract. |
+| Unknown action outcome | An effect that may have occurred but has not been established. |
+| Human handoff | Transfer of a defined decision and supporting evidence to an accountable person. |
+| Holdout cases | Cases reserved for evaluation rather than used to tune the system. |
+| Knowledge release | A versioned knowledge change with scope, evidence, testing, and recovery. |
+
+## Appendix E: Dated Field Notes
+
+Field notes preserve what an event changed in the operating model. Each records the observation date, evidence type, lesson, affected chapter, and a useful next action. Product capabilities are a snapshot, not a permanent catalog. A recurring anecdote becomes a chapter when it supports a distinct decision and enough evidence to teach it.
+
+**July 15, 2026 — accountability after an agent failure.** The summit preparation raised the sequence of defining, detecting, owning, containing, and recovering from failure. Preparation is evidence of the questions being developed, not a transcript of every panelist's answer. It now informs Chapter 27's recovery playbook. Exercise an incident before the system creates one for you.
+
+**August 2026 — knowledge can make the machine worse.** Suspect Memories, a Fast Hackathon prototype, uses sanitized fixtures and a deterministic single-culprit example. It illustrates why a knowledge update needs provenance, regression checks, and a way to quarantine it. It does not establish production accuracy. Chapter 28 carries the operating lesson.
+
+**August 31, 2026 — a percentage changes without another resolution.** Fin's published metric update describes an earlier rollout that changed the involved population. The resolution percentage and involvement percentage can move while total resolutions remain constant. Chapter 18 adds definition versions and comparable cohorts to the scorecard.
+
+**September 10, 2026 — a platform changes ownership.** Salesforce announced that it completed the acquisition of Fin. Chapter 7 treats the event as a reason to revisit dependencies and contractual assumptions. The announcement does not establish future prices or service quality. Appendix A includes continuity and exit evidence.
+
+**September 22, 2026 — the shadow run grows into a release protocol.** The Shadow Run keynote materials and field sheet develop a more explicit test method than the earlier manuscript. Chapters 22 and 28 distinguish pre-release evidence from observed customer outcomes. Use request-time context, hard boundaries, and a tested human path.
+
+**October 7, 2026 — the customer agent expands its job.** Fin announced Skills, a broader Operator, and customer-success capabilities in Fin 4. As checked for this edition on November 1, the Success page offered early access and some help material retained a coming-soon label. Chapters 7, 17, and 29 address goals, audiences, and longer customer milestones. Confirm access before promising a capability to your own stakeholders.
+
+**October 21, 2026 — support work reaches the product.** In the Plain/Sentry panel, Jordyn described a tooltip improvement responding to recurring confusion; I described a Sentry teammate's CTA change. Rene's customer-agent example and Simon's stale-documentation story illuminate different failure paths. These are separately attributed panel accounts, not a single measured case study. Chapters 15, 17, 19, and 28 draw the relevant distinctions.
+
+**November 1, 2026 — prototypes become operating questions.** This edition reviews RECEIPT's interrupted-action demonstration, Promise Ledger's synthetic account promise, and Stage Manager's bounded owner handoff. Their development and demonstrations are not production outcome studies. Use Chapters 16, 17, and 27 to decide which evidence and responsibilities your own operation needs.
+
+Date the next note, state what changed your view, separate observation from inference, and give the reader a useful next action. Preserve the previous edition when publishing the revision.

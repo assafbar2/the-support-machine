@@ -1,79 +1,45 @@
-# First 30 Days Review
+# First Thirty Days Review
 
-## Summary
+Launch date / observation period / owner:
 
-Launch date:
+Status: healthy within stated scope / watch / intervene.
 
-Review period:
+## First forty-eight hours
 
-Overall status: Healthy / Watch / Intervention needed
+Classify silence as an unknown outcome unless independent evidence establishes more. Review bot loops, internal forwarded messages, customer objections, required escalations, and failures concealed by successful-looking answers.
 
-## First 48 Hours
+Immediate repair and next deployment scope:
 
-What happened when the machine first met real customers?
+## Outcome and workload evidence
 
-What did silence mean: resolution, confusion, abandonment, or something else?
+| Measure | Count / denominator / window | Definition version | Coverage and uncertainty | Action |
+|---|---|---|---|---|
+| Platform-reported automation | | | | |
+| 7-day related repeat contact | | | | |
+| 30-day related repeat contact | | | | |
+| Independently confirmed outcome | | | | |
+| Missed required escalation | | | | |
+| Reviewed quality by dimension | | | | |
+| Customer effort | | | | |
+| Human effort and case mix | | | | |
+| Total operating cost | | | | |
 
-Which edge cases arrived immediately?
+Use only mature, sufficiently observed cohorts. Report unknown matches. Keep baseline samples distinct from targeted failure reviews. A young launch may have no eligible thirty-day cohort yet.
 
-- Bot loops:
-- Internal-forward / inside-job cases:
-- Customer resistance to AI:
-- Escalations that proved the guardrails worked:
+## Failures and repair
 
-What moved into v0.2:
+For each case: source, retrieval, intent, applicability, policy, tool, routing, reviewer or staffing failure; evidence; owner; repair; regression; later outcome.
 
-## Metrics
+## Team and company learning
 
-Do not report deflection alone. Pair it with resolution and trust signals.
+Protected improvement time, training and review access:
 
-| Metric | Result | Interpretation | Action |
-|---|---:|---|---|
-| True resolution rate |  |  |  |
-| Escalation rate |  |  |  |
-| Escalation quality |  |  |  |
-| Hallucination / unsupported claim rate |  |  |  |
-| Customer trust signal |  |  |  |
-| Knowledge fixes shipped |  |  |  |
-| Product gaps identified |  |  |  |
-| Human work shifted |  |  |  |
+Product/docs/workflow changes shipped and customer evidence:
 
-## Failure Taxonomy
+Promises still open at account level:
 
-| Failure Type | Count | Example | Fix Owner |
-|---|---:|---|---|
-| Knowledge gap |  |  |  |
-| Product gap |  |  |  |
-| Routing gap |  |  |  |
-| Tone gap |  |  |  |
-| Policy gap |  |  |  |
-| Tool/action gap |  |  |  |
-
-## Customer Trust
-
-What made customers trust the machine?
-
-What made customers reject or bypass it?
-
-Where did a human create trust faster?
-
-## Human Work Shift
-
-What repetitive work disappeared?
-
-What new system work appeared?
-
-Who is now acting as a system architect?
+Lost or excluded customer signals and deliberate customer contact:
 
 ## Decisions
 
-- Keep:
-- Change:
-- Pause:
-- Expand:
-
-## Next 30 Days
-
-1.
-2.
-3.
+Keep / change / pause / expand, with reason, owner, constraints, and next check.

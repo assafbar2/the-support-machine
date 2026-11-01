@@ -1,86 +1,104 @@
-from __future__ import annotations
-
+"""Export the canonical DOCX, preserving inline links, emphasis and lists."""
 import sys
-import re
 from pathlib import Path
-
 from docx import Document
 from docx.oxml.ns import qn
 from docx.table import Table
 from docx.text.paragraph import Paragraph
+from docx.text.run import Run
+from manuscript_format import slugify, TICK
 
+def paragraph_markdown(p,anchors):
+    parts = []
+    for element in p._p:
+        if element.tag == qn("w:r"):
+            run = Run(element,p)
+            value = run.text
+            if not value:
+                continue
+            if run.font.name == "Consolas" and p.style.name != "Code":
+                value = TICK+value+TICK
+            elif run.bold:
+                value = "**"+value+"**"
+            elif run.italic:
+                value = "_"+value+"_"
+            parts.append(value)
+        elif element.tag == qn("w:hyperlink"):
+            value = "".join(t.text or "" for t in element.iter(qn("w:t")))
+            rel, anchor = element.get(qn("r:id")), element.get(qn("w:anchor"))
+            if rel:
+                target = p.part.rels[rel].target_ref
+            elif anchor:
+                if anchor not in anchors:
+                    raise ValueError("Unresolved internal bookmark: "+anchor)
+                target = "#"+anchors[anchor]
+            else:
+                target = ""
+            parts.append(f"[{value}]({target})" if target else value)
+    return "".join(parts).replace("\xa0"," ").strip()
 
-def clean_text(text: str) -> str:
-    text = text.replace("\xa0", " ")
-    text = text.replace("lie.It’s", "lie. It’s")
-    text = text.replace("Accuracy:Of", "Accuracy: Of")
-    text = text.replace("whywe", "why we")
-    text = text.replace("like<a ", "like <a ")
-    return text.strip()
+def numbering_starts(doc):
+    root = doc.part.numbering_part.element
+    abstract, starts = {}, {}
+    for node in root.findall(qn("w:abstractNum")):
+        level = node.find(qn("w:lvl"))
+        start = level.find(qn("w:start")) if level is not None else None
+        abstract[node.get(qn("w:abstractNumId"))] = int(start.get(qn("w:val"))) if start is not None else 1
+    for node in root.findall(qn("w:num")):
+        ref = node.find(qn("w:abstractNumId"))
+        starts[node.get(qn("w:numId"))] = abstract.get(ref.get(qn("w:val")),1)
+    return starts
 
-
-def table_to_markdown(table) -> list[str]:
-    rows = []
-    for row in table.rows:
-        rows.append([clean_text(cell.text.replace("\n", " ")) for cell in row.cells])
-    if not rows:
-        return []
-    width = max(len(r) for r in rows)
-    rows = [r + [""] * (width - len(r)) for r in rows]
-    lines = ["| " + " | ".join(rows[0]) + " |"]
-    lines.append("| " + " | ".join(["---"] * width) + " |")
-    for row in rows[1:]:
-        lines.append("| " + " | ".join(row) + " |")
-    lines.append("")
-    return lines
-
-
-def export_docx(src: Path, dst: Path) -> None:
+def export_docx(src,dst):
     doc = Document(src)
-    lines = [
-        "# The Support Machine",
-        "",
-        f"> Markdown export of the manuscript. The canonical formatted source is `manuscript/{src.name}`.",
-        "",
-    ]
-
-    for child in doc.element.body.iterchildren():
+    anchors, seen = {}, {}
+    for p in doc.paragraphs:
+        if p.style.name == "Title" or p.style.name.startswith("Heading"):
+            anchor = slugify(p.text)
+            seen[anchor] = seen.get(anchor,0)+1
+            if seen[anchor] > 1:
+                anchor += "-"+str(seen[anchor])
+            for start in p._p.findall(qn("w:bookmarkStart")):
+                anchors[start.get(qn("w:name"))] = anchor
+    lines, counts, starts = [], {}, numbering_starts(doc)
+    for child in doc.element.body:
         if child.tag == qn("w:p"):
-            p = Paragraph(child, doc)
-            text = clean_text(p.text)
+            p = Paragraph(child,doc)
+            text = paragraph_markdown(p,anchors)
             if not text:
                 continue
             style = p.style.name
             if style == "Title":
-                lines.extend([f"# {text}", ""])
-            elif style == "Heading 1":
-                lines.extend([f"## {text}", ""])
-            elif style == "Heading 2":
-                lines.extend([f"### {text}", ""])
-            elif style == "Heading 3":
-                lines.extend([f"#### {text}", ""])
+                lines += ["# "+text,"",f"> Markdown export of the manuscript. The canonical formatted source is {TICK}manuscript/{src.name}{TICK}.",""]
+            elif style.startswith("Heading "):
+                lines += ["#"*(int(style.split()[-1])+1)+" "+text,""]
             elif style == "List Bullet":
-                lines.append(f"- {text}")
+                lines += ["- "+text,""]
             elif style == "List Number":
-                lines.append(f"1. {text}")
+                num = p._p.find("./"+qn("w:pPr")+"/"+qn("w:numPr")+"/"+qn("w:numId"))
+                nid = num.get(qn("w:val")) if num is not None else "default"
+                number = counts.get(nid,starts.get(nid,1))
+                counts[nid] = number+1
+                lines += [f"{number}. {text}",""]
             elif style == "Quote":
-                lines.extend([f"> {text}", ""])
+                lines += ["> "+text,""]
+            elif style == "Code":
+                lines += [TICK*3,text,TICK*3,""]
             else:
-                lines.extend([text, ""])
+                lines += [text,""]
         elif child.tag == qn("w:tbl"):
-            lines.extend(table_to_markdown(Table(child, doc)))
-
-    markdown = "\n".join(line.rstrip() for line in lines).rstrip() + "\n"
-    markdown = re.sub(r"[ \t]+\n", "\n", markdown)
-    dst.write_text(markdown)
-
-
-def main() -> None:
-    if len(sys.argv) != 3:
-        print("usage: export_docx_to_markdown.py input.docx output.md", file=sys.stderr)
-        raise SystemExit(2)
-    export_docx(Path(sys.argv[1]), Path(sys.argv[2]))
-
+            rows = []
+            for row in Table(child,doc).rows:
+                rows.append([" ".join(paragraph_markdown(p,anchors) for p in c.paragraphs).replace("|",r"\|") for c in row.cells])
+            lines += ["| "+" | ".join(rows[0])+" |","| "+" | ".join(["---"]*len(rows[0]))+" |"]
+            lines += ["| "+" | ".join(row)+" |" for row in rows[1:]]
+            lines += [""]
+    if not any(line.startswith("# ") for line in lines):
+        lines = ["# The Support Machine",""]+lines
+    dst.parent.mkdir(parents=True,exist_ok=True)
+    dst.write_text("\n".join(lines).rstrip()+"\n")
 
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) != 3:
+        raise SystemExit("usage: export_docx_to_markdown.py input.docx output.md")
+    export_docx(Path(sys.argv[1]),Path(sys.argv[2]))
