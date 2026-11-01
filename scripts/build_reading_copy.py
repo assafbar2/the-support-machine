@@ -20,7 +20,7 @@ def build():
     shutil.copyfile(source, destination)
     assert destination.read_bytes() == source.read_bytes()
     guide = [f'# The Support Machine {version} Reading Guide', '',
-             'The reading copy contains the complete current book, with plain chapter titles in the contents and document outline. It is identical to the canonical manuscript. Discuss edits by chapter title and passage in our chat.', '',
+             'The reading copy contains the complete book. Use the contents or document outline to jump to a chapter or appendix.', '',
              f'[Notes for the new version](../release-notes/{version}.md) explain what changed for returning readers.', '',
              '## Chapters', '']
     guide += [f'- {title}' for title in chapters]

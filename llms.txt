@@ -1,25 +1,25 @@
 # The Support Machine
 
-> A book and practical skills for deploying and operating AI customer support without breaking trust.
+> A field guide by Assaf Barnir to deploying and operating AI customer support without breaking trust.
 
-v0.3 review edition, November 1, 2026. 29 chapters, five appendices. The public site shows the deployed edition until this revision is published.
+v0.3 review edition, 2026-11-01. 29 chapters, 8 appendices, and two companion skills.
 
 ## Read
 
-- [Full book](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine-v0.3.md)
-- [Online book](https://assafbar2.github.io/the-support-machine/book.html)
-- [PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-v0.3.pdf)
-- [Word](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine-v0.3.docx)
-- [Version notes](https://assafbar2.github.io/the-support-machine/notes.html)
-- [Previous editions](https://assafbar2.github.io/the-support-machine/editions.html)
+- [Full book in Markdown](https://raw.githubusercontent.com/assafbar2/the-support-machine/codex/support-machine-v0.3/docs/downloads/the-support-machine-v0.3.md)
+- [PDF](https://raw.githubusercontent.com/assafbar2/the-support-machine/codex/support-machine-v0.3/docs/the-support-machine-v0.3.pdf)
+- [DOCX](https://raw.githubusercontent.com/assafbar2/the-support-machine/codex/support-machine-v0.3/docs/downloads/the-support-machine-v0.3.docx)
+- [Version notes](https://raw.githubusercontent.com/assafbar2/the-support-machine/codex/support-machine-v0.3/release-notes/v0.3.md)
+- [Previous edition](https://github.com/assafbar2/the-support-machine/tree/codex/support-machine-v0.3/docs/editions/v0.2)
+- [Published online edition](https://assafbar2.github.io/the-support-machine/book.html)
 
 ## Apply
 
-- [The Support Machine skill](https://github.com/assafbar2/the-support-machine/tree/main/skills/the-support-machine)
-- [Support AI Evals skill](https://github.com/assafbar2/the-support-machine/tree/main/skills/support-ai-evals)
+- [The Support Machine skill](https://github.com/assafbar2/the-support-machine/tree/codex/support-machine-v0.3/skills/the-support-machine)
+- [Support AI Evals skill](https://github.com/assafbar2/the-support-machine/tree/codex/support-machine-v0.3/skills/support-ai-evals)
 
-In a local checkout, use skills/the-support-machine/SKILL.md for the full migration and operating model. Use skills/support-ai-evals/SKILL.md for continuing QA and the local cohort calculator. Each is independently installable. Before merge, v0.3 lives on codex/support-machine-v0.3.
+The Support Machine skill contains the complete book and reusable templates. Appendix G starts with installation and includes 80 practical prompts. Support AI Evals covers continuing QA and a local cohort calculator. Each skill installs independently.
 
-Keep reported resolution, reviewed quality, and later customer evidence separate. Use mature observation windows and declared coverage. No observed return is not proof of success. Verify account authority and action effects. A valid objection can save a launch. Keep a tested human path, owned repairs, and controlled knowledge releases.
+Keep reported resolution, reviewed quality, and later customer evidence separate. Use mature observation windows and declared coverage. Customer silence alone does not prove success. Verify account authority and action effects. Preserve legitimate objections, a tested human path, and controlled knowledge releases.
 
-The canonical formatted source is the current DOCX in manuscript/. Book Markdown and site downloads are derived. See CONTRIBUTING.md for the generation workflow. Manuscript text is CC BY 4.0; skills, templates, and scripts are MIT.
+This is Assaf Barnir's personal project and does not speak for Sentry. Book text is CC BY 4.0; skills, templates, scripts, and repository documentation are MIT. See the repository's license files for terms.
