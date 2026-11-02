@@ -64,8 +64,14 @@ def verify():
     for rel,expected in preserved.items():
         assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==expected,"archive changed: "+rel
     assert (ROOT/f"docs/downloads/the-support-machine-{version}.docx").read_bytes()==source.read_bytes()
-    assert (ROOT/f"review/the-support-machine-{version}-reading-copy.docx").read_bytes()==source.read_bytes(),"reading copy differs from canonical manuscript"
     assert (ROOT/f"docs/downloads/the-support-machine-{version}.md").read_bytes()==book.read_bytes()
+    assert meta['name']=='Second Edition' and meta['status']=='published'
+    assert 'Second Edition' in text and 'Notes for the Second Edition' in text
+    assert not re.search(r'v0\.[23]|review edition|codex/support-machine',text,re.I), 'unpublished naming in book'
+    for suffix in ('pdf','docx','md','markdown.zip'):
+        folder=ROOT/'docs' if suffix=='pdf' else ROOT/'docs/downloads'
+        joiner='-' if suffix=='markdown.zip' else '.'
+        assert (folder/f"the-support-machine-{meta['slug']}{joiner}{suffix}").read_bytes()==(folder/f"the-support-machine-{version}{joiner}{suffix}").read_bytes(), 'stale edition alias: '+suffix
     doc=Document(source)
     assert not doc.styles.element.xpath(".//w:pBdr"),"unexpected paragraph border"
     figures=json.loads((ROOT/'docs/illustrations/manifest.json').read_text())['figures']
@@ -105,6 +111,9 @@ def verify():
     combined="\n".join(page.extract_text() or "" for page in pdf.pages)
     for marker in ("AI NIMBYs","Build vs. Buy","When the Customer Is a Bot","Did the Action Actually Happen","When the Agent Gets It Wrong","The Work Is Never Done","Appendix E","Repositories Behind the Book","Talk to the Book","Sources and Further Reading"):
         assert marker in combined,"missing PDF section: "+marker
+    assert 'Second Edition' in (pdf.pages[0].extract_text() or ''), 'PDF cover edition label'
+    assert not re.search(r'v0\.[23]|Review edition',combined,re.I), 'repository version exposed in PDF'
+    assert 'SECOND EDITION' in (pdf.pages[1].extract_text() or ''), 'PDF running header edition label'
     for i,page in enumerate(pdf.pages):
         assert len((page.extract_text() or "").strip())>30,f"empty PDF page {i+1}"
     pages={}
@@ -140,6 +149,12 @@ def verify():
                     assert package.read(member)==path.read_bytes(),"stale skill resource: "+member
             if skill == "the-support-machine":
                 assert package.read(f"{skill}/references/book.md")==book.read_bytes(),"packaged book is stale"
+    for page_name in ('index.html','book.html','notes.html','skill.html','illustrations/index.html'):
+        page_text=(ROOT/'docs'/page_name).read_text()
+        # Legacy filenames are allowed as technical URLs, never as current-edition prose.
+        visible_text=re.sub(r'<[^>]+>',' ',page_text)
+        assert not re.search(r'v0\.[23]|review edition',visible_text,re.I), 'public edition label: '+page_name
+        assert 'Second Edition' in page_text, 'missing edition label: '+page_name
     print(f"Verified {meta['chapters']} chapters, {meta['appendices']} appendices, {expected} captioned illustrations, {len(pdf.pages)} PDF pages, {len(pages)} HTML pages, all local site links, canonical export, downloads, and v0.2 checksums.")
     return len(pdf.pages)
 

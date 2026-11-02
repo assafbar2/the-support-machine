@@ -1,6 +1,6 @@
 # The Support Machine illustrations
 
-Ten companion drawings in a shared black-and-white architectural sketch style. Each appears beside its discussion in the v0.3 review edition.
+Ten companion drawings in a shared black-and-white architectural sketch style. Each appears beside its discussion in the Second Edition.
 
 ## Diagnose the queue
 

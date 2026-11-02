@@ -123,7 +123,7 @@ def format_document(doc):
     styles["Hyperlink"].font.color.rgb = RGBColor.from_string("772817")
     styles["Hyperlink"].font.underline = True
     header = section.header.paragraphs[0]
-    run = header.add_run("THE SUPPORT MACHINE  ·  v0.3")
+    run = header.add_run("THE SUPPORT MACHINE  ·  SECOND EDITION")
     run.font.name, run.font.size = "Calibri", Pt(8)
     run.font.color.rgb = RGBColor(0,0,0)
     footer = section.footer.paragraphs[0]
@@ -172,7 +172,7 @@ def create(source, destination):
     doc.core_properties.title = "The Support Machine"
     doc.core_properties.author = "Assaf Barnir"
     doc.core_properties.subject = "How to Deploy AI in Customer Support Without Breaking Trust"
-    doc.core_properties.keywords = "v0.3, support, AI, evaluation, operating model"
+    doc.core_properties.keywords = "Second Edition, support, AI, evaluation, operating model"
     doc.core_properties.comments = ""
     seen, cover, count, in_contents = {}, True, 0, False
     list_id, expected_number = None, None
@@ -270,7 +270,7 @@ def create(source, destination):
                 paragraph.paragraph_format.space_after = Pt(7)
         if active_chapter in {13,28} and paragraph.style.name=='Normal':
             paragraph.paragraph_format.space_after=Pt(4)
-        if active_section in {'Notes for the New Version: v0.3', 'Appendix H: Sources and Further Reading'}:
+        if active_section in {'Notes for the Second Edition', 'Appendix H: Sources and Further Reading'}:
             if paragraph.style.name in {'Normal', 'List Bullet'}:
                 paragraph.paragraph_format.space_after = Pt(4)
                 paragraph.paragraph_format.line_spacing = 1.05

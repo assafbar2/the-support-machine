@@ -641,10 +641,10 @@ for fn in [diagnose,choose,guardrails,shadow,launch,operate,sixteen,evaluation,u
     fn()
 (OUTPUT/'manifest.json').write_text(json.dumps({
     'style':'Monochrome architect sketch: objects, selective hatching, curved connectors, restrained hand-drawn contours, clear labels.',
-    'status':'Approved visual direction for the v0.3 review edition.',
+    'status':'Approved visual direction for the Second Edition.',
     'width':W,'height':H,'figures':FIGURES},ensure_ascii=False,indent=2)+'\n')
 gallery=['# The Support Machine illustrations','',
-         'Ten companion drawings in a shared black-and-white architectural sketch style. Each appears beside its discussion in the v0.3 review edition.','']
+         'Ten companion drawings in a shared black-and-white architectural sketch style. Each appears beside its discussion in the Second Edition.','']
 for figure in FIGURES:
     gallery += [f'## {figure["title"]}','',figure['caption'],'',
                 f'![{figure["title"]}]({figure["slug"]}.png)','',

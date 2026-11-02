@@ -2,21 +2,21 @@
 
 > A field guide by Assaf Barnir to deploying and operating AI customer support without breaking trust.
 
-v0.3 review edition, 2026-11-01. 29 chapters, 8 appendices, and two companion skills.
+Second Edition, 2026-11-01. 29 chapters, 8 appendices, 10 illustrations, and two companion skills.
 
 ## Read
 
-- [Full book in Markdown](https://raw.githubusercontent.com/assafbar2/the-support-machine/codex/support-machine-v0.3/docs/downloads/the-support-machine-v0.3.md)
-- [PDF](https://raw.githubusercontent.com/assafbar2/the-support-machine/codex/support-machine-v0.3/docs/the-support-machine-v0.3.pdf)
-- [DOCX](https://raw.githubusercontent.com/assafbar2/the-support-machine/codex/support-machine-v0.3/docs/downloads/the-support-machine-v0.3.docx)
-- [Version notes](https://raw.githubusercontent.com/assafbar2/the-support-machine/codex/support-machine-v0.3/release-notes/v0.3.md)
-- [Previous edition](https://github.com/assafbar2/the-support-machine/tree/codex/support-machine-v0.3/docs/editions/v0.2)
-- [Published online edition](https://assafbar2.github.io/the-support-machine/book.html)
+- [Full book in Markdown](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine-second-edition.md)
+- [PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-second-edition.pdf)
+- [DOCX](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine-second-edition.docx)
+- [What is new in the Second Edition](https://assafbar2.github.io/the-support-machine/notes.html)
+- [Previous edition](https://assafbar2.github.io/the-support-machine/editions.html)
+- [Read the Second Edition online](https://assafbar2.github.io/the-support-machine/book.html)
 
 ## Apply
 
-- [The Support Machine skill](https://github.com/assafbar2/the-support-machine/tree/codex/support-machine-v0.3/skills/the-support-machine)
-- [Support AI Evals skill](https://github.com/assafbar2/the-support-machine/tree/codex/support-machine-v0.3/skills/support-ai-evals)
+- [The Support Machine skill](https://github.com/assafbar2/the-support-machine/tree/main/skills/the-support-machine)
+- [Support AI Evals skill](https://github.com/assafbar2/the-support-machine/tree/main/skills/support-ai-evals)
 
 The Support Machine skill contains the complete book and reusable templates. Appendix G starts with installation and includes 80 practical prompts. Support AI Evals covers continuing QA and a local cohort calculator. Each skill installs independently.
 

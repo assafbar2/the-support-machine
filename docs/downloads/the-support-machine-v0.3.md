@@ -1,20 +1,20 @@
 # The Support Machine
 
-> Markdown export of the manuscript. The canonical formatted source is `manuscript/The Support Machine - manuscript v0.3.docx`.
+> Markdown export of the manuscript. The canonical formatted source is maintained in `manuscript/`.
 
 How to Deploy AI in Customer Support Without Breaking Trust
 
 Assaf Barnir
 
-v0.3 · November 1, 2026 · Review edition
+Second Edition · November 1, 2026
 
-## Notes for the New Version: v0.3
+## Notes for the Second Edition
 
-This edition builds on more use cases I've seen, discussed, researched, and worked through in collaboration with humans and AI since the first version was released.
+This edition builds on more use cases I've seen, discussed, researched, and worked through in collaboration with humans and AI since the first edition was released.
 
 This edition moves the book beyond the launch room. The original migration story remains, but more of the work now happens after the first answer: verifying the result, recovering when it fails, and changing the system without teaching it a new mistake.
 
-If you read v0.2, there are six new chapters and substantial revisions across the operating material. Here is where to return.
+If you read the first edition, there are six new chapters and substantial revisions across the operating material. Here is where to return.
 
 - **Organizational resistance:** Chapter 5 adds four fictional NIMBY cases and a self-check. It also makes room for the objection that correctly stops an unsafe rollout.
 
@@ -44,7 +44,7 @@ The vendor discussion is a snapshot checked on November 1, 2026. Announced, earl
 
 Personal accounts, fictional teaching cases, prototype demonstrations, and recommended practices are identified throughout the book.
 
-The previous v0.2 edition remains available in the [edition archive](https://assafbar2.github.io/the-support-machine/editions.html), including its PDF, DOCX, and Markdown.
+The first edition remains available in the [edition archive](https://assafbar2.github.io/the-support-machine/editions.html), including its PDF, DOCX, and Markdown.
 
 ## Reader's Note
 
@@ -2253,9 +2253,9 @@ The calculator does not connect to a helpdesk, decide whether two conversations 
 
 ### Install the book as a skill
 
-Install The Support Machine skill once. It gives your assistant access to the complete v0.3 book, all eight appendices, the podcast additions, and fourteen working templates. Ask a question or describe a decision; the skill reads the relevant chapters and templates from its bundled files.
+Install The Support Machine skill once. It gives your assistant access to the complete Second Edition, all eight appendices, the podcast additions, and fourteen working templates. Ask a question or describe a decision; the skill reads the relevant chapters and templates from its bundled files.
 
-[Download The Support Machine v0.3 skill ZIP](https://github.com/assafbar2/the-support-machine/raw/refs/heads/codex/support-machine-v0.3/docs/downloads/the-support-machine.zip). You can also [inspect its files in the repository](https://github.com/assafbar2/the-support-machine/tree/codex/support-machine-v0.3/skills/the-support-machine). These links select the v0.3 review edition rather than the earlier public edition.
+[Download The Support Machine Second Edition skill ZIP](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine.zip). You can also [inspect its files in the repository](https://github.com/assafbar2/the-support-machine/tree/main/skills/the-support-machine). The package includes the Second Edition and its companion templates.
 
 **In Claude**
 
@@ -2271,7 +2271,7 @@ Install The Support Machine skill once. It gives your assistant access to the co
 
 Ask the built-in installer to install the repository's existing skill. Paste this request into Codex:
 
-> $skill-installer Install skills/the-support-machine from GitHub repository assafbar2/the-support-machine, ref codex/support-machine-v0.3.
+> $skill-installer Install skills/the-support-machine from GitHub repository assafbar2/the-support-machine, ref main.
 
 Then invoke it with `$the-support-machine`, followed by your task. If it does not appear in the available skills, restart Codex and check again. For a manual installation, place the complete `the-support-machine` folder inside `~/.agents/skills/`, retaining its references and templates. Copying only `SKILL.md` leaves the book behind.
 
@@ -2279,13 +2279,13 @@ Then invoke it with `$the-support-machine`, followed by your task. If it does no
 
 > Use The Support Machine skill. Read its bundled book reference and report the edition, Chapter 28's title, and the purpose of Appendix G. Then identify the template you would use for a build-versus-buy decision. If a file is missing, tell me.
 
-The expected edition is v0.3; Chapter 28 is “Evaluating AI: The Work Is Never Done.” The bundle's `references/book.md` contains the full text. A skill supplies reusable instructions and reference material. Installing it does not train the model on the book or connect it to your helpdesk.
+The expected edition is the Second Edition; Chapter 28 is “Evaluating AI: The Work Is Never Done.” The bundle's `references/book.md` contains the full text. A skill supplies reusable instructions and reference material. Installing it does not train the model on the book or connect it to your helpdesk.
 
 **Keep your copy current**
 
 When a new edition arrives, download or reinstall that edition's skill and repeat the check. A locally installed or uploaded copy does not automatically follow changes in this GitHub repository. Keep any company-specific notes separately so replacing the book does not erase them. The repository's edition notes tell you what changed.
 
-For focused evaluation work, the optional [Support AI Evals ZIP](https://github.com/assafbar2/the-support-machine/raw/refs/heads/codex/support-machine-v0.3/docs/downloads/support-ai-evals.zip) adds a review workflow and a calculator for normalized local data. Install it separately if useful; The Support Machine works on its own.
+For focused evaluation work, the optional [Support AI Evals ZIP](https://assafbar2.github.io/the-support-machine/downloads/support-ai-evals.zip) adds a review workflow and a calculator for normalized local data. Install it separately if useful; The Support Machine works on its own.
 
 The setup steps reflect the official product instructions checked for this edition. Appendix H links to the current guides.
 
@@ -2657,7 +2657,7 @@ The 80 prompts below cover the six gates and the recurring decisions around them
 
 **80. Revisit an older edition**
 
-> Use the installed edition's version notes to explain what changed since [earlier edition] and which decisions deserve another look for [our situation]. Separate changed advice from clearer wording. If both full editions are accessible, compare them directly; otherwise state that you are relying on version notes and do not invent a diff.
+> Use the installed edition's notes to explain what changed since [earlier edition] and which decisions deserve another look for [our situation]. Separate changed advice from clearer wording. If both full editions are accessible, compare them directly; otherwise state that you are relying on edition notes and do not invent a diff.
 
 The value of the conversation is the work it helps you inspect. Keep the case, test the recommendation, and bring the resulting evidence back. That gives the next discussion something better than another confident summary.
 

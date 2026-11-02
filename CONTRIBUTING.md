@@ -31,11 +31,11 @@ python -m unittest discover -s tests -v
 python scripts/verify_edition.py
 ```
 
-The build exports Markdown, copies the supplied rendered PDF, and regenerates HTML, versioned downloads, complete review text, the label-free reading copy, and matching ZIP/.skill packages. It does not modify the previous canonical DOCX/PDF. CSS in `docs/styles.css` is maintained directly.
+The build exports Markdown, copies the supplied rendered PDF, and regenerates HTML, versioned downloads, edition-named downloads, and matching ZIP/.skill packages. It does not modify the previous canonical DOCX/PDF. CSS in `docs/styles.css` is maintained directly.
 
 Render and visually inspect every PDF page. Check the cover, contents, chapter starts, tables, field notes, page breaks and links. Text extraction and automated checks do not replace visual review.
 
-The reading copy is a byte-for-byte copy of the canonical DOCX, so its visual verification uses the same render. The build and edition verifier check that equality. Keep editorial directions in this file or the research/review records, never in reader-facing chapter endings. Audit names, visible placeholders, and authoring residue when revising the manuscript. Reader prompts in Appendix G are intentional examples.
+The downloadable DOCX is a byte-for-byte copy of the canonical manuscript. The build and edition verifier check that equality. Keep editorial directions in this file or the research/source records, never in reader-facing chapter endings. Audit names, visible placeholders, and authoring residue when revising the manuscript. Reader prompts in Appendix G are intentional examples.
 
 ## Claims and release notes
 
@@ -43,7 +43,9 @@ Check time-sensitive product claims against current primary documentation. Recor
 
 Update `edition.json`, `CHANGELOG.md`, reader notes, and the coverage record. Preserve previous editions and verify the archive checksums. Do not overwrite an old version to save a filename.
 
-v0.3 is a review edition until accepted. Publication is a separate action: update the release status and the review-branch installation links in Appendix G and the README, regenerate all formats, merge the reviewed changes, verify Pages, and create a GitHub release with the versioned PDF, DOCX, Markdown and skill packages. Do not create or move a release tag before that decision.
+The current book is the **Second Edition**, published November 1, 2026. Its repository release identifier is `v0.3`; the First Edition uses `v0.2`. Use edition names in all reader-facing text. These technical identifiers do not number the book editions. `edition.json` keeps the edition name, public download slug, release identifier, and publication status together.
+
+Publish approved changes by regenerating every format, merging the reviewed PR, verifying GitHub Pages and download checksums, and creating the corresponding GitHub release. Existing edition files and tags remain immutable. Public download names use `second-edition`; legacy `v0.3` paths remain compatibility aliases.
 
 ## Skills and tests
 

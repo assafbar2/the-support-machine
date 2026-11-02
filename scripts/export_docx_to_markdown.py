@@ -94,7 +94,7 @@ def export_docx(src,dst):
                 continue
             style = p.style.name
             if style == "Title":
-                lines += ["# "+text,"",f"> Markdown export of the manuscript. The canonical formatted source is {TICK}manuscript/{src.name}{TICK}.",""]
+                lines += ["# "+text,"",f"> Markdown export of the manuscript. The canonical formatted source is maintained in {TICK}manuscript/{TICK}.",""]
             elif style.startswith("Heading "):
                 lines += ["#"*(int(style.split()[-1])+1)+" "+text,""]
             elif style == "List Bullet":
