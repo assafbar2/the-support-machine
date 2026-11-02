@@ -1,56 +1,30 @@
 # AI Support Vendor Scorecard
 
-## Decision
+Decision / recommendation / owner / review date:
 
-Recommended vendor:
+| Area | Current capability | Plan, channel, access status | Our test evidence | Gap / owner |
+|---|---|---|---|---|
+| Customer task and retrieval | | | | |
+| Audience and identity boundaries | | | | |
+| Skills, tools, goals and conflicts | | | | |
+| Actions, receipts and safe retries | | | | |
+| Handoff and fallback capacity | | | | |
+| QA, rubric ownership and exports | | | | |
+| Data handling and human access | | | | |
+| Configuration proposals and approval | | | | |
+| Implementation and operating ownership | | | | |
+| Lifecycle cost and usage assumptions | | | | |
+| Continuity, acquisition risk and exit | | | | |
 
-Reason:
+Separate vendor documentation, contractual commitments, roadmap intentions, and observed behavior. Date every time-sensitive capability check. Do not average away a failed data, authority, or recovery boundary.
 
-Risk level: Low / Medium / High
+Wizard check: which work is automated, which is human, and what fails without the demo team? A questionnaire alone does not prove concealed labor.
 
-## Scoring
+Tollbooth check: can we inspect, change, recover, and maintain the service? Who owns failed delivery and knowledge transfer?
 
-Score each category 1-5. A vendor must score at least 4 on trust, escalation, and auditability before launch.
+Required proof: representative cases, interrupted action, missing context, required escalation, human-capacity exercise, export and replacement path.
 
-| Category | Score | Evidence | Risk |
-|---|---:|---|---|
-| Product fit |  |  |  |
-| Retrieval quality |  |  |  |
-| Escalation behavior |  |  |  |
-| Read/write action safety |  |  |  |
-| Analytics and sampling |  |  |  |
-| Security and compliance |  |  |  |
-| Implementation partnership |  |  |  |
-| Admin/operator UX |  |  |  |
+Exit review: data/config exports, integration dependencies, accountable support path, contract changes, switching effort, and replacement rehearsal. An acquisition is a review trigger, not proof of deterioration.
 
-## Wizard of Oz Check
-
-- What work is the AI truly doing?
-- Where are hidden humans carrying the system?
-- What fails if the vendor team is not watching?
-- Can the customer tell when the machine is uncertain?
-
-## Tollbooth Check
-
-- Does the partner control key implementation paths without owning outcomes?
-- Can your team change, audit, and improve the system without waiting on them?
-- Who owns failure after launch?
-
-## Required Proof
-
-- Real historical case test:
-- Escalation test:
-- Security review:
-- Rollback / correction path:
-- Post-launch support model:
-
-## Recommendation
-
-Proceed / Proceed with constraints / Do not proceed
-
-Next actions:
-
-1.
-2.
-3.
+Decision: proceed / constrained scope / gather evidence / decline. Record reasons and owned follow-ups.
 

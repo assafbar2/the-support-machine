@@ -1,0 +1,43 @@
+{
+  "as_of": "2026-11-01T00:00:00Z",
+  "coverage_scope": "Synthetic example: continuously observed Intercom conversations only; no Slack or account-manager contacts.",
+  "records": [
+    {
+      "conversation_id": "original-1",
+      "account_id": "demo-account",
+      "definition_version": "demo-v1",
+      "resolved_at": "2026-10-01T00:00:00Z",
+      "observed_through": "2026-11-01T00:00:00Z",
+      "coverage": "complete",
+      "confirmed_success_at": "2026-10-02T00:00:00Z",
+      "returns": [
+        {
+          "event_id": "return-1",
+          "conversation_id": "followup-1",
+          "account_id": "demo-account",
+          "occurred_at": "2026-10-05T00:00:00Z",
+          "match": "confirmed",
+          "reason": "Reviewed: same broken export and account."
+        }
+      ]
+    },
+    {
+      "conversation_id": "original-2",
+      "account_id": "demo-account-2",
+      "definition_version": "demo-v1",
+      "resolved_at": "2026-10-25T00:00:00Z",
+      "observed_through": "2026-11-01T00:00:00Z",
+      "coverage": "complete",
+      "returns": []
+    },
+    {
+      "conversation_id": "original-3",
+      "account_id": "demo-account-3",
+      "definition_version": "demo-v1",
+      "resolved_at": "2026-10-30T00:00:00Z",
+      "observed_through": "2026-11-01T00:00:00Z",
+      "coverage": "partial",
+      "returns": []
+    }
+  ]
+}

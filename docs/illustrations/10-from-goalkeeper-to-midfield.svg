@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">From goalkeeper to midfield</title>
+<desc id="desc">Support engineers keep a staffed human recovery path and spend protected time improving documentation, product behavior and onboarding to prevent repeated customer problems.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(28)"><path d="M 0 0 L 0 8" stroke="#000" stroke-width=".9"/></pattern></defs>
+<rect width="1200" height="820" fill="#fff"/>
+<g fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<text x="52" y="42" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="start" letter-spacing="1.2">THE SUPPORT MACHINE  /  FIGURE 10</text>
+<text x="52" y="94" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" text-anchor="start" letter-spacing="0">From goalkeeper to midfield</text>
+<text x="52" y="132" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0">Prevent repeated problems while keeping a human recovery path.</text>
+<path d="M 52 730 Q 600.68 730.33 1148 730" fill="none" stroke-width="1.3"/>
+<text x="52" y="762" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">READ THE RESULT</text>
+<text x="52" y="791" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start" letter-spacing="0">Protected improvement time, product access and a staffed human path.</text>
+<path d="M 171 245 Q 643.34 244.37 1115 245 Q 1074.65 433.35 1033 623 Q 560.85 623.30 88 623 Q 128.99 434.57 171 245 Z" fill="none" stroke-width="1.6"/>
+<path d="M 176 240 Q 635 242 1111 240" fill="none" stroke-width="0.9"/>
+<path d="M 154 323 Q 231.64 323.45 308 323 Q 286.96 435.09 267 548 Q 185.77 547.35 105 548" fill="none" stroke-width="1.3"/>
+<path d="M 640 245 Q 631.00 289.87 620 337" fill="none" stroke-width="1.3"/>
+<path d="M 566 586 Q 562.74 605.14 558 623" fill="none" stroke-width="1.3"/>
+<path d="M 670 433 C 679 381 651 348 610 348 C 568 347 529 385 522 432 C 512 482 543 518 582 518 C 624 519 660 480 670 433 Z" fill="none" stroke-width="1.3"/>
+<path d="M 77 349 Q 110.87 355.65 145 361 Q 133.38 418.64 120 475 Q 85.65 468.75 53 461 Q 65.21 405.78 77 349 Z" fill="url(#hatch)" stroke-width="1.5"/>
+<path d="M 145 361 Q 151.32 365.75 157 372 Q 144.74 430.36 132 487 Q 126.05 481.15 120 475 Q 132.49 418.32 145 361 Z" fill="#fff" stroke-width="1.5"/>
+<path d="M 77 349 Q 83.21 355.63 90 362" fill="none" stroke-width="1.1"/>
+<path d="M 53 461 Q 59.04 467.73 65 474" fill="none" stroke-width="1.1"/>
+<path d="M 65 474 Q 99.66 479.81 132 487" fill="none" stroke-width="1.1"/>
+<text x="70" y="213" fill="#000" stroke="none" font-family="Bradley Hand, Noteworthy, Arial, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0">Keep the goal staffed.</text>
+<path d="M 285 212 C 320 220 222 300 214 344" fill="none" stroke-width="1.4"/>
+<path d="M 220.21626897744943 334.96628537090083 Q 216.54 339.28 214 344 Q 212.36 338.31 211.36143978655025 333.35631642710104" fill="none" stroke-width="1.4"/>
+<g transform="translate(209 425) rotate(0) scale(1.05)">
+<path d="M 11 -49 C 11.7 -42.84 5.94 -37.5 0 -38 C -6.27 -38 -11.5 -42.95 -11 -49 C -11 -55.269999999999996 -6.16 -60.6 0 -60 C 6.16 -60 11.4 -54.94 11 -49 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -15 -28 L -32 -13 L -43 -29 L -50 -24 L -35 1 L -17 -7 L -15 23 L 16 23 L 17 -7 L 35 1 L 50 -24 L 43 -29 L 32 -13 L 15 -28 Q 0 -34 -15 -28 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -42 -30 C -41.3 -27.2 -44.3 -24.5 -47 -25 C -49.85 -25 -52.5 -27.25 -52 -30 C -52 -32.85 -49.8 -35.6 -47 -35 C -44.2 -35 -41.6 -32.7 -42 -30 Z" fill="#fff" stroke-width="1.7"/>
+<path d="M 52 -30 C 52.7 -27.2 49.7 -24.5 47 -25 C 44.15 -25 41.5 -27.25 42 -30 C 42 -32.85 44.2 -35.6 47 -35 C 49.8 -35 52.4 -32.7 52 -30 Z" fill="#fff" stroke-width="1.7"/>
+<path d="M -14 23 Q -14.68 31.20 -15 39 Q -8.45 39.74 -2 39 Q -0.43 34.28 1 28 Q 3.27 32.93 4 39 Q 11.24 38.46 17 39 Q 17.43 30.42 17 23 Q 0.88 23.42 -14 23 Z" fill="#fff" stroke-width="2"/>
+<path d="M -13 39 L -17 59 L -25 63 L -25 67 L -11 67 L -4 41 M 6 40 L 14 61 L 23 61 L 24 66 L 10 68 L 0 43" fill="none" stroke-width="2.3"/>
+<path d="M -10 -25 Q -9.38 -3.77 -8 18" fill="none" stroke-width="1.1"/>
+</g>
+<text x="204" y="581.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">Human recovery</text>
+<path d="M 295 414 C 371 377 433 380 503 410" fill="none" stroke-width="2.1" stroke-dasharray="8 7"/>
+<path d="M 495.5811865434257 401.92465437912705 Q 499.79 405.63 503 410 Q 498.11 409.81 492.03591285621314 410.19695964928957" fill="none" stroke-width="2.1"/>
+<text x="405" y="361" fill="#000" stroke="none" font-family="Bradley Hand, Noteworthy, Arial, sans-serif" font-size="24" font-weight="400" text-anchor="middle" letter-spacing="0">Protected time</text>
+<g transform="translate(593 420) rotate(0) scale(1.17)">
+<path d="M 11 -49 C 11.7 -42.84 5.94 -37.5 0 -38 C -6.27 -38 -11.5 -42.95 -11 -49 C -11 -55.269999999999996 -6.16 -60.6 0 -60 C 6.16 -60 11.4 -54.94 11 -49 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -15 -28 L -32 -9 L -45 -17 L -49 -9 L -30 4 L -17 -8 L -14 23 L 17 23 L 17 -7 L 36 -1 L 47 -19 L 40 -23 L 32 -11 L 15 -28 Q 0 -34 -15 -28 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -14 23 Q -14.53 31.79 -15 39 Q -8.58 38.40 -2 39 Q 0.18 32.92 1 28 Q 1.60 33.57 4 39 Q 10.85 39.68 17 39 Q 17.52 30.45 17 23 Q 2.32 22.29 -14 23 Z" fill="#fff" stroke-width="2"/>
+<path d="M -13 39 L -17 59 L -25 63 L -25 67 L -11 67 L -4 41 M 6 40 L 14 61 L 23 61 L 24 66 L 10 68 L 0 43" fill="none" stroke-width="2.3"/>
+<path d="M -10 -25 Q -8.61 -3.17 -8 18" fill="none" stroke-width="1.1"/>
+</g>
+<path d="M 657 501 C 657.7 508.84 650.56 515.5 643 515 C 635.02 515 628.5 508.7 629 501 C 629 493.02 635.16 486.4 643 487 C 650.84 487 657.4 493.44 657 501 Z" fill="#fff" stroke-width="1.8"/>
+<path d="M 643 494.42 Q 645.56 496.36 649.58 499.32 Q 647.72 502.54 646.78 507.16 Q 642.65 506.70 639.22 507.16 Q 638.23 503.83 636.42 499.32 Q 638.96 496.56 643 494.42 Z" fill="#000" stroke-width="0.8"/>
+<path d="M 643 494.42 Q 643.12 490.64 643 487" fill="none" stroke-width="1"/>
+<path d="M 649.58 499.32 Q 652.89 498.03 656.3 496.8" fill="none" stroke-width="1"/>
+<path d="M 646.78 507.16 Q 648.93 509.76 650.98 512.62" fill="none" stroke-width="1"/>
+<path d="M 639.22 507.16 Q 637.11 509.74 635.02 512.62" fill="none" stroke-width="1"/>
+<path d="M 636.42 499.32 Q 633.06 497.94 629.7 496.8" fill="none" stroke-width="1"/>
+<text x="592" y="569" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0">Support engineers</text>
+<path d="M 657 393 C 724 366 753 310 830 309" fill="none" stroke-width="2"/>
+<path d="M 819.9424065752552 304.63023862178613 Q 824.50 306.11 830 309 Q 825.23 311.52 820.0592798364852 313.62947973650296" fill="none" stroke-width="2"/>
+<path d="M 665 432 C 741 426 819 428 883 429" fill="none" stroke-width="2"/>
+<path d="M 873.0715243981555 424.3443182858384 Q 878.74 426.40 883 429 Q 878.00 431.87 872.9309165611506 433.3432198541507" fill="none" stroke-width="2"/>
+<path d="M 671 470 C 727 496 751 549 805 548" fill="none" stroke-width="2"/>
+<path d="M 794.9183951887217 543.6859248465971 Q 799.64 545.35 805 548 Q 800.79 550.46 795.0850332847758 552.6843820335232" fill="none" stroke-width="2"/>
+<g transform="translate(899 299) rotate(0) scale(0.79)">
+<path d="M 0 -18 Q -18 -29 -40 -24 L -40 25 Q -17 21 0 33 Q 18 21 40 25 L 40 -24 Q 19 -29 0 -18 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M 0 -18 Q 1 6 0 33" fill="none" stroke-width="2"/>
+<path d="M -31 -11 Q -18 -13 -9 -6" fill="none" stroke-width="1.4"/>
+<path d="M 9 -6 Q 20 -13 31 -11" fill="none" stroke-width="1.4"/>
+<path d="M -31 0 Q -18 -2 -9 5" fill="none" stroke-width="1.4"/>
+<path d="M 9 5 Q 20 -2 31 0" fill="none" stroke-width="1.4"/>
+<path d="M -31 11 Q -18 9 -9 16" fill="none" stroke-width="1.4"/>
+<path d="M 9 16 Q 20 9 31 11" fill="none" stroke-width="1.4"/>
+<path d="M -43 -18 L -44 30 Q -19 25 -2 38 Q 18 26 44 30 L 44 -18" fill="none" stroke-width="1.2"/>
+</g>
+<text x="899" y="360" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">Documentation</text>
+<g transform="translate(951 426) rotate(0) scale(1)">
+<path d="M -42 -30 Q 0.84 -30.39 42 -30 Q 41.95 -1.01 42 27 Q 0.03 26.10 -42 27 Q -41.71 -2.26 -42 -30 Z" fill="#fff" stroke-width="2"/>
+<path d="M -42 -15 Q 0.77 -13.87 42 -15" fill="none" stroke-width="1.4"/>
+<path d="M -30.8 -23 C -30.1 -22.328 -31.352 -21.3 -32 -21.8 C -32.684 -21.8 -33.7 -22.34 -33.2 -23 C -33.2 -23.684 -32.672 -24.8 -32 -24.2 C -31.328 -24.2 -30.400000000000002 -23.648 -30.8 -23 Z" fill="#000" stroke-width="0.5"/>
+<path d="M -22.8 -23 C -22.1 -22.328 -23.352 -21.3 -24 -21.8 C -24.684 -21.8 -25.7 -22.34 -25.2 -23 C -25.2 -23.684 -24.672 -24.8 -24 -24.2 C -23.328 -24.2 -22.400000000000002 -23.648 -22.8 -23 Z" fill="#000" stroke-width="0.5"/>
+<path d="M -14.8 -23 C -14.100000000000001 -22.328 -15.352 -21.3 -16 -21.8 C -16.684 -21.8 -17.7 -22.34 -17.2 -23 C -17.2 -23.684 -16.672 -24.8 -16 -24.2 C -15.328 -24.2 -14.4 -23.648 -14.8 -23 Z" fill="#000" stroke-width="0.5"/>
+<path d="M -17 -2 Q -21.63 1.36 -25 6 Q -21.18 9.21 -17 13" fill="none" stroke-width="1.8"/>
+<path d="M -2 -2 Q 1.99 2.60 6 6 Q 1.72 10.12 -2 13" fill="none" stroke-width="1.8"/>
+<g transform="translate(29 13) rotate(-20) scale(0.63)">
+<path d="M -22 -31 C -41 -22 -40 0 -23 10 Q -15 15 -7 11 L 18 44 Q 24 50 31 43 Q 37 38 31 31 L 4 -1 Q 13 -18 -2 -30 L -1 -14 L -12 -9 L -23 -18 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M 27.5 39 C 28.2 40.4 26.35 42.0 25 41.5 C 23.575 41.5 22.0 40.375 22.5 39 C 22.5 37.575 23.6 35.9 25 36.5 C 26.4 36.5 27.9 37.65 27.5 39 Z" fill="none" stroke-width="1.3"/>
+<path d="M -3 12 L 21 40" fill="none" stroke-width="1.1"/>
+</g>
+</g>
+<text x="955" y="486" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">Product fixes</text>
+<g transform="translate(875 550) rotate(0) scale(1)">
+<path d="M 0 -29 Q -0.99 -0.52 0 28" fill="none" stroke-width="2.2"/>
+<path d="M -34 -24 Q -3.34 -24.15 26 -24 Q 31.85 -19.14 38 -13 Q 31.56 -7.21 26 -2 Q -3.35 -1.79 -34 -2 Q -33.17 -13.27 -34 -24 Z" fill="#fff" stroke-width="2"/>
+<path d="M -25 3 Q 0.37 2.97 27 3 Q 26.27 10.73 27 20 Q 0.37 20.17 -25 20 Q -29.60 16.89 -34 12 Q -30.35 7.34 -25 3 Z" fill="#fff" stroke-width="2"/>
+<path d="M -7 29 Q 1.91 29.39 10 29" fill="none" stroke-width="1.4"/>
+</g>
+<text x="877" y="604" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" text-anchor="middle" letter-spacing="0">Onboarding</text>
+<text x="600" y="686" fill="#000" stroke="none" font-family="Bradley Hand, Noteworthy, Arial, sans-serif" font-size="25" font-weight="400" text-anchor="middle" letter-spacing="0">Fix what keeps sending the ball back.</text>
+</g>
+</svg>

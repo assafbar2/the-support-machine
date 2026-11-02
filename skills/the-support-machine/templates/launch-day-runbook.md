@@ -1,80 +1,39 @@
 # Launch Day Runbook
 
-## Launch Thesis
+Launch thesis / scope / time / decision owner:
 
-We are not launching a bot. We are migrating the support operating model.
-
-## Owners
-
-| Lane | Owner | Backup | Launch responsibility |
+| Lane | Owner | Backup | Required decision and evidence |
 |---|---|---|---|
-| Support |  |  |  |
-| Support engineering |  |  |  |
-| Vendor / partner |  |  |  |
-| Product |  |  |  |
-| Security / legal |  |  |  |
-| Customer communications |  |  |  |
+| Support and human capacity | | | |
+| Support Engineering and actions | | | |
+| Vendor / implementation | | | |
+| Product and knowledge | | | |
+| Security / legal | | | |
+| Customer communication | | | |
 
-## Pre-Launch Checklist
+## Before cutover
 
-- [ ] Legacy baseline frozen.
-- [ ] Pre-mortem completed.
-- [ ] Shadow run passed.
-- [ ] Launch blockers separated from post-launch fixes.
-- [ ] Escalation paths tested.
-- [ ] Rollback path documented.
-- [ ] Launch-room owners confirmed.
-- [ ] Customer-facing language approved.
-- [ ] Monitoring dashboard ready.
-- [ ] Failure taxonomy ready.
-- [ ] First 30 days review cadence scheduled.
+- [ ] Baseline frozen with definitions, population, case mix and cost.
+- [ ] Pre-mortem covers wrong context, unknown effects, missing humans and cost spikes.
+- [ ] Shadow release record passed for the intended scope.
+- [ ] Audience and tool permissions verified.
+- [ ] Escalation tested with realistic load, access and backup.
+- [ ] Containment and configuration recovery exercised.
+- [ ] Irreversible effects and compensation authority documented.
+- [ ] Audit logs, action receipts and monitoring available.
+- [ ] Customer-facing capability claims accurate.
+- [ ] Daily review and rolling 7/30-day checks assigned.
 
-## Zero Hour
+## Cutover and monitoring
 
-Launch time:
+Record time, scope, configuration and owners. Inspect actual conversations, customer effort, missed required escalation, unknown action effects, queue capacity and costs alongside dashboards.
 
-Cutover owner:
+Stop the affected capability on unauthorized effects, consequential unsupported advice, failed required handoffs, or loss of audit/containment ability. Use a pre-agreed owner and evidence to decide broader pauses.
 
-Monitoring owner:
+## End-of-day evidence
 
-Escalation owner:
+What worked / broke / surprised us:
 
-Rollback owner:
+Urgent containment / required repair / later improvement:
 
-## Monitoring
-
-Watch:
-
-- Resolution quality
-- Escalation volume
-- Escalation quality
-- Customer frustration language
-- Hallucination or unsupported claims
-- Read/write action failures
-- Cost or rate-limit spikes
-
-## Rollback / Pause Conditions
-
-Pause or rollback if:
-
-- The machine creates customer-visible misinformation.
-- High-severity cases are misrouted.
-- Read/write actions violate guardrails.
-- Escalation path fails.
-- Support team cannot audit failures in real time.
-
-## End-of-Day Evidence Log
-
-What worked:
-
-What broke:
-
-What surprised us:
-
-Which failures are blockers:
-
-Which failures move to v0.2:
-
-What we changed:
-
-What must be fixed before day two:
+Owner, regression case, release decision, customer obligation and next check for each finding:

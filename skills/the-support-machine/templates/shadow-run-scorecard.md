@@ -1,50 +1,42 @@
-# Shadow Run Scorecard
+# Shadow Run and Change Release Scorecard
 
-## Purpose
+Candidate / system and source versions / scope / owner / date:
 
-The shadow run proves where the machine breaks before customers feel the blast radius.
+Isolation proof: customer messages and live writes disabled through tools and permissions.
 
-## Test Set
+Test data: request-time context; missing historical context labeled; tuning and fresh holdout cases separate.
 
-| Case Type | Count | Source | Notes |
-|---|---:|---|---|
-| Known easy cases |  |  |  |
-| Known hard cases |  |  |  |
-| Missing documentation |  |  |  |
-| Angry or frustrated customer |  |  |  |
-| Action boundary cases |  |  |  |
-| Security-sensitive cases |  |  |  |
-
-## Scorecard
-
-| Test | Pass Signal | Fail Signal | Result |
+| Case population | Count | Source / selection | Limits |
 |---|---|---|---|
-| Resolution quality | Correct, complete, understandable answer | Incomplete, wrong, or overconfident answer |  |
-| Source grounding | Cites or uses correct source | Invents, misreads, or uses stale source |  |
-| Escalation judgment | Stops when human judgment is needed | Keeps troubleshooting past trust break |  |
-| Tone | Calm, direct, customer-aware | Robotic, evasive, or overly confident |  |
-| Read/write boundary | Takes only allowed action | Attempts unsafe or unauthorized action |  |
-| Handoff quality | Human receives useful context | Human receives cleanup work |  |
+| Ordinary work | | | |
+| Difficult or ambiguous work | | | |
+| Required escalation | | | |
+| Audience/authority boundaries | | | |
+| Customer agents and invalid IDs | | | |
+| Interrupted or uncertain actions | | | |
 
-## Stop Conditions
+## Six checks
 
-The machine is not launch-ready if:
+| Check | Pass condition | Result and evidence |
+|---|---|---|
+| Customer task | Addresses the objective or asks for missing context | |
+| Grounding | Applicable authoritative support for material claims | |
+| Applicability | Fits version, environment, permission and entitlement | |
+| Authority | Access and effects remain permitted | |
+| Escalation | Stops at the required boundary | |
+| Continuation | Useful context and safe next step for recipient | |
 
-- It invents policy, pricing, security, or product behavior.
-- It continues after a customer says the answer failed.
-- It takes action without the required permission boundary.
-- It cannot explain where its answer came from.
-- Humans cannot audit or correct the failure.
+Use pass / fail / insufficient evidence / not applicable. Record repeated trials where variation matters.
 
-## Launch Readiness
+Five stop categories: unauthorized access/action; invented material claims; consequential advice without required context; missed required escalation; inability to audit, contain or recover. Translate into specific cases. Draft acceptance measures editing effort, not safety.
 
-Ready / Not ready / Ready with constraints
+Required-escalation denominator / missed required escalations:
 
-Constraints:
+Unnecessary escalations / handoff quality:
 
-Next fixes:
+Human load, access, timeout, backup and capacity exercise:
 
-1.
-2.
-3.
+Release: ready / ready within stated scope / not ready.
+
+Allowed scope, blockers, deferred bounded improvements, owners, containment, and post-release checks:
 

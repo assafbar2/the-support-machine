@@ -1,6 +1,6 @@
 # Manuscript License
 
-The manuscript and book-format outputs for _The Support Machine_ are licensed under the Creative Commons Attribution 4.0 International License.
+The manuscript, book illustrations, and book-format outputs for _The Support Machine_ are licensed under the Creative Commons Attribution 4.0 International License.
 
 SPDX-License-Identifier: CC-BY-4.0
 

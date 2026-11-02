@@ -1,0 +1,12 @@
+{
+  "version": "v0.3",
+  "name": "Second Edition",
+  "slug": "second-edition",
+  "date": "2026-11-01",
+  "status": "published",
+  "previous": "v0.2",
+  "previous_name": "First Edition",
+  "chapters": 29,
+  "appendices": 8,
+  "illustrations": 10
+}

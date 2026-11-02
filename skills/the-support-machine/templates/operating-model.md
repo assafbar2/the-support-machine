@@ -1,57 +1,56 @@
 # AI Support Operating Model
 
-## Operating Thesis
+Customer outcomes and service scope:
 
-AI support is not a chatbot project. It is an operating model migration.
-
-## Ownership Model
-
-| Function | Old role | New role in the machine | Named owner |
+| Responsibility | Named owner | Backup | Decision rights |
 |---|---|---|---|
-| Support | Answer tickets and manage queues | Own conversation quality, escalation design, and customer trust signals |  |
-| Support engineering | Build tools and debug edge cases | Architect retrieval, routing, action boundaries, and failure recovery |  |
-| Documentation | Publish articles | Operate as machine memory |  |
-| Product | Receive support themes | Treat failure patterns as product discovery |  |
-| Security / legal | Approve tools | Govern data, actions, retention, and auditability |  |
-| GTM | Use support feedback indirectly | Turn repeated confusion into messaging and onboarding fixes |  |
+| Conversation quality and recovery | | | |
+| Retrieval, tools and action receipts | | | |
+| Knowledge authority and releases | | | |
+| Product changes and account enablement | | | |
+| Data, policy and permissions | | | |
+| Customer promises and success goals | | | |
+| Rubric, calibration and delayed outcomes | | | |
 
-## Governance Loop
+One person may hold several responsibilities. Name who accepts a decision at team boundaries.
 
-Daily:
+## Operating rhythm
 
-Weekly:
+Immediate: consequential failure containment and customer repair.
 
-Monthly:
+Weekly: baseline and targeted review, calibration, owned improvement queue.
 
-Quarterly:
+Rolling: mature 7/30-day checks with declared coverage.
 
-## Autonomy Boundaries
+Regular: costs, human case mix, customer effort, grader disagreement, and longer success milestones.
 
-What the machine can answer:
+On material change: release tests, scope review, vendor/access/contract check.
 
-What the machine can do:
+## Team that ships
 
-What the machine must never do:
+Protected time and queue coverage:
 
-When it must escalate:
+Training and paired reviewers:
 
-## Metrics
+Debugging exercise: customer task, initial hypothesis, evidence tested, revised explanation, remaining uncertainty, and customer-facing explanation.
 
-Resolution:
+Bounded change authority / escalation to Product or Engineering:
 
-Trust:
+Impact log: customer problem → evidence → reviewed change → population → later result and limitations.
 
-Escalation quality:
+Reward prevention and useful objections; do not replace ticket counts with PR counts.
 
-Knowledge improvement:
+## Boundaries
 
-Human work shift:
+Actions, goals, audiences, contact preferences, and conflict owner:
 
-## Promotion Path
+Unknown effects and recovery path:
 
-How support engineers move from ticket solvers to system architects:
+Knowledge promotion, regression and withdrawal:
 
-1.
-2.
-3.
+Customer promise and evidence-review loop:
+
+Human handoff: requested, required, or preventable; timing, customer goal, attempts, evidence, accepting owner, and later result. A useful handoff is not automatically an automation failure.
+
+Pre-sales / post-sales continuity: current customer milestone, technical decisions and constraints, unresolved blockers, receiving owner, and evidence that the context transferred.
 

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="545" viewBox="40 170 1120 545" role="img" aria-labelledby="title desc">
+<title id="title">Diagnose the queue</title>
+<desc id="desc">Read a sample of customer questions and distinguish product behavior, hard-to-find answers, repeatable tasks, and work needing human investigation.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(28)"><path d="M 0 0 L 0 8" stroke="#000" stroke-width=".9"/></pattern></defs>
+<rect width="1200" height="820" fill="#fff"/>
+<g fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(133 383) rotate(-11) scale(1.02)">
+<path d="M -38 -45 Q -8.69 -45.66 19 -45 Q 28.85 -35.38 37 -27 Q 37.78 8.69 37 46 Q -0.38 45.26 -38 46 Q -38.87 0.34 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 18.78 -35.93 19 -27 Q 27.89 -27.31 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -25 -19 Q -0.29 -18.74 23 -19" fill="none" stroke-width="1.5"/>
+<path d="M -25 0 Q -0.89 0.55 23 0" fill="none" stroke-width="1.5"/>
+<path d="M -25 19 Q -7.02 19.12 11 19" fill="none" stroke-width="1.5"/>
+</g>
+<g transform="translate(155 395) rotate(5) scale(1.02)">
+<path d="M -38 -45 Q -8.70 -44.65 19 -45 Q 27.96 -36.88 37 -27 Q 37.50 9.27 37 46 Q -0.91 46.12 -38 46 Q -38.19 0.68 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 19.87 -35.68 19 -27 Q 27.51 -26.21 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -25 -19 Q -0.20 -19.29 23 -19" fill="none" stroke-width="1.5"/>
+<path d="M -25 0 Q -0.07 -0.22 23 0" fill="none" stroke-width="1.5"/>
+<path d="M -25 19 Q -7.65 19.02 11 19" fill="none" stroke-width="1.5"/>
+</g>
+<g transform="translate(167 406) rotate(-3) scale(1.02)">
+<path d="M -38 -45 Q -8.84 -45.28 19 -45 Q 28.38 -36.85 37 -27 Q 37.38 9.53 37 46 Q 0.25 46.53 -38 46 Q -38.82 0.01 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 19.55 -36.63 19 -27 Q 27.24 -26.43 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -25 -19 Q -1.87 -19.72 23 -19" fill="none" stroke-width="1.5"/>
+<path d="M -25 0 Q -0.01 -0.37 23 0" fill="none" stroke-width="1.5"/>
+<path d="M -25 19 Q -7.28 19.36 11 19" fill="none" stroke-width="1.5"/>
+</g>
+<text x="151" y="519.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Customer</text>
+<text x="151" y="548.44" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">questions</text>
+<path d="M 220 405 C 253 400 279 398 312 399" fill="none" stroke-width="2.3"/>
+<path d="M 302.14088927842965 394.1991734274381 Q 306.84 395.77 312 399 Q 307.81 401.45 301.8682871386627 403.1950440397465" fill="none" stroke-width="2.3"/>
+<g transform="translate(378 386) rotate(3) scale(0.95)">
+<path d="M -38 -45 Q -10.15 -44.49 19 -45 Q 27.59 -36.76 37 -27 Q 37.31 10.27 37 46 Q -0.08 46.89 -38 46 Q -37.31 0.35 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 18.70 -36.41 19 -27 Q 27.14 -27.08 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -25 -19 Q -1.02 -18.14 23 -19" fill="none" stroke-width="1.5"/>
+<path d="M -25 0 Q -0.42 -0.60 23 0" fill="none" stroke-width="1.5"/>
+<path d="M -25 19 Q -7.43 19.78 11 19" fill="none" stroke-width="1.5"/>
+</g>
+<g transform="translate(400 412) rotate(0) scale(1.25)">
+<path d="M 28 0 C 28.7 15.680000000000001 15.120000000000001 28.5 0 28 C -15.959999999999999 28 -28.5 15.400000000000002 -28 0 C -28 -15.959999999999999 -15.680000000000001 -28.6 0 -28 C 15.680000000000001 -28 28.4 -15.120000000000001 28 0 Z" fill="#fff" stroke-width="2.6"/>
+<path d="M -17 -8 Q -10 -21 5 -18" fill="none" stroke-width="1.2"/>
+<path d="M 17 23 Q 27.99 33.17 38 45 Q 42.11 40.84 45 38 Q 34.84 27.20 23 17 Q 19.85 20.65 17 23 Z" fill="url(#hatch)" stroke-width="2"/>
+</g>
+<text x="389" y="527.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Read the evidence</text>
+<text x="389" y="564" fill="#000" stroke="none" font-family="Bradley Hand, Noteworthy, Arial, sans-serif" font-size="26" font-weight="400" text-anchor="middle" letter-spacing="0">Start with a sample.</text>
+<path d="M 486 398 C 565 395 534 238 620 238 M 486 398 C 549 400 556 350 620 350 M 486 398 C 552 397 557 469 620 469 M 486 398 C 557 403 535 586 620 586" fill="none" stroke-width="1.7"/>
+<path d="M 610.0 233.5 Q 615.78 235.74 620 238 Q 614.33 240.03 610.0 242.5" fill="none" stroke-width="1.7"/>
+<path d="M 610.0 345.5 Q 615.12 347.00 620 350 Q 615.77 352.26 610.0 354.5" fill="none" stroke-width="1.7"/>
+<path d="M 610.0 464.5 Q 614.34 467.52 620 469 Q 615.48 472.07 610.0 473.5" fill="none" stroke-width="1.7"/>
+<path d="M 610.0 581.5 Q 615.47 584.39 620 586 Q 615.58 588.25 610.0 590.5" fill="none" stroke-width="1.7"/>
+<g transform="translate(690 236) rotate(0) scale(0.78)">
+<path d="M -42 -30 Q -0.64 -30.27 42 -30 Q 42.39 -1.94 42 27 Q 0.59 27.39 -42 27 Q -41.60 -1.84 -42 -30 Z" fill="#fff" stroke-width="2"/>
+<path d="M -42 -15 Q -1.01 -15.75 42 -15" fill="none" stroke-width="1.4"/>
+<path d="M -30.7 -23 C -30.0 -22.272 -31.298 -21.2 -32 -21.7 C -32.741 -21.7 -33.8 -22.285 -33.3 -23 C -33.3 -23.741 -32.728 -24.900000000000002 -32 -24.3 C -31.272 -24.3 -30.3 -23.702 -30.7 -23 Z" fill="#000" stroke-width="0.6"/>
+<path d="M -22.7 -23 C -22.0 -22.272 -23.298 -21.2 -24 -21.7 C -24.741 -21.7 -25.8 -22.285 -25.3 -23 C -25.3 -23.741 -24.728 -24.900000000000002 -24 -24.3 C -23.272 -24.3 -22.3 -23.702 -22.7 -23 Z" fill="#000" stroke-width="0.6"/>
+<path d="M -14.7 -23 C -14.0 -22.272 -15.298 -21.2 -16 -21.7 C -16.741 -21.7 -17.8 -22.285 -17.3 -23 C -17.3 -23.741 -16.728 -24.900000000000002 -16 -24.3 C -15.272 -24.3 -14.299999999999999 -23.702 -14.7 -23 Z" fill="#000" stroke-width="0.6"/>
+<path d="M -17 -2 Q -20.29 1.79 -25 6 Q -21.90 9.71 -17 13" fill="none" stroke-width="1.8"/>
+<path d="M -2 -2 Q 1.48 2.33 6 6 Q 2.44 9.40 -2 13" fill="none" stroke-width="1.8"/>
+<g transform="translate(29 13) rotate(-20) scale(0.63)">
+<path d="M -22 -31 C -41 -22 -40 0 -23 10 Q -15 15 -7 11 L 18 44 Q 24 50 31 43 Q 37 38 31 31 L 4 -1 Q 13 -18 -2 -30 L -1 -14 L -12 -9 L -23 -18 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M 27.5 39 C 28.2 40.4 26.35 42.0 25 41.5 C 23.575 41.5 22.0 40.375 22.5 39 C 22.5 37.575 23.6 35.9 25 36.5 C 26.4 36.5 27.9 37.65 27.5 39 Z" fill="none" stroke-width="1.3"/>
+<path d="M -3 12 L 21 40" fill="none" stroke-width="1.1"/>
+</g>
+</g>
+<g transform="translate(690 348) rotate(0) scale(0.76)">
+<path d="M 0 -18 Q -18 -29 -40 -24 L -40 25 Q -17 21 0 33 Q 18 21 40 25 L 40 -24 Q 19 -29 0 -18 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M 0 -18 Q 1 6 0 33" fill="none" stroke-width="2"/>
+<path d="M -31 -11 Q -18 -13 -9 -6" fill="none" stroke-width="1.4"/>
+<path d="M 9 -6 Q 20 -13 31 -11" fill="none" stroke-width="1.4"/>
+<path d="M -31 0 Q -18 -2 -9 5" fill="none" stroke-width="1.4"/>
+<path d="M 9 5 Q 20 -2 31 0" fill="none" stroke-width="1.4"/>
+<path d="M -31 11 Q -18 9 -9 16" fill="none" stroke-width="1.4"/>
+<path d="M 9 16 Q 20 9 31 11" fill="none" stroke-width="1.4"/>
+<path d="M -43 -18 L -44 30 Q -19 25 -2 38 Q 18 26 44 30 L 44 -18" fill="none" stroke-width="1.2"/>
+</g>
+<g transform="translate(690 466) rotate(0) scale(0.82)">
+<path d="M -28 -14 C -9 -45 36 -29 31 4" fill="none" stroke-width="2"/>
+<path d="M 36.9472735632914 -5.213030834821689 Q 33.60 -0.24 31 4 Q 28.74 -0.53 28.048834025268498 -6.561279249673644" fill="none" stroke-width="2"/>
+<path d="M 23 25 C -13 46 -42 14 -27 -10" fill="none" stroke-width="2"/>
+<path d="M -36.115981768054695 -3.9050121899634296 Q -30.94 -6.14 -27 -10 Q -28.03 -5.12 -28.4839970320089 0.8649782700651909" fill="none" stroke-width="2"/>
+<path d="M -10 -7 Q 0.45 -7.74 12 -7 Q 11.64 3.64 12 14 Q 1.39 14.35 -10 14 Q -9.14 3.09 -10 -7 Z" fill="#fff" stroke-width="1.6"/>
+</g>
+<g transform="translate(681 583) rotate(0) scale(0.85)">
+<path d="M 10 -17 C 10.7 -11.399999999999999 5.4 -6.5 0 -7 C -5.699999999999999 -7 -10.5 -11.5 -10 -17 C -10 -22.7 -5.6000000000000005 -27.6 0 -27 C 5.6000000000000005 -27 10.4 -22.4 10 -17 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -23 28 Q -22 0 -3 0 L 3 0 Q 22 0 23 28 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -12 5 L -10 28 M 12 5 L 10 28" fill="none" stroke-width="1.2"/>
+</g>
+<g transform="translate(705 600) rotate(0) scale(0.39)">
+<path d="M 28 0 C 28.7 15.680000000000001 15.120000000000001 28.5 0 28 C -15.959999999999999 28 -28.5 15.400000000000002 -28 0 C -28 -15.959999999999999 -15.680000000000001 -28.6 0 -28 C 15.680000000000001 -28 28.4 -15.120000000000001 28 0 Z" fill="#fff" stroke-width="2.6"/>
+<path d="M -17 -8 Q -10 -21 5 -18" fill="none" stroke-width="1.2"/>
+<path d="M 17 23 Q 27.01 33.45 38 45 Q 40.99 41.31 45 38 Q 34.49 26.66 23 17 Q 20.58 20.11 17 23 Z" fill="url(#hatch)" stroke-width="2"/>
+</g>
+<text x="759" y="234" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">Fix the product</text>
+<text x="759" y="264" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">Product behavior</text>
+<text x="759" y="346" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">Improve guidance</text>
+<text x="759" y="376" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">Hard-to-find or unclear answer</text>
+<text x="759" y="465" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">Test automation</text>
+<text x="759" y="495" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">Repeatable, bounded task</text>
+<text x="759" y="582" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="start" letter-spacing="0">Human investigation</text>
+<text x="759" y="612" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">Uncertain or complex problem</text>
+</g>
+</svg>

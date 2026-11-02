@@ -1,178 +1,72 @@
 # The Support Machine
 
-_The Support Machine: How to Deploy AI in Customer Support Without Breaking Trust_ is both a full manuscript and an executable AI-agent skill.
+### Second Edition
 
-The manuscript is the story and philosophy. The skill is the operating system: it helps a reader plan, audit, launch, and operate an AI support migration.
+*How to Deploy AI in Customer Support Without Breaking Trust*
 
-## Shadow Run field sheet
+By **Assaf Barnir**
 
-**Here for the talk? [Download the one-page field sheet](https://assafbar2.github.io/the-support-machine/shadow-run/Shadow-Run-Field-Sheet-v0.13.pdf).**
+A free field guide for support leaders at API, developer-tool, and B2B companies—and the executives who work with them. From choosing the system and preparing the team to verifying outcomes and improving the service after launch.
 
-Six checks, five stop conditions, and a plan for Monday. [Preview the sheet and see how to use it](docs/shadow-run/).
+**[Read the Second Edition](https://assafbar2.github.io/the-support-machine/book.html)** · **[Download the PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-second-edition.pdf)** · [Book home](https://assafbar2.github.io/the-support-machine/)
 
-![Building AI support happening now](docs/assets/the-support-machine-social.png)
+29 chapters · 8 appendices · 10 illustrations · 80 practical prompts · 2 companion AI skills
 
-## Read It
+![Choose the layer before choosing whether to buy, extend, or build](docs/illustrations/book/02-choose-the-machine.png)
 
-- [Read the book online](https://assafbar2.github.io/the-support-machine/)
-- [Download the PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-v0.2.pdf)
-- [Use the skill](https://assafbar2.github.io/the-support-machine/skill.html)
-- [Read the Markdown source](skills/the-support-machine/references/book.md)
-- [Agent-readable llms.txt](https://assafbar2.github.io/the-support-machine/llms.txt)
+## What's new in the Second Edition
 
-## What It Does
+This edition builds on more use cases I've seen, discussed, researched, and worked through with humans and AI since the first edition.
 
-Use this skill when you need to:
+- **Six new chapters:** organizational resistance, build versus buy, customer agents, action receipts, recovery, and continuing evaluation.
+- **A stronger operating model:** customer promises, the 16% calculation, support teams shipping improvements, and repeatable release gates.
+- **More ways to apply it:** all field notes in one appendix, related projects, fourteen templates, skill installation, and 80 prompts.
+- **Ten new illustrations** and insights from my conversation on **The Prompt Room**.
 
-- Diagnose whether AI support is actually the right answer
-- Evaluate AI support vendors
-- Design the support machine architecture and guardrails
-- Run a shadow test before launch
-- Build a zero-hour launch runbook
-- Review the first 30 days after launch
-- Define the post-launch operating model
+[Notes for returning readers](https://assafbar2.github.io/the-support-machine/notes.html) · [Chapter reading map](release-notes/v0.3-coverage.md) · [All ten illustrations](https://assafbar2.github.io/the-support-machine/illustrations/)
 
-Core thesis:
+## Choose your format
 
-> AI support is not a chatbot project. It is an operating model migration.
+| Read or use | Link |
+|---|---|
+| Complete online book | [Read in your browser](https://assafbar2.github.io/the-support-machine/book.html) |
+| PDF | [Download the Second Edition](https://assafbar2.github.io/the-support-machine/the-support-machine-second-edition.pdf) |
+| Editable document | [Download DOCX](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine-second-edition.docx) |
+| Markdown | [Read the text](skills/the-support-machine/references/book.md) · [Download with images](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine-second-edition-markdown.zip) |
+| AI skills | [Installation and examples](https://assafbar2.github.io/the-support-machine/skill.html) |
 
-## Repository Layout
+## Work with the book
 
-```text
-.
-├── skills/the-support-machine/
-│   ├── SKILL.md
-│   ├── references/
-│   │   └── book.md
-│   └── templates/
-│       ├── ai-support-rollout-plan.md
-│       ├── first-30-days-review.md
-│       ├── launch-day-runbook.md
-│       ├── operating-model.md
-│       ├── shadow-run-scorecard.md
-│       └── vendor-scorecard.md
-├── manuscript/
-│   └── The Support Machine - manuscript v0.2.docx
-├── scripts/
-│   ├── build_site.py
-│   └── export_docx_to_markdown.py
-├── docs/
-│   ├── assets/
-│   │   └── the-support-machine-social.png
-│   ├── index.html
-│   ├── book.html
-│   ├── skill.html
-│   └── the-support-machine-v0.2.pdf
-├── LICENSE.md
-├── LICENSE-MANUSCRIPT.md
-├── LICENSE-SKILL.md
-└── evals/
-    └── evals.json
-```
+[Appendix G](https://assafbar2.github.io/the-support-machine/book.html#appendix-g-talk-to-the-book) starts with installation, verification, and updates, followed by 80 prompts. Install the book once; your assistant can read the relevant chapters and templates when you bring it a question or decision.
 
-## How People Can Use It
+**The Support Machine** includes the complete Second Edition and fourteen templates. [Download the ZIP](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine.zip) or [.skill package](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine.skill).
 
-### Claude Code / Codex-style local use
+**Claude:** Upload the ZIP through Customize → Skills → + → Create skill → Upload a skill, then enable it. Code execution and file creation must be available under your account's policy. [Official guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
 
-Copy or symlink the skill folder into your local skills directory:
-
-```bash
-mkdir -p ~/.codex/skills
-cp -R skills/the-support-machine ~/.codex/skills/
-```
-
-Then ask:
+**Codex:** Ask the built-in installer:
 
 ```text
-Use The Support Machine to build our AI support rollout plan.
+$skill-installer Install skills/the-support-machine from GitHub repository assafbar2/the-support-machine, ref main.
 ```
 
-Or:
+Invoke `$the-support-machine` with a task. Restart Codex if it does not appear. Verify that the loaded book identifies itself as the Second Edition and includes Chapter 28 on continuing evaluation. Reinstall when a new edition arrives; installed copies do not automatically follow GitHub. [Official guide](https://learn.chatgpt.com/docs/build-skills).
 
-```text
-Use The Support Machine to audit this AI support vendor proposal.
-```
+The optional [Support AI Evals skill](https://assafbar2.github.io/the-support-machine/downloads/support-ai-evals.zip) provides a focused evaluation workflow and local cohort calculator. It installs separately and does not connect to a helpdesk.
 
-### Claude.ai skill upload
+## Hear the conversation
 
-Zip the skill folder:
+I joined **The Prompt Room, Episode 4** to discuss reducing customer pain and how support work is changing. That conversation informs several chapters. [Watch on YouTube](https://www.youtube.com/watch?v=JxJb4FDqWdI) or [listen on Spotify](https://open.spotify.com/episode/6x73nZKsh9y1VIw46yCW5q).
 
-```bash
-cd skills
-zip -r the-support-machine.skill the-support-machine
-```
+## First Edition and companion material
 
-Upload `the-support-machine.skill` in Claude.ai under Skills.
+The [First Edition remains available](https://assafbar2.github.io/the-support-machine/editions.html) in its original formats. The [Shadow Run field sheet](docs/shadow-run/Shadow-Run-Field-Sheet-v0.13.pdf) accompanies the earlier talk.
 
-### GitHub install pattern
+[Edition highlights](CHANGELOG.md) · [Contributing and publishing](CONTRIBUTING.md)
 
-For agents that can read skills from a GitHub repo, point them at:
+## Author and license
 
-```text
-skills/the-support-machine/SKILL.md
-```
+This is my personal project. The judgments and recommendations are mine; I do not speak for Sentry. This repository is not an official Sentry support channel.
 
-## Example Prompts
+Book text, illustrations, and book formats: [CC BY 4.0](LICENSE-MANUSCRIPT.md). Skills, templates, scripts, and repository documentation: [MIT](LICENSE-SKILL.md).
 
-```text
-We are choosing between two AI support vendors. Build a scorecard and identify hidden risks.
-```
-
-```text
-Help us plan a shadow run before exposing the AI support machine to customers.
-```
-
-```text
-Create a launch-day runbook for our AI support rollout.
-```
-
-```text
-We launched last month. Build a first-30-days review. Some metrics are missing, so mark what we still need.
-```
-
-## Patterns Borrowed From Open-Source Skill Repos
-
-This repo follows common patterns from open-source skill repositories:
-
-- A compact `SKILL.md` with strong trigger metadata.
-- Long source material kept in `references/`.
-- Reusable outputs kept in `templates/`.
-- Optional scripts for deterministic maintenance.
-- Eval prompts in `evals/` to test whether the skill behaves correctly.
-
-Reference projects reviewed:
-
-- [`anthropics/skills`](https://github.com/anthropics/skills)
-- [`haowjy/creative-writing-skills`](https://github.com/haowjy/creative-writing-skills)
-- [`coleam00/second-brain-skills`](https://github.com/coleam00/second-brain-skills)
-- [`simonw/claude-skills`](https://github.com/simonw/claude-skills)
-
-## Contributing
-
-Pull requests are welcome for typo fixes, clearer examples, stronger templates, and better distribution ideas.
-
-For manuscript edits, open a pull request against `skills/the-support-machine/references/book.md` and explain the intended manuscript change. For skill behavior, edit `SKILL.md`, templates, or evals directly.
-
-Please preserve the book's metaphor system and do not turn the voice into generic AI-transformation copy.
-
-## License
-
-This repository uses a split license:
-
-- Manuscript and book-format outputs: [Creative Commons Attribution 4.0 International](LICENSE-MANUSCRIPT.md)
-- Skill, templates, scripts, evals, and repo docs: [MIT License](LICENSE-SKILL.md)
-
-See [LICENSE.md](LICENSE.md) for the file-by-file split.
-
-## Contact
-
-Website: [barnir.co](https://barnir.co)  
-Email: [assafbar@gmail.com](mailto:assafbar@gmail.com)
-
-This is a personal project, not an official Sentry support channel.
-
-## Status
-
-Public v0.2.
-
-The manuscript is closed as a document, but the story is not. This repo is the path from static book to living skill.
+[About Assaf](https://www.barnir.co/) · [Email](mailto:assafbar@gmail.com)

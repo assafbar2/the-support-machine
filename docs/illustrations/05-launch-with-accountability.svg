@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">Launch with direct accountability</title>
+<desc id="desc">Readiness checks lead to a bounded cutover and observation. Evidence supports continuing; stop conditions route to containment and a staffed human service path.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(28)"><path d="M 0 0 L 0 8" stroke="#000" stroke-width=".9"/></pattern></defs>
+<rect width="1200" height="820" fill="#fff"/>
+<g fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<text x="52" y="42" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="start" letter-spacing="1.2">THE SUPPORT MACHINE  /  GATE 05</text>
+<text x="52" y="94" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" text-anchor="start" letter-spacing="0">Launch with direct accountability</text>
+<text x="52" y="132" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0">Who decides, who watches, and who can stop the rollout?</text>
+<path d="M 52 730 Q 600.51 729.94 1148 730" fill="none" stroke-width="1.3"/>
+<text x="52" y="762" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">GATE EVIDENCE</text>
+<text x="52" y="791" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start" letter-spacing="0">Named owners, cutover checks and tested recovery capacity.</text>
+<g transform="translate(154 282) rotate(-3) scale(0.94)">
+<path d="M -38 -45 Q -9.08 -44.25 19 -45 Q 27.14 -35.95 37 -27 Q 37.21 8.82 37 46 Q -0.64 46.52 -38 46 Q -38.48 1.09 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 19.16 -36.84 19 -27 Q 28.24 -27.42 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -28 -19 Q -25.33 -16.63 -23 -14 Q -19.66 -20.41 -15 -26" fill="none" stroke-width="1.6"/>
+<path d="M -6 -19 Q 8.49 -18.43 24 -19" fill="none" stroke-width="1.4"/>
+<path d="M -28 0 Q -25.39 2.02 -23 5 Q -19.49 -0.38 -15 -7" fill="none" stroke-width="1.6"/>
+<path d="M -6 0 Q 8.46 0.37 24 0" fill="none" stroke-width="1.4"/>
+<path d="M -28 19 Q -26.11 21.15 -23 24 Q -18.24 17.72 -15 12" fill="none" stroke-width="1.6"/>
+<path d="M -6 19 Q 8.84 19.21 24 19" fill="none" stroke-width="1.4"/>
+</g>
+<g transform="translate(444 282) rotate(0) scale(1.02)">
+<path d="M -36 27 Q -5.73 27.83 26 27 Q 34.29 21.06 41 16 Q 10.79 16.49 -20 16 Q -28.61 21.27 -36 27 Z" fill="#fff" stroke-width="2"/>
+<path d="M -36 27 Q -4.20 27.19 26 27 Q 25.45 33.09 26 39 Q -5.01 38.74 -36 39 Q -36.07 33.19 -36 27 Z" fill="url(#hatch)" stroke-width="1.5"/>
+<path d="M 26 27 Q 32.72 21.53 41 16 Q 40.74 22.72 41 28 Q 33.83 34.29 26 39 Q 25.78 33.01 26 27 Z" fill="#fff" stroke-width="1.5"/>
+<path d="M 7 17 C 7.7 20.92 3.7800000000000002 24.5 0 24 C -3.9899999999999998 24 -7.5 20.85 -7 17 C -7 13.01 -3.9200000000000004 9.4 0 10 C 3.9200000000000004 10 7.4 13.219999999999999 7 17 Z" fill="#fff" stroke-width="1.8"/>
+<path d="M -4 12 Q 6.48 -9.24 17 -31 Q 21.85 -28.16 25 -27 Q 13.85 -4.24 4 17 Q 0.45 14.25 -4 12 Z" fill="#fff" stroke-width="2"/>
+<path d="M 31 -31 C 31.7 -25.96 26.86 -21.5 22 -22 C 16.87 -22 12.5 -26.05 13 -31 C 13 -36.13 16.96 -40.6 22 -40 C 27.04 -40 31.4 -35.86 31 -31 Z" fill="#fff" stroke-width="2"/>
+<path d="M -28 -5 C -24 -25 -10 -38 4 -39" fill="none" stroke-width="1.4"/>
+<path d="M -6.295198723252946 -42.77609364935921 Q -1.65 -41.78 4 -39 Q -0.44 -36.98 -5.653975273361758 -33.7989653508826" fill="none" stroke-width="1.4"/>
+</g>
+<g transform="translate(744 282) rotate(0) scale(1)">
+<path d="M -41 25 A 45 45 0 1 1 41 25 Z" fill="#fff" stroke-width="2.3"/>
+<path d="M -26 -11 Q -22.91 -8.37 -20 -6" fill="none" stroke-width="1.5"/>
+<path d="M 0 -27 Q 0.07 -22.26 0 -18" fill="none" stroke-width="1.5"/>
+<path d="M 27 -10 Q 24.07 -7.42 21 -5" fill="none" stroke-width="1.5"/>
+<path d="M 0 14 Q 12.72 0.89 24 -13" fill="none" stroke-width="2.4"/>
+<path d="M 4 14 C 4.7 16.240000000000002 2.16 18.5 0 18 C -2.28 18 -4.5 16.2 -4 14 C -4 11.72 -2.24 9.4 0 10 C 2.24 10 4.4 11.84 4 14 Z" fill="#fff" stroke-width="1.6"/>
+</g>
+<g transform="translate(1040 282) rotate(0) scale(1)">
+<path d="M -24 -42 Q -23.89 -0.56 -24 41" fill="none" stroke-width="2.5"/>
+<path d="M -24 -37 Q -5 -48 13 -35 Q 27 -26 40 -35 L 40 4 Q 26 15 12 2 Q -6 -11 -24 1 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M -7 -21 Q -3.28 -15.77 1 -12 Q 9.35 -18.48 18 -26" fill="none" stroke-width="2"/>
+<path d="M -35 42 Q -23.56 41.57 -11 42" fill="none" stroke-width="1.4"/>
+</g>
+<path d="M 214 282 C 260 270 317 270 379 282" fill="none" stroke-width="2"/>
+<path d="M 370.03730007364356 275.6817716066851 Q 374.49 278.47 379 282 Q 373.51 282.54 368.3271029145508 284.5177902619976" fill="none" stroke-width="2"/>
+<path d="M 504 282 C 550 270 607 270 669 282" fill="none" stroke-width="2"/>
+<path d="M 660.0373000736436 275.6817716066851 Q 664.82 278.77 669 282 Q 663.61 283.72 658.3271029145508 284.5177902619976" fill="none" stroke-width="2"/>
+<path d="M 804 282 C 850 270 907 270 969 282" fill="none" stroke-width="2"/>
+<path d="M 960.0373000736436 275.6817716066851 Q 963.96 279.22 969 282 Q 963.18 283.72 958.3271029145508 284.5177902619976" fill="none" stroke-width="2"/>
+<text x="154" y="363" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0">Ready</text>
+<text x="154" y="397" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Checks and owners</text>
+<text x="154" y="444" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Release owner</text>
+<text x="444" y="363" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0">Cut over</text>
+<text x="444" y="397" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Bounded rollout</text>
+<text x="444" y="444" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Routing owner</text>
+<text x="744" y="363" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0">Observe</text>
+<text x="744" y="397" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Customer evidence</text>
+<text x="744" y="444" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Support lead</text>
+<text x="1040" y="363" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="0">Continue</text>
+<text x="1040" y="397" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Criteria met</text>
+<text x="1040" y="444" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Decision owner</text>
+<text x="906" y="244" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" letter-spacing="0">Pass</text>
+<path d="M 744 465 C 744 487 744 503 744 522" fill="none" stroke-width="1.8"/>
+<path d="M 748.5 512.0 Q 747.04 516.47 744 522 Q 741.04 516.63 739.5 512.0" fill="none" stroke-width="1.8"/>
+<text x="767" y="500" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">Stop condition</text>
+<g transform="translate(744 574) rotate(0) scale(1)">
+<path d="M -44 10 Q -1.02 10.35 44 10" fill="none" stroke-width="2.2"/>
+<path d="M -44 23 Q -0.96 23.05 44 23" fill="none" stroke-width="2.2"/>
+<path d="M -19 -3 Q -0.57 -2.89 19 -3 Q 19.60 16.80 19 36 Q 0.48 36.83 -19 36 Q -19.83 15.89 -19 -3 Z" fill="#fff" stroke-width="2"/>
+<path d="M 0 -3 Q 0.35 -9.96 0 -17" fill="none" stroke-width="2"/>
+<path d="M 17 -30 C 17.7 -20.479999999999997 9.18 -12.5 0 -13 C -9.69 -13 -17.5 -20.65 -17 -30 C -17 -39.69 -9.520000000000001 -47.6 0 -47 C 9.520000000000001 -47 17.4 -39.18 17 -30 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M -12 -42 Q 0.26 -30.23 12 -18" fill="none" stroke-width="1.5"/>
+<path d="M -12 -18 Q 0.64 -29.50 12 -42" fill="none" stroke-width="1.5"/>
+</g>
+<g transform="translate(1040 574) rotate(0) scale(1.1)">
+<path d="M 10 -17 C 10.7 -11.399999999999999 5.4 -6.5 0 -7 C -5.699999999999999 -7 -10.5 -11.5 -10 -17 C -10 -22.7 -5.6000000000000005 -27.6 0 -27 C 5.6000000000000005 -27 10.4 -22.4 10 -17 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -23 28 Q -22 0 -3 0 L 3 0 Q 22 0 23 28 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -12 5 L -10 28 M 12 5 L 10 28" fill="none" stroke-width="1.2"/>
+</g>
+<path d="M 805 581 C 863 567 920 568 974 581" fill="none" stroke-width="1.9"/>
+<path d="M 965.3310059020098 574.2844552470399 Q 969.72 577.62 974 581 Q 968.76 582.82 963.2245213548347 583.0344679814598" fill="none" stroke-width="1.9"/>
+<text x="744" y="643" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">Contain</text>
+<text x="744" y="672" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" letter-spacing="0">Pause affected capability</text>
+<text x="1040" y="643" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">Serve customers</text>
+<text x="1040" y="672" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="middle" letter-spacing="0">Staffed human path</text>
+<text x="75" y="568" fill="#000" stroke="none" font-family="Bradley Hand, Noteworthy, Arial, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0">A release needs</text>
+<text x="75" y="601" fill="#000" stroke="none" font-family="Bradley Hand, Noteworthy, Arial, sans-serif" font-size="27" font-weight="400" text-anchor="start" letter-spacing="0">a way to stop.</text>
+<text x="75" y="660" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">Test repairs before restarting</text>
+<text x="75" y="686" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start" letter-spacing="0">the affected capability.</text>
+</g>
+</svg>

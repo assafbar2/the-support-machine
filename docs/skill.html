@@ -1,45 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Use The Support Machine Skill</title>
-  <meta name="description" content="How to install and use The Support Machine AI skill.">
-  <meta property="og:title" content="Use The Support Machine Skill">
-  <meta property="og:description" content="How to install and use The Support Machine AI skill.">
-  <meta property="og:image" content="https://assafbar2.github.io/the-support-machine/assets/the-support-machine-social.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Use The Support Machine Skill">
-  <meta name="twitter:description" content="How to install and use The Support Machine AI skill.">
-  <meta name="twitter:image" content="https://assafbar2.github.io/the-support-machine/assets/the-support-machine-social.png">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  
-<main class="skill-page">
-  <a class="back" href="index.html">The Support Machine</a>
-  <h1>Use the skill</h1>
-  <p>The skill turns the book into an operating guide. Use it when you are planning, auditing, launching, or operating AI customer support.</p>
-  <section>
-    <h2>Install locally</h2>
-    <pre><code>mkdir -p ~/.codex/skills
-git clone https://github.com/assafbar2/the-support-machine.git
-cp -R the-support-machine/skills/the-support-machine ~/.codex/skills/</code></pre>
-    <p>Restart Codex so the skill is loaded.</p>
-  </section>
-  <section>
-    <h2>Ask it for artifacts</h2>
-    <pre><code>Use The Support Machine to build our AI support rollout plan.
-Use The Support Machine to evaluate this AI support vendor.
-Use The Support Machine to create a launch-day runbook.
-Use The Support Machine to review our first 30 days.</code></pre>
-  </section>
-  <section>
-    <h2>Source</h2>
-    <p><a href="https://github.com/assafbar2/the-support-machine/tree/main/skills/the-support-machine">View the skill folder on GitHub</a></p>
-  </section>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Use The Support Machine Skills</title>
+<meta name="description" content="Two focused skills and their practical tools.">
+<meta name="author" content="Assaf Barnir">
+<meta property="og:title" content="Use The Support Machine Skills">
+<meta property="og:description" content="Two focused skills and their practical tools.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://assafbar2.github.io/the-support-machine/skill.html">
+<meta property="og:image" content="https://assafbar2.github.io/the-support-machine/assets/second-edition-social.png">
+<meta property="og:image:alt" content="The Support Machine by Assaf Barnir — Second Edition">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://assafbar2.github.io/the-support-machine/skill.html">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<main class="skill-page" id="main">
+<a class="back" href="index.html">The Support Machine</a><h1>Use the skills</h1>
+<p>The Second Edition skill contains the full book, all 8 appendices, and fourteen practical templates. <a href="book.html#appendix-g-talk-to-the-book">Start with Appendix G for setup and 80 prompts.</a></p>
+<h2>The Support Machine</h2><p>For the full migration and operating model: build versus buy, vendors, release gates, action safety, customer promises, recovery, and team design.</p>
+<p><a href="downloads/the-support-machine.zip">Download the skill ZIP</a> · <a href="downloads/the-support-machine.skill">.skill package</a></p>
+<h2>Install in Claude</h2><p>Leave the ZIP zipped. In Customize → Skills, choose + → Create skill → Upload a skill. Upload the ZIP and enable it. Code execution and file creation must be enabled; organization policy may control availability. Start with “Use The Support Machine skill to help me with [decision].”</p>
+<h2>Install in Codex</h2><p>Ask the built-in installer:</p><pre><code>$skill-installer Install skills/the-support-machine from GitHub repository assafbar2/the-support-machine, ref main.</code></pre>
+<p>Invoke <code>$the-support-machine</code> followed by your task. Restart Codex if the skill does not appear. For manual installation, copy the complete skill folder, including references and templates, into <code>~/.agents/skills/</code>.</p>
+<h2>Verify and update your copy</h2><p>Ask the skill to read its bundled book reference, identify the Second Edition, and locate Chapter 28 and the build-versus-buy template. Install the new package when a new edition arrives; a local or uploaded copy does not automatically follow the GitHub repository. Keep company-specific notes separately.</p>
+<h2>Support AI Evals</h2><p>For ongoing QA: delayed outcome checks, independent review, calibration, knowledge changes, and a local cohort calculator. It reads normalized local data and does not connect to a helpdesk.</p>
+<p><a href="downloads/support-ai-evals.zip">Download the evaluation skill ZIP</a> · <a href="downloads/support-ai-evals.skill">.skill package</a>. This optional skill works independently; install it separately if useful.</p>
+<h2>Try a concrete task</h2><pre><code>Use The Support Machine to compare buying, extending, and building our support agent.
+Use The Support Machine to rehearse an action whose result is unknown.
+Use Support AI Evals to review our seven-day repeat-contact cohort.
+Use Support AI Evals to design a calibrated comparison of two QA systems.</code></pre>
+<p><a href="https://github.com/assafbar2/the-support-machine">Repository and installation instructions</a></p>
+<p>Current platform guidance: <a href="https://learn.chatgpt.com/docs/build-skills">OpenAI Build skills</a> · <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Use skills in Claude</a>.</p>
 </main>
-
-</body>
-</html>
+</body></html>

@@ -2,44 +2,18 @@
 
 Copyright (c) 2026 Assaf Barnir
 
-This repository uses a split license.
+## Manuscript and book outputs — CC BY 4.0
 
-## Manuscript And Book Text: CC BY 4.0
+The manuscript and its book-format outputs use the [Creative Commons Attribution 4.0 International License](LICENSE-MANUSCRIPT.md).
 
-The manuscript and book-format outputs are licensed under the Creative Commons Attribution 4.0 International License.
+This includes the full book in skills/the-support-machine/references/book.md, manuscript/, review/ complete text, docs/book.html, docs/review.html, versioned PDF/DOCX/Markdown downloads, archived book text, and docs/assets/.
 
-This applies to:
+You may share and adapt the manuscript, including commercially, with appropriate attribution, a license link, and an indication of changes.
 
-- `skills/the-support-machine/references/book.md`
-- `manuscript/`
-- `docs/assets/`
-- `docs/book.html`
-- `docs/the-support-machine-v0.2.pdf`
+## Skills, templates, code, and repository documentation — MIT
 
-You may share and adapt the manuscript, including commercially, as long as you give appropriate credit, link to the license, and indicate if changes were made.
+The reusable skill instructions, templates, evaluation references and calculator, scripts, tests, eval prompts, version notes, research/maintenance records, README, CONTRIBUTING, AGENTS, llms.txt, website styles (including archived styles), and navigation/build code use the [MIT License](LICENSE-SKILL.md).
 
-See [LICENSE-MANUSCRIPT.md](LICENSE-MANUSCRIPT.md).
+The book inside a skill package retains its CC BY 4.0 license. Packaging does not change the license of an included file.
 
-## Skill, Templates, Code, And Repo Docs: MIT
-
-The reusable skill, templates, scripts, evals, and repository documentation are licensed under the MIT License.
-
-This applies to:
-
-- `skills/the-support-machine/SKILL.md`
-- `skills/the-support-machine/templates/`
-- `scripts/`
-- `evals/`
-- `llms.txt`
-- `docs/llms.txt`
-- `docs/index.html`
-- `docs/skill.html`
-- `docs/styles.css`
-- `README.md`
-- `CONTRIBUTING.md`
-
-See [LICENSE-SKILL.md](LICENSE-SKILL.md).
-
-## Contributions
-
-By opening a pull request, you agree that your contribution will be licensed under the license that applies to the file you edit.
+Contributions use the license applicable to the edited material.
