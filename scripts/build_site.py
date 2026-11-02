@@ -36,9 +36,12 @@ def page_shell(title,body,description,css="styles.css"):
 '''
 
 def downloads(version):
-    return f'''<a href="the-support-machine-{version}.pdf">PDF</a>
+    links=f'''<a href="the-support-machine-{version}.pdf">PDF</a>
 <a href="downloads/the-support-machine-{version}.docx">DOCX</a>
 <a href="downloads/the-support-machine-{version}.md">Markdown</a>'''
+    if (DOCS/f'downloads/the-support-machine-{version}-markdown.zip').exists():
+        links+=f'\n<a href="downloads/the-support-machine-{version}-markdown.zip">Markdown + images</a>'
+    return links
 
 def write(name,title,body,description,css="styles.css"):
     target=DOCS/name
@@ -93,8 +96,20 @@ def build():
     for v in (version,previous):
         shutil.copyfile(ROOT/f"manuscript/The Support Machine - manuscript {v}.docx", DOCS/f"downloads/the-support-machine-{v}.docx")
     shutil.copyfile(BOOK,DOCS/f"downloads/the-support-machine-{version}.md")
+    image_source=BOOK.parent/'illustrations'
+    if image_source.exists():
+        shutil.copytree(image_source,DOCS/'downloads/illustrations',dirs_exist_ok=True)
+        with ZipFile(DOCS/f'downloads/the-support-machine-{version}-markdown.zip','w',compression=ZIP_DEFLATED) as bundle:
+            entries=[(BOOK,'book.md'),(ROOT/'LICENSE-MANUSCRIPT.md','LICENSE-MANUSCRIPT.md')]
+            entries += [(p,'illustrations/'+p.name) for p in sorted(image_source.glob('*.png'))]
+            for path,member in entries:
+                info=ZipInfo(member,tuple(map(int,meta['date'].split('-')))+(0,0,0))
+                info.compress_type=ZIP_DEFLATED
+                info.create_system=3
+                info.external_attr=0o100644 << 16
+                bundle.writestr(info,path.read_bytes())
     book=re.sub(r"^> Markdown export of the manuscript\..*\n","",BOOK.read_text(),flags=re.M)
-    book_html,toc=markdown_to_html(book)
+    book_html,toc=markdown_to_html(book,image_base='downloads')
     toc_html="\n".join(f'<a class="toc-l{level}" href="#{anchor}">{html.escape(title)}</a>' for level,title,anchor in toc if level<=2)
     actions=f'<div class="book-actions"><a href="index.html">Home</a>{downloads(version)}<a href="notes.html">What changed</a><a href="editions.html">Editions</a></div>'
     reader=f'''<div class="reader-layout"><aside class="sidebar">
@@ -137,7 +152,8 @@ def build():
     review_intro=f'<p class="review-notice">Complete {version} reading copy. <a href="notes.html">The version notes</a> identify chapters to revisit.</p>'
     write("review.html","The Support Machine reading copy",reader.replace(actions,actions+review_intro,1),"The complete book and its appendices.")
     (ROOT/"review").mkdir(exist_ok=True)
-    (ROOT/f"review/{version}-complete-text.md").write_text(book)
+    review_book=re.sub(r'(!\[[^\n]+\]\()illustrations/',r'\1../skills/the-support-machine/references/illustrations/',book)
+    (ROOT/f"review/{version}-complete-text.md").write_text(review_book)
     ref = f"codex/support-machine-{version}" if meta["status"]=="review" else "main"
     install_prompt = f"$skill-installer Install skills/the-support-machine from GitHub repository assafbar2/the-support-machine, ref {ref}."
     write("skill.html","Use The Support Machine Skills",f'''<main class="skill-page" id="main">

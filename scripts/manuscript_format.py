@@ -37,6 +37,11 @@ def blocks(markdown):
         if not line:
             i += 1
             continue
+        image=re.fullmatch(r'!\[((?:\\.|[^\]\\])*)\]\(([^)]+)\)',line)
+        if image:
+            yield 'image',re.sub(r'\\([\\\[\]])',r'\1',image[1]),image[2]
+            i+=1
+            continue
         if line.startswith(TICK*3):
             content = []
             i += 1
@@ -81,7 +86,7 @@ def blocks(markdown):
         i += 1
         while i < len(lines) and lines[i].strip():
             following = lines[i].strip()
-            if re.match(r"^(#{1,4} |[-|>] |\d+\. |\|)", following) or following.startswith(TICK*3):
+            if re.match(r"^(#{1,4} |[-|>] |\d+\. |\||!\[)", following) or following.startswith(TICK*3):
                 break
             parts.append(following)
             i += 1

@@ -68,7 +68,40 @@ def verify():
     assert (ROOT/f"docs/downloads/the-support-machine-{version}.md").read_bytes()==book.read_bytes()
     doc=Document(source)
     assert not doc.styles.element.xpath(".//w:pBdr"),"unexpected paragraph border"
+    figures=json.loads((ROOT/'docs/illustrations/manifest.json').read_text())['figures']
+    expected=meta['illustrations']
+    assert len(figures)==len(doc.inline_shapes)==expected,'illustration count differs'
+    captions=[p.text for p in doc.paragraphs if p.style.name=='Book Figure Caption']
+    assert len(captions)==expected,'illustration captions missing'
+    for label,count in [('Gate',6),('Figure',4)]:
+        numbers=[int(m[1]) for c in captions if (m:=re.match(label+r' (\d+) — ',c))]
+        assert numbers==list(range(1,count+1)),label+' captions are out of reading order'
+    assert len(re.findall(r'^!\[',text,re.M))==expected,'Markdown illustrations missing'
+    shapes={s._inline.docPr.get('name'):s for s in doc.inline_shapes}
+    for figure in figures:
+        slug=figure['slug']
+        shape=shapes[slug]
+        assert shape._inline.docPr.get('descr')==figure['caption'],'missing or stale image alternative text'
+        embed=shape._inline.xpath('.//a:blip')[0].get('{http://schemas.openxmlformats.org/officeDocument/2006/relationships}embed')
+        data=doc.part.related_parts[embed].blob
+        for directory in (ROOT/'docs/illustrations/book',ROOT/'docs/downloads/illustrations',book.parent/'illustrations'):
+            assert (directory/f'{slug}.png').read_bytes()==data,'stale illustration: '+str(directory/slug)
+    with ZipFile(ROOT/f'docs/downloads/the-support-machine-{version}-markdown.zip') as bundle:
+        assert bundle.read('book.md')==book.read_bytes()
+        for figure in figures:
+            filename=figure['slug']+'.png'
+            assert bundle.read('illustrations/'+filename)==(book.parent/'illustrations'/filename).read_bytes()
     pdf=PdfReader(ROOT/f"docs/the-support-machine-{version}.pdf")
+    # LibreOffice shares image resources across pages; count actual paint operations.
+    drawn_images=0
+    for page in pdf.pages:
+        resources=page['/Resources'].get_object().get('/XObject',{})
+        if hasattr(resources,'get_object'):
+            resources=resources.get_object()
+        for operands,operation in page.get_contents().operations:
+            if operation==b'Do' and resources[operands[0]].get_object().get('/Subtype')=='/Image':
+                drawn_images+=1
+    assert drawn_images==expected,'rendered PDF illustrations missing'
     combined="\n".join(page.extract_text() or "" for page in pdf.pages)
     for marker in ("AI NIMBYs","Build vs. Buy","When the Customer Is a Bot","Did the Action Actually Happen","When the Agent Gets It Wrong","The Work Is Never Done","Appendix E","Repositories Behind the Book","Talk to the Book","Sources and Further Reading"):
         assert marker in combined,"missing PDF section: "+marker
@@ -107,7 +140,7 @@ def verify():
                     assert package.read(member)==path.read_bytes(),"stale skill resource: "+member
             if skill == "the-support-machine":
                 assert package.read(f"{skill}/references/book.md")==book.read_bytes(),"packaged book is stale"
-    print(f"Verified {meta['chapters']} chapters, {meta['appendices']} appendices, {len(pdf.pages)} PDF pages, {len(pages)} HTML pages, all local site links, canonical export, downloads, and v0.2 checksums.")
+    print(f"Verified {meta['chapters']} chapters, {meta['appendices']} appendices, {expected} captioned illustrations, {len(pdf.pages)} PDF pages, {len(pages)} HTML pages, all local site links, canonical export, downloads, and v0.2 checksums.")
     return len(pdf.pages)
 
 if __name__=="__main__":

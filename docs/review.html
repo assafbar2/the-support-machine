@@ -67,7 +67,8 @@
 <a class="toc-l2" href="#appendix-h-sources-and-further-reading">Appendix H: Sources and Further Reading</a></nav>
 </aside><main class="book" id="main"><div class="book-actions"><a href="index.html">Home</a><a href="the-support-machine-v0.3.pdf">PDF</a>
 <a href="downloads/the-support-machine-v0.3.docx">DOCX</a>
-<a href="downloads/the-support-machine-v0.3.md">Markdown</a><a href="notes.html">What changed</a><a href="editions.html">Editions</a></div><p class="review-notice">Complete v0.3 reading copy. <a href="notes.html">The version notes</a> identify chapters to revisit.</p><h1 id="the-support-machine">The Support Machine</h1>
+<a href="downloads/the-support-machine-v0.3.md">Markdown</a>
+<a href="downloads/the-support-machine-v0.3-markdown.zip">Markdown + images</a><a href="notes.html">What changed</a><a href="editions.html">Editions</a></div><p class="review-notice">Complete v0.3 reading copy. <a href="notes.html">The version notes</a> identify chapters to revisit.</p><h1 id="the-support-machine">The Support Machine</h1>
 <p>How to Deploy AI in Customer Support Without Breaking Trust</p>
 <p>Assaf Barnir</p>
 <p>v0.3 · November 1, 2026 · Review edition</p>
@@ -87,6 +88,7 @@
 <li><strong>Projects and practical conversations:</strong> Appendix F connects the relevant repositories to the chapters. Appendix G starts with instructions for installing the updated book as a skill, followed by 80 prompts for applying it to your own decisions.</li>
 <li><strong>The podcast conversation:</strong> My appearance on The Prompt Room adds a personal self-check in Chapter 5, continuity across the sales handoff in Chapter 17, earlier customer signals in Chapter 18, debugging judgment in Chapter 19, and welcomed human handoffs in Chapter 23. The Reader&#x27;s Note links to the episode.</li>
 <li><strong>Sources without interrupting the story:</strong> Appendix H groups research and product links by chapter. The main text keeps the reasoning and the limits of each claim visible.</li>
+<li><strong>Ten illustrations: </strong>The six operating gates, the 16% calculation, delayed evaluation, action recovery, and the midfield model now have companion drawings beside the relevant discussion.</li>
 </ul>
 <p>The vendor discussion is a snapshot checked on November 1, 2026. Announced, early-access, generally available, and enabled in your workspace are different states. Fin&#x27;s Operator, Skills, audiences, and customer-success direction widen the questions to ask; they do not remove the need to test your own configuration. Pylon, Salesforce, and Plain provide useful alternative approaches to examine.</p>
 <p>Personal accounts, fictional teaching cases, prototype demonstrations, and recommended practices are identified throughout the book.</p>
@@ -192,6 +194,8 @@
 <p>The mirror is a cruel invention.</p>
 <p>Sentry helps developers see what is broken in their code. I like to think of it as the check engine light: the thing you look at when things go sideways.</p>
 <p>Turning that lens on the support workflow I worked with made repeated friction easier to see.</p>
+<figure class="book-figure"><a href="downloads/illustrations/01-diagnose-the-queue.png" title="Open illustration at full size"><img src="downloads/illustrations/01-diagnose-the-queue.png" alt="Read a sample of customer questions and distinguish product behavior, hard-to-find answers, repeatable tasks, and work needing human investigation." loading="lazy"></a>
+<figcaption><strong>Gate 1 — Diagnose the queue. </strong>Classified customer tasks and candidate fixes.</figcaption></figure>
 <h3 id="the-good-enough-trap">The “Good Enough” Trap</h3>
 <p>Metrics can lie by omission. The CSAT and SLA dashboards I was watching looked healthy. The team was meeting the expectations those measures set. That did not tell me how much repeated work the customer experience still created. If you look at a dashboard in a QBR, you nod and move on to the next slide.</p>
 <p>But doing things “as expected” is death in Silicon Valley.</p>
@@ -382,6 +386,8 @@
 <p>Measure the customer result: fewer related returns, a task completed more reliably, or less effort required. Record the limits of the comparison. Counting merged PRs would merely replace ticket-count theater with a different scoreboard.</p>
 <h3 id="keep-a-goalkeeper">Keep a goalkeeper</h3>
 <p>Prevention does not eliminate the need for skilled human recovery. Complex architecture, exceptional circumstances, and consequential decisions still need people with judgment and authority. A customer asking for help should not have to prove that they exhausted every automated route.</p>
+<figure class="book-figure"><a href="downloads/illustrations/10-from-goalkeeper-to-midfield.png" title="Open illustration at full size"><img src="downloads/illustrations/10-from-goalkeeper-to-midfield.png" alt="Support engineers keep a staffed human recovery path and spend protected time improving documentation, product behavior and onboarding to prevent repeated customer problems." loading="lazy"></a>
+<figcaption><strong>Figure 1 — From goalkeeper to midfield. </strong>Protected improvement time, product access and a staffed human path.</figcaption></figure>
 <p>The financial case is therefore a question to measure. Better prevention may reduce repeated work and make growth easier to support. It does not guarantee a universal headcount ratio or make empathy obsolete. The remaining cases may demand more expertise even as their number falls.</p>
 <p>Celebrate the great save. Also celebrate the change that meant the next customer never needed one.</p>
 <p><em>Field note: Move support expertise into the product journey, and verify that the customer makes progress.</em></p>
@@ -420,6 +426,8 @@
 <h3 id="choose-the-layer-before-choosing-the-answer">Choose the layer before choosing the answer</h3>
 <p>A support operation contains several decisions disguised as one purchase. There are channels and queues, customer identity, knowledge access, reasoning, tools that change accounts, human handoffs, and evaluation. You can buy a platform and still own your action policy. You can build a specialist workflow without rebuilding the inbox. You can buy an evaluator and still own the definition of quality.</p>
 <p>The question is which layer benefits from being specific to your business, and which layer you can responsibly let someone else maintain. Write that boundary down before somebody presents a total price.</p>
+<figure class="book-figure"><a href="downloads/illustrations/02-choose-the-machine.png" title="Open illustration at full size"><img src="downloads/illustrations/02-choose-the-machine.png" alt="A support system has several layers. Buy, extend and build remain options at each layer; each component still needs funded operating ownership." loading="lazy"></a>
+<figcaption><strong>Gate 2 — Choose the machine. </strong>An owner, lifecycle cost and exit path for each component.</figcaption></figure>
 <p>Plain&#x27;s documented Bring Your Own Agent approach is a useful challenge to the idea that one vendor must own the whole stack. Its platform can retain routing and handoff infrastructure while an external or internal agent handles conversations. That is a vendor-described option to test, not proof that every integration is seamless. It changes the comparison from a single supplier decision into a set of responsibilities.</p>
 <h3 id="three-options-deserve-a-fair-comparison">Three options deserve a fair comparison</h3>
 <p>Buying fits when a vendor meets the real requirements, the service is supportable, and the capability does not justify becoming an internal product. Buying and extending fits when the platform solves the common problem but a bounded connection or domain workflow is missing. Building can fit when the requirement is strategically important, vendors cannot meet a material constraint, and the company funds ownership beyond the prototype.</p>
@@ -563,6 +571,8 @@
 <p>The <strong>Gatekeeper</strong> enforces boundaries around information and actions. It is not one magical filter in front of the model. Permission checks belong wherever data is retrieved or effects are created. Text from a customer, document, or tool result must not silently become a higher-authority instruction.</p>
 <p>The <strong>Auditor</strong> reviews the work. It checks whether the answer addresses the task, whether it applies to this customer, whether an action occurred, and whether escalation was required. Some checks can run before a response; others require later customer or product evidence. A grader can be wrong too. It needs calibration, and a failed check must not trigger unlimited retries.</p>
 <p>These are responsibilities, not a demand for five models. A simpler implementation can be easier to inspect. The point is to keep evidence, reasoning, authority, execution, and review distinguishable when something fails.</p>
+<figure class="book-figure"><a href="downloads/illustrations/03-design-the-guardrails.png" title="Open illustration at full size"><img src="downloads/illustrations/03-design-the-guardrails.png" alt="The answer path uses applicable evidence. The action path separately checks permission, executes, and verifies a receipt. Missing evidence or authority leads to a stop or human handoff." loading="lazy"></a>
+<figcaption><strong>Gate 3 — Design the guardrails. </strong>Allowed actions, evidence checks and a clear human exit.</figcaption></figure>
 <h3 id="my-mashed-potato-test">My mashed-potato test</h3>
 <p>I like asking what goes best with mashed potatoes. The popular answer is gravy. My answer is sour cream.</p>
 <p>The joke exposes a small but useful distinction: general popularity is different from the preference of the person you are helping. It is not a benchmark of model quality or a claim that my lunch preference is absolute truth. In support, the equivalent mistake is offering the common fix without checking whether it fits the customer&#x27;s version, account, or goal.</p>
@@ -656,6 +666,8 @@
 <p>Applying a credit, sending a confirmation, and closing a conversation are separate effects. If the credit succeeds and the email fails, replaying the whole workflow may duplicate the credit. Resume at the appropriate boundary.</p>
 <p>Compensation also needs care. A reversal is a new action with its own permission, audit trail, and possible failure. Some effects cannot be fully undone: a customer has already read the message, or another system has acted on it. Explain the actual recovery options instead of promising a universal rollback button.</p>
 <p>The human handoff should include the original intent, operation identifier, known effects, uncertain effects, and the actions that remain safe. &quot;Please investigate&quot; without that evidence simply moves the ambiguity into another queue.</p>
+<figure class="book-figure"><a href="downloads/illustrations/09-when-the-effect-is-unknown.png" title="Open illustration at full size"><img src="downloads/illustrations/09-when-the-effect-is-unknown.png" alt="An authorized attempt can leave an uncertain effect. Inspect provider state or assign a human owner before deciding what to retry. If a credit succeeded but its confirmation failed, recover the message without issuing another credit." loading="lazy"></a>
+<figcaption><strong>Figure 2 — When the effect is unknown. </strong>Recover the unfinished step without duplicating a completed effect.</figcaption></figure>
 <h3 id="ask-this-in-the-vendor-review">Ask this in the vendor review</h3>
 <p>For each consequential action, ask how the system identifies duplicate intent, obtains proof of completion, behaves after a timeout, and prevents a second worker from doing the same work. Ask how long that protection lasts and what an operator sees when reconciliation fails.</p>
 <p>Then test the interruption. Disconnect after the provider commits. Retry an acknowledgment that was lost. Stop midway through a multi-step workflow. Verify the actual account state, not just the final transcript.</p>
@@ -701,6 +713,8 @@
 <h3 id="keep-the-denominator-in-the-room">Keep the denominator in the room</h3>
 <p>Suppose, as an illustration, that an agent is involved in 40% of all eligible conversations and resolves 40% of the conversations in which it is involved. Its reported automation across that original population is 16%: 0.40 multiplied by 0.40.</p>
 <p>That calculation works only if the populations, time window, and definitions line up. The second percentage is conditional on the first. Do not multiply two dashboard percentages simply because they are next to each other. These percentages are illustrative, not measurements from the migration.</p>
+<figure class="book-figure"><a href="downloads/illustrations/07-the-sixteen-percent-problem.png" title="Open illustration at full size"><img src="downloads/illustrations/07-the-sixteen-percent-problem.png" alt="Of 100 eligible conversations, an agent is involved in 40. If 40 percent of those 40 are reported resolved, that is 16 of the original 100. These are illustrative counts, not company results." loading="lazy"></a>
+<figcaption><strong>Figure 3 — The 16% problem. </strong>The numbers are illustrative, not company results. Reported resolution still needs a separate customer-outcome check.</figcaption></figure>
 <p>Fin&#x27;s automation-rate definition makes this relationship useful to examine. The managerial question is how much eligible customer work the system actually handled, and what the platform counts as resolved.</p>
 <h3 id="the-denominator-moved">The denominator moved</h3>
 <p>Fin documented a change to its performance metrics that excluded constrained conversations from its involved population. Reported involvement fell and resolution rate rose, while total resolutions and automation remained unchanged. The article is dated August 31, 2026 and describes an earlier rollout; the article date is not the date on which every account changed.</p>
@@ -824,6 +838,8 @@
 <p>Historical replay can accidentally make a system look brilliant. The resolved ticket contains the answer, the follow-up contains a crucial diagnostic clue, and the documentation was updated after the incident. If we put that material into the test input, we are grading hindsight.</p>
 <p>Reconstruct the request-time context. Record the product, policy, knowledge, and tool versions that matter. If reconstruction is incomplete, label the limitation rather than pretending the test recreates production exactly. Separate the evidence supplied to the agent from the evidence used by the reviewer to assess the eventual outcome.</p>
 <p>The original human answer is also evidence to examine. It may have been incomplete or wrong. Agreement with a human response is not enough; the response must satisfy the customer&#x27;s task and relevant constraints.</p>
+<figure class="book-figure"><a href="downloads/illustrations/04-shadow-run-the-machine.png" title="Open illustration at full size"><img src="downloads/illustrations/04-shadow-run-the-machine.png" alt="Give a human reference review and an isolated candidate run the same request-time evidence. Compare the results; the candidate has no live messaging or write capability." loading="lazy"></a>
+<figcaption><strong>Gate 4 — Shadow-run the machine. </strong>A reviewed scorecard, observed failures and a release decision.</figcaption></figure>
 <h3 id="build-a-set-that-can-disappoint-you">Build a set that can disappoint you</h3>
 <p>Include routine requests, difficult investigations, missing documentation, ambiguous intent, frustrated customers, unsupported configurations, and cases that require a human. Add customer agents with invalid identifiers, stale audience attributes, and actions interrupted after the provider may have committed them.</p>
 <p>Use cases for tuning and a separate fresh set for the release decision. Keep the reason each case belongs in the set. A memorable edge case can justify a stop condition without becoming an estimate of how often that failure occurs.</p>
@@ -887,6 +903,8 @@
 <p>Launch day team runbook</p>
 <p>This is where the rubber meets the road. The “Last Breath” legacy metrics capture our historical baseline—the final, frozen-in-time snapshot of our legacy world.</p>
 <p>The launch runbook and pre-mortem brought the preparation together. We asked: “Assuming this entire launch fails spectacularly, how did it happen?” The scenarios included the Librarian layer failing under load, the Clerk executing mismapped intents, and costs spiking. For each scenario, the useful output was an owner, a containment step, and a way to test the repair.</p>
+<figure class="book-figure"><a href="downloads/illustrations/05-launch-with-accountability.png" title="Open illustration at full size"><img src="downloads/illustrations/05-launch-with-accountability.png" alt="Readiness checks lead to a bounded cutover and observation. Evidence supports continuing; stop conditions route to containment and a staffed human service path." loading="lazy"></a>
+<figcaption><strong>Gate 5 — Launch with direct accountability. </strong>Named owners, cutover checks and tested recovery capacity.</figcaption></figure>
 <h3 id="shipping-the-machine">Shipping the Machine</h3>
 <p>When you launch a traditional product, you control the code. When you launch an AI-driven support operation, you control the infrastructure, but the user interactions are dynamic, fluid, and unpredictable. You aren’t just launching an app; you are releasing an agent into the wild to interact with a highly critical, deeply skeptical audience.</p>
 <p>The playbooks and launch checks gave us a basis for proceeding. They could not tell us every failure customers would discover.</p>
@@ -1000,6 +1018,8 @@
 <h3 id="three-views-of-the-same-operation">Three views of the same operation</h3>
 <p>I would build the evaluation program in three parts: delayed outcome checks, an independent challenge to answer quality, and a rubric built around the failures customers actually encounter. Each part sees something the others miss.</p>
 <p>The agent&#x27;s report tells us what it classified as resolved. The reviewer tells us whether the answer or action met the standard. Later evidence tells us what happened after the conversation ended. None of these should quietly stand in for the others.</p>
+<figure class="book-figure"><a href="downloads/illustrations/08-evaluation-over-time.png" title="Open illustration at full size"><img src="downloads/illustrations/08-evaluation-over-time.png" alt="Check related returns seven and thirty days after reported resolution. Each denominator needs a mature observation window and known coverage. Weekly independent answer review runs on a separate track." loading="lazy"></a>
+<figcaption><strong>Figure 4 — Evaluation over time. </strong>Customer silence alone does not prove success.</figcaption></figure>
 <p>This fits the broader evaluation practice described in Anthropic&#x27;s guide to agent evaluations: inspect outcomes as well as transcripts, calibrate graders, and combine evaluation with evidence from actual use. A convincing final message is not proof that the intended account change exists.</p>
 <h3 class="part" id="part-one-check-again-after-seven-and-thirty-days">Part one: check again after seven and thirty days</h3>
 <p>Every conversation Fin marks resolved should enter a follow-up cohort. Capture the conversation ID, account and contact identifiers, original resolution time, outcome definition, and available issue context. Preserve that original event. A later reopening must not erase the fact that the system previously counted the conversation as resolved.</p>
@@ -1061,6 +1081,8 @@
 <h3 id="make-review-lead-to-work">Make review lead to work</h3>
 <p>Review consequential failures promptly. Run a weekly case review and improvement queue. Maintain the seven- and thirty-day outcome checks for mature cohorts. Examine cost, workload, customer effort, and evaluator disagreement regularly. Reassess scope when the product, tools, policies, or vendor capabilities change.</p>
 <p>Each finding needs an owner, an action, a way to verify the repair, and a later check where the outcome requires time. Preserve the evidence and the versions involved. A meeting that produces only a new dashboard has not completed the loop.</p>
+<figure class="book-figure"><a href="downloads/illustrations/06-operate-the-living-system.png" title="Open illustration at full size"><img src="downloads/illustrations/06-operate-the-living-system.png" alt="Customer evidence moves through review, an accountable owner, a tested change, release, and a later outcome check. The evidence feeds the next iteration." loading="lazy"></a>
+<figcaption><strong>Gate 6 — Operate the living system. </strong>An assigned owner, a tested change and later evidence of its effect.</figcaption></figure>
 <p>The recurring work can increasingly be assisted by operational agents. Their proposals still need a clear scope, the relevant tests, and accountable review. Automatically discovering a problem and automatically deciding the acceptable remedy are different grants of authority.</p>
 <h3 id="give-people-the-means-to-move-upfield">Give people the means to move upfield</h3>
 <p>Support engineers need access to the product, development workflow, and reviewers if they are expected to ship fixes. Give them time to learn and time to build. Define the changes they may propose, the review they require, and how the customer result will be checked.</p>

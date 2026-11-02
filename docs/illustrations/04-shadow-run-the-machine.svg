@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">Shadow-run the machine</title>
+<desc id="desc">Give a human reference review and an isolated candidate run the same request-time evidence. Compare the results; the candidate has no live messaging or write capability.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(28)"><path d="M 0 0 L 0 8" stroke="#000" stroke-width=".9"/></pattern></defs>
+<rect width="1200" height="820" fill="#fff"/>
+<g fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<text x="52" y="42" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="start" letter-spacing="1.2">THE SUPPORT MACHINE  /  GATE 04</text>
+<text x="52" y="94" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" text-anchor="start" letter-spacing="0">Shadow-run the machine</text>
+<text x="52" y="132" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0">Can the candidate handle real cases without touching live customer state?</text>
+<path d="M 52 730 Q 600.33 731.24 1148 730" fill="none" stroke-width="1.3"/>
+<text x="52" y="762" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">GATE EVIDENCE</text>
+<text x="52" y="791" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start" letter-spacing="0">A reviewed scorecard, observed failures and a release decision.</text>
+<g transform="translate(138 384) rotate(-4) scale(1.1)">
+<path d="M -38 -45 Q -9.87 -44.66 19 -45 Q 28.12 -35.55 37 -27 Q 37.25 10.23 37 46 Q 0.15 46.72 -38 46 Q -37.42 -0.02 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 19.78 -35.72 19 -27 Q 28.18 -27.75 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -25 -19 Q -2.23 -18.44 23 -19" fill="none" stroke-width="1.5"/>
+<path d="M -25 0 Q -0.57 -0.18 23 0" fill="none" stroke-width="1.5"/>
+<path d="M -25 19 Q -6.50 19.78 11 19" fill="none" stroke-width="1.5"/>
+</g>
+<path d="M 189 427 C 189.7 439.32 178.88 449.5 167 449 C 154.46 449 144.5 439.1 145 427 C 145 414.46 154.68 404.4 167 405 C 179.32 405 189.4 415.12 189 427 Z" fill="#fff" stroke-width="1.8"/>
+<path d="M 167 411 Q 167.24 418.18 167 427 Q 172.48 430.28 178 433" fill="none" stroke-width="1.8"/>
+<text x="141" y="496.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="0">Same case</text>
+<text x="141" y="531.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Request-time</text>
+<text x="141" y="556.6" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">evidence</text>
+<path d="M 207 396 L 266 396 M 266 396 C 307 397 279 269 355 269 M 266 396 C 307 397 279 524 355 524" fill="none" stroke-width="1.8"/>
+<path d="M 345.0 264.5 Q 350.81 267.10 355 269 Q 350.88 271.71 345.0 273.5" fill="none" stroke-width="1.8"/>
+<path d="M 345.0 519.5 Q 350.09 522.26 355 524 Q 349.66 527.09 345.0 528.5" fill="none" stroke-width="1.8"/>
+<g transform="translate(433 266) rotate(0) scale(1.1)">
+<path d="M 10 -17 C 10.7 -11.399999999999999 5.4 -6.5 0 -7 C -5.699999999999999 -7 -10.5 -11.5 -10 -17 C -10 -22.7 -5.6000000000000005 -27.6 0 -27 C 5.6000000000000005 -27 10.4 -22.4 10 -17 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -23 28 Q -22 0 -3 0 L 3 0 Q 22 0 23 28 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -12 5 L -10 28 M 12 5 L 10 28" fill="none" stroke-width="1.2"/>
+</g>
+<g transform="translate(460 289) rotate(0) scale(0.52)">
+<path d="M 28 0 C 28.7 15.680000000000001 15.120000000000001 28.5 0 28 C -15.959999999999999 28 -28.5 15.400000000000002 -28 0 C -28 -15.959999999999999 -15.680000000000001 -28.6 0 -28 C 15.680000000000001 -28 28.4 -15.120000000000001 28 0 Z" fill="#fff" stroke-width="2.6"/>
+<path d="M -17 -8 Q -10 -21 5 -18" fill="none" stroke-width="1.2"/>
+<path d="M 17 23 Q 28.39 34.33 38 45 Q 41.36 42.28 45 38 Q 34.67 26.82 23 17 Q 20.33 19.19 17 23 Z" fill="url(#hatch)" stroke-width="2"/>
+</g>
+<g transform="translate(747 269) rotate(-2) scale(0.95)">
+<path d="M -38 -45 Q -8.70 -44.68 19 -45 Q 27.14 -35.40 37 -27 Q 36.62 8.79 37 46 Q -0.77 46.40 -38 46 Q -38.00 -0.04 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 19.03 -36.17 19 -27 Q 27.75 -26.92 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -28 -19 Q -25.55 -16.11 -23 -14 Q -18.34 -19.18 -15 -26" fill="none" stroke-width="1.6"/>
+<path d="M -6 -19 Q 8.91 -19.79 24 -19" fill="none" stroke-width="1.4"/>
+<path d="M -28 0 Q -26.02 2.51 -23 5 Q -19.77 -0.38 -15 -7" fill="none" stroke-width="1.6"/>
+<path d="M -6 0 Q 8.38 0.35 24 0" fill="none" stroke-width="1.4"/>
+<path d="M -28 19 Q -25.49 22.31 -23 24 Q -19.80 18.43 -15 12" fill="none" stroke-width="1.6"/>
+<path d="M -6 19 Q 8.47 19.06 24 19" fill="none" stroke-width="1.4"/>
+</g>
+<text x="440" y="347.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Human reference</text>
+<text x="440" y="376.44" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">review</text>
+<text x="748" y="347.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Reviewed</text>
+<text x="748" y="376.44" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">reference</text>
+<path d="M 505 267 C 552 259 618 259 683 267" fill="none" stroke-width="2"/>
+<path d="M 673.6245882969082 261.3121484374565 Q 678.52 264.85 683 267 Q 677.52 269.32 672.5251914848192 270.24474753567915" fill="none" stroke-width="2"/>
+<path d="M 359 419 Q 612 409 858 419 Q 889 422 887 455 L 886 633 Q 886 656 855 657 Q 600 664 355 657 Q 326 657 327 631 L 327 455 Q 327 422 359 419 Z" fill="none" stroke-width="1.4" stroke-dasharray="7 7"/>
+<text x="354" y="448" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="0.6">ISOLATED ENVIRONMENT</text>
+<g transform="translate(439 522) rotate(0) scale(0.88)">
+<path d="M -36 -31 Q 0.35 -30.96 36 -31 Q 36.03 -0.22 36 31 Q 0.47 30.73 -36 31 Q -36.59 -0.56 -36 -31 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -21 -31 Q -21.09 -36.55 -21 -42" fill="none" stroke-width="1.6"/>
+<path d="M -21 31 Q -21.20 36.21 -21 42" fill="none" stroke-width="1.6"/>
+<path d="M 0 -31 Q 0.27 -36.34 0 -42" fill="none" stroke-width="1.6"/>
+<path d="M 0 31 Q -0.10 36.59 0 42" fill="none" stroke-width="1.6"/>
+<path d="M 21 -31 Q 20.88 -36.26 21 -42" fill="none" stroke-width="1.6"/>
+<path d="M 21 31 Q 21.28 36.46 21 42" fill="none" stroke-width="1.6"/>
+<path d="M -36 -18 Q -41.46 -17.99 -47 -18" fill="none" stroke-width="1.6"/>
+<path d="M 36 -18 Q 41.75 -18.24 47 -18" fill="none" stroke-width="1.6"/>
+<path d="M -36 0 Q -41.38 0.05 -47 0" fill="none" stroke-width="1.6"/>
+<path d="M 36 0 Q 41.45 -0.06 47 0" fill="none" stroke-width="1.6"/>
+<path d="M -36 18 Q -41.43 17.95 -47 18" fill="none" stroke-width="1.6"/>
+<path d="M 36 18 Q 41.62 18.30 47 18" fill="none" stroke-width="1.6"/>
+<path d="M -4 -3 C -3.3 0.9200000000000004 -7.22 4.5 -11 4 C -14.99 4 -18.5 0.8500000000000005 -18 -3 C -18 -6.99 -14.92 -10.6 -11 -10 C -7.08 -10 -3.6 -6.78 -4 -3 Z" fill="none" stroke-width="1.8"/>
+<path d="M 18 9 C 18.7 11.8 15.7 14.5 13 14 C 10.15 14 7.5 11.75 8 9 C 8 6.15 10.2 3.4 13 4 C 15.8 4 18.4 6.3 18 9 Z" fill="none" stroke-width="1.8"/>
+<path d="M -9 4 Q -0.89 6.21 8 8" fill="none" stroke-width="1.6"/>
+<path d="M -24 -22 L 24 -22" fill="none" stroke-width="1"/>
+</g>
+<g transform="translate(748 522) rotate(-2) scale(0.87)">
+<path d="M -38 -45 Q -9.13 -45.81 19 -45 Q 28.15 -35.65 37 -27 Q 36.60 9.30 37 46 Q -0.69 46.58 -38 46 Q -38.74 0.46 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 18.66 -36.19 19 -27 Q 27.82 -26.71 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -25 -19 Q -1.47 -18.06 23 -19" fill="none" stroke-width="1.5"/>
+<path d="M -25 0 Q -1.32 0.82 23 0" fill="none" stroke-width="1.5"/>
+<path d="M -25 19 Q -6.46 19.49 11 19" fill="none" stroke-width="1.5"/>
+</g>
+<path d="M 499 522 C 556 512 621 512 689 522" fill="none" stroke-width="2"/>
+<path d="M 679.7611316035783 516.0929439859099 Q 684.78 518.83 689 522 Q 684.07 524.17 678.4516856891247 524.9971762041935" fill="none" stroke-width="2"/>
+<text x="439" y="596" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Candidate run</text>
+<text x="748" y="596" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Observed behavior</text>
+<text x="605" y="637" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">No customer messages. No live writes.</text>
+<path d="M 798 270 C 917 270 918 355 977 371" fill="none" stroke-width="1.8"/>
+<path d="M 968.5263950883924 364.03953882260805 Q 972.91 367.11 977 371 Q 971.36 371.34 966.1707983562081 372.7258017725378" fill="none" stroke-width="1.8"/>
+<path d="M 798 524 C 917 524 919 439 977 419" fill="none" stroke-width="1.8"/>
+<path d="M 966.0793121088 418.00572841587586 Q 971.30 418.59 977 419 Q 973.90 422.83 969.0132282586746 426.51408525051227" fill="none" stroke-width="1.8"/>
+<g transform="translate(1043 397) rotate(3) scale(1.02)">
+<path d="M -38 -45 Q -9.20 -44.35 19 -45 Q 28.67 -35.64 37 -27 Q 37.79 9.97 37 46 Q -0.93 45.39 -38 46 Q -38.77 0.52 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 18.81 -35.24 19 -27 Q 27.87 -27.06 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -28 -19 Q -25.66 -15.86 -23 -14 Q -18.60 -20.60 -15 -26" fill="none" stroke-width="1.6"/>
+<path d="M -6 -19 Q 9.31 -18.14 24 -19" fill="none" stroke-width="1.4"/>
+<path d="M -28 0 Q -24.64 2.27 -23 5 Q -18.62 -0.22 -15 -7" fill="none" stroke-width="1.6"/>
+<path d="M -6 0 Q 9.62 0.22 24 0" fill="none" stroke-width="1.4"/>
+<path d="M -28 19 Q -25.09 20.97 -23 24 Q -18.73 17.49 -15 12" fill="none" stroke-width="1.6"/>
+<path d="M -6 19 Q 9.01 18.33 24 19" fill="none" stroke-width="1.4"/>
+</g>
+<text x="1043" y="493" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Compare</text>
+<text x="1043" y="524" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">and decide</text>
+</g>
+</svg>

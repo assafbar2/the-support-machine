@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="545" viewBox="40 170 1120 545" role="img" aria-labelledby="title desc">
+<title id="title">Operate the living system</title>
+<desc id="desc">Customer evidence moves through review, an accountable owner, a tested change, release, and a later outcome check. The evidence feeds the next iteration.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(28)"><path d="M 0 0 L 0 8" stroke="#000" stroke-width=".9"/></pattern></defs>
+<rect width="1200" height="820" fill="#fff"/>
+<g fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(176 280) rotate(-5) scale(0.91)">
+<path d="M -38 -45 Q -10.04 -44.13 19 -45 Q 28.66 -36.62 37 -27 Q 37.15 9.75 37 46 Q 0.15 45.98 -38 46 Q -37.44 0.42 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 19.42 -35.37 19 -27 Q 28.76 -26.95 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -25 -19 Q 0.21 -19.54 23 -19" fill="none" stroke-width="1.5"/>
+<path d="M -25 0 Q -1.76 -0.74 23 0" fill="none" stroke-width="1.5"/>
+<path d="M -25 19 Q -6.60 18.23 11 19" fill="none" stroke-width="1.5"/>
+</g>
+<g transform="translate(204 301) rotate(0) scale(0.59)">
+<path d="M -25 -18 Q -26 -25 -18 -25 L 23 -25 Q 30 -25 30 -17 L 30 12 Q 30 20 23 20 L -4 20 L -19 32 L -17 20 L -20 20 Q -27 20 -26 12 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -11 -1 C -10.3 0.1200000000000001 -11.92 1.5 -13 1 C -14.14 1 -15.5 0.10000000000000009 -15 -1 C -15 -2.1399999999999997 -14.120000000000001 -3.6 -13 -3 C -11.879999999999999 -3 -10.6 -2.08 -11 -1 Z" fill="#000" stroke-width="1"/>
+<path d="M 4 -1 C 4.7 0.1200000000000001 3.08 1.5 2 1 C 0.8600000000000001 1 -0.5 0.10000000000000009 0 -1 C 0 -2.1399999999999997 0.8799999999999999 -3.6 2 -3 C 3.12 -3 4.4 -2.08 4 -1 Z" fill="#000" stroke-width="1"/>
+<path d="M 19 -1 C 19.7 0.1200000000000001 18.08 1.5 17 1 C 15.86 1 14.5 0.10000000000000009 15 -1 C 15 -2.1399999999999997 15.879999999999999 -3.6 17 -3 C 18.12 -3 19.4 -2.08 19 -1 Z" fill="#000" stroke-width="1"/>
+</g>
+<g transform="translate(597 280) rotate(3) scale(0.91)">
+<path d="M -38 -45 Q -9.23 -44.29 19 -45 Q 27.68 -36.88 37 -27 Q 37.21 9.08 37 46 Q 0.31 46.87 -38 46 Q -38.81 -0.20 -38 -45 Z" fill="#fff" stroke-width="2.2"/>
+<path d="M 19 -45 Q 19.84 -36.32 19 -27 Q 27.48 -26.81 37 -27" fill="none" stroke-width="1.5"/>
+<path d="M -25 -19 Q -2.17 -19.44 23 -19" fill="none" stroke-width="1.5"/>
+<path d="M -25 0 Q -1.45 1.27 23 0" fill="none" stroke-width="1.5"/>
+<path d="M -25 19 Q -7.78 18.60 11 19" fill="none" stroke-width="1.5"/>
+</g>
+<g transform="translate(627 298) rotate(0) scale(0.79)">
+<path d="M 28 0 C 28.7 15.680000000000001 15.120000000000001 28.5 0 28 C -15.959999999999999 28 -28.5 15.400000000000002 -28 0 C -28 -15.959999999999999 -15.680000000000001 -28.6 0 -28 C 15.680000000000001 -28 28.4 -15.120000000000001 28 0 Z" fill="#fff" stroke-width="2.6"/>
+<path d="M -17 -8 Q -10 -21 5 -18" fill="none" stroke-width="1.2"/>
+<path d="M 17 23 Q 27.96 34.07 38 45 Q 41.11 42.04 45 38 Q 33.69 27.95 23 17 Q 20.29 19.38 17 23 Z" fill="url(#hatch)" stroke-width="2"/>
+</g>
+<g transform="translate(1024 280) rotate(0) scale(1.1)">
+<path d="M 10 -17 C 10.7 -11.399999999999999 5.4 -6.5 0 -7 C -5.699999999999999 -7 -10.5 -11.5 -10 -17 C -10 -22.7 -5.6000000000000005 -27.6 0 -27 C 5.6000000000000005 -27 10.4 -22.4 10 -17 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -23 28 Q -22 0 -3 0 L 3 0 Q 22 0 23 28 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -12 5 L -10 28 M 12 5 L 10 28" fill="none" stroke-width="1.2"/>
+</g>
+<text x="180" y="362.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Customer</text>
+<text x="180" y="391.44" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">evidence</text>
+<text x="600" y="362.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Review</text>
+<text x="600" y="391.44" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">failures</text>
+<text x="1024" y="362.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Assign</text>
+<text x="1024" y="391.44" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">an owner</text>
+<path d="M 242 280 C 335 249 438 251 525 280" fill="none" stroke-width="2"/>
+<path d="M 516.9361919665706 272.56864749860426 Q 520.61 276.49 525 280 Q 518.97 279.97 514.0901420724191 281.10679718105894" fill="none" stroke-width="2"/>
+<path d="M 674 280 C 765 251 860 251 953 280" fill="none" stroke-width="2"/>
+<path d="M 944.7929824548561 272.7271145331651 Q 948.92 276.23 953 280 Q 948.02 280.19 942.1137684720135 281.3190766160738" fill="none" stroke-width="2"/>
+<path d="M 1091 312 C 1158 365 1158 455 1090 511" fill="none" stroke-width="2"/>
+<path d="M 1100.5799849940456 508.11661353166573 Q 1095.56 509.00 1090 511 Q 1092.22 506.90 1094.8586197182956 501.16924141111224" fill="none" stroke-width="2"/>
+<g transform="translate(1017 557) rotate(0) scale(0.82)">
+<path d="M -36 -31 Q 0.01 -30.42 36 -31 Q 35.17 -0.44 36 31 Q 0.45 31.06 -36 31 Q -35.16 -0.59 -36 -31 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -21 -31 Q -21.02 -36.53 -21 -42" fill="none" stroke-width="1.6"/>
+<path d="M -21 31 Q -21.30 36.27 -21 42" fill="none" stroke-width="1.6"/>
+<path d="M 0 -31 Q -0.11 -36.44 0 -42" fill="none" stroke-width="1.6"/>
+<path d="M 0 31 Q -0.23 36.48 0 42" fill="none" stroke-width="1.6"/>
+<path d="M 21 -31 Q 21.03 -36.69 21 -42" fill="none" stroke-width="1.6"/>
+<path d="M 21 31 Q 20.89 36.62 21 42" fill="none" stroke-width="1.6"/>
+<path d="M -36 -18 Q -41.47 -17.82 -47 -18" fill="none" stroke-width="1.6"/>
+<path d="M 36 -18 Q 41.28 -18.29 47 -18" fill="none" stroke-width="1.6"/>
+<path d="M -36 0 Q -41.28 -0.24 -47 0" fill="none" stroke-width="1.6"/>
+<path d="M 36 0 Q 41.52 0.24 47 0" fill="none" stroke-width="1.6"/>
+<path d="M -36 18 Q -41.29 18.20 -47 18" fill="none" stroke-width="1.6"/>
+<path d="M 36 18 Q 41.61 18.04 47 18" fill="none" stroke-width="1.6"/>
+<path d="M -4 -3 C -3.3 0.9200000000000004 -7.22 4.5 -11 4 C -14.99 4 -18.5 0.8500000000000005 -18 -3 C -18 -6.99 -14.92 -10.6 -11 -10 C -7.08 -10 -3.6 -6.78 -4 -3 Z" fill="none" stroke-width="1.8"/>
+<path d="M 18 9 C 18.7 11.8 15.7 14.5 13 14 C 10.15 14 7.5 11.75 8 9 C 8 6.15 10.2 3.4 13 4 C 15.8 4 18.4 6.3 18 9 Z" fill="none" stroke-width="1.8"/>
+<path d="M -9 4 Q -0.47 5.98 8 8" fill="none" stroke-width="1.6"/>
+<path d="M -24 -22 L 24 -22" fill="none" stroke-width="1"/>
+</g>
+<path d="M 1074 580 C 1074.7 590.08 1065.72 598.5 1056 598 C 1045.74 598 1037.5 589.9 1038 580 C 1038 569.74 1045.92 561.4 1056 562 C 1066.08 562 1074.4 570.28 1074 580 Z" fill="#fff" stroke-width="1.7"/>
+<path d="M 1047 581 Q 1049.68 584.56 1053 587 Q 1059.94 579.77 1066 572" fill="none" stroke-width="2"/>
+<g transform="translate(600 558) rotate(0) scale(0.98)">
+<path d="M -36 27 Q -4.32 27.32 26 27 Q 32.95 22.02 41 16 Q 11.34 15.19 -20 16 Q -28.16 20.68 -36 27 Z" fill="#fff" stroke-width="2"/>
+<path d="M -36 27 Q -4.89 27.85 26 27 Q 26.10 32.44 26 39 Q -5.59 38.29 -36 39 Q -36.56 33.13 -36 27 Z" fill="url(#hatch)" stroke-width="1.5"/>
+<path d="M 26 27 Q 32.79 20.64 41 16 Q 41.13 21.34 41 28 Q 32.63 33.50 26 39 Q 25.86 33.90 26 27 Z" fill="#fff" stroke-width="1.5"/>
+<path d="M 7 17 C 7.7 20.92 3.7800000000000002 24.5 0 24 C -3.9899999999999998 24 -7.5 20.85 -7 17 C -7 13.01 -3.9200000000000004 9.4 0 10 C 3.9200000000000004 10 7.4 13.219999999999999 7 17 Z" fill="#fff" stroke-width="1.8"/>
+<path d="M -4 12 Q 6.33 -8.80 17 -31 Q 21.09 -29.56 25 -27 Q 15.25 -5.43 4 17 Q 0.17 15.36 -4 12 Z" fill="#fff" stroke-width="2"/>
+<path d="M 31 -31 C 31.7 -25.96 26.86 -21.5 22 -22 C 16.87 -22 12.5 -26.05 13 -31 C 13 -36.13 16.96 -40.6 22 -40 C 27.04 -40 31.4 -35.86 31 -31 Z" fill="#fff" stroke-width="2"/>
+<path d="M -28 -5 C -24 -25 -10 -38 4 -39" fill="none" stroke-width="1.4"/>
+<path d="M -6.295198723252946 -42.77609364935921 Q -1.59 -41.11 4 -39 Q -1.61 -35.59 -5.653975273361758 -33.7989653508826" fill="none" stroke-width="1.4"/>
+</g>
+<g transform="translate(178 558) rotate(-2) scale(1)">
+<path d="M -62 -51 Q -1.88 -51.58 60 -51 Q 61.09 -3.16 61 43 Q 54.23 51.05 47 58 Q -7.62 57.39 -62 57 Q -61.55 3.82 -62 -51 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M 61 43 L 46 42 L 47 58" fill="none" stroke-width="1.7"/>
+<path d="M -61 -24 Q 0.60 -25.06 60 -24" fill="none" stroke-width="1.7"/>
+<path d="M -39 -45 L -39 -60 Q -35 -67 -31 -60 L -31 -45" fill="none" stroke-width="2.5"/>
+<path d="M 30 -45 L 30 -60 Q 34 -67 38 -60 L 38 -45" fill="none" stroke-width="2.5"/>
+<text x="0" y="27" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="0">LATER</text>
+<path d="M -65 -45 L -66 61 L 41 62" fill="none" stroke-width="1.1"/>
+</g>
+<g transform="translate(232 596) rotate(0) scale(0.57)">
+<path d="M 28 0 C 28.7 15.680000000000001 15.120000000000001 28.5 0 28 C -15.959999999999999 28 -28.5 15.400000000000002 -28 0 C -28 -15.959999999999999 -15.680000000000001 -28.6 0 -28 C 15.680000000000001 -28 28.4 -15.120000000000001 28 0 Z" fill="#fff" stroke-width="2.6"/>
+<path d="M -17 -8 Q -10 -21 5 -18" fill="none" stroke-width="1.2"/>
+<path d="M 17 23 Q 28.04 34.28 38 45 Q 41.97 42.09 45 38 Q 33.60 28.36 23 17 Q 19.92 20.39 17 23 Z" fill="url(#hatch)" stroke-width="2"/>
+</g>
+<text x="1024" y="649.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Test the</text>
+<text x="1024" y="678.44" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">change</text>
+<text x="600" y="649.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Release</text>
+<text x="180" y="649.0" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">Check later</text>
+<text x="180" y="678.44" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" text-anchor="middle" letter-spacing="0">outcomes</text>
+<path d="M 951 558 C 852 590 755 590 670 558" fill="none" stroke-width="2"/>
+<path d="M 677.7732753036631 565.7347392362938 Q 673.32 562.69 670 558 Q 676.01 557.61 680.9442431329195 557.3118559398315" fill="none" stroke-width="2"/>
+<path d="M 535 558 C 442 588 345 588 260 558" fill="none" stroke-width="2"/>
+<path d="M 267.9322128060208 565.5716576784744 Q 263.13 561.91 260 558 Q 266.28 556.84 270.927593865637 557.0847446762284" fill="none" stroke-width="2"/>
+<path d="M 105 515 C 40 463 40 373 107 316" fill="none" stroke-width="2"/>
+<path d="M 96.46750986658702 319.0523190510754 Q 102.42 317.00 107 316 Q 105.47 320.90 102.29931498093225 325.9072478696918" fill="none" stroke-width="2"/>
+<text x="600" y="454" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="400" text-anchor="middle" letter-spacing="0">Knowledge · policy · tools · people</text>
+<text x="600" y="491" fill="#000" stroke="none" font-family="Bradley Hand, Noteworthy, Arial, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0">Keep the loop moving.</text>
+</g>
+</svg>

@@ -14,7 +14,9 @@ python scripts/export_docx_to_markdown.py \
 
 For a major revision drafted in Markdown, use `scripts/import_markdown_to_docx.py working-draft.md output.docx`, inspect the resulting DOCX, then export it as above. The importer supports the book's flat Markdown subset: headings, lists, tables, paragraphs, quotes, code, and inline links/emphasis. Do not commit an unexplained competing canonical manuscript.
 
-The exporter preserves hyperlinks, internal contents links, list numbers, emphasis, and tables. Keep generation changes in the same PR as affected outputs.
+The exporter preserves hyperlinks, internal contents links, list numbers, emphasis, tables, and embedded illustrations with alternative text. Image files live beside the Markdown reference and are included in the skill package and the Markdown ZIP. Keep generation changes in the same PR as affected outputs.
+
+The ten illustration sources and regeneration steps are documented in [illustrations/README.md](illustrations/README.md). Refresh the manuscript's inline pictures with `python scripts/insert_illustrations.py` before rendering. That script preserves existing prose and tables, keeps each picture with its caption, and can be rerun after artwork changes.
 
 ## Build every format
 

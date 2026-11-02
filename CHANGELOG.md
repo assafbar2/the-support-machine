@@ -10,6 +10,7 @@ Six new chapters expand the book from 23 to 29 chapters. See the [notes for retu
 - The Prompt Room conversation adds context on self-awareness, sales handoffs, earlier customer signals, debugging judgment, and human handoffs. The book links to the episode on YouTube and Spotify.
 - Updated vendor guidance considers lifecycle ownership, acquisition and exit risk, and the documented capabilities of Fin, Pylon, Salesforce, and Plain as of November 1, 2026.
 - Companion tools include fourteen templates, the updated book skill, and a standalone Support AI Evals skill with a local cohort calculator.
+- Ten black-and-white illustrations explain the operating gates, measurement, continuing evaluation, action recovery, and the midfield model alongside their chapters.
 - The complete edition is available in HTML, PDF, DOCX, and Markdown, with matching skill packages. The original v0.2 files remain available.
 
 ## v0.2 — Previous public edition

@@ -1,0 +1,98 @@
+{
+  "style": "Monochrome architect sketch: objects, selective hatching, curved connectors, restrained hand-drawn contours, clear labels.",
+  "status": "Approved visual direction for the v0.3 review edition.",
+  "width": 1200,
+  "height": 820,
+  "figures": [
+    {
+      "number": 1,
+      "slug": "01-diagnose-the-queue",
+      "title": "Diagnose the queue",
+      "caption": "Read a sample of customer questions and distinguish product behavior, hard-to-find answers, repeatable tasks, and work needing human investigation.",
+      "placement": "The Operating Map; Chapters 1–3",
+      "gate": true,
+      "takeaway": "Classified customer tasks and candidate fixes."
+    },
+    {
+      "number": 2,
+      "slug": "02-choose-the-machine",
+      "title": "Choose the machine",
+      "caption": "A support system has several layers. Buy, extend and build remain options at each layer; each component still needs funded operating ownership.",
+      "placement": "The Operating Map; Chapter 8",
+      "gate": true,
+      "takeaway": "An owner, lifecycle cost and exit path for each component."
+    },
+    {
+      "number": 3,
+      "slug": "03-design-the-guardrails",
+      "title": "Design the guardrails",
+      "caption": "The answer path uses applicable evidence. The action path separately checks permission, executes, and verifies a receipt. Missing evidence or authority leads to a stop or human handoff.",
+      "placement": "The Operating Map; Chapters 13–16",
+      "gate": true,
+      "takeaway": "Allowed actions, evidence checks and a clear human exit."
+    },
+    {
+      "number": 4,
+      "slug": "04-shadow-run-the-machine",
+      "title": "Shadow-run the machine",
+      "caption": "Give a human reference review and an isolated candidate run the same request-time evidence. Compare the results; the candidate has no live messaging or write capability.",
+      "placement": "The Operating Map; Chapter 22",
+      "gate": true,
+      "takeaway": "A reviewed scorecard, observed failures and a release decision."
+    },
+    {
+      "number": 5,
+      "slug": "05-launch-with-accountability",
+      "title": "Launch with direct accountability",
+      "caption": "Readiness checks lead to a bounded cutover and observation. Evidence supports continuing; stop conditions route to containment and a staffed human service path.",
+      "placement": "The Operating Map; Chapters 20, 24 and 27",
+      "gate": true,
+      "takeaway": "Named owners, cutover checks and tested recovery capacity."
+    },
+    {
+      "number": 6,
+      "slug": "06-operate-the-living-system",
+      "title": "Operate the living system",
+      "caption": "Customer evidence moves through review, an accountable owner, a tested change, release, and a later outcome check. The evidence feeds the next iteration.",
+      "placement": "The Operating Map; Chapters 28–29",
+      "gate": true,
+      "takeaway": "An assigned owner, a tested change and later evidence of its effect."
+    },
+    {
+      "number": 7,
+      "slug": "07-the-sixteen-percent-problem",
+      "title": "The 16% problem",
+      "caption": "Of 100 eligible conversations, an agent is involved in 40. If 40 percent of those 40 are reported resolved, that is 16 of the original 100. These are illustrative counts, not company results.",
+      "placement": "Chapter 18 — CSAT and Other Comfort Metrics",
+      "gate": false,
+      "takeaway": "Reported resolution still needs a separate customer-outcome check."
+    },
+    {
+      "number": 8,
+      "slug": "08-evaluation-over-time",
+      "title": "Evaluation over time",
+      "caption": "Check related returns seven and thirty days after reported resolution. Each denominator needs a mature observation window and known coverage. Weekly independent answer review runs on a separate track.",
+      "placement": "Chapter 28 — Evaluating AI: The Work Is Never Done",
+      "gate": false,
+      "takeaway": "Customer silence alone does not prove success."
+    },
+    {
+      "number": 9,
+      "slug": "09-when-the-effect-is-unknown",
+      "title": "When the effect is unknown",
+      "caption": "An authorized attempt can leave an uncertain effect. Inspect provider state or assign a human owner before deciding what to retry. If a credit succeeded but its confirmation failed, recover the message without issuing another credit.",
+      "placement": "Chapter 16 — Did the Action Actually Happen?",
+      "gate": false,
+      "takeaway": "Recover the unfinished step without duplicating a completed effect."
+    },
+    {
+      "number": 10,
+      "slug": "10-from-goalkeeper-to-midfield",
+      "title": "From goalkeeper to midfield",
+      "caption": "Support engineers keep a staffed human recovery path and spend protected time improving documentation, product behavior and onboarding to prevent repeated customer problems.",
+      "placement": "Chapter 6 — The Goalkeeper Fallacy",
+      "gate": false,
+      "takeaway": "Protected improvement time, product access and a staffed human path."
+    }
+  ]
+}

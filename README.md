@@ -4,12 +4,13 @@
 
 A free field guide for support leaders at API, developer-tool, and B2B companies, and the executives who work with them. It covers choosing a system, preparing the team, testing the rollout, and improving the service after launch.
 
-**v0.3 review edition:** 29 chapters, eight appendices, and two companion skills. The latest published edition is v0.2.
+**v0.3 review edition:** 29 chapters, eight appendices, ten illustrations, and two companion skills. The latest published edition is v0.2.
 
 ## Read the book
 
 - [Read with Google’s viewer](https://docs.google.com/gview?url=https%3A%2F%2Fraw.githubusercontent.com%2Fassafbar2%2Fthe-support-machine%2Fcodex%2Fsupport-machine-v0.3%2Freview%2Fthe-support-machine-v0.3-reading-copy.docx)
 - [PDF](docs/the-support-machine-v0.3.pdf) · [Editable DOCX](review/the-support-machine-v0.3-reading-copy.docx) · [Markdown](skills/the-support-machine/references/book.md)
+- [Browse the illustrations](docs/illustrations/README.md) · [Markdown with images](docs/downloads/the-support-machine-v0.3-markdown.zip)
 - [Notes for the new version](release-notes/v0.3.md) · [Chapter reading map](release-notes/v0.3-coverage.md)
 - [Published online edition](https://assafbar2.github.io/the-support-machine/book.html)
 

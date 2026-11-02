@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+<title id="title">Choose the machine</title>
+<desc id="desc">A support system has several layers. Buy, extend and build remain options at each layer; each component still needs funded operating ownership.</desc>
+<defs><pattern id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(28)"><path d="M 0 0 L 0 8" stroke="#000" stroke-width=".9"/></pattern></defs>
+<rect width="1200" height="820" fill="#fff"/>
+<g fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+<text x="52" y="42" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="start" letter-spacing="1.2">THE SUPPORT MACHINE  /  GATE 02</text>
+<text x="52" y="94" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" text-anchor="start" letter-spacing="0">Choose the machine</text>
+<text x="52" y="132" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" text-anchor="start" letter-spacing="0">What should you buy, extend, or build at each layer?</text>
+<path d="M 52 730 Q 600.49 729.27 1148 730" fill="none" stroke-width="1.3"/>
+<text x="52" y="762" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" text-anchor="start" letter-spacing="1">GATE EVIDENCE</text>
+<text x="52" y="791" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" text-anchor="start" letter-spacing="0">An owner, lifecycle cost and exit path for each component.</text>
+<text x="70" y="205" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="1">COMPONENTS</text>
+<text x="670" y="205" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="1">DECIDE AT EACH LAYER</text>
+<path d="M 85 296 Q 282.97 296.25 480 296 Q 479.84 303.66 480 310 Q 281.93 310.30 85 310 Q 85.46 303.16 85 296 Z" fill="url(#hatch)" stroke-width="1.6"/>
+<path d="M 480 296 Q 512.56 267.17 545 240 Q 545.49 246.46 545 254 Q 513.14 281.43 480 310 Q 479.28 302.11 480 296 Z" fill="url(#hatch)" stroke-width="1.6"/>
+<path d="M 85 296 Q 282.34 296.49 480 296 Q 511.71 268.81 545 240 Q 347.65 240.45 150 240 Q 117.44 268.66 85 296 Z" fill="#fff" stroke-width="2.5"/>
+<text x="180" y="278" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="0">Conversation platform</text>
+<g transform="translate(150 271) rotate(0) scale(0.48)">
+<path d="M -25 -18 Q -26 -25 -18 -25 L 23 -25 Q 30 -25 30 -17 L 30 12 Q 30 20 23 20 L -4 20 L -19 32 L -17 20 L -20 20 Q -27 20 -26 12 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -11 -1 C -10.3 0.1200000000000001 -11.92 1.5 -13 1 C -14.14 1 -15.5 0.10000000000000009 -15 -1 C -15 -2.1399999999999997 -14.120000000000001 -3.6 -13 -3 C -11.879999999999999 -3 -10.6 -2.08 -11 -1 Z" fill="#000" stroke-width="1"/>
+<path d="M 4 -1 C 4.7 0.1200000000000001 3.08 1.5 2 1 C 0.8600000000000001 1 -0.5 0.10000000000000009 0 -1 C 0 -2.1399999999999997 0.8799999999999999 -3.6 2 -3 C 3.12 -3 4.4 -2.08 4 -1 Z" fill="#000" stroke-width="1"/>
+<path d="M 19 -1 C 19.7 0.1200000000000001 18.08 1.5 17 1 C 15.86 1 14.5 0.10000000000000009 15 -1 C 15 -2.1399999999999997 15.879999999999999 -3.6 17 -3 C 18.12 -3 19.4 -2.08 19 -1 Z" fill="#000" stroke-width="1"/>
+</g>
+<path d="M 85 386 Q 283.06 385.83 480 386 Q 480.45 393.02 480 400 Q 282.81 400.83 85 400 Q 85.41 393.84 85 386 Z" fill="url(#hatch)" stroke-width="1.6"/>
+<path d="M 480 386 Q 513.29 358.63 545 330 Q 545.85 336.38 545 344 Q 511.97 371.53 480 400 Q 479.93 393.78 480 386 Z" fill="url(#hatch)" stroke-width="1.6"/>
+<path d="M 85 386 Q 282.99 385.86 480 386 Q 511.81 358.43 545 330 Q 347.55 329.21 150 330 Q 117.64 358.39 85 386 Z" fill="#fff" stroke-width="2.5"/>
+<text x="180" y="368" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="0">Knowledge &amp; retrieval</text>
+<g transform="translate(150 360) rotate(0) scale(0.38)">
+<path d="M 0 -18 Q -18 -29 -40 -24 L -40 25 Q -17 21 0 33 Q 18 21 40 25 L 40 -24 Q 19 -29 0 -18 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M 0 -18 Q 1 6 0 33" fill="none" stroke-width="2"/>
+<path d="M -31 -11 Q -18 -13 -9 -6" fill="none" stroke-width="1.4"/>
+<path d="M 9 -6 Q 20 -13 31 -11" fill="none" stroke-width="1.4"/>
+<path d="M -31 0 Q -18 -2 -9 5" fill="none" stroke-width="1.4"/>
+<path d="M 9 5 Q 20 -2 31 0" fill="none" stroke-width="1.4"/>
+<path d="M -31 11 Q -18 9 -9 16" fill="none" stroke-width="1.4"/>
+<path d="M 9 16 Q 20 9 31 11" fill="none" stroke-width="1.4"/>
+<path d="M -43 -18 L -44 30 Q -19 25 -2 38 Q 18 26 44 30 L 44 -18" fill="none" stroke-width="1.2"/>
+</g>
+<path d="M 85 476 Q 281.68 475.53 480 476 Q 480.59 483.64 480 490 Q 281.76 489.73 85 490 Q 84.20 483.83 85 476 Z" fill="url(#hatch)" stroke-width="1.6"/>
+<path d="M 480 476 Q 512.28 447.55 545 420 Q 545.46 427.13 545 434 Q 512.54 461.40 480 490 Q 480.52 483.60 480 476 Z" fill="url(#hatch)" stroke-width="1.6"/>
+<path d="M 85 476 Q 281.81 475.43 480 476 Q 512.23 448.45 545 420 Q 347.73 420.61 150 420 Q 116.68 447.61 85 476 Z" fill="#fff" stroke-width="2.5"/>
+<text x="180" y="458" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="0">Tools &amp; integrations</text>
+<g transform="translate(148 447) rotate(0) scale(0.38)">
+<path d="M -21 -16 L 23 -16 L 23 1 Q 23 23 1 25 Q -21 23 -21 1 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -12 -16 Q -11.77 -26.31 -12 -37" fill="none" stroke-width="3"/>
+<path d="M 14 -16 Q 13.77 -26.12 14 -37" fill="none" stroke-width="3"/>
+<path d="M 1 25 L 1 35 C 1 59 36 54 42 39" fill="none" stroke-width="2.4"/>
+<path d="M -14 4 Q -13 14 -6 16" fill="none" stroke-width="1.2"/>
+</g>
+<path d="M 85 566 Q 283.38 565.85 480 566 Q 480.51 572.96 480 580 Q 283.04 579.39 85 580 Q 85.80 573.29 85 566 Z" fill="url(#hatch)" stroke-width="1.6"/>
+<path d="M 480 566 Q 512.92 537.59 545 510 Q 545.22 516.59 545 524 Q 512.91 551.68 480 580 Q 480.41 572.20 480 566 Z" fill="url(#hatch)" stroke-width="1.6"/>
+<path d="M 85 566 Q 282.62 565.75 480 566 Q 511.84 537.77 545 510 Q 347.35 510.58 150 510 Q 117.59 538.49 85 566 Z" fill="#fff" stroke-width="2.5"/>
+<text x="180" y="548" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="0">Evaluation &amp; reporting</text>
+<path d="M 165 537 C 165.7 545.4 158.1 552.5 150 552 C 141.45 552 134.5 545.25 135 537 C 135 528.45 141.6 521.4 150 522 C 158.4 522 165.4 528.9 165 537 Z" fill="#fff" stroke-width="1.6"/>
+<path d="M 140 543 Q 140.06 540.03 140 537" fill="none" stroke-width="2"/>
+<path d="M 150 543 Q 150.09 535.67 150 529" fill="none" stroke-width="2"/>
+<path d="M 160 543 Q 159.84 537.74 160 533" fill="none" stroke-width="2"/>
+<path d="M 568 239 Q 594 237 594 267 L 594 380 Q 595 400 614 410 Q 596 420 594 442 L 594 550 Q 594 580 568 580" fill="none" stroke-width="1.7"/>
+<path d="M 617 410 C 627 409 637 406 650 400" fill="none" stroke-width="1.8"/>
+<path d="M 639.0346443564176 400.1047645443654 Q 644.07 399.25 650 400 Q 645.60 403.60 642.8061679535733 408.27639900486946" fill="none" stroke-width="1.8"/>
+<text x="908" y="262" fill="#000" stroke="none" font-family="Bradley Hand, Noteworthy, Arial, sans-serif" font-size="27" font-weight="400" text-anchor="middle" letter-spacing="0">Choose your mix.</text>
+<g transform="translate(726 347) rotate(0) scale(1.05)">
+<path d="M -42 -18 Q -20.56 -27.89 0 -39 Q 21.93 -27.04 44 -16 Q 23.31 -4.13 1 8 Q -19.84 -4.93 -42 -18 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -42 -18 Q -20.85 -4.39 1 8 Q 1.12 27.18 1 48 Q -21.13 35.54 -42 22 Q -42.54 2.60 -42 -18 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M 1 8 Q 23.03 -3.53 44 -16 Q 44.23 4.77 44 24 Q 23.34 36.83 1 48 Q 1.88 28.03 1 8 Z" fill="url(#hatch)" stroke-width="1.8"/>
+<path d="M -22 -28 Q -0.57 -16.84 21 -4 Q 20.25 1.10 21 8 Q 14.78 12.22 10 15 Q 10.28 8.84 10 2 Q -11.02 -9.42 -33 -22 Q -26.99 -25.12 -22 -28 Z" fill="#fff" stroke-width="1.5"/>
+<path d="M -33 8 Q -23.30 13.49 -14 19" fill="none" stroke-width="1.7"/>
+<path d="M -33 15 Q -27.35 18.84 -22 22" fill="none" stroke-width="1.4"/>
+</g>
+<g transform="translate(900 340) rotate(0) scale(1.12)">
+<path d="M -21 -16 L 23 -16 L 23 1 Q 23 23 1 25 Q -21 23 -21 1 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -12 -16 Q -11.53 -26.69 -12 -37" fill="none" stroke-width="3"/>
+<path d="M 14 -16 Q 14.08 -26.09 14 -37" fill="none" stroke-width="3"/>
+<path d="M 1 25 L 1 35 C 1 59 36 54 42 39" fill="none" stroke-width="2.4"/>
+<path d="M -14 4 Q -13 14 -6 16" fill="none" stroke-width="1.2"/>
+</g>
+<g transform="translate(1085 340) rotate(25) scale(1.4)">
+<path d="M -22 -31 C -41 -22 -40 0 -23 10 Q -15 15 -7 11 L 18 44 Q 24 50 31 43 Q 37 38 31 31 L 4 -1 Q 13 -18 -2 -30 L -1 -14 L -12 -9 L -23 -18 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M 27.5 39 C 28.2 40.4 26.35 42.0 25 41.5 C 23.575 41.5 22.0 40.375 22.5 39 C 22.5 37.575 23.6 35.9 25 36.5 C 26.4 36.5 27.9 37.65 27.5 39 Z" fill="none" stroke-width="1.3"/>
+<path d="M -3 12 L 21 40" fill="none" stroke-width="1.1"/>
+</g>
+<text x="726" y="434" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0.7">BUY</text>
+<text x="902" y="434" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0.7">EXTEND</text>
+<text x="1080" y="434" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="middle" letter-spacing="0.7">BUILD</text>
+<path d="M 671 459 Q 902 468 1133 459" fill="none" stroke-width="1.1"/>
+<text x="902" y="490" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">All three are options for every layer.</text>
+<text x="670" y="543" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="start" letter-spacing="1">OPERATE WHAT YOU CHOOSE</text>
+<g transform="translate(726 600) rotate(0) scale(0.74)">
+<path d="M 10 -17 C 10.7 -11.399999999999999 5.4 -6.5 0 -7 C -5.699999999999999 -7 -10.5 -11.5 -10 -17 C -10 -22.7 -5.6000000000000005 -27.6 0 -27 C 5.6000000000000005 -27 10.4 -22.4 10 -17 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -23 28 Q -22 0 -3 0 L 3 0 Q 22 0 23 28 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -12 5 L -10 28 M 12 5 L 10 28" fill="none" stroke-width="1.2"/>
+</g>
+<g transform="translate(902 602) rotate(0) scale(0.74)">
+<path d="M 21 0 C 21.7 11.760000000000002 11.34 21.5 0 21 C -11.969999999999999 21 -21.5 11.55 -21 0 C -21 -11.969999999999999 -11.760000000000002 -21.6 0 -21 C 11.760000000000002 -21 21.4 -11.34 21 0 Z" fill="#fff" stroke-width="2"/>
+<text x="0" y="9" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="400" text-anchor="middle" letter-spacing="0">$</text>
+<path d="M -29 6 C -44 -23 -7 -47 23 -26" fill="none" stroke-width="1.7"/>
+<path d="M 17.388261344444572 -35.42116708596897 Q 20.20 -29.95 23 -26 Q 18.14 -27.91 12.227100245174618 -28.0480798012976" fill="none" stroke-width="1.7"/>
+<path d="M 29 -4 C 44 24 7 47 -23 26" fill="none" stroke-width="1.7"/>
+<path d="M -17.388261344444572 35.42116708596897 Q -20.60 30.89 -23 26 Q -17.38 26.75 -12.227100245174618 28.0480798012976" fill="none" stroke-width="1.7"/>
+</g>
+<g transform="translate(1076 601) rotate(0) scale(0.74)">
+<path d="M -19 29 Q -19.71 -1.47 -19 -31 Q -1.71 -31.48 17 -31 Q 17.73 -1.15 17 29" fill="none" stroke-width="2.5"/>
+<path d="M -19 -31 Q -7.23 -26.73 4 -21 Q 3.98 8.82 4 37 Q -8.06 32.67 -19 29 Q -18.98 -0.62 -19 -31 Z" fill="#fff" stroke-width="2.5"/>
+<path d="M -1.7 9 C -1.0 9.728 -2.298 10.8 -3 10.3 C -3.741 10.3 -4.8 9.715 -4.3 9 C -4.3 8.259 -3.728 7.1000000000000005 -3 7.7 C -2.272 7.7 -1.2999999999999998 8.298 -1.7 9 Z" fill="#000" stroke-width="1"/>
+<path d="M 13 4 Q 26.50 4.24 41 4" fill="none" stroke-width="2"/>
+<path d="M 33.0 0.3999999999999999 Q 36.34 2.14 41 4 Q 36.98 5.92 33.0 7.6" fill="none" stroke-width="2"/>
+<path d="M -26 37 Q -19.73 36.84 -13 37" fill="none" stroke-width="1.2"/>
+</g>
+<text x="726" y="658" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Owner</text>
+<text x="902" y="658" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Lifecycle cost</text>
+<text x="1080" y="658" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="middle" letter-spacing="0">Exit path</text>
+<text x="85" y="641" fill="#000" stroke="none" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start" letter-spacing="0">Illustrative layers</text>
+<path d="M 85 651 Q 173 648 232 652" fill="none" stroke-width="1.1"/>
+</g>
+</svg>

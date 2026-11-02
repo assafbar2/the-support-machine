@@ -35,6 +35,8 @@ def main():
     paths += [ROOT/f"docs/downloads/{skill}.{extension}"
               for skill in ("the-support-machine", "support-ai-evals")
               for extension in ("skill", "zip")]
+    for directory in (ROOT/'docs/illustrations',ROOT/'docs/downloads/illustrations',markdown.parent/'illustrations'):
+        paths += sorted(p for p in directory.rglob('*') if p.is_file())
     manifest={"version":version,"source":str(source.relative_to(ROOT)),
               "files":{str(p.relative_to(ROOT)):sha(p) for p in paths}}
     (ROOT/f"release-notes/{version}-checksums.json").write_text(json.dumps(manifest,indent=2)+"\n")

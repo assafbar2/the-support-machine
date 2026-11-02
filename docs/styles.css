@@ -210,6 +210,10 @@ code {
 }
 
 /* Edition navigation and readable small screens. */
+.book-figure { margin: 30px 0; break-inside: avoid; }
+.book-figure img { display: block; width: 100%; height: auto; }
+.book-figure figcaption { margin-top: 12px; font-size: 15px; line-height: 1.5; }
+.book-figure > a { display: block; }
 .book-actions { flex-wrap: wrap; }
 .edition-links { margin-top: 24px; }
 .edition-summary { margin-top: 48px; max-width: 760px; font-size: 20px; }

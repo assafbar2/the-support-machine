@@ -8,8 +8,10 @@ from docx.enum.table import WD_TABLE_ALIGNMENT, WD_CELL_VERTICAL_ALIGNMENT
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 from docx.shared import Inches, Pt, RGBColor
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.opc.constants import RELATIONSHIP_TYPE as RT
 from manuscript_format import blocks, spans, slugify, bookmark, plain
+from urllib.parse import urlsplit,unquote
 
 def xml(tag, **attrs):
     node = OxmlElement(tag)
@@ -102,6 +104,20 @@ def format_document(doc):
     styles["Cell Body"].paragraph_format.space_before = Pt(3)
     styles["Cell Body"].paragraph_format.line_spacing = 1.05
     styles["Code"].font.name, styles["Code"].font.size = "Consolas", Pt(9)
+    for name,size in [('Book Figure',1),('Book Figure Caption',10)]:
+        if name not in styles:
+            styles.add_style(name,WD_STYLE_TYPE.PARAGRAPH)
+        styles[name].base_style=styles['Normal']
+        styles[name].font.name,styles[name].font.size='Arial',Pt(size)
+        styles[name].paragraph_format.keep_together=True
+    figure=styles['Book Figure'].paragraph_format
+    figure.line_spacing=1
+    figure.space_before,figure.space_after=Pt(10),Pt(3)
+    figure.keep_with_next=True
+    caption=styles['Book Figure Caption'].paragraph_format
+    caption.line_spacing=1.1
+    caption.space_after=Pt(10)
+    caption.keep_with_next=False
     if "Hyperlink" not in styles:
         styles.add_style("Hyperlink", WD_STYLE_TYPE.CHARACTER)
     styles["Hyperlink"].font.color.rgb = RGBColor.from_string("772817")
@@ -182,10 +198,22 @@ def create(source, destination):
                 cover = False
         elif kind == "table":
             add_table(doc,content)
+        elif kind == 'image':
+            url=urlsplit(extra)
+            if url.scheme or url.netloc:
+                raise ValueError('Import illustrations from local files, not remote URLs')
+            image=(source.parent/unquote(url.path)).resolve()
+            p=doc.add_paragraph(style='Book Figure')
+            p.alignment=WD_ALIGN_PARAGRAPH.CENTER
+            shape=p.add_run().add_picture(str(image),width=Inches(6.8))
+            shape._inline.docPr.set('name',image.stem)
+            shape._inline.docPr.set('descr',content)
         else:
             style = {"bullet":"List Bullet","number":"List Number","quote":"Quote","code":"Code"}.get(kind,"Normal")
             if cover and kind == "paragraph":
                 style = "Subtitle" if content.startswith("How to Deploy") else "Normal"
+            if kind=='paragraph' and doc.paragraphs and doc.paragraphs[-1].style.name=='Book Figure' and re.match(r'^\*\*(Gate|Figure) \d+\b',content):
+                style='Book Figure Caption'
             p = doc.add_paragraph(style=style)
             add_inline(p,content)
             if kind == 'paragraph' and re.fullmatch(r'\*\*[^*]+\*\*',content):
@@ -240,6 +268,8 @@ def create(source, destination):
             elif paragraph.style.name == 'Heading 1' and compact:
                 paragraph.paragraph_format.space_before = Pt(10)
                 paragraph.paragraph_format.space_after = Pt(7)
+        if active_chapter in {13,28} and paragraph.style.name=='Normal':
+            paragraph.paragraph_format.space_after=Pt(4)
         if active_section in {'Notes for the New Version: v0.3', 'Appendix H: Sources and Further Reading'}:
             if paragraph.style.name in {'Normal', 'List Bullet'}:
                 paragraph.paragraph_format.space_after = Pt(4)
