@@ -8,11 +8,24 @@ By **Assaf Barnir**
 
 A free field guide for support leaders at API, developer-tool, and B2B companies—and the executives who work with them. From choosing the system and preparing the team to verifying outcomes and improving the service after launch.
 
-**[Read the Second Edition](https://assafbar2.github.io/the-support-machine/book.html)** · **[Download the PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-second-edition.pdf)** · [Book home](https://assafbar2.github.io/the-support-machine/)
+**[Read the Second Edition](https://assafbar2.github.io/the-support-machine/book.html)** · **[Browse the 80 prompts](https://assafbar2.github.io/the-support-machine/prompts.html)** · [Download the PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-second-edition.pdf) · [Book home](https://assafbar2.github.io/the-support-machine/)
 
 29 chapters · 8 appendices · 10 illustrations · 80 prompts in the skill · 2 companion AI skills
 
 ![Choose the layer before choosing whether to buy, extend, or build](docs/illustrations/book/02-choose-the-machine.png)
+
+## 80 ways to put the book to work
+
+Bring a real support decision. Pick a prompt, add your situation, and work through it with the book.
+
+- [Challenge the weekend demo](https://assafbar2.github.io/the-support-machine/prompts.html#prompt-19): what happens after somebody has to operate it?
+- [Price a year of operation](https://assafbar2.github.io/the-support-machine/prompts.html#prompt-17): include maintenance, evaluation, and the work somebody still has to do.
+- [Find the correct but useless answer](https://assafbar2.github.io/the-support-machine/prompts.html#prompt-52): true statements can still leave a customer stuck.
+- [Challenge the book itself](https://assafbar2.github.io/the-support-machine/prompts.html#prompt-04): ask where its recommendation could be wrong. It can take it.
+
+**[Browse all 80 by task](https://assafbar2.github.io/the-support-machine/prompts.html)** · [Original Markdown library](skills/the-support-machine/references/prompts.md) · [Install the book as a skill](https://assafbar2.github.io/the-support-machine/skill.html)
+
+Use what helps. Change the rest. The full library comes with the skill.
 
 ## What's new in the Second Edition
 

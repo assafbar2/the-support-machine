@@ -281,6 +281,43 @@ code {
 .site-footer { border-top: 1px solid var(--line); padding: 28px 0 40px; font: 12px/1.65 ui-sans-serif, system-ui, sans-serif; color: var(--muted); }
 .site-footer p { margin: 5px 0; }
 a:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 5px; }
+.library-link { font: 600 13px/1.5 ui-sans-serif, system-ui, sans-serif; margin: 0 0 22px; }
+.apply-section .prompt-invitation { margin-top: 24px; color: var(--muted); }
+.prompt-examples { padding-left: 20px; margin: 20px 0; font-size: 18px; }
+.prompt-examples li { margin: 10px 0; }
+.prompt-hero { padding: 72px 0 54px; max-width: 900px; }
+.prompt-hero h1 { font-size: clamp(48px, 7vw, 86px); line-height: 1.04; font-weight: 500; letter-spacing: -.035em; }
+.prompt-hero > p { font-size: 19px; max-width: 720px; }
+.prompt-hero .eyebrow { font-size: 12px; }
+.prompt-hero .prompt-dek { font-size: 25px; line-height: 1.45; margin: 30px 0 20px; }
+.prompt-hero .access-note { font-size: 12px; }
+.prompt-featured { padding: 40px 0; border-top: 1px solid var(--line); }
+.prompt-picks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin: 32px 0 0; }
+.prompt-pick { display: block; padding: 20px 0; border-top: 1px solid var(--ink); color: var(--ink); text-decoration: none; }
+.prompt-pick h3 { font: 650 19px/1.35 ui-sans-serif, system-ui, sans-serif; margin: 12px 0 8px; }
+.prompt-pick p { font-size: 17px; line-height: 1.5; color: var(--muted); margin: 0; }
+.prompt-pick:hover h3 { text-decoration: underline; }
+.prompt-number { color: var(--accent-dark); font: 13px/1.5 ui-monospace, monospace; }
+.prompt-setup { border-top: 1px solid var(--line); padding: 36px 0; max-width: 880px; }
+.prompt-setup h2 { font-size: 30px; }
+.prompt-setup p { font-size: 18px; }
+.prompt-setup summary { cursor: pointer; color: var(--accent-dark); font: 650 15px/1.5 ui-sans-serif, system-ui, sans-serif; padding: 12px 0; }
+.prompt-setup summary:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 3px; }
+.prompt-setup blockquote { font-size: 17px; font-weight: 400; color: var(--ink); }
+.prompt-setup .prompt-source { font-size: 15px; }
+.prompt-library { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 60px; padding: 42px 0 72px; border-top: 2px solid var(--ink); scroll-margin-top: 24px; }
+.prompt-sidebar { position: sticky; top: 24px; align-self: start; max-height: calc(100vh - 48px); overflow: auto; }
+.prompt-sidebar .eyebrow { margin-bottom: 12px; }
+.prompt-sidebar nav a { font: 14px/1.45 ui-sans-serif, system-ui, sans-serif; padding: 8px 0; }
+.prompt-content { min-width: 0; }
+.prompt-category + .prompt-category { margin-top: 58px; }
+.prompt-category h2 { font-size: 32px; scroll-margin-top: 32px; }
+.prompt-entry { border-top: 1px solid var(--line); margin-top: 26px; padding-top: 24px; scroll-margin-top: 24px; }
+.prompt-entry h3 { font: 650 21px/1.4 ui-sans-serif, system-ui, sans-serif; margin: 0; }
+.prompt-entry h3 .prompt-number { margin-right: 10px; }
+.prompt-entry blockquote { border: 0; background: none; color: var(--ink); font-size: 19px; font-weight: 400; padding: 0; margin: 18px 0 14px; overflow-wrap: anywhere; }
+.prompt-permalink { font: 13px/1.5 ui-sans-serif, system-ui, sans-serif; }
+.prompt-entry:target { border-top-color: var(--accent-dark); }
 @media (max-width: 900px) {
   .landing { padding: 0 28px; }
   .edition-hero { gap: 28px; padding-top: 56px; }
@@ -289,6 +326,8 @@ a:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 5px; }
   .hero-drawing { padding: 18px; }
   .new-topics { gap: 24px; }
   .format-links { grid-template-columns: repeat(3, 1fr); row-gap: 24px; }
+  .prompt-library { grid-template-columns: 210px minmax(0, 1fr); gap: 30px; }
+  .prompt-picks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px) {
   .landing { padding: 0 22px; }
@@ -316,4 +355,11 @@ a:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 5px; }
   .formats-section { padding: 42px 0; }
   .format-links { grid-template-columns: 1fr 1fr; }
   .more-section { padding: 34px 0; gap: 28px; }
+  .prompt-hero { padding: 42px 0; }
+  .prompt-hero .prompt-dek { font-size: 21px; }
+  .prompt-picks { grid-template-columns: 1fr; gap: 8px; }
+  .prompt-library { grid-template-columns: 1fr; gap: 36px; }
+  .prompt-sidebar { position: static; max-height: none; }
+  .prompt-sidebar nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 18px; }
+  .prompt-category h2 { font-size: 28px; }
 }

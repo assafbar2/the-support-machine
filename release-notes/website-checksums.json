@@ -1,0 +1,15 @@
+{
+  "book_version": "v0.4",
+  "files": {
+    "docs/index.html": "26432fb0500b38b5e44f988f29cf22fa54b39f74f2ca9b33ee18500d30976080",
+    "docs/book.html": "f20fc8a189d54d094041d3746c7c30914e417c051b6203dcd76d56738228c17c",
+    "docs/notes.html": "b27d728b08c4b79cfc08bf99d871a957467ca0c56636863cda70fa09d4b46366",
+    "docs/review.html": "78a3a300e6e14759c6179aab1557254fa9e4b584364fa4961d1bbfe4c85345f9",
+    "docs/skill.html": "bc9ca6522f0be9f4163dc4c7329ffba9693f9dd5614bbe7e83fba390abb3b935",
+    "docs/editions.html": "f6c2e0109718553595c765dc2eff5a73dcff36b589f9afcb8e82e01dd2559179",
+    "docs/prompts.html": "792a0f90ab710aeeb2f380d785bb32a8042a858d29890bc2af9cf52774bb9841",
+    "docs/styles.css": "4b839e4a9049c3a9ca3d8357b434b805d9d7d26caf10681b0d20c642e806959e",
+    "docs/llms.txt": "f806aa45b5c379ada4fec523bbb6488bf21c73daa61cfa1aa0d73dbe0d18d077",
+    "llms.txt": "f806aa45b5c379ada4fec523bbb6488bf21c73daa61cfa1aa0d73dbe0d18d077"
+  }
+}
