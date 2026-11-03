@@ -282,6 +282,37 @@ code {
 .site-footer p { margin: 5px 0; }
 a:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 5px; }
 .library-link { font: 600 13px/1.5 ui-sans-serif, system-ui, sans-serif; margin: 0 0 22px; }
+.library-link a { display: block; }
+.library-link a + a { margin-top: 10px; }
+.sheet-feature, .sheet-hero { display: grid; grid-template-columns: 1.2fr .85fr; gap: 72px; align-items: center; padding: 64px 0; }
+.sheet-feature { border-top: 2px solid var(--ink); }
+.sheet-feature p, .sheet-hero p { max-width: 550px; font-size: 19px; line-height: 1.5; }
+.sheet-feature .eyebrow, .sheet-hero .eyebrow { font-size: 12px; }
+.sheet-feature .hero-actions { align-items: center; gap: 20px; }
+.sheet-feature .sheet-dek { font-size: 26px; margin: 24px 0 18px; }
+.sheet-feature .sheet-preview { max-width: 300px; }
+.sheet-preview { width: 100%; max-width: 400px; margin: 0 auto; }
+.sheet-preview img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: white; box-shadow: 8px 8px 0 var(--panel); }
+.sheet-preview figcaption { margin-top: 18px; color: var(--muted); font: 13px/1.5 ui-sans-serif, system-ui, sans-serif; }
+.sheet-hero h1 { font-size: clamp(48px, 5.3vw, 70px); line-height: 1.04; font-weight: 500; letter-spacing: -.035em; }
+.sheet-hero .sheet-dek { font-size: 24px; margin: 28px 0 20px; }
+.sheet-hero .sheet-talk { font-size: 16px; color: var(--muted); margin-top: 24px; }
+.sheet-hero .access-note { font-size: 12px; }
+.sheet-contents { border-top: 1px solid var(--line); padding: 48px 0; }
+.sheet-contents dl { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 60px; margin: 32px 0 0; }
+.sheet-contents dt { font: 650 18px/1.4 ui-sans-serif, system-ui, sans-serif; }
+.sheet-contents dd { margin: 8px 0 0; font-size: 18px; line-height: 1.5; color: var(--muted); }
+.sheet-use { border-top: 2px solid var(--ink); padding: 48px 0; display: grid; grid-template-columns: 1fr 1.2fr; gap: 72px; scroll-margin-top: 24px; }
+.sheet-use p { font-size: 18px; line-height: 1.55; }
+.sheet-use .eyebrow { font-size: 12px; }
+.sheet-use ol { padding-left: 24px; margin: 0; }
+.sheet-use li { font-size: 18px; line-height: 1.55; padding-left: 8px; margin-bottom: 18px; }
+.sheet-use li::marker { font: 13px/1.5 ui-monospace, monospace; color: var(--accent-dark); }
+.sheet-next { border-top: 1px solid var(--line); padding: 48px 0 64px; }
+.sheet-next p, .sheet-next li { font-size: 18px; line-height: 1.55; }
+.sheet-next ul { padding-left: 20px; }
+.sheet-next li { margin: 12px 0; }
+.prompt-companion { font-size: 17px; line-height: 1.5; color: var(--muted); }
 .apply-section .prompt-invitation { margin-top: 24px; color: var(--muted); }
 .prompt-examples { padding-left: 20px; margin: 20px 0; font-size: 18px; }
 .prompt-examples li { margin: 10px 0; }
@@ -328,14 +359,14 @@ a:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 5px; }
   .format-links { grid-template-columns: repeat(3, 1fr); row-gap: 24px; }
   .prompt-library { grid-template-columns: 210px minmax(0, 1fr); gap: 30px; }
   .prompt-picks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sheet-feature, .sheet-hero, .sheet-use { gap: 36px; }
 }
 @media (max-width: 640px) {
   .landing { padding: 0 22px; }
-  .site-header { min-height: 84px; gap: 14px; }
-  .site-wordmark { max-width: 100px; font-size: 13px; }
-  .site-nav { gap: 15px; }
+  .site-header { min-height: 84px; gap: 14px; padding: 20px 0; flex-direction: column; align-items: flex-start; }
+  .site-wordmark { font-size: 13px; }
+  .site-nav { gap: 12px 15px; flex-wrap: wrap; }
   .site-nav a { font-size: 12px; }
-  .site-nav a:nth-child(2) { display: none; }
   .edition-hero { grid-template-columns: 1fr; padding: 42px 0; gap: 36px; }
   .hero-copy h1 { font-size: clamp(58px, 16vw, 82px); }
   .hero-copy .eyebrow { font-size: 11px; margin-bottom: 24px; }
@@ -362,4 +393,10 @@ a:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 5px; }
   .prompt-sidebar { position: static; max-height: none; }
   .prompt-sidebar nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 18px; }
   .prompt-category h2 { font-size: 28px; }
+  .sheet-feature, .sheet-hero, .sheet-use { grid-template-columns: 1fr; padding: 42px 0; gap: 32px; }
+  .sheet-hero .sheet-dek { font-size: 21px; }
+  .sheet-contents { padding: 36px 0; }
+  .sheet-contents dl { grid-template-columns: 1fr; gap: 24px; }
+  .sheet-preview { max-width: 330px; }
+  .sheet-next { padding: 36px 0 48px; }
 }

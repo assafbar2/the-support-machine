@@ -10,6 +10,7 @@ import shutil
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 from render_markdown import markdown_to_html
 from prompt_library import render_prompt_library
+from shadow_run import homepage_feature, render_shadow_run
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -19,7 +20,7 @@ REPO = "https://github.com/assafbar2/the-support-machine"
 WEBSITE_FILES = (
     'docs/index.html', 'docs/book.html', 'docs/notes.html', 'docs/review.html',
     'docs/skill.html', 'docs/editions.html', 'docs/prompts.html', 'docs/styles.css',
-    'docs/llms.txt', 'llms.txt',
+    'docs/llms.txt', 'llms.txt', 'docs/shadow-run/index.html',
 )
 
 
@@ -29,7 +30,9 @@ def write_website_manifest(version):
         name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in WEBSITE_FILES}}
     (ROOT/'release-notes/website-checksums.json').write_text(json.dumps(manifest, indent=2)+'\n')
 
-def page_shell(title,body,description,css="styles.css",url=BASE):
+def page_shell(title,body,description,css="styles.css",url=BASE,
+               social_image="assets/second-edition-social.png",
+               social_alt="The Support Machine by Assaf Barnir — Second Edition"):
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -42,8 +45,8 @@ def page_shell(title,body,description,css="styles.css",url=BASE):
 <meta property="og:description" content="{html.escape(description,quote=True)}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{html.escape(url,quote=True)}">
-<meta property="og:image" content="{BASE}assets/second-edition-social.png">
-<meta property="og:image:alt" content="The Support Machine by Assaf Barnir — Second Edition">
+<meta property="og:image" content="{html.escape(BASE+social_image,quote=True)}">
+<meta property="og:image:alt" content="{html.escape(social_alt,quote=True)}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{html.escape(url,quote=True)}">
 <link rel="stylesheet" href="{css}">
@@ -61,11 +64,13 @@ def downloads(version):
         links+=f'\n<a href="downloads/the-support-machine-{version}-markdown.zip">Markdown + images</a>'
     return links
 
-def write(name,title,body,description,css="styles.css"):
+def write(name,title,body,description,css="styles.css",*,url=None,
+          social_image="assets/second-edition-social.png",
+          social_alt="The Support Machine by Assaf Barnir — Second Edition"):
     target=DOCS/name
     target.parent.mkdir(parents=True,exist_ok=True)
-    url = BASE if name == "index.html" else BASE + name
-    target.write_text(page_shell(title,body,description,css,url))
+    url = url or (BASE if name == "index.html" else BASE + name)
+    target.write_text(page_shell(title,body,description,css,url,social_image,social_alt))
 
 def edition_summary(meta):
     """Build agent-readable metadata with links to the edition's actual location."""
@@ -95,6 +100,7 @@ def edition_summary(meta):
 
 ## Apply
 
+- [Shadow Run field sheet]({reading_base}shadow-run/)
 - [80 ways to put the book to work]({reading_base}prompts.html)
 - [The Support Machine skill]({REPO}/tree/{ref}/skills/the-support-machine)
 - [Support AI Evals skill]({REPO}/tree/{ref}/skills/support-ai-evals)
@@ -143,7 +149,7 @@ def build():
     actions=f'<div class="book-actions"><a href="index.html">Home</a>{downloads(artifact)}<a href="notes.html">What changed</a><a href="editions.html">Editions</a></div>'
     reader=f'''<div class="reader-layout"><aside class="sidebar">
 <a class="brand" href="index.html">The Support Machine</a>
-<p class="edition-label">{html.escape(label)}</p><p class="library-link"><a href="prompts.html">80 ways to put the book to work ↗</a></p><nav aria-label="Book contents">{toc_html}</nav>
+<p class="edition-label">{html.escape(label)}</p><p class="library-link"><a href="prompts.html">80 ways to put the book to work ↗</a><a href="shadow-run/">Shadow Run field sheet ↗</a></p><nav aria-label="Book contents">{toc_html}</nav>
 </aside><main class="book" id="main">{actions}{book_html}</main></div>'''
     write("book.html","The Support Machine — "+meta["name"],reader,f"The complete book, with {meta['chapters']} chapters and {meta['appendices']} appendices.")
     book_schema=json.dumps({
@@ -156,7 +162,7 @@ def build():
     })
     write("index.html","The Support Machine — Second Edition",f'''<div class="landing">
 <header class="site-header"><a class="site-wordmark" href="index.html">The Support Machine</a>
-<nav class="site-nav" aria-label="Main navigation"><a href="prompts.html">80 prompts</a><a href="skill.html">Use the skills</a><a href="book.html">Read the book <span aria-hidden="true">↗</span></a></nav></header>
+<nav class="site-nav" aria-label="Main navigation"><a href="prompts.html">80 prompts</a><a href="shadow-run/">Shadow Run</a><a href="skill.html">Use the skills</a><a href="book.html">Read the book <span aria-hidden="true">↗</span></a></nav></header>
 <main id="main">
 <section class="edition-hero" aria-labelledby="book-title">
 <div class="hero-copy"><p class="eyebrow">Second Edition · November 2026</p>
@@ -177,9 +183,10 @@ def build():
 <article><span class="topic-number">03</span><h3>Put it to work</h3><p>Field notes, fourteen templates, ten drawings, and 80 prompts for your own decisions.</p></article></div>
 <a class="text-link" href="notes.html">See what's new and where to reread <span aria-hidden="true">↗</span></a>
 </section>
+{homepage_feature()}
 <section class="apply-section" aria-labelledby="apply-title"><div><p class="eyebrow">Read it. Then work with it.</p><h2 id="apply-title">80 ways to put<br>the book to work.</h2><p class="prompt-invitation">Use what helps. Change the rest.</p><a class="text-link" href="prompts.html">Browse all 80 prompts <span aria-hidden="true">↗</span></a></div><div><p>Bring a real support decision. These prompts help you work through it with the book and your own evidence.</p><ul class="prompt-examples"><li><a href="prompts.html#prompt-19">Challenge the weekend demo.</a></li><li><a href="prompts.html#prompt-17">Price a year of operation.</a></li><li><a href="prompts.html#prompt-52">Find the correct but useless answer.</a></li><li><a href="prompts.html#prompt-04">Challenge the book itself.</a></li></ul><p><a href="skill.html">Install the book as a skill</a>, then pick a prompt and add your situation.</p></div></section>
 <section class="formats-section" id="downloads" aria-labelledby="formats-title"><h2 id="formats-title">Your copy. Your format.</h2><div class="format-links"><a href="book.html"><span>Read online</span><small>Complete book in your browser</small></a><a href="the-support-machine-{artifact}.pdf"><span>PDF <span aria-hidden="true">↓</span></span><small>Second Edition, ready to keep</small></a><a href="downloads/the-support-machine-{artifact}.docx"><span>DOCX <span aria-hidden="true">↓</span></span><small>For Word or Google Docs</small></a><a href="downloads/the-support-machine-{artifact}-markdown.zip"><span>Markdown <span aria-hidden="true">↓</span></span><small>Full text and illustrations</small></a><a href="skill.html"><span>AI skills <span aria-hidden="true">↗</span></span><small>Installation and practical prompts</small></a></div></section>
-<section class="more-section" aria-label="Explore the book"><div><p class="eyebrow">Hear the conversation</p><h2>The Prompt Room</h2><p>I joined Episode 4 to talk about reducing customer pain and how support work is changing. That conversation helped shape this edition.</p><p><a href="https://www.youtube.com/watch?v=JxJb4FDqWdI">Watch on YouTube</a> · <a href="https://open.spotify.com/episode/6x73nZKsh9y1VIw46yCW5q">Listen on Spotify</a></p></div><div><p class="eyebrow">Keep exploring</p><p><a href="illustrations/">The ten illustrations</a></p><p><a href="editions.html">The preserved First Edition</a></p><p><a href="shadow-run/Shadow-Run-Field-Sheet-v0.13.pdf">Shadow Run field sheet</a></p><p><a href="{REPO}">Source and companion tools on GitHub</a></p></div></section>
+<section class="more-section" aria-label="Explore the book"><div><p class="eyebrow">Hear the conversation</p><h2>The Prompt Room</h2><p>I joined Episode 4 to talk about reducing customer pain and how support work is changing. That conversation helped shape this edition.</p><p><a href="https://www.youtube.com/watch?v=JxJb4FDqWdI">Watch on YouTube</a> · <a href="https://open.spotify.com/episode/6x73nZKsh9y1VIw46yCW5q">Listen on Spotify</a></p></div><div><p class="eyebrow">Keep exploring</p><p><a href="illustrations/">The ten illustrations</a></p><p><a href="editions.html">The preserved First Edition</a></p><p><a href="{REPO}">Source and companion tools on GitHub</a></p></div></section>
 </main><footer class="site-footer"><p>© Assaf Barnir · <a href="https://www.barnir.co/">barnir.co</a></p><p>A personal field guide. The judgments and recommendations are mine; I do not speak for Sentry.</p><p>Book and illustrations: CC BY 4.0 · Skills and code: MIT</p></footer>
 <script type="application/ld+json">{book_schema}</script></div>''',"The Second Edition of Assaf Barnir's free field guide to AI customer support. 29 chapters, ten illustrations, and practical skills for the work after launch.")
     notes_source=(ROOT/f"release-notes/{version}.md").read_text()
@@ -208,6 +215,7 @@ def build():
 <a class="back" href="index.html">The Support Machine</a><h1>Use the skills</h1>
 <p>The {meta["name"]} skill contains the full book, all {meta['appendices']} appendices, and fourteen practical templates. <a href="book.html#appendix-g-talk-to-the-book">Start with Appendix G for setup and ten starter prompts.</a></p>
 <h2>80 ways to put the book to work</h2><p>Challenge a demo, price a year of operation, rehearse a launch, or question the book itself. <a href="prompts.html">Browse the full prompt library by the work you need to do.</a> Every prompt is included in the skill; ask for one by number or topic.</p>
+<p>Bring the printable <a href="shadow-run/">Shadow Run field sheet</a> to a team review. The skill also includes an <a href="{REPO}/blob/main/skills/the-support-machine/templates/shadow-run-scorecard.md">editable shadow-run scorecard</a> for the fuller release record.</p>
 <h2>The Support Machine</h2><p>For the full migration and operating model: build versus buy, vendors, release gates, action safety, customer promises, recovery, and team design.</p>
 <p><a href="downloads/the-support-machine.zip">Download the skill ZIP</a> · <a href="downloads/the-support-machine.skill">.skill package</a></p>
 <h2>Install in Claude</h2><p>Leave the ZIP zipped. In Customize → Skills, choose + → Create skill → Upload a skill. Upload the ZIP and enable it. Code execution and file creation must be enabled; organization policy may control availability. Start with “Use The Support Machine skill to help me with [decision].”</p>
@@ -227,6 +235,12 @@ Use Support AI Evals to design a calibrated comparison of two QA systems.</code>
     write('prompts.html', '80 ways to put the book to work — The Support Machine',
           render_prompt_library(prompt_source, book),
           '80 practical prompts for AI support decisions: build versus buy, evaluation, launch, recovery, and challenging your own plan. Free, with The Support Machine.')
+    write('shadow-run/index.html', 'Shadow Run field sheet — The Support Machine',
+          render_shadow_run(REPO),
+          'Before your AI touches customers. A free one-page cheat sheet from Assaf Barnir’s Shadow Run talk: six checks, five stop conditions, failure owners, and a starting plan.',
+          '../styles.css', url=BASE+'shadow-run/',
+          social_image='shadow-run/field-sheet-preview.png',
+          social_alt='The one-page Shadow Run field sheet by Assaf Barnir')
     for skill in ("the-support-machine","support-ai-evals"):
         source=ROOT/"skills"/skill
         entries=[(path,str(path.relative_to(ROOT/"skills"))) for path in sorted(source.rglob("*"))
