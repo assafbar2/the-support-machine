@@ -11,10 +11,10 @@ from docx.text.paragraph import Paragraph
 
 ROOT=Path(__file__).resolve().parents[1]
 PLACEMENTS={
-    1:(1,'Turning that lens on the support workflow I worked with made repeated friction easier to see.'),
+    1:(1,'We had a friction problem.'),
     2:(8,'The question is which layer benefits from being specific to your business'),
-    3:(13,'These are responsibilities, not a demand for five models.'),
-    4:(22,'The original human answer is also evidence to examine.'),
+    3:(13,'Five roles. Not five models.'),
+    4:(22,'The original human answer is also something to examine.'),
     5:(24,'The launch runbook and pre-mortem brought the preparation together.'),
     6:(29,'Each finding needs an owner, an action, a way to verify the repair'),
     7:(18,'That calculation works only if the populations'),
@@ -22,7 +22,6 @@ PLACEMENTS={
     9:(16,'The human handoff should include the original intent,'),
     10:(6,'Prevention does not eliminate the need for skilled human recovery.'),
 }
-NOTE='Ten illustrations: The six operating gates, the 16% calculation, delayed evaluation, action recovery, and the midfield model now have companion drawings beside the relevant discussion.'
 
 
 def after(anchor,style):
@@ -45,7 +44,7 @@ def insert():
     for p in list(doc.paragraphs):
         if p.style.name in {'Book Figure','Book Figure Caption'}:
             p._p.getparent().remove(p._p)
-    original=[p.text for p in doc.paragraphs if p.text!=NOTE]
+    original=[p.text for p in doc.paragraphs]
     tables=[t._tbl.xml for t in doc.tables]
     for name in ['Book Figure','Book Figure Caption']:
         if name not in doc.styles:
@@ -90,13 +89,6 @@ def insert():
         caption.add_run(label).bold=True
         extra='The numbers are illustrative, not company results. ' if figure['number']==7 else ''
         caption.add_run(extra+figure['takeaway'])
-    if not any(p.text==NOTE for p in doc.paragraphs):
-        anchor=next(p for p in doc.paragraphs if p.text.startswith('Sources without interrupting the story:'))
-        p=after(anchor,'List Bullet')
-        p.paragraph_format.space_after=Pt(4)
-        p.paragraph_format.line_spacing=1.05
-        p.add_run('Ten illustrations: ').bold=True
-        p.add_run(NOTE.removeprefix('Ten illustrations: '))
     # Small paragraph-spacing adjustments keep the closing notes with these chapters.
     # Preserve font sizes and full-width artwork for print readability.
     chapter=None
@@ -105,12 +97,12 @@ def insert():
             m=re.match(r'^(\d+)\. ',p.text)
             chapter=int(m[1]) if m else None
         if p.style.name=='Normal' and chapter in (13,28):
-            p.paragraph_format.space_after=Pt(4)
-    assert [p.text for p in doc.paragraphs if p.style.name not in {'Book Figure','Book Figure Caption'} and p.text!=NOTE]==original
+            p.paragraph_format.space_after=Pt(2 if chapter==13 else 4)
+    assert [p.text for p in doc.paragraphs if p.style.name not in {'Book Figure','Book Figure Caption'}]==original
     assert [t._tbl.xml for t in doc.tables]==tables
     assert len(doc.inline_shapes)==10
     doc.save(source)
-    print('Inserted 10 captioned illustrations and one reader-note bullet; all existing manuscript paragraphs and tables preserved.')
+    print('Refreshed 10 captioned illustrations; all existing manuscript paragraphs and tables preserved.')
 
 
 if __name__=='__main__':

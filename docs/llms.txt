@@ -18,7 +18,7 @@ Second Edition, 2026-11-01. 29 chapters, 8 appendices, 10 illustrations, and two
 - [The Support Machine skill](https://github.com/assafbar2/the-support-machine/tree/main/skills/the-support-machine)
 - [Support AI Evals skill](https://github.com/assafbar2/the-support-machine/tree/main/skills/support-ai-evals)
 
-The Support Machine skill contains the complete book and reusable templates. Appendix G starts with installation and includes 80 practical prompts. Support AI Evals covers continuing QA and a local cohort calculator. Each skill installs independently.
+The Support Machine skill contains the complete book and reusable templates. Appendix G starts with installation and ten starter prompts; the skill includes all 80. Support AI Evals covers continuing QA and a local cohort calculator. Each skill installs independently.
 
 Keep reported resolution, reviewed quality, and later customer evidence separate. Use mature observation windows and declared coverage. Customer silence alone does not prove success. Verify account authority and action effects. Preserve legitimate objections, a tested human path, and controlled knowledge releases.
 

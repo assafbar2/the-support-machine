@@ -4,6 +4,7 @@ import hashlib
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+import posixpath
 import re
 from tempfile import TemporaryDirectory
 from urllib.parse import urlsplit, unquote
@@ -39,19 +40,29 @@ def verify():
     assert len(re.findall(r"^## Part [IVX]+:",text,re.M))==5
     assert not re.search(r"\?\?\?|<[-—]AI|AI-generated phrasing|AI number",text)
     visible=re.sub(r'\]\([^)]+\)',']',text)
-    assert not re.search(r'\bhorror\b|unstructured thoughts for LLM|Date the next note|Do not put the result of a future demo into the book',visible,re.I),"reader-facing editorial residue"
-    assert not re.search(r'\b(?:Rene|Jordyn|Simon|Kegan|Lahey|Edmondson|Kurzweil|Turing)\b|Hernán|Cortés',visible),"named narrative participant"
-    assert len(re.findall(r'^\*\*\d{2}\. ',text,re.M))==80,"prompt appendix is incomplete"
+    assert not re.search(r'\bhorror\b|unstructured thoughts for LLM|Date the next note|Do not put the result of a future demo into the book|\[\[ASSAF',visible,re.I),"reader-facing editorial residue"
+    assert not re.search(r'\b(?:Rene|Jordyn|Simon|Kegan|Lahey|Edmondson)\b',visible),"named narrative participant"
+    assert len(re.findall(r'^\*\*\d{2}\. ',text,re.M))==10,"prompt appendix should print ten starter prompts"
+    prompts=(ROOT/'skills/the-support-machine/references/prompts.md').read_text()
+    assert len(re.findall(r'^\*\*\d{2}\. ',prompts,re.M))==80,"prompt library is incomplete"
+    def prompt_items(source):
+        return {number:(title,body.strip()) for number,title,body in
+                re.findall(r'^\*\*(\d{2})\. ([^\n]+)\*\*\n\n(.*?)(?=^\*\*\d{2}\. |^### |^## |\Z)',source,re.M|re.S)}
+    library = prompt_items(prompts)
+    starters = prompt_items(text)
+    assert set(library)=={f'{number:02}' for number in range(1,81)},"prompt numbers must be unique and complete"
+    assert set(starters)=={'01','09','12','17','26','36','41','48','52','66'},"wrong starter prompts"
+    assert all(library[number]==prompt for number,prompt in starters.items()),"printed prompt differs from the full library"
     chapters=re.findall(r'^## (\d+)\. ([^\n]+)\n(.*?)(?=^## |\Z)',text,re.M|re.S)
     chapter_notes=[]
     for number,title,body in chapters:
         notes=re.findall(r'^_Field note: (.+)_$',body,re.M)
         assert len(notes)==1,(number,notes)
         chapter_notes.append((number,notes[0]))
-    collected=text.split('## Appendix E: All Field Notes\n',1)[1].split('### Dated observations',1)[0]
-    assert len(re.findall(r'^\*\*Chapter \d+ —',collected,re.M))==meta['chapters']
-    for number,note in chapter_notes:
-        assert note in collected,'missing collected field note '+number
+    index=text.split('## Appendix E: Dated Observations\n',1)[1].split('### Dated observations',1)[0]
+    assert len(re.findall(r'^- \[Chapter \d+ — ',index,re.M))==meta['chapters'],"field-note index incomplete"
+    assert [int(n) for n in re.findall(r'^- \[Chapter (\d+) — ',index,re.M)]==numbers,"field-note index has duplicate or missing chapters"
+    assert len({note for _,note in chapter_notes})==len(chapter_notes),"duplicate field notes"
     source=ROOT/f"manuscript/The Support Machine - manuscript {version}.docx"
     with TemporaryDirectory() as temp:
         regenerated=Path(temp)/"book.md"
@@ -63,11 +74,21 @@ def verify():
     preserved=json.loads((ROOT/f'docs/editions/{meta["previous"]}/checksums.json').read_text())
     for rel,expected in preserved.items():
         assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==expected,"archive changed: "+rel
+    for prior_path in (ROOT/'release-notes').glob('v*-checksums.json'):
+        prior=json.loads(prior_path.read_text())
+        if prior['version']==version:
+            continue
+        # Stable edition aliases intentionally change; versioned printings do not.
+        immutable={rel:expected for rel,expected in prior['files'].items()
+                   if re.search(re.escape(prior['version'])+r'(?=[.-])',Path(rel).name)}
+        assert immutable,'prior printing manifest has no versioned files: '+str(prior_path)
+        for rel,expected in immutable.items():
+            assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==expected,'prior printing changed: '+rel
     assert (ROOT/f"docs/downloads/the-support-machine-{version}.docx").read_bytes()==source.read_bytes()
     assert (ROOT/f"docs/downloads/the-support-machine-{version}.md").read_bytes()==book.read_bytes()
     assert meta['name']=='Second Edition' and meta['status']=='published'
     assert 'Second Edition' in text and 'Notes for the Second Edition' in text
-    assert not re.search(r'v0\.[23]|review edition|codex/support-machine',text,re.I), 'unpublished naming in book'
+    assert not re.search(r'v0\.\d+|review edition|codex/support-machine',text,re.I), 'unpublished naming in book'
     for suffix in ('pdf','docx','md','markdown.zip'):
         folder=ROOT/'docs' if suffix=='pdf' else ROOT/'docs/downloads'
         joiner='-' if suffix=='markdown.zip' else '.'
@@ -94,6 +115,7 @@ def verify():
             assert (directory/f'{slug}.png').read_bytes()==data,'stale illustration: '+str(directory/slug)
     with ZipFile(ROOT/f'docs/downloads/the-support-machine-{version}-markdown.zip') as bundle:
         assert bundle.read('book.md')==book.read_bytes()
+        assert bundle.read('LICENSE-MANUSCRIPT.md')==(ROOT/'licenses/MANUSCRIPT-CC-BY-4.0.md').read_bytes(),'Markdown package book license differs'
         for figure in figures:
             filename=figure['slug']+'.png'
             assert bundle.read('illustrations/'+filename)==(book.parent/'illustrations'/filename).read_bytes()
@@ -109,10 +131,15 @@ def verify():
                 drawn_images+=1
     assert drawn_images==expected,'rendered PDF illustrations missing'
     combined="\n".join(page.extract_text() or "" for page in pdf.pages)
+    cover=' '.join((pdf.pages[0].extract_text() or '').split())
+    assert doc.core_properties.subject in cover,'PDF subtitle differs from the canonical manuscript'
+    normalized=' '.join(combined.split())
+    for marker in ('Burn the Ships. Keep a Lifeboat.','What I got wrong in the first edition'):
+        assert marker in normalized,'PDF is missing revised-printing content: '+marker
     for marker in ("AI NIMBYs","Build vs. Buy","When the Customer Is a Bot","Did the Action Actually Happen","When the Agent Gets It Wrong","The Work Is Never Done","Appendix E","Repositories Behind the Book","Talk to the Book","Sources and Further Reading"):
         assert marker in combined,"missing PDF section: "+marker
     assert 'Second Edition' in (pdf.pages[0].extract_text() or ''), 'PDF cover edition label'
-    assert not re.search(r'v0\.[23]|Review edition',combined,re.I), 'repository version exposed in PDF'
+    assert not re.search(r'v0\.\d+|Review edition|Markdown export of the manuscript|\[\[ASSAF',combined,re.I), 'authoring residue or repository version exposed in PDF'
     assert 'SECOND EDITION' in (pdf.pages[1].extract_text() or ''), 'PDF running header edition label'
     for i,page in enumerate(pdf.pages):
         assert len((page.extract_text() or "").strip())>30,f"empty PDF page {i+1}"
@@ -132,7 +159,7 @@ def verify():
             target=(path.parent/unquote(url.path)).resolve() if url.path else path
             if target.is_dir():
                 target=target/"index.html"
-            if not target.exists():
+            if not target.is_relative_to((ROOT/'docs').resolve()) or not target.exists():
                 broken.append((str(path.relative_to(ROOT)),link))
             elif url.fragment and target in pages and unquote(url.fragment) not in pages[target].ids:
                 broken.append((str(path.relative_to(ROOT)),link))
@@ -149,13 +176,23 @@ def verify():
                     assert package.read(member)==path.read_bytes(),"stale skill resource: "+member
             if skill == "the-support-machine":
                 assert package.read(f"{skill}/references/book.md")==book.read_bytes(),"packaged book is stale"
+            overview = 'LICENSE.md' if skill == 'the-support-machine' else 'LICENSING.md'
+            license_text = package.read(f'{skill}/{overview}').decode()
+            for link in re.findall(r'\]\(([^)]+)\)', license_text):
+                url = urlsplit(link)
+                if not url.scheme and not url.netloc:
+                    member = posixpath.normpath(f'{skill}/{url.path}')
+                    assert member in package.namelist(),'broken packaged licensing link: '+member
+            assert package.read(f'{skill}/LICENSE-MANUSCRIPT.md')==(ROOT/'licenses/MANUSCRIPT-CC-BY-4.0.md').read_bytes(),"book license missing from package"
+            code_license = 'LICENSE-SKILL.md' if skill == 'the-support-machine' else 'LICENSE.md'
+            assert package.read(f'{skill}/{code_license}')==(ROOT/'LICENSE').read_bytes(),"code license changed in package"
     for page_name in ('index.html','book.html','notes.html','skill.html','illustrations/index.html'):
         page_text=(ROOT/'docs'/page_name).read_text()
         # Legacy filenames are allowed as technical URLs, never as current-edition prose.
         visible_text=re.sub(r'<[^>]+>',' ',page_text)
-        assert not re.search(r'v0\.[23]|review edition',visible_text,re.I), 'public edition label: '+page_name
+        assert not re.search(r'v0\.\d+|review edition',visible_text,re.I), 'public edition label: '+page_name
         assert 'Second Edition' in page_text, 'missing edition label: '+page_name
-    print(f"Verified {meta['chapters']} chapters, {meta['appendices']} appendices, {expected} captioned illustrations, {len(pdf.pages)} PDF pages, {len(pages)} HTML pages, all local site links, canonical export, downloads, and v0.2 checksums.")
+    print(f"Verified {meta['chapters']} chapters, {meta['appendices']} appendices, {expected} captioned illustrations, {len(pdf.pages)} PDF pages, {len(pages)} HTML pages, all local site links, canonical export, downloads, and preserved editions/printings.")
     return len(pdf.pages)
 
 if __name__=="__main__":

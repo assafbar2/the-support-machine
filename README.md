@@ -2,7 +2,7 @@
 
 ### Second Edition
 
-*How to Deploy AI in Customer Support Without Breaking Trust*
+*How to Deploy and Run AI Customer Support Without Breaking Trust*
 
 By **Assaf Barnir**
 
@@ -10,7 +10,7 @@ A free field guide for support leaders at API, developer-tool, and B2B companies
 
 **[Read the Second Edition](https://assafbar2.github.io/the-support-machine/book.html)** · **[Download the PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-second-edition.pdf)** · [Book home](https://assafbar2.github.io/the-support-machine/)
 
-29 chapters · 8 appendices · 10 illustrations · 80 practical prompts · 2 companion AI skills
+29 chapters · 8 appendices · 10 illustrations · 80 prompts in the skill · 2 companion AI skills
 
 ![Choose the layer before choosing whether to buy, extend, or build](docs/illustrations/book/02-choose-the-machine.png)
 
@@ -20,10 +20,10 @@ This edition builds on more use cases I've seen, discussed, researched, and work
 
 - **Six new chapters:** organizational resistance, build versus buy, customer agents, action receipts, recovery, and continuing evaluation.
 - **A stronger operating model:** customer promises, the 16% calculation, support teams shipping improvements, and repeatable release gates.
-- **More ways to apply it:** all field notes in one appendix, related projects, fourteen templates, skill installation, and 80 prompts.
+- **More ways to apply it:** a field-note index, related projects, fourteen templates, skill installation, and 80 prompts in the skill.
 - **Ten new illustrations** and insights from my conversation on **The Prompt Room**.
 
-[Notes for returning readers](https://assafbar2.github.io/the-support-machine/notes.html) · [Chapter reading map](release-notes/v0.3-coverage.md) · [All ten illustrations](https://assafbar2.github.io/the-support-machine/illustrations/)
+[Notes for returning readers](https://assafbar2.github.io/the-support-machine/notes.html) · [Chapter reading map](release-notes/v0.4-coverage.md) · [All ten illustrations](https://assafbar2.github.io/the-support-machine/illustrations/)
 
 ## Choose your format
 
@@ -37,7 +37,7 @@ This edition builds on more use cases I've seen, discussed, researched, and work
 
 ## Work with the book
 
-[Appendix G](https://assafbar2.github.io/the-support-machine/book.html#appendix-g-talk-to-the-book) starts with installation, verification, and updates, followed by 80 prompts. Install the book once; your assistant can read the relevant chapters and templates when you bring it a question or decision.
+[Appendix G](https://assafbar2.github.io/the-support-machine/book.html#appendix-g-talk-to-the-book) starts with installation, verification, and updates, followed by ten starter prompts. All 80 ship with the skill. Install the book once; your assistant can read the relevant chapters and templates when you bring it a question or decision.
 
 **The Support Machine** includes the complete Second Edition and fourteen templates. [Download the ZIP](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine.zip) or [.skill package](https://assafbar2.github.io/the-support-machine/downloads/the-support-machine.skill).
 
@@ -67,6 +67,6 @@ The [First Edition remains available](https://assafbar2.github.io/the-support-ma
 
 This is my personal project. The judgments and recommendations are mine; I do not speak for Sentry. This repository is not an official Sentry support channel.
 
-Book text, illustrations, and book formats: [CC BY 4.0](LICENSE-MANUSCRIPT.md). Skills, templates, scripts, and repository documentation: [MIT](LICENSE-SKILL.md).
+Book text, illustrations, and book formats: [CC BY 4.0](licenses/MANUSCRIPT-CC-BY-4.0.md). Skills, templates, scripts, and repository documentation: [MIT](LICENSE).
 
 [About Assaf](https://www.barnir.co/) · [Email](mailto:assafbar@gmail.com)

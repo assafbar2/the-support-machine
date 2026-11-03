@@ -84,7 +84,7 @@ def edition_summary(meta):
 - [The Support Machine skill]({REPO}/tree/{ref}/skills/the-support-machine)
 - [Support AI Evals skill]({REPO}/tree/{ref}/skills/support-ai-evals)
 
-The Support Machine skill contains the complete book and reusable templates. Appendix G starts with installation and includes 80 practical prompts. Support AI Evals covers continuing QA and a local cohort calculator. Each skill installs independently.
+The Support Machine skill contains the complete book and reusable templates. Appendix G starts with installation and ten starter prompts; the skill includes all 80. Support AI Evals covers continuing QA and a local cohort calculator. Each skill installs independently.
 
 Keep reported resolution, reviewed quality, and later customer evidence separate. Use mature observation windows and declared coverage. Customer silence alone does not prove success. Verify account authority and action effects. Preserve legitimate objections, a tested human path, and controlled knowledge releases.
 
@@ -108,7 +108,7 @@ def build():
     if image_source.exists():
         shutil.copytree(image_source,DOCS/'downloads/illustrations',dirs_exist_ok=True)
         with ZipFile(DOCS/f'downloads/the-support-machine-{version}-markdown.zip','w',compression=ZIP_DEFLATED) as bundle:
-            entries=[(BOOK,'book.md'),(ROOT/'LICENSE-MANUSCRIPT.md','LICENSE-MANUSCRIPT.md')]
+            entries=[(BOOK,'book.md'),(ROOT/'licenses/MANUSCRIPT-CC-BY-4.0.md','LICENSE-MANUSCRIPT.md')]
             entries += [(p,'illustrations/'+p.name) for p in sorted(image_source.glob('*.png'))]
             for path,member in entries:
                 info=ZipInfo(member,tuple(map(int,meta['date'].split('-')))+(0,0,0))
@@ -136,7 +136,7 @@ def build():
         "bookEdition":meta["name"], "datePublished":meta["date"], "inLanguage":"en",
         "author":{"@type":"Person","name":"Assaf Barnir","url":"https://www.barnir.co/"},
         "url":BASE, "isAccessibleForFree":True,
-        "description":"How to Deploy AI in Customer Support Without Breaking Trust",
+        "description":"How to Deploy and Run AI Customer Support Without Breaking Trust",
         "license":"https://creativecommons.org/licenses/by/4.0/"
     })
     write("index.html","The Support Machine — Second Edition",f'''<div class="landing">
@@ -146,7 +146,7 @@ def build():
 <section class="edition-hero" aria-labelledby="book-title">
 <div class="hero-copy"><p class="eyebrow">Second Edition · November 2026</p>
 <h1 id="book-title">The Support<br>Machine</h1>
-<p class="hero-subtitle">How to Deploy AI in Customer Support Without Breaking Trust</p>
+<p class="hero-subtitle">How to Deploy and Run AI Customer Support Without Breaking Trust</p>
 <p class="hero-byline">A field guide by <a href="https://www.barnir.co/">Assaf Barnir</a></p>
 <div class="hero-actions"><a class="button button-primary" href="book.html">Read the Second Edition <span aria-hidden="true">↗</span></a><a class="button" href="the-support-machine-{artifact}.pdf">Download PDF <span aria-hidden="true">↓</span></a></div>
 <p class="access-note">Free to read, download, and put to work.</p></div>
@@ -154,12 +154,12 @@ def build():
 <img src="illustrations/book/02-choose-the-machine.png" alt="Support architecture split into layers, with a choice to buy, extend, or build at each layer." width="2040" height="993" fetchpriority="high">
 <figcaption>Choose the layer before choosing the answer.</figcaption></figure>
 </section>
-<div class="edition-facts" aria-label="Inside the Second Edition"><p><strong>29</strong> chapters</p><p><strong>10</strong> illustrations</p><p><strong>80</strong> practical prompts</p><p><strong>2</strong> AI skills</p></div>
+<div class="edition-facts" aria-label="Inside the Second Edition"><p><strong>29</strong> chapters</p><p><strong>10</strong> illustrations</p><p><strong>80</strong> prompts in the skill</p><p><strong>2</strong> AI skills</p></div>
 <section class="new-edition" id="whats-new" aria-labelledby="new-title">
 <div class="section-intro"><p class="eyebrow">For returning readers</p><h2 id="new-title">The work continues<br>after launch.</h2><p>Six new chapters, expanded playbooks, and lessons from more use cases, conversations, research, and work with humans and AI.</p></div>
 <div class="new-topics"><article><span class="topic-number">01</span><h3>Make the right call</h3><p>Build versus buy, vendor exit risk, and the organizational resistance that can stop progress.</p></article>
 <article><span class="topic-number">02</span><h3>Follow the outcome</h3><p>Customer agents, action receipts, recovery, and evaluation seven and thirty days after the answer.</p></article>
-<article><span class="topic-number">03</span><h3>Put it to work</h3><p>Collected field notes, fourteen templates, ten drawings, and 80 prompts for your own decisions.</p></article></div>
+<article><span class="topic-number">03</span><h3>Put it to work</h3><p>Field notes, fourteen templates, ten drawings, and 80 prompts for your own decisions.</p></article></div>
 <a class="text-link" href="notes.html">See what's new and where to reread <span aria-hidden="true">↗</span></a>
 </section>
 <section class="apply-section" aria-labelledby="apply-title"><div><p class="eyebrow">Read it. Then work with it.</p><h2 id="apply-title">Bring your next<br>support decision.</h2></div><div><p>For support leaders at API, developer-tool, and B2B companies—and the executives who work with them.</p><p>Install the book as a skill. Your assistant can use its chapters and templates to help compare vendors, design evaluations, or rehearse a difficult launch.</p><a class="text-link" href="book.html#appendix-g-talk-to-the-book">Start with Appendix G <span aria-hidden="true">↗</span></a></div></section>
@@ -167,7 +167,10 @@ def build():
 <section class="more-section" aria-label="Explore the book"><div><p class="eyebrow">Hear the conversation</p><h2>The Prompt Room</h2><p>I joined Episode 4 to talk about reducing customer pain and how support work is changing. That conversation helped shape this edition.</p><p><a href="https://www.youtube.com/watch?v=JxJb4FDqWdI">Watch on YouTube</a> · <a href="https://open.spotify.com/episode/6x73nZKsh9y1VIw46yCW5q">Listen on Spotify</a></p></div><div><p class="eyebrow">Keep exploring</p><p><a href="illustrations/">The ten illustrations</a></p><p><a href="editions.html">The preserved First Edition</a></p><p><a href="shadow-run/Shadow-Run-Field-Sheet-v0.13.pdf">Shadow Run field sheet</a></p><p><a href="{REPO}">Source and companion tools on GitHub</a></p></div></section>
 </main><footer class="site-footer"><p>© Assaf Barnir · <a href="https://www.barnir.co/">barnir.co</a></p><p>A personal field guide. The judgments and recommendations are mine; I do not speak for Sentry.</p><p>Book and illustrations: CC BY 4.0 · Skills and code: MIT</p></footer>
 <script type="application/ld+json">{book_schema}</script></div>''',"The Second Edition of Assaf Barnir's free field guide to AI customer support. 29 chapters, ten illustrations, and practical skills for the work after launch.")
-    notes_html,_=markdown_to_html((ROOT/f"release-notes/{version}.md").read_text())
+    notes_source=(ROOT/f"release-notes/{version}.md").read_text()
+    # The notes source lives beside repository files; the published page does not.
+    notes_source=notes_source.replace('(../CHANGELOG.md)',f'({REPO}/blob/main/CHANGELOG.md)')
+    notes_html,_=markdown_to_html(notes_source)
     write("notes.html","Notes for the "+meta["name"],f'<main class="book notes-page" id="main">{actions}{notes_html}</main>',"What changed in this edition and why to reread.")
     editions=f'''<main class="skill-page" id="main"><a class="back" href="index.html">The Support Machine</a>
 <h1>Editions</h1><h2>{meta["name"]} · {date_label}</h2><p>{html.escape(label)}. {meta['chapters']} chapters, {meta['appendices']} appendices, {meta['illustrations']} illustrations, and two companion skills.</p>
@@ -188,7 +191,7 @@ def build():
     install_prompt = f"$skill-installer Install skills/the-support-machine from GitHub repository assafbar2/the-support-machine, ref {ref}."
     write("skill.html","Use The Support Machine Skills",f'''<main class="skill-page" id="main">
 <a class="back" href="index.html">The Support Machine</a><h1>Use the skills</h1>
-<p>The {meta["name"]} skill contains the full book, all {meta['appendices']} appendices, and fourteen practical templates. <a href="book.html#appendix-g-talk-to-the-book">Start with Appendix G for setup and 80 prompts.</a></p>
+<p>The {meta["name"]} skill contains the full book, all {meta['appendices']} appendices, and fourteen practical templates. <a href="book.html#appendix-g-talk-to-the-book">Start with Appendix G for setup and ten starter prompts.</a></p>
 <h2>The Support Machine</h2><p>For the full migration and operating model: build versus buy, vendors, release gates, action safety, customer promises, recovery, and team design.</p>
 <p><a href="downloads/the-support-machine.zip">Download the skill ZIP</a> · <a href="downloads/the-support-machine.skill">.skill package</a></p>
 <h2>Install in Claude</h2><p>Leave the ZIP zipped. In Customize → Skills, choose + → Create skill → Upload a skill. Upload the ZIP and enable it. Code execution and file creation must be enabled; organization policy may control availability. Start with “Use The Support Machine skill to help me with [decision].”</p>
@@ -209,9 +212,11 @@ Use Support AI Evals to design a calibrated comparison of two QA systems.</code>
         entries=[(path,str(path.relative_to(ROOT/"skills"))) for path in sorted(source.rglob("*"))
                  if path.is_file() and "__pycache__" not in path.parts and path.suffix!=".pyc"]
         if skill=="the-support-machine":
-            entries += [(ROOT/name,f"{skill}/{name}") for name in ("LICENSE.md","LICENSE-MANUSCRIPT.md","LICENSE-SKILL.md")]
+            entries += [(ROOT/src,f"{skill}/{name}") for src,name in (("LICENSING.md","LICENSE.md"),("licenses/MANUSCRIPT-CC-BY-4.0.md","LICENSE-MANUSCRIPT.md"),("LICENSE","LICENSE-SKILL.md"))]
         else:
-            entries.append((ROOT/"LICENSE-SKILL.md",f"{skill}/LICENSE.md"))
+            entries.append((ROOT/"LICENSE",f"{skill}/LICENSE.md"))
+            entries += [(ROOT/'LICENSING.md',f'{skill}/LICENSING.md'),
+                        (ROOT/'licenses/MANUSCRIPT-CC-BY-4.0.md',f'{skill}/LICENSE-MANUSCRIPT.md')]
         with ZipFile(DOCS/f"downloads/{skill}.skill","w",compression=ZIP_DEFLATED) as bundle:
             for path,archive_name in sorted(entries,key=lambda entry:entry[1]):
                 stamp=tuple(map(int,meta["date"].split("-")))+(0,0,0)
@@ -219,7 +224,13 @@ Use Support AI Evals to design a calibrated comparison of two QA systems.</code>
                 info.compress_type=ZIP_DEFLATED
                 info.create_system=3
                 info.external_attr=0o100644 << 16
-                bundle.writestr(info,path.read_bytes())
+                payload = path.read_bytes()
+                if path == ROOT/'LICENSING.md':
+                    code_license = 'LICENSE-SKILL.md' if skill == 'the-support-machine' else 'LICENSE.md'
+                    payload = (path.read_text()
+                               .replace('(licenses/MANUSCRIPT-CC-BY-4.0.md)', '(LICENSE-MANUSCRIPT.md)')
+                               .replace('(LICENSE)', '('+code_license+')')).encode()
+                bundle.writestr(info,payload)
         shutil.copyfile(DOCS/f"downloads/{skill}.skill", DOCS/f"downloads/{skill}.zip")
     (DOCS/".nojekyll").write_text("")
     summary=edition_summary(meta)
