@@ -14,6 +14,31 @@ from export_docx_to_markdown import export_docx
 from render_markdown import markdown_to_html
 
 class PublishingTests(unittest.TestCase):
+    def test_editorial_quotes_round_trip_without_markers_or_export_metadata(self):
+        text = ('# Test Book\n\n'
+                '> Markdown export of the manuscript. The canonical formatted source is maintained in `manuscript/`.\n\n'
+                '## A reflection\n\n'
+                '> Before: *"An earlier claim."*\n>\n'
+                '> Now: a more precise claim.\n')
+        with TemporaryDirectory() as tmp:
+            p = Path(tmp)
+            (p/'input.md').write_text(text)
+            create(p/'input.md', p/'output.docx')
+            document = Document(p/'output.docx')
+            paragraphs = [paragraph.text for paragraph in document.paragraphs]
+            self.assertNotIn('>', paragraphs)
+            self.assertFalse(any('Markdown export' in value for value in paragraphs))
+            quote = next(paragraph for paragraph in document.paragraphs if paragraph.text.startswith('Before:'))
+            self.assertTrue(any(run.italic and 'An earlier claim.' in run.text for run in quote.runs))
+            export_docx(p/'output.docx', p/'output.md')
+            exported = (p/'output.md').read_text()
+        self.assertEqual(exported.count('Markdown export of the manuscript.'), 1)
+        self.assertIn('> Before: _"An earlier claim."_', exported)
+        self.assertNotIn('\n>\n', exported)
+        rendered, _ = markdown_to_html(text)
+        self.assertIn('<em>&quot;An earlier claim.&quot;</em>', rendered)
+        self.assertNotIn('Markdown export', rendered)
+
     def test_docx_round_trip_links_numbers_and_tables(self):
         text="# Test Book\n\n## Contents\n\n- [A chapter](#1-a-chapter)\n\n## 1. A chapter\n\nAn **important** [source](https://example.com/a?x=1&y=2).\n\n3. First\n4. Next\n\n| Item | Evidence |\n|---|---|\n| One | [Record](https://example.com/record) |\n"
         with TemporaryDirectory() as tmp:

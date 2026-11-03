@@ -3,7 +3,7 @@ import re
 import hashlib
 
 TICK = chr(96)
-INLINE = re.compile(r"(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|" + TICK + "[^" + TICK + "]+" + TICK + r"|_[^_\n]+_)")
+INLINE = re.compile(r"(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|" + TICK + "[^" + TICK + "]+" + TICK + r"|_[^_\n]+_|\*[^*\n]+\*)")
 
 def slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-") or "section"
@@ -22,7 +22,7 @@ def spans(text):
             yield "bold", part[2:-2], None
         elif part.startswith(TICK):
             yield "code", part[1:-1], None
-        elif part.startswith("_"):
+        elif part.startswith(("_", "*")):
             yield "italic", part[1:-1], None
         else:
             yield "text", part, None
@@ -35,6 +35,11 @@ def blocks(markdown):
     while i < len(lines):
         line = lines[i].strip()
         if not line:
+            i += 1
+            continue
+        # Export metadata is not reader prose. A bare quote marker separates
+        # quoted paragraphs and must never become a visible '>' in the book.
+        if line == ">" or line.startswith("> Markdown export of the manuscript."):
             i += 1
             continue
         image=re.fullmatch(r'!\[((?:\\.|[^\]\\])*)\]\(([^)]+)\)',line)

@@ -4,11 +4,11 @@ Preserve the direct field-guide voice and the machine, Rubicon, goalkeeper, wiza
 
 ## Manuscript workflow
 
-The current formatted canonical source is `manuscript/The Support Machine - manuscript v0.3.docx`. Edit that file and regenerate downstream text:
+The current formatted canonical source is `manuscript/The Support Machine - manuscript v0.4.docx`. Edit that file and regenerate downstream text:
 
 ```bash
 python scripts/export_docx_to_markdown.py \
-  "manuscript/The Support Machine - manuscript v0.3.docx" \
+  "manuscript/The Support Machine - manuscript v0.4.docx" \
   skills/the-support-machine/references/book.md
 ```
 
@@ -24,9 +24,9 @@ Install Python 3.10+ and `requirements.txt`. PDF conversion needs LibreOffice; r
 
 ```bash
 soffice --headless --convert-to pdf --outdir /tmp/support-book-render \
-  "manuscript/The Support Machine - manuscript v0.3.docx"
+  "manuscript/The Support Machine - manuscript v0.4.docx"
 python scripts/build_edition.py --pdf \
-  "/tmp/support-book-render/The Support Machine - manuscript v0.3.pdf"
+  "/tmp/support-book-render/The Support Machine - manuscript v0.4.pdf"
 python -m unittest discover -s tests -v
 python scripts/verify_edition.py
 ```
@@ -43,9 +43,9 @@ Check time-sensitive product claims against current primary documentation. Recor
 
 Update `edition.json`, `CHANGELOG.md`, reader notes, and the coverage record. Preserve previous editions and verify the archive checksums. Do not overwrite an old version to save a filename.
 
-The current book is the **Second Edition**, published November 1, 2026. Its repository release identifier is `v0.3`; the First Edition uses `v0.2`. Use edition names in all reader-facing text. These technical identifiers do not number the book editions. `edition.json` keeps the edition name, public download slug, release identifier, and publication status together.
+The current book is the **Second Edition**, first published November 1, 2026. The revised printing uses repository release identifier `v0.4`; `v0.3` identifies the November 1, 2026 printing, and the First Edition uses `v0.2`. Use edition names in all reader-facing text. These technical identifiers do not number the book editions. `edition.json` keeps the edition name, printing date, public download slug, release identifier, and publication status together.
 
-Publish approved changes by regenerating every format, merging the reviewed PR, verifying GitHub Pages and download checksums, and creating the corresponding GitHub release. Existing edition files and tags remain immutable. Public download names use `second-edition`; legacy `v0.3` paths remain compatibility aliases.
+Publish approved changes by regenerating every format, merging the reviewed PR, verifying GitHub Pages and download checksums, and creating the corresponding GitHub release. Existing edition files and tags remain immutable. Public download names use `second-edition`; versioned `v0.3` paths preserve the prior printing.
 
 ## Skills and tests
 
@@ -55,4 +55,4 @@ The main package must include the current canonical Markdown export and every te
 
 ## Contributions and licensing
 
-Open a PR against main with the problem, resulting behavior, evidence, and relevant validation. Book text and formats are CC BY 4.0; reusable skills, templates, code, and repo documentation are MIT. See `LICENSE.md`.
+Open a PR against main with the problem, resulting behavior, evidence, and relevant validation. Book text and formats are CC BY 4.0; reusable skills, templates, code, and repo documentation are MIT. See `LICENSING.md`.
