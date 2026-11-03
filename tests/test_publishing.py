@@ -3,6 +3,8 @@ from pathlib import Path
 from tempfile import TemporaryDirectory
 import unittest
 import base64
+import html
+import re
 from docx import Document
 from docx.shared import Inches
 
@@ -12,8 +14,29 @@ from manuscript_format import blocks,plain
 from import_markdown_to_docx import create
 from export_docx_to_markdown import export_docx
 from render_markdown import markdown_to_html
+from prompt_library import prompt_groups, render_prompt_library
 
 class PublishingTests(unittest.TestCase):
+    def test_public_library_preserves_all_eighty_prompts_and_the_session_opening(self):
+        source = (ROOT/'skills/the-support-machine/references/prompts.md').read_text()
+        book = (ROOT/'skills/the-support-machine/references/book.md').read_text()
+        rendered = render_prompt_library(source, book)
+        expected = re.findall(r'^\*\*(\d{2})\. (.+)\*\*\n\n> (.+)$', source, re.M)
+        actual = re.findall(r'<article class="prompt-entry" id="prompt-(\d{2})"><h3><span class="prompt-number">\d{2}</span> (.*?)</h3><blockquote>(.*?)</blockquote>', rendered)
+        self.assertEqual(len(actual), 80)
+        self.assertEqual([(n, html.unescape(title), html.unescape(body)) for n, title, body in actual], expected)
+        opening = re.search(r'Start with this prompt, then choose an example below:\n\n> ([^\n]+)', book)[1]
+        self.assertIn(html.escape(opening), rendered)
+        for number, _, _ in expected:
+            self.assertIn(f'href="#prompt-{number}"', rendered)
+
+    def test_public_library_rejects_a_missing_or_duplicate_prompt(self):
+        source = (ROOT/'skills/the-support-machine/references/prompts.md').read_text()
+        with self.assertRaises(ValueError):
+            prompt_groups(source.replace('**80. Revisit an older edition**', '**79. Revisit an older edition**'))
+        with self.assertRaises(ValueError):
+            prompt_groups(source.split('**80. Revisit an older edition**')[0])
+
     def test_editorial_quotes_round_trip_without_markers_or_export_metadata(self):
         text = ('# Test Book\n\n'
                 '> Markdown export of the manuscript. The canonical formatted source is maintained in `manuscript/`.\n\n'

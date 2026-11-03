@@ -12,6 +12,8 @@ from zipfile import ZipFile
 from docx import Document
 from pypdf import PdfReader
 from export_docx_to_markdown import export_docx
+from build_site import WEBSITE_FILES
+from prompt_library import render_prompt_library
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -69,7 +71,19 @@ def verify():
         export_docx(source,regenerated)
         assert regenerated.read_bytes()==book.read_bytes(),"canonical export is stale"
     manifest=json.loads((ROOT/f"release-notes/{version}-checksums.json").read_text())
+    website_path=ROOT/'release-notes/website-checksums.json'
+    website_files={}
+    if website_path.exists():
+        website=json.loads(website_path.read_text())
+        assert website['book_version']==version,'website refers to a different book release'
+        website_files=website['files']
+        assert set(website_files)==set(WEBSITE_FILES),'unexpected website manifest scope'
+        for rel,expected in website_files.items():
+            assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==expected,'stale website file: '+rel
+        assert render_prompt_library(prompts,text) in (ROOT/'docs/prompts.html').read_text(),'public prompt library differs from its source'
     for rel,expected in manifest["files"].items():
+        if rel in website_files:
+            continue
         assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==expected,rel
     preserved=json.loads((ROOT/f'docs/editions/{meta["previous"]}/checksums.json').read_text())
     for rel,expected in preserved.items():

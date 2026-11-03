@@ -1,5 +1,9 @@
 # Changelog
 
+## Prompt library on the website — November 2, 2026
+
+The [full library of 80 prompts](https://assafbar2.github.io/the-support-machine/prompts.html) now has its own page: browse by task, start with six examples, and share a link to any prompt. The homepage, README, online reader, and skill page make it easier to find. The prompts and published book downloads are unchanged.
+
 ## Second Edition, revised printing — November 1, 2026
 
 Same edition, same chapters, a sharper book. See the [notes for returning readers](release-notes/v0.4.md).

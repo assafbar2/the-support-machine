@@ -2,18 +2,32 @@
 from __future__ import annotations
 from datetime import date
 import html
+import hashlib
 import json
 from pathlib import Path
 import re
 import shutil
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 from render_markdown import markdown_to_html
+from prompt_library import render_prompt_library
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 BOOK = ROOT / "skills/the-support-machine/references/book.md"
 BASE = "https://assafbar2.github.io/the-support-machine/"
 REPO = "https://github.com/assafbar2/the-support-machine"
+WEBSITE_FILES = (
+    'docs/index.html', 'docs/book.html', 'docs/notes.html', 'docs/review.html',
+    'docs/skill.html', 'docs/editions.html', 'docs/prompts.html', 'docs/styles.css',
+    'docs/llms.txt', 'llms.txt',
+)
+
+
+def write_website_manifest(version):
+    """Track the current website while keeping published release manifests intact."""
+    manifest = {'book_version': version, 'files': {
+        name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest() for name in WEBSITE_FILES}}
+    (ROOT/'release-notes/website-checksums.json').write_text(json.dumps(manifest, indent=2)+'\n')
 
 def page_shell(title,body,description,css="styles.css",url=BASE):
     return f'''<!doctype html>
@@ -81,6 +95,7 @@ def edition_summary(meta):
 
 ## Apply
 
+- [80 ways to put the book to work]({reading_base}prompts.html)
 - [The Support Machine skill]({REPO}/tree/{ref}/skills/the-support-machine)
 - [Support AI Evals skill]({REPO}/tree/{ref}/skills/support-ai-evals)
 
@@ -128,7 +143,7 @@ def build():
     actions=f'<div class="book-actions"><a href="index.html">Home</a>{downloads(artifact)}<a href="notes.html">What changed</a><a href="editions.html">Editions</a></div>'
     reader=f'''<div class="reader-layout"><aside class="sidebar">
 <a class="brand" href="index.html">The Support Machine</a>
-<p class="edition-label">{html.escape(label)}</p><nav aria-label="Book contents">{toc_html}</nav>
+<p class="edition-label">{html.escape(label)}</p><p class="library-link"><a href="prompts.html">80 ways to put the book to work ↗</a></p><nav aria-label="Book contents">{toc_html}</nav>
 </aside><main class="book" id="main">{actions}{book_html}</main></div>'''
     write("book.html","The Support Machine — "+meta["name"],reader,f"The complete book, with {meta['chapters']} chapters and {meta['appendices']} appendices.")
     book_schema=json.dumps({
@@ -141,7 +156,7 @@ def build():
     })
     write("index.html","The Support Machine — Second Edition",f'''<div class="landing">
 <header class="site-header"><a class="site-wordmark" href="index.html">The Support Machine</a>
-<nav class="site-nav" aria-label="Main navigation"><a href="#whats-new">What's new</a><a href="skill.html">Use the skills</a><a href="book.html">Read the book <span aria-hidden="true">↗</span></a></nav></header>
+<nav class="site-nav" aria-label="Main navigation"><a href="prompts.html">80 prompts</a><a href="skill.html">Use the skills</a><a href="book.html">Read the book <span aria-hidden="true">↗</span></a></nav></header>
 <main id="main">
 <section class="edition-hero" aria-labelledby="book-title">
 <div class="hero-copy"><p class="eyebrow">Second Edition · November 2026</p>
@@ -154,7 +169,7 @@ def build():
 <img src="illustrations/book/02-choose-the-machine.png" alt="Support architecture split into layers, with a choice to buy, extend, or build at each layer." width="2040" height="993" fetchpriority="high">
 <figcaption>Choose the layer before choosing the answer.</figcaption></figure>
 </section>
-<div class="edition-facts" aria-label="Inside the Second Edition"><p><strong>29</strong> chapters</p><p><strong>10</strong> illustrations</p><p><strong>80</strong> prompts in the skill</p><p><strong>2</strong> AI skills</p></div>
+<div class="edition-facts" aria-label="Inside the Second Edition"><p><strong>29</strong> chapters</p><p><strong>10</strong> illustrations</p><p><a href="prompts.html"><strong>80</strong> practical prompts</a></p><p><strong>2</strong> AI skills</p></div>
 <section class="new-edition" id="whats-new" aria-labelledby="new-title">
 <div class="section-intro"><p class="eyebrow">For returning readers</p><h2 id="new-title">The work continues<br>after launch.</h2><p>Six new chapters, expanded playbooks, and lessons from more use cases, conversations, research, and work with humans and AI.</p></div>
 <div class="new-topics"><article><span class="topic-number">01</span><h3>Make the right call</h3><p>Build versus buy, vendor exit risk, and the organizational resistance that can stop progress.</p></article>
@@ -162,7 +177,7 @@ def build():
 <article><span class="topic-number">03</span><h3>Put it to work</h3><p>Field notes, fourteen templates, ten drawings, and 80 prompts for your own decisions.</p></article></div>
 <a class="text-link" href="notes.html">See what's new and where to reread <span aria-hidden="true">↗</span></a>
 </section>
-<section class="apply-section" aria-labelledby="apply-title"><div><p class="eyebrow">Read it. Then work with it.</p><h2 id="apply-title">Bring your next<br>support decision.</h2></div><div><p>For support leaders at API, developer-tool, and B2B companies—and the executives who work with them.</p><p>Install the book as a skill. Your assistant can use its chapters and templates to help compare vendors, design evaluations, or rehearse a difficult launch.</p><a class="text-link" href="book.html#appendix-g-talk-to-the-book">Start with Appendix G <span aria-hidden="true">↗</span></a></div></section>
+<section class="apply-section" aria-labelledby="apply-title"><div><p class="eyebrow">Read it. Then work with it.</p><h2 id="apply-title">80 ways to put<br>the book to work.</h2><p class="prompt-invitation">Use what helps. Change the rest.</p><a class="text-link" href="prompts.html">Browse all 80 prompts <span aria-hidden="true">↗</span></a></div><div><p>Bring a real support decision. These prompts help you work through it with the book and your own evidence.</p><ul class="prompt-examples"><li><a href="prompts.html#prompt-19">Challenge the weekend demo.</a></li><li><a href="prompts.html#prompt-17">Price a year of operation.</a></li><li><a href="prompts.html#prompt-52">Find the correct but useless answer.</a></li><li><a href="prompts.html#prompt-04">Challenge the book itself.</a></li></ul><p><a href="skill.html">Install the book as a skill</a>, then pick a prompt and add your situation.</p></div></section>
 <section class="formats-section" id="downloads" aria-labelledby="formats-title"><h2 id="formats-title">Your copy. Your format.</h2><div class="format-links"><a href="book.html"><span>Read online</span><small>Complete book in your browser</small></a><a href="the-support-machine-{artifact}.pdf"><span>PDF <span aria-hidden="true">↓</span></span><small>Second Edition, ready to keep</small></a><a href="downloads/the-support-machine-{artifact}.docx"><span>DOCX <span aria-hidden="true">↓</span></span><small>For Word or Google Docs</small></a><a href="downloads/the-support-machine-{artifact}-markdown.zip"><span>Markdown <span aria-hidden="true">↓</span></span><small>Full text and illustrations</small></a><a href="skill.html"><span>AI skills <span aria-hidden="true">↗</span></span><small>Installation and practical prompts</small></a></div></section>
 <section class="more-section" aria-label="Explore the book"><div><p class="eyebrow">Hear the conversation</p><h2>The Prompt Room</h2><p>I joined Episode 4 to talk about reducing customer pain and how support work is changing. That conversation helped shape this edition.</p><p><a href="https://www.youtube.com/watch?v=JxJb4FDqWdI">Watch on YouTube</a> · <a href="https://open.spotify.com/episode/6x73nZKsh9y1VIw46yCW5q">Listen on Spotify</a></p></div><div><p class="eyebrow">Keep exploring</p><p><a href="illustrations/">The ten illustrations</a></p><p><a href="editions.html">The preserved First Edition</a></p><p><a href="shadow-run/Shadow-Run-Field-Sheet-v0.13.pdf">Shadow Run field sheet</a></p><p><a href="{REPO}">Source and companion tools on GitHub</a></p></div></section>
 </main><footer class="site-footer"><p>© Assaf Barnir · <a href="https://www.barnir.co/">barnir.co</a></p><p>A personal field guide. The judgments and recommendations are mine; I do not speak for Sentry.</p><p>Book and illustrations: CC BY 4.0 · Skills and code: MIT</p></footer>
@@ -192,6 +207,7 @@ def build():
     write("skill.html","Use The Support Machine Skills",f'''<main class="skill-page" id="main">
 <a class="back" href="index.html">The Support Machine</a><h1>Use the skills</h1>
 <p>The {meta["name"]} skill contains the full book, all {meta['appendices']} appendices, and fourteen practical templates. <a href="book.html#appendix-g-talk-to-the-book">Start with Appendix G for setup and ten starter prompts.</a></p>
+<h2>80 ways to put the book to work</h2><p>Challenge a demo, price a year of operation, rehearse a launch, or question the book itself. <a href="prompts.html">Browse the full prompt library by the work you need to do.</a> Every prompt is included in the skill; ask for one by number or topic.</p>
 <h2>The Support Machine</h2><p>For the full migration and operating model: build versus buy, vendors, release gates, action safety, customer promises, recovery, and team design.</p>
 <p><a href="downloads/the-support-machine.zip">Download the skill ZIP</a> · <a href="downloads/the-support-machine.skill">.skill package</a></p>
 <h2>Install in Claude</h2><p>Leave the ZIP zipped. In Customize → Skills, choose + → Create skill → Upload a skill. Upload the ZIP and enable it. Code execution and file creation must be enabled; organization policy may control availability. Start with “Use The Support Machine skill to help me with [decision].”</p>
@@ -207,6 +223,10 @@ Use Support AI Evals to design a calibrated comparison of two QA systems.</code>
 <p><a href="https://github.com/assafbar2/the-support-machine">Repository and installation instructions</a></p>
 <p>Current platform guidance: <a href="https://learn.chatgpt.com/docs/build-skills">OpenAI Build skills</a> · <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude">Use skills in Claude</a>.</p>
 </main>''',"Two focused skills and their practical tools.")
+    prompt_source=(ROOT/'skills/the-support-machine/references/prompts.md').read_text()
+    write('prompts.html', '80 ways to put the book to work — The Support Machine',
+          render_prompt_library(prompt_source, book),
+          '80 practical prompts for AI support decisions: build versus buy, evaluation, launch, recovery, and challenging your own plan. Free, with The Support Machine.')
     for skill in ("the-support-machine","support-ai-evals"):
         source=ROOT/"skills"/skill
         entries=[(path,str(path.relative_to(ROOT/"skills"))) for path in sorted(source.rglob("*"))
@@ -236,6 +256,7 @@ Use Support AI Evals to design a calibrated comparison of two QA systems.</code>
     summary=edition_summary(meta)
     (ROOT/"llms.txt").write_text(summary)
     (DOCS/"llms.txt").write_text(summary)
+    write_website_manifest(version)
 
 if __name__=="__main__":
     build()
