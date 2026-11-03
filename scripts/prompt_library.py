@@ -60,11 +60,13 @@ def render_prompt_library(source, book):
             f'<blockquote>{inline(body)}</blockquote>'
             f'<a class="prompt-permalink" href="#prompt-{number}" aria-label="Link to prompt {number}: {html.escape(title, quote=True)}">Link to this prompt</a>'
             '</article>' for number, title, body in group['prompts'])
+        companion = ('<p class="prompt-companion">Bring the <a href="shadow-run/">one-page Shadow Run field sheet</a> to your team review.</p>'
+                     if group['anchor'] == 'gate-4-shadow-runs' else '')
         sections.append(f'<section class="prompt-category" aria-labelledby="{group["anchor"]}">'
-                        f'<h2 id="{group["anchor"]}">{html.escape(group["title"])}</h2>{entries}</section>')
+                        f'<h2 id="{group["anchor"]}">{html.escape(group["title"])}</h2>{companion}{entries}</section>')
     return f'''<div class="landing prompt-page">
 <header class="site-header"><a class="site-wordmark" href="index.html">The Support Machine</a>
-<nav class="site-nav" aria-label="Main navigation"><a href="#all-prompts">Browse prompts</a><a href="skill.html">Use the skills</a><a href="book.html">Read the book ↗</a></nav></header>
+<nav class="site-nav" aria-label="Main navigation"><a href="#all-prompts">Browse prompts</a><a href="shadow-run/">Shadow Run</a><a href="skill.html">Use the skills</a><a href="book.html">Read the book ↗</a></nav></header>
 <main id="main">
 <section class="prompt-hero" aria-labelledby="prompt-title">
 <p class="eyebrow">A working companion to the Second Edition</p>

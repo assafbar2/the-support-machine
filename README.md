@@ -8,11 +8,19 @@ By **Assaf Barnir**
 
 A free field guide for support leaders at API, developer-tool, and B2B companies—and the executives who work with them. From choosing the system and preparing the team to verifying outcomes and improving the service after launch.
 
-**[Read the Second Edition](https://assafbar2.github.io/the-support-machine/book.html)** · **[Browse the 80 prompts](https://assafbar2.github.io/the-support-machine/prompts.html)** · [Download the PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-second-edition.pdf) · [Book home](https://assafbar2.github.io/the-support-machine/)
+**[Read the Second Edition](https://assafbar2.github.io/the-support-machine/book.html)** · **[Browse the 80 prompts](https://assafbar2.github.io/the-support-machine/prompts.html)** · **[Shadow Run field sheet](https://assafbar2.github.io/the-support-machine/shadow-run/)** · [Download the book PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-second-edition.pdf) · [Book home](https://assafbar2.github.io/the-support-machine/)
 
 29 chapters · 8 appendices · 10 illustrations · 80 prompts in the skill · 2 companion AI skills
 
 ![Choose the layer before choosing whether to buy, extend, or build](docs/illustrations/book/02-choose-the-machine.png)
+
+## Shadow Run: a cheat sheet for your next review
+
+Before your AI touches customers. The take-home from my talk, *Shadow running AI: The framework for safer AI adoption*, puts six checks, five stop conditions, failure owners, and a starting plan on one printable page.
+
+Print it. Mark it up. Bring it to your next review.
+
+**[Get the field sheet](https://assafbar2.github.io/the-support-machine/shadow-run/)** · [Download the one-page PDF](https://assafbar2.github.io/the-support-machine/shadow-run/Shadow-Run-Field-Sheet-v0.13.pdf) · [Editable scorecard](skills/the-support-machine/templates/shadow-run-scorecard.md)
 
 ## 80 ways to put the book to work
 
@@ -70,9 +78,9 @@ The optional [Support AI Evals skill](https://assafbar2.github.io/the-support-ma
 
 I joined **The Prompt Room, Episode 4** to discuss reducing customer pain and how support work is changing. That conversation informs several chapters. [Watch on YouTube](https://www.youtube.com/watch?v=JxJb4FDqWdI) or [listen on Spotify](https://open.spotify.com/episode/6x73nZKsh9y1VIw46yCW5q).
 
-## First Edition and companion material
+## First Edition
 
-The [First Edition remains available](https://assafbar2.github.io/the-support-machine/editions.html) in its original formats. The [Shadow Run field sheet](docs/shadow-run/Shadow-Run-Field-Sheet-v0.13.pdf) accompanies the earlier talk.
+The [First Edition remains available](https://assafbar2.github.io/the-support-machine/editions.html) in its original formats.
 
 [Edition highlights](CHANGELOG.md) · [Contributing and publishing](CONTRIBUTING.md)
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## Shadow Run field sheet — November 2, 2026
+
+The [one-page Shadow Run field sheet](https://assafbar2.github.io/the-support-machine/shadow-run/) now has a dedicated page with a preview, direct PDF download, and a guide for using it with a team. It is featured alongside the prompt library on the homepage and in the README, with links from the reader, skill page, and shadow-run prompts. The original talk handout and published book files are unchanged.
+
 ## Prompt library on the website — November 2, 2026
 
 The [full library of 80 prompts](https://assafbar2.github.io/the-support-machine/prompts.html) now has its own page: browse by task, start with six examples, and share a link to any prompt. The homepage, README, online reader, and skill page make it easier to find. The prompts and published book downloads are unchanged.

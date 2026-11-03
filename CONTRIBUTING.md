@@ -35,6 +35,8 @@ The build exports Markdown, copies the supplied rendered PDF, and regenerates HT
 
 For website presentation updates, run `python scripts/build_site.py` and the existing tests and verifier. The public prompt page is generated directly from `skills/the-support-machine/references/prompts.md`; do not edit a second copy of its prompts. `release-notes/website-checksums.json` tracks the current website separately from the immutable versioned release manifests. Its scope is limited to the listed HTML, stylesheet, and discovery files. Book text, downloads, packages, and historical artifacts still use the release checksums. A website update does not create a new book edition or replace published release assets.
 
+The Shadow Run landing page is rendered by `scripts/shadow_run.py` through the same site build. It uses the existing PDF and preview in `docs/shadow-run/`; preserve those published handout files when updating its presentation.
+
 Render and visually inspect every PDF page. Check the cover, contents, chapter starts, tables, field notes, page breaks and links. Text extraction and automated checks do not replace visual review.
 
 The downloadable DOCX is a byte-for-byte copy of the canonical manuscript. The build and edition verifier check that equality. Keep editorial directions in this file or the research/source records, never in reader-facing chapter endings. Audit names, visible placeholders, and authoring residue when revising the manuscript. Reader prompts in Appendix G are intentional examples.

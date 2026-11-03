@@ -15,6 +15,7 @@ Second Edition, 2026-11-01. 29 chapters, 8 appendices, 10 illustrations, and two
 
 ## Apply
 
+- [Shadow Run field sheet](https://assafbar2.github.io/the-support-machine/shadow-run/)
 - [80 ways to put the book to work](https://assafbar2.github.io/the-support-machine/prompts.html)
 - [The Support Machine skill](https://github.com/assafbar2/the-support-machine/tree/main/skills/the-support-machine)
 - [Support AI Evals skill](https://github.com/assafbar2/the-support-machine/tree/main/skills/support-ai-evals)

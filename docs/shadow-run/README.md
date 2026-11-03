@@ -1,6 +1,8 @@
 # Shadow Run field sheet
 
-The one-page take-home from **Shadow running AI: The framework for safer AI adoption** by Assaf Barnir.
+Before your AI touches customers. The one-page take-home from **[Shadow running AI: The framework for safer AI adoption](https://events.customersuccesscollective.com/location/supportsf/speaker/assafbarnir)** by Assaf Barnir.
+
+**[Get the field sheet and see how to use it](https://assafbar2.github.io/the-support-machine/shadow-run/)**
 
 ## Download the PDF
 
@@ -25,7 +27,9 @@ The sheet records what happened inside the test. It does not prove customer reso
 ## Book and templates
 
 - [Read The Support Machine](https://assafbar2.github.io/the-support-machine/)
+- [Chapter 22: The Shadow Run](https://assafbar2.github.io/the-support-machine/book.html#22-the-shadow-run)
+- [Appendix B: Shadow Run and Change Release Record](https://assafbar2.github.io/the-support-machine/book.html#appendix-b-shadow-run-and-change-release-record)
 - [Use the editable shadow-run scorecard](../../skills/the-support-machine/templates/shadow-run-scorecard.md)
 - [Back to the repository](../../README.md)
 
-Field sheet v0.13, matching the v0.13 presentation. The ownership section now includes agent setup: retrieval, prompts and model behavior. The six checks and five stop conditions are unchanged.
+Field sheet v0.13 from the talk. For the expanded release method, use Chapter 22 and Appendix B of the Second Edition.
