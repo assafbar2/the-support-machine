@@ -44,7 +44,7 @@ This edition builds on more use cases I've seen, discussed, researched, and work
 - **More ways to apply it:** a field-note index, related projects, fourteen templates, skill installation, and 80 prompts in the skill.
 - **Ten new illustrations** and insights from my conversation on **The Prompt Room**.
 
-[Notes for returning readers](https://assafbar2.github.io/the-support-machine/notes.html) · [Chapter reading map](release-notes/v0.5-coverage.md) · [All illustrations](https://assafbar2.github.io/the-support-machine/illustrations/)
+[Notes for returning readers](https://assafbar2.github.io/the-support-machine/notes.html) · [Chapter reading map](release-notes/v0.6-coverage.md) · [All illustrations](https://assafbar2.github.io/the-support-machine/illustrations/)
 
 The November 20 printing adds [QueueLab in Chapter 22](https://assafbar2.github.io/the-support-machine/book.html#22-the-shadow-run), with a measured post-training result, a failure worth seeing, and links to the [open-source companion](https://github.com/assafbar2/queuelab).
 

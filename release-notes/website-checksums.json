@@ -1,9 +1,9 @@
 {
-  "book_version": "v0.5",
+  "book_version": "v0.6",
   "files": {
     "docs/index.html": "2aa36a94b885e5ca96b885df54b3cf3c9fc40325b3f590ae3271b6681ad0c802",
-    "docs/book.html": "c01e2620283045f507e5e34946754b7049359eec7c3b827feeb722a6a53b3539",
-    "docs/notes.html": "798945793e0983c32bd4af80f71adfe742bd8fd206e9f1ec727dbc3274f7387c",
+    "docs/book.html": "bb6e22050697a70bf033dd012b3c079fa1bcfd45aacf10008a923baf8ec80d5e",
+    "docs/notes.html": "457481a41b0ab4ce35b4cd31bca81699db99b07ff1b6219d1fc25f25d4d6fa01",
     "docs/review.html": "78a3a300e6e14759c6179aab1557254fa9e4b584364fa4961d1bbfe4c85345f9",
     "docs/skill.html": "33246404290a8cf0348bfd46c72a790a48f004da97f96c56e281c8b730008b87",
     "docs/editions.html": "5a7ae690daf51428f02a18e8ad5a386a56bafa4a6702375bbc08c480720ee71e",
