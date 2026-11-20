@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="490" viewBox="0 0 1120 490" role="img" aria-labelledby="title desc">
   <title id="title">Change one thing. Test both.</title>
-  <desc id="desc">Reviewed engineering support investigations train a small adapter. The same base model is tested with and without the adapter on the same unseen tickets and records. The grade checks the next step against the records actually seen.</desc>
+  <desc id="desc">Checked fictional engineering support investigations train a small adapter. The same base model is tested with and without the adapter on the same unseen tickets and records. The grade checks the next step against the records actually seen.</desc>
   <defs>
     <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" viewBox="0 0 8 8"><path d="M1 1l6 3-6 3" fill="none" stroke="#242424" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker>
     <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M-1 1l2-2M0 6l6-6m-1 7 2-2" stroke="#bbb" fill="none"/></pattern>
@@ -28,7 +28,7 @@
   <path d="M54 172h1012" stroke="#777" stroke-width="1.2"/>
 
   <text x="55" y="212" class="label">01 / TRAIN</text>
-  <text x="55" y="245" class="title" font-size="28">Reviewed investigations</text>
+  <text x="55" y="245" class="title" font-size="28">Checked examples</text>
   <g fill="#fafafa" stroke="#343434" stroke-width="1.8">
     <rect x="80" y="274" width="128" height="90" rx="7" transform="rotate(-7 144 319)"/>
     <rect x="90" y="268" width="128" height="90" rx="7"/>
