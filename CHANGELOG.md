@@ -1,5 +1,9 @@
 # Changelog
 
+## Paired LLM Evals — November 20, 2026
+
+Support AI Evals now includes **Paired LLM Evals: Baseline vs. Candidate**. Compare the same held-out cases before and after a change, inspect an improvement and a remaining failure, and decide what to test or release next. The workflow includes a worked QueueLab example and is available on the [Skills page](https://assafbar2.github.io/the-support-machine/skill.html#paired-llm-evals) and in the current evaluation skill downloads. The book and its tagged releases are unchanged.
+
 ## Second Edition, QueueLab replay link — November 20, 2026
 
 Chapter 22 links directly to the QueueLab replay beside the case, and Appendix F and the README make it easier to find. The replay shows saved model runs from before and after fine-tuning. The results and illustration are unchanged.

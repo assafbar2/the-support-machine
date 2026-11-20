@@ -1,17 +1,19 @@
 ---
 name: support-ai-evals
-description: Design or audit ongoing evaluation of support AI such as Fin, Kapa, or an internal agent. Use for 7/30-day repeat-contact cohorts, independent QA, evaluator comparisons, rubric calibration, regression testing, and knowledge releases. Produces an evidence-based evaluation plan or cohort report without treating silence as proven resolution.
+description: Design or audit evaluation of support AI such as Fin, Kapa, or an internal agent. Use for before-and-after model or prompt changes, 7/30-day repeat-contact cohorts, independent QA, evaluator comparisons, rubric calibration, regression testing, and knowledge releases. Produces a change review, evaluation plan, or cohort report without treating silence as proven resolution.
 ---
 
 # Support AI Evals
 
-Use this focused skill for continuing evaluation, including after the first thirty days. It is self-contained; the broader migration book is optional.
+Use this focused skill to review proposed changes and to evaluate support AI after launch. It is self-contained; the broader migration book is optional.
 
 ## Establish the task
 
 Identify the customer job, systems, time period, available evidence and decision owner. Distinguish an evaluation design from analysis of actual data. Never imply that a helpdesk is connected, a demo occurred, or a production change was made without evidence.
 
 Read `references/rubric.md` for review and calibration. Read `references/cohort-data.md` before using the calculator.
+
+For a before-and-after review, use **Paired LLM Evals: Baseline vs. Candidate** (`references/paired-llm-evals.md`) instead of the cohort workflow. Compare the same held-out cases under the same conditions, show a trace that improved and one that still failed, and say what the evidence supports. A simulation alone does not establish readiness for live customers.
 
 ## Three-part workflow
 

@@ -5,12 +5,14 @@
     "docs/book.html": "bbc3e173c11f60ef0c7bd43c499efe16d90c299e2a4243a639d5d68303495a10",
     "docs/notes.html": "8940d5a85977ce01883793ba2442cf4e3ab52a8a21329d63d3ed00a22ef6b85f",
     "docs/review.html": "78a3a300e6e14759c6179aab1557254fa9e4b584364fa4961d1bbfe4c85345f9",
-    "docs/skill.html": "33246404290a8cf0348bfd46c72a790a48f004da97f96c56e281c8b730008b87",
+    "docs/skill.html": "856d301ef85bb858d6bdff9bc6145c2aa9aa39228f2495c12e62ac40be83153b",
     "docs/editions.html": "5a7ae690daf51428f02a18e8ad5a386a56bafa4a6702375bbc08c480720ee71e",
     "docs/prompts.html": "273f6b73db0a85f2b083a9a6c0bffda0b2eb3a9a944fe1ac0ea421d8dadae6ed",
     "docs/styles.css": "5540cf85912dfd63727086702a66a6be46eb9f32f99b873ebc6ba0216246b99d",
     "docs/llms.txt": "90f3fd274bb24ca4937a565effe8cffa53ec00fdea9ad82ff093f187587824c2",
     "llms.txt": "90f3fd274bb24ca4937a565effe8cffa53ec00fdea9ad82ff093f187587824c2",
-    "docs/shadow-run/index.html": "f9d423f88ef57a3ac4e248f1a5937b88f4d569d64e2dc8df4b1a1c64918b6238"
+    "docs/shadow-run/index.html": "f9d423f88ef57a3ac4e248f1a5937b88f4d569d64e2dc8df4b1a1c64918b6238",
+    "docs/downloads/support-ai-evals.skill": "eb68d916de2b0345a250bd8064ba56c13b7d2aabc87d7edacfe4d9549d9157c6",
+    "docs/downloads/support-ai-evals.zip": "eb68d916de2b0345a250bd8064ba56c13b7d2aabc87d7edacfe4d9549d9157c6"
   }
 }

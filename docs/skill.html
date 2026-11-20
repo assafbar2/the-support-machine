@@ -28,10 +28,14 @@
 <h2>Install in Codex</h2><p>Ask the built-in installer:</p><pre><code>$skill-installer Install skills/the-support-machine from GitHub repository assafbar2/the-support-machine, ref main.</code></pre>
 <p>Invoke <code>$the-support-machine</code> followed by your task. Restart Codex if the skill does not appear. For manual installation, copy the complete skill folder, including references and templates, into <code>~/.agents/skills/</code>.</p>
 <h2>Verify and update your copy</h2><p>Ask the skill to read its bundled book reference, identify the Second Edition, and locate Chapter 28 and the build-versus-buy template. Install the new package when a new edition arrives; a local or uploaded copy does not automatically follow the GitHub repository. Keep company-specific notes separately.</p>
-<h2>Support AI Evals</h2><p>For ongoing QA: delayed outcome checks, independent review, calibration, knowledge changes, and a local cohort calculator. It reads normalized local data and does not connect to a helpdesk.</p>
+<h2>Support AI Evals</h2><p>For model-change reviews and ongoing QA: delayed outcome checks, independent review, calibration, knowledge changes, and a local cohort calculator. It reads normalized local data and does not connect to a helpdesk.</p>
 <p><a href="downloads/support-ai-evals.zip">Download the evaluation skill ZIP</a> · <a href="downloads/support-ai-evals.skill">.skill package</a>. This optional skill works independently; install it separately if useful.</p>
+<h3 id="paired-llm-evals">Paired LLM Evals: Baseline vs. Candidate</h3>
+<p><em>Did the model change earn a rollout?</em> Compare both versions on the same held-out cases. Show one investigation that got better and one that still failed, then decide what the evidence supports.</p>
+<p><a href="https://github.com/assafbar2/the-support-machine/blob/main/skills/support-ai-evals/references/paired-llm-evals.md">Read the workflow and worked QueueLab example</a>. Already using Support AI Evals? Install the updated package above to get the workflow.</p>
 <h2>Try a concrete task</h2><pre><code>Use The Support Machine to compare buying, extending, and building our support agent.
 Use The Support Machine to rehearse an action whose result is unknown.
+Use Support AI Evals to compare these baseline and candidate runs. Show one case that got better, one that still went wrong, and what would stop you from approving the change.
 Use Support AI Evals to review our seven-day repeat-contact cohort.
 Use Support AI Evals to design a calibrated comparison of two QA systems.</code></pre>
 <p><a href="https://github.com/assafbar2/the-support-machine">Repository and installation instructions</a></p>
