@@ -1,5 +1,9 @@
 # Changelog
 
+## Second Edition, QueueLab clarification — November 20, 2026
+
+Chapter 22 and Appendix F now lead with the test setup: QueueLab simulates an engineering support queue, and each model investigates the same fictional cases before and after fine-tuning. The results and illustration are unchanged. The web reader and all current book downloads and skill copies use the revised text.
+
 ## Second Edition, revised printing — November 20, 2026
 
 Chapter 22 uses QueueLab, an open-source engineering support experiment, to explain post-training and why the shadow run grades decisions against records, not just the shape of a reply. SmolLM2 improved on the fictional test; Falcon earned no pass. Appendix F links to the scorecard and replay, and all current book formats carry the same case and illustration.

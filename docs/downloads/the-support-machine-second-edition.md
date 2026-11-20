@@ -1524,11 +1524,13 @@ Run more than one trial where variability could change the decision. One good an
 
 ### One ticket, three possible explanations
 
+I built QueueLab to simulate an engineering support queue. I tested each model on the same fictional tickets before and after fine-tuning. I wanted to see whether it got better at checking the records before giving advice, and whether it knew when to hand a case off.
+
 An engineering support ticket comes in: “Our nightly export stopped arriving after the upgrade.” You can write a convincing reply before you open a single record. You can't yet tell the customer what happened.
 
 In one version of the case, the run log shows no export since the upgrade, and the schedule record shows it was turned off. Check the schedule before recommending that someone re-enable it. In a second version, the job completed. The receipt shows an old folder and the account record names a different one. Correcting the destination makes more sense than rerunning a job that worked. In a third version, the records have expired. Escalate with what you couldn't verify and what the next person should look for. It is the same opening message every time.
 
-I built QueueLab to make that distinction measurable. The model can read fictional records, ask a bounded question, recommend a next step, or escalate. It cannot touch a customer account. If it guesses the schedule was disabled without finding evidence for it, the guess doesn't pass.
+The model can read fictional records, ask a bounded question, recommend a next step, or escalate. It cannot touch a customer account. If it guesses the schedule was disabled without finding evidence for it, the guess doesn't pass.
 
 **Post-training** means training a model further after its initial training. Here I used fine-tuning: show the model a fictional investigation up to a particular point, then train it on the next action from a checked reference. Sometimes that action is another record lookup. Sometimes it is to stop and hand the case to a person. A prompt can tell the model to check first. Fine-tuning changes what it has learned to do.
 
@@ -2249,9 +2251,9 @@ The calculator does not connect to a helpdesk, decide whether two conversations 
 
 ### QueueLab
 
-Read with Chapter 22, _The Shadow Run_. Start with the missing nightly export. Keep the complaint fixed, change the records, and see whether the recommended next step changes with them. A useful escalation counts when the available evidence cannot support a diagnosis.
+QueueLab is the engineering support simulation from Chapter 22, _The Shadow Run_. Each model investigates the same fictional cases before and after fine-tuning. Start with the missing nightly export. Watch which records the model checks, what it recommends, and what it does when it can’t tell what happened.
 
-The cases are fictional and the simulator is read-only. See the [QueueLab source](https://github.com/assafbar2/queuelab), [measured scorecard and raw traces](https://github.com/assafbar2/queuelab/tree/main/reports/post-training-2026-11-20), and [before-and-after replay](https://assafbar2.github.io/queuelab/post-training/). They show what happened on the test, not what happened to customers.
+The simulator is read-only. See the [QueueLab source](https://github.com/assafbar2/queuelab), [measured scorecard and raw traces](https://github.com/assafbar2/queuelab/tree/main/reports/post-training-2026-11-20), and [before-and-after replay](https://assafbar2.github.io/queuelab/post-training/). They show what happened on the test, not what happened to customers.
 
 ## Appendix G: Talk to the Book
 
