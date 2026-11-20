@@ -18,6 +18,10 @@ QueueLab is a small engineering support experiment built around cases like this.
 
 The proposed method is **LoRA**. Leave the original model weights fixed and train a small add-on, called an adapter. Run the same model with the adapter off and on. The goal is to teach habits such as checking the run history before suggesting a delivery fix. The account's current schedule still belongs in a record the model can look up, not in its weights.
 
+![Reviewed engineering support investigations train an adapter. The same base model, with and without the adapter, investigates the same unseen tickets. Both decisions are scored against the evidence each model saw.](figures/queuelab-post-training.png)
+
+*Figure: The missing-export case tests whether adding an adapter changes the next step the model can justify. The diagram explains the comparison, not its results.*
+
 Keep the prompt, permissions, and cases identical in both runs. Use tickets that weren't used to train the adapter, including look-alike complaints with different causes and cases where escalation is right. Count decisions supported by evidence. A higher score alone isn't enough if the model also makes more unsupported claims, or if the apparent gain could be noise. Save the traces so someone else can see where it changed its behavior.
 
 The development run has exercised the simulator with scripted actions and unchanged models. It has not yet measured a post-training gain. Even a good result here would tell us how the model behaved on fictional cases, not whether it solved more customer problems. That takes a separate check after release.

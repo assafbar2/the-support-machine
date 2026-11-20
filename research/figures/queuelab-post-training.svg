@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="490" viewBox="0 0 1120 490" role="img" aria-labelledby="title desc">
+  <title id="title">Change one thing. Test both.</title>
+  <desc id="desc">Reviewed engineering support investigations train a small adapter. The same base model is tested with and without the adapter on the same unseen tickets and records. The grade checks the next step against the records actually seen.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" viewBox="0 0 8 8"><path d="M1 1l6 3-6 3" fill="none" stroke="#242424" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M-1 1l2-2M0 6l6-6m-1 7 2-2" stroke="#bbb" fill="none"/></pattern>
+    <g id="model" fill="#fafafa" stroke="#262626" stroke-width="2">
+      <rect x="-34" y="-26" width="68" height="52" rx="9"/>
+      <path d="M-17-10h34m-34 20h34m-34-20v20m34-20v20m-34-20 34 20m-34 0 34-20" fill="none" stroke-width="1.4"/>
+      <circle cx="-17" cy="-10" r="3"/><circle cx="17" cy="-10" r="3"/><circle cx="-17" cy="10" r="3"/><circle cx="17" cy="10" r="3"/>
+    </g>
+    <g id="adapter" stroke="#252525" stroke-width="1.8">
+      <rect x="-17" y="-15" width="34" height="30" rx="6" fill="url(#hatch)"/>
+      <path d="M-5 0h10M0-5v10" stroke-linecap="round"/>
+    </g>
+    <style>
+      .ink { fill: #202020; }
+      .sub { fill: #414141; font-family: Arial, Helvetica, sans-serif; font-size: 22px; }
+      .label { fill: #303030; font: 700 17px Arial, Helvetica, sans-serif; letter-spacing: 1.4px; }
+      .title { fill: #141414; font-family: Georgia, 'Times New Roman', serif; }
+      .wire { fill: none; stroke: #303030; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1120" height="490" fill="#fff"/>
+  <text x="54" y="49" class="label">QUEUELAB / ENGINEERING SUPPORT</text>
+  <text x="51" y="108" class="title" font-size="52">Change one thing. Test both.</text>
+  <text x="54" y="148" class="sub">Case: the nightly export stopped arriving after the upgrade.</text>
+  <path d="M54 172h1012" stroke="#777" stroke-width="1.2"/>
+
+  <text x="55" y="212" class="label">01 / TRAIN</text>
+  <text x="55" y="245" class="title" font-size="28">Reviewed investigations</text>
+  <g fill="#fafafa" stroke="#343434" stroke-width="1.8">
+    <rect x="80" y="274" width="128" height="90" rx="7" transform="rotate(-7 144 319)"/>
+    <rect x="90" y="268" width="128" height="90" rx="7"/>
+    <path d="m107 295 4 4 7-9m-11 24 4 4 7-9m-11 24 4 4 7-9m14-33h63m-63 19h52m-52 19h57" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M224 326h42" class="wire"/>
+  <use href="#adapter" x="289" y="326"/>
+  <text x="288" y="370" class="sub" text-anchor="middle">Adapter</text>
+  <path d="M308 326c32 0 48 40 87 40" class="wire" stroke-dasharray="5 4"/>
+
+  <text x="406" y="212" class="label">02 / SAME BASE MODEL</text>
+  <rect x="405" y="234" width="252" height="76" rx="13" fill="#fff" stroke="#959595" stroke-width="1.5"/>
+  <rect x="405" y="328" width="252" height="76" rx="13" fill="#f7f7f7" stroke="#555" stroke-width="1.5"/>
+  <use href="#model" x="457" y="272"/>
+  <use href="#model" x="457" y="366"/>
+  <use href="#adapter" x="492" y="366" transform="translate(88.56 65.88) scale(.82)"/>
+  <text x="518" y="279" class="sub">Unchanged</text>
+  <text x="518" y="373" class="sub">With adapter</text>
+  <path d="M661 272h64" class="wire"/>
+  <path d="M661 366h64" class="wire"/>
+
+  <text x="738" y="212" class="label">03 / COMPARE</text>
+  <rect x="738" y="234" width="326" height="170" rx="18" fill="#fff" stroke="#616161" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <text x="760" y="280" class="title" font-size="29">Same unseen tickets</text>
+  <text x="760" y="315" class="sub">Same tools and records.</text>
+  <text x="760" y="358" class="sub">Score each next step</text>
+  <text x="760" y="387" class="sub">against the evidence.</text>
+
+  <path d="M54 432h1012" stroke="#777" stroke-width="1.2"/>
+  <text x="54" y="465" class="sub">The adapter is the only change. The evidence stays the same.</text>
+</svg>
