@@ -1526,6 +1526,8 @@ Run more than one trial where variability could change the decision. One good an
 
 I built QueueLab to simulate an engineering support queue. I tested each model on the same fictional tickets before and after fine-tuning. I wanted to see whether it got better at checking the records before giving advice, and whether it knew when to hand a case off.
 
+[Watch the QueueLab before-and-after replay](https://assafbar2.github.io/queuelab/post-training/). See which records the models checked and what they did next. The replay uses saved runs, so there’s nothing to install.
+
 An engineering support ticket comes in: “Our nightly export stopped arriving after the upgrade.” You can write a convincing reply before you open a single record. You can't yet tell the customer what happened.
 
 In one version of the case, the run log shows no export since the upgrade, and the schedule record shows it was turned off. Check the schedule before recommending that someone re-enable it. In a second version, the job completed. The receipt shows an old folder and the account record names a different one. Correcting the destination makes more sense than rerunning a job that worked. In a third version, the records have expired. Escalate with what you couldn't verify and what the next person should look for. It is the same opening message every time.
@@ -2251,9 +2253,9 @@ The calculator does not connect to a helpdesk, decide whether two conversations 
 
 ### QueueLab
 
-QueueLab is the engineering support simulation from Chapter 22, _The Shadow Run_. Each model investigates the same fictional cases before and after fine-tuning. Start with the missing nightly export. Watch which records the model checks, what it recommends, and what it does when it can’t tell what happened.
+QueueLab is the engineering support simulation from Chapter 22, _The Shadow Run_. Each model investigates the same fictional cases before and after fine-tuning.
 
-The simulator is read-only. See the [QueueLab source](https://github.com/assafbar2/queuelab), [measured scorecard and raw traces](https://github.com/assafbar2/queuelab/tree/main/reports/post-training-2026-11-20), and [before-and-after replay](https://assafbar2.github.io/queuelab/post-training/). They show what happened on the test, not what happened to customers.
+[Watch the before-and-after replay](https://assafbar2.github.io/queuelab/post-training/). Start with the missing nightly export. For the details, see the [QueueLab source](https://github.com/assafbar2/queuelab) and the [measured scorecard and raw traces](https://github.com/assafbar2/queuelab/tree/main/reports/post-training-2026-11-20). The simulator is read-only. These are test results, not customer outcomes.
 
 ## Appendix G: Talk to the Book
 
