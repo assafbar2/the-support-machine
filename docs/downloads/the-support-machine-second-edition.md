@@ -6,7 +6,7 @@ How to Deploy and Run AI Customer Support Without Breaking Trust
 
 Assaf Barnir
 
-Second Edition · November 1, 2026
+Second Edition · November 20, 2026
 
 ## Notes for the Second Edition
 
@@ -30,7 +30,9 @@ I also got some things wrong. This printing revisits first-edition claims in Cha
 
 My appearance on The Prompt Room adds a personal self-check in Chapter 5, continuity across the sales handoff in Chapter 17, earlier customer signals in Chapter 18, debugging judgment in Chapter 19, and welcomed human handoffs in Chapter 23. The Reader's Note links to the episode.
 
-At the back: Appendix E indexes the field notes and keeps nine dated observations. Appendix F connects the repositories to the chapters. Appendix G shows you how to install the book as a skill, with ten prompts to start. Appendix H groups the research and product links by chapter, so the story doesn't stop for citations. Ten illustrations sit beside the discussions they explain: the six operating gates, the 16% calculation, delayed evaluation, action recovery, and the midfield model.
+At the back: Appendix E indexes the field notes and keeps nine dated observations. Appendix F connects the repositories to the chapters. Appendix G shows you how to install the book as a skill, with ten prompts to start. Appendix H groups the research and product links by chapter, so the story doesn't stop for citations. Eleven illustrations sit beside the discussions they explain: the six operating gates, the 16% calculation, delayed evaluation, action recovery, the midfield model, and the QueueLab comparison.
+
+The November 20 printing adds QueueLab to Chapter 22: an open-source engineering support experiment that tests what post-training changes. The two models did not earn the same verdict. Appendix F links to the replay and the measured results.
 
 The vendor discussion is a snapshot checked on November 1, 2026. Announced, early-access, generally available, and enabled in your workspace are different states. For Fin (formerly Intercom), the Operator, Skills, audiences, and customer-success direction widen the questions to ask. They don't remove the need to test your own configuration. Pylon, Salesforce, and Plain provide useful alternative approaches to examine.
 
@@ -1520,6 +1522,32 @@ Use cases for tuning and a separate fresh set for the release decision. Keep the
 
 Run more than one trial where variability could change the decision. One good answer proves very little about a task that must work every time. Record system versions and conditions so another reviewer can understand a change in results.
 
+### One ticket, three possible explanations
+
+An engineering support ticket comes in: “Our nightly export stopped arriving after the upgrade.” You can write a convincing reply before you open a single record. You can't yet tell the customer what happened.
+
+In one version of the case, the run log shows no export since the upgrade, and the schedule record shows it was turned off. Check the schedule before recommending that someone re-enable it. In a second version, the job completed. The receipt shows an old folder and the account record names a different one. Correcting the destination makes more sense than rerunning a job that worked. In a third version, the records have expired. Escalate with what you couldn't verify and what the next person should look for. It is the same opening message every time.
+
+I built QueueLab to make that distinction measurable. The model can read fictional records, ask a bounded question, recommend a next step, or escalate. It cannot touch a customer account. If it guesses the schedule was disabled without finding evidence for it, the guess doesn't pass.
+
+**Post-training** means training a model further after its initial training. Here I used fine-tuning: show the model a fictional investigation up to a particular point, then train it on the next action from a checked reference. Sometimes that action is another record lookup. Sometimes it is to stop and hand the case to a person. A prompt can tell the model to check first. Fine-tuning changes what it has learned to do.
+
+I used **LoRA**, a way to leave the original model weights fixed while training a small add-on called an adapter. The habit I want to teach is checking whether the job ran before recommending a delivery fix. The account's current schedule still belongs in a record the model can look up, not in its weights.
+
+![Checked fictional engineering support investigations train an adapter. The same model, with and without its adapter, investigates the same unseen tickets. Both decisions are scored against the evidence each model saw.](illustrations/11-queuelab-post-training.png)
+
+**Figure 4 — Change one thing. Test both. **The nightly export case compares the same model before and after training. The evidence and scoring rules stay fixed.
+
+### Same test, two outcomes
+
+I started with two already-trained language models. **SmolLM2 1.7B**, from Hugging Face, is a general instruction-following model. **Falcon-H1-Tiny 90M**, from the Technology Innovation Institute, is a much smaller model trained to request actions such as a record lookup. Those numbers are approximate counts of the settings learned by the original model. They aren't scores. I trained a separate adapter for each and compared each model with its own unchanged version. Same prompt, same tools, same 60 fictional test cases that neither adapter trained on.
+
+SmolLM2 went from **0 to 53 evidence-backed decisions out of 60**. In one case, the unchanged model kept coming back to the run history. After training, it checked the delivery receipt, asked which folder the customer expected, and cited both destinations before recommending a correction. Unsupported recommendation attempts fell from 36 cases to seven. The improvement was still there when I accounted for the paired cases; it met the rule I had set before scoring.
+
+Falcon learned to send more valid requests. It still gave advice the records couldn't support. It went from **0 to 3 supported decisions out of 60** and made unsupported recommendations in 39 cases after training. If I had graded the format, I could have called that a win. I wouldn't put my name on the advice.
+
+This is what I want the shadow run to catch. Before you approve a model change, ask to see one investigation that got better and one that still went wrong. SmolLM2 still missed seven cases where the schedule was disabled. Neither run tells us whether a real customer got a file back. Those are fictional tickets from known failure families, not evidence of production outcomes.
+
 ### Six checks for each case
 
 Assess whether the response addresses the customer's actual task; whether its factual claims are supported; whether the proposed steps apply to this customer's environment; whether it respects data and action boundaries; whether it escalates appropriately; and whether the next human or customer has enough context to continue.
@@ -1868,7 +1896,7 @@ The agent's report tells us what it classified as resolved. The reviewer tells u
 
 ![Check related returns seven and thirty days after reported resolution. Each denominator needs a mature observation window and known coverage. Weekly independent answer review runs on a separate track.](illustrations/08-evaluation-over-time.png)
 
-**Figure 4 — Evaluation over time. **Customer silence alone does not prove success.
+**Figure 5 — Evaluation over time. **Customer silence alone does not prove success.
 
 This fits the broader evaluation practice described in Anthropic's guide to agent evaluations: inspect outcomes as well as transcripts, calibrate graders, and combine evaluation with evidence from actual use. A convincing final message is not proof that the intended account change exists.
 
@@ -2161,7 +2189,7 @@ The second part keeps the dated observations from panels, talks, product changes
 
 Building a small version of a problem is a useful way to discover what the argument has been skipping. These projects helped make the book's questions concrete: did the action happen, was the promise kept, did an owner decide, and did new knowledge make the answer worse?
 
-The descriptions below reflect the public repositories reviewed on November 1, 2026. Their demonstrations have limits. A working example gives us something to inspect; a production service needs its own evidence, permissions, maintainers, and recovery plan.
+The earlier projects below were reviewed on November 1, 2026. QueueLab joins them in the November 20 printing. Their demonstrations have limits. A working example gives us something to inspect; a production service needs its own evidence, permissions, maintainers, and recovery plan.
 
 ### RECEIPT
 
@@ -2218,6 +2246,12 @@ This tool was reviewed for this appendix; the book's evaluation findings do not 
 The repository contains the book formats, edition notes, and reusable operating templates. The Support Machine skill helps turn the chapters into decision records and runbooks. Support AI Evals adds a focused evaluation workflow and a calculator for normalized local cohort data.
 
 The calculator does not connect to a helpdesk, decide whether two conversations concern the same issue, or confirm a customer outcome. Someone has to confirm those facts before calculating a rate. Appendix G begins with installation instructions, followed by prompts for using the book and these materials with your own situation.
+
+### QueueLab
+
+Read with Chapter 22, _The Shadow Run_. Start with the missing nightly export. Keep the complaint fixed, change the records, and see whether the recommended next step changes with them. A useful escalation counts when the available evidence cannot support a diagnosis.
+
+The cases are fictional and the simulator is read-only. See the [QueueLab source](https://github.com/assafbar2/queuelab), [measured scorecard and raw traces](https://github.com/assafbar2/queuelab/tree/main/reports/post-training-2026-11-20), and [before-and-after replay](https://assafbar2.github.io/queuelab/post-training/). They show what happened on the test, not what happened to customers.
 
 ## Appendix G: Talk to the Book
 
@@ -2408,6 +2442,8 @@ Salesforce describes conversation-level tests and custom scoring in Agentforce T
 - [Google SRE guidance on postmortem culture](https://sre.google/workbook/postmortem-culture/) informs incident learning and follow-through on corrective actions.
 
 - [unitQ Support QA](https://www.unitq.com/products/unitq-support-qa/), [Unwrap SupportIQ](https://docs.unwrap.ai/articles/3449954721-supportiq), and [Salesforce Agentforce Testing Center](https://www.salesforce.com/blog/agentforce-testing-center/) are product references for evaluating the evaluator. Their inclusion does not declare a winner or substitute for a comparison using the same cases.
+
+- [The QueueLab run record](https://github.com/assafbar2/queuelab/tree/main/reports/post-training-2026-11-20) contains the synthetic holdout scores, raw traces, and limits. [Hu et al. on LoRA](https://arxiv.org/abs/2106.09685) explains how to train an adapter while keeping the base weights fixed.
 
 ### Appendix G — using the book as a skill
 

@@ -93,6 +93,17 @@
       "placement": "Chapter 6 — The Goalkeeper Fallacy",
       "gate": false,
       "takeaway": "Protected improvement time, product access and a staffed human path."
+    },
+    {
+      "number": 11,
+      "slug": "11-queuelab-post-training",
+      "title": "Change one thing. Test both",
+      "caption": "Checked fictional engineering support investigations train an adapter. The same model, with and without its adapter, investigates the same unseen tickets. Both decisions are scored against the evidence each model saw.",
+      "placement": "Chapter 22 — The Shadow Run",
+      "takeaway": "The nightly export case compares the same model before and after training. The evidence and scoring rules stay fixed.",
+      "gate": false,
+      "width": 1120,
+      "height": 490
     }
   ]
 }

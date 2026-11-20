@@ -1,4 +1,4 @@
-"""Insert or refresh the ten book illustrations without rewriting the manuscript."""
+"""Insert or refresh the book illustrations without rewriting the manuscript."""
 import json
 from pathlib import Path
 import re
@@ -21,6 +21,7 @@ PLACEMENTS={
     8:(28,"The agent's report tells us what it classified as resolved."),
     9:(16,'The human handoff should include the original intent,'),
     10:(6,'Prevention does not eliminate the need for skilled human recovery.'),
+    11:(22,'I used LoRA, a way to leave the original model weights fixed'),
 }
 
 
@@ -36,7 +37,7 @@ def insert():
     meta=json.loads((ROOT/'edition.json').read_text())
     source=ROOT/f'manuscript/The Support Machine - manuscript {meta["version"]}.docx'
     figures=json.loads((ROOT/'docs/illustrations/manifest.json').read_text())['figures']
-    assert len(figures)==10
+    assert len(figures)==meta['illustrations']
     # Gate numbers follow the operating map. Supplemental figures follow reading order.
     supplemental=sorted((f for f in figures if not f['gate']),key=lambda f:PLACEMENTS[f['number']][0])
     figure_numbers={f['number']:i for i,f in enumerate(supplemental,1)}
@@ -100,9 +101,9 @@ def insert():
             p.paragraph_format.space_after=Pt(2 if chapter==13 else 4)
     assert [p.text for p in doc.paragraphs if p.style.name not in {'Book Figure','Book Figure Caption'}]==original
     assert [t._tbl.xml for t in doc.tables]==tables
-    assert len(doc.inline_shapes)==10
+    assert len(doc.inline_shapes)==len(figures)
     doc.save(source)
-    print('Refreshed 10 captioned illustrations; all existing manuscript paragraphs and tables preserved.')
+    print(f'Refreshed {len(figures)} captioned illustrations; all existing manuscript paragraphs and tables preserved.')
 
 
 if __name__=='__main__':

@@ -1,6 +1,6 @@
 # QueueLab: proposed companion for The Shadow Run
 
-Editorial draft for *The Support Machine — Second Edition*. The text below is ready to review in context. It does not revise the published printing or its downloads.
+Archived editorial draft for *The Support Machine — Second Edition*. The final text and illustration are in [Chapter 22](../docs/book.html#one-ticket-three-possible-explanations) of the [v0.5 printing](../release-notes/v0.5.md); see [Appendix F](../docs/book.html#queuelab) for the public evidence links. The notes below record the original editorial plan.
 
 ## Chapter 22 placement
 
@@ -44,7 +44,7 @@ The cases are fictional and the simulator is read-only. The recorded post-traini
 
 ## Editorial checks before publication
 
-- Add the **QueueLab source and run record** link to Appendix F only when `https://github.com/assafbar2/queuelab` contains the approved release and readers can open it. Use `https://github.com/assafbar2/queuelab/tree/main/reports/post-training-2026-11-20` for the measured evidence and `https://assafbar2.github.io/queuelab/post-training/` for the replay after it is hosted. These are proposed destinations, not currently public reader links.
+- Appendix F's publication gate was public access to the [QueueLab source](https://github.com/assafbar2/queuelab), [measured run record](https://github.com/assafbar2/queuelab/tree/main/reports/post-training-2026-11-20), and [before-and-after replay](https://assafbar2.github.io/queuelab/post-training/). All three are now public.
 - The results above are from the actual November 20, 2026 local paired run. Don't substitute the scripted checklist's score or the animation's example numbers. Publish the traces and scorecard before treating them as linked evidence in the book.
 - Keep Chapter 28 focused on ongoing evaluation. The primary placement for this example is Chapter 22; Appendix F holds the project and evidence links.
 - For the LoRA explanation: [Hu et al., *LoRA: Low-Rank Adaptation of Large Language Models*](https://arxiv.org/abs/2106.09685). For publication, apply approved text to the canonical manuscript and regenerate the next printing without replacing the existing release.

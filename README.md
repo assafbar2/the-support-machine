@@ -10,7 +10,7 @@ A free field guide for support leaders at API, developer-tool, and B2B companies
 
 **[Read the Second Edition](https://assafbar2.github.io/the-support-machine/book.html)** · **[Browse the 80 prompts](https://assafbar2.github.io/the-support-machine/prompts.html)** · **[Shadow Run field sheet](https://assafbar2.github.io/the-support-machine/shadow-run/)** · [Download the book PDF](https://assafbar2.github.io/the-support-machine/the-support-machine-second-edition.pdf) · [Book home](https://assafbar2.github.io/the-support-machine/)
 
-29 chapters · 8 appendices · 10 illustrations · 80 prompts in the skill · 2 companion AI skills
+29 chapters · 8 appendices · 11 illustrations · 80 prompts in the skill · 2 companion AI skills
 
 ![Choose the layer before choosing whether to buy, extend, or build](docs/illustrations/book/02-choose-the-machine.png)
 
@@ -44,7 +44,9 @@ This edition builds on more use cases I've seen, discussed, researched, and work
 - **More ways to apply it:** a field-note index, related projects, fourteen templates, skill installation, and 80 prompts in the skill.
 - **Ten new illustrations** and insights from my conversation on **The Prompt Room**.
 
-[Notes for returning readers](https://assafbar2.github.io/the-support-machine/notes.html) · [Chapter reading map](release-notes/v0.4-coverage.md) · [All ten illustrations](https://assafbar2.github.io/the-support-machine/illustrations/)
+[Notes for returning readers](https://assafbar2.github.io/the-support-machine/notes.html) · [Chapter reading map](release-notes/v0.5-coverage.md) · [All illustrations](https://assafbar2.github.io/the-support-machine/illustrations/)
+
+The November 20 printing adds [QueueLab in Chapter 22](https://assafbar2.github.io/the-support-machine/book.html#22-the-shadow-run), with a measured post-training result, a failure worth seeing, and links to the [open-source companion](https://github.com/assafbar2/queuelab).
 
 ## Choose your format
 

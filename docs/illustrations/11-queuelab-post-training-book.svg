@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="490" viewBox="0 0 1120 490" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="330" viewBox="0 160 1120 330" role="img" aria-labelledby="title desc">
   <title id="title">Change one thing. Test both.</title>
   <desc id="desc">Checked fictional engineering support investigations train a small adapter. The same base model is tested with and without the adapter on the same unseen tickets and records. The grade checks the next step against the records actually seen.</desc>
   <defs>
@@ -22,7 +22,7 @@
     </style>
   </defs>
   <rect width="1120" height="490" fill="#fff"/>
-  <text x="54" y="49" class="label">QUEUELAB / ENGINEERING SUPPORT</text>
+  <text x="54" y="49" class="label">THE SUPPORT MACHINE / QUEUELAB</text>
   <text x="51" y="108" class="title" font-size="52">Change one thing. Test both.</text>
   <text x="54" y="148" class="sub">Case: the nightly export stopped arriving after the upgrade.</text>
   <path d="M54 172h1012" stroke="#777" stroke-width="1.2"/>
