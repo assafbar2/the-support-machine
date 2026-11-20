@@ -1,4 +1,4 @@
-"""Draw The Support Machine's ten monochrome architectural illustrations."""
+"""Draw The Support Machine's monochrome architectural illustrations."""
 from html import escape
 from pathlib import Path
 import json
@@ -637,14 +637,24 @@ def midfield():
     d.save()
 
 
-for fn in [diagnose,choose,guardrails,shadow,launch,operate,sixteen,evaluation,unknown,midfield]:
+def queuelab():
+    figure = next(item.copy() for item in MANIFEST['figures'] if item['number'] == 11)
+    svg = (ROOT / 'queuelab-post-training.svg').read_text()
+    (OUTPUT / f'{figure["slug"]}.svg').write_text(svg)
+    (OUTPUT / f'{figure["slug"]}-book.svg').write_text(
+        svg.replace('height="490" viewBox="0 0 1120 490"', 'height="330" viewBox="0 160 1120 330"', 1)
+    )
+    FIGURES.append(figure)
+
+
+for fn in [diagnose,choose,guardrails,shadow,launch,operate,sixteen,evaluation,unknown,midfield,queuelab]:
     fn()
 (OUTPUT/'manifest.json').write_text(json.dumps({
     'style':'Monochrome architect sketch: objects, selective hatching, curved connectors, restrained hand-drawn contours, clear labels.',
     'status':'Approved visual direction for the Second Edition.',
     'width':W,'height':H,'figures':FIGURES},ensure_ascii=False,indent=2)+'\n')
 gallery=['# The Support Machine illustrations','',
-         'Ten companion drawings in a shared black-and-white architectural sketch style. Each appears beside its discussion in the Second Edition.','']
+         'Companion drawings in a shared black-and-white architectural sketch style. Each appears beside its discussion in the Second Edition.','']
 for figure in FIGURES:
     gallery += [f'## {figure["title"]}','',figure['caption'],'',
                 f'![{figure["title"]}]({figure["slug"]}.png)','',

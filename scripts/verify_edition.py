@@ -114,7 +114,8 @@ def verify():
     assert len(figures)==len(doc.inline_shapes)==expected,'illustration count differs'
     captions=[p.text for p in doc.paragraphs if p.style.name=='Book Figure Caption']
     assert len(captions)==expected,'illustration captions missing'
-    for label,count in [('Gate',6),('Figure',4)]:
+    gate_count=sum(bool(figure['gate']) for figure in figures)
+    for label,count in [('Gate',gate_count),('Figure',expected-gate_count)]:
         numbers=[int(m[1]) for c in captions if (m:=re.match(label+r' (\d+) — ',c))]
         assert numbers==list(range(1,count+1)),label+' captions are out of reading order'
     assert len(re.findall(r'^!\[',text,re.M))==expected,'Markdown illustrations missing'

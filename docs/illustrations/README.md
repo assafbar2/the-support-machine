@@ -1,6 +1,6 @@
 # The Support Machine illustrations
 
-Ten companion drawings in a shared black-and-white architectural sketch style. Each appears beside its discussion in the Second Edition.
+Companion drawings in a shared black-and-white architectural sketch style. Each appears beside its discussion in the Second Edition.
 
 ## Diagnose the queue
 
@@ -81,3 +81,11 @@ Support engineers keep a staffed human recovery path and spend protected time im
 ![From goalkeeper to midfield](10-from-goalkeeper-to-midfield.png)
 
 [PNG](10-from-goalkeeper-to-midfield.png) · [SVG](10-from-goalkeeper-to-midfield.svg)
+
+## Change one thing. Test both
+
+Checked fictional engineering support investigations train an adapter. The same model, with and without its adapter, investigates the same unseen tickets. Both decisions are scored against the evidence each model saw.
+
+![Change one thing. Test both](11-queuelab-post-training.png)
+
+[PNG](11-queuelab-post-training.png) · [SVG](11-queuelab-post-training.svg)

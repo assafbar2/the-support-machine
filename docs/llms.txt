@@ -2,7 +2,7 @@
 
 > A field guide by Assaf Barnir to deploying and operating AI customer support without breaking trust.
 
-Second Edition, 2026-11-01. 29 chapters, 8 appendices, 10 illustrations, and two companion skills.
+Second Edition, 2026-11-20. 29 chapters, 8 appendices, 11 illustrations, and two companion skills.
 
 ## Read
 

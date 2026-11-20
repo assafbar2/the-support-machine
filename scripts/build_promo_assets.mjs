@@ -22,7 +22,7 @@ const social=svg(1200,630,`<path d="M62 80H1138M62 554H1138" stroke="#d8d2c5"/>
 <rect x="658" y="159" width="480" height="310" fill="white" stroke="#d8d2c5"/>
 <image href="data:image/png;base64,${artwork}" x="677" y="193" width="442" height="215"/>
 <text x="681" y="443" font-family="Georgia,serif" font-style="italic" font-size="17" fill="#514f48">Choose the layer before choosing the answer.</text>
-<text x="62" y="593" font-family="Arial,sans-serif" font-size="18" fill="#514f48">29 chapters · 10 illustrations · 80 prompts in the skill · Free</text>`);
+<text x="62" y="593" font-family="Arial,sans-serif" font-size="18" fill="#514f48">29 chapters · 11 illustrations · 80 prompts in the skill · Free</text>`);
 const cover=svg(800,1000,`<path d="M58 108H742M58 896H742" stroke="#d8d2c5"/>
 <text x="58" y="73" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#772817">SECOND EDITION</text>
 <text x="56" y="230" font-family="Georgia,serif" font-size="92" fill="#141414">The Support</text>

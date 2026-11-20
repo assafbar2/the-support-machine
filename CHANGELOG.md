@@ -1,5 +1,9 @@
 # Changelog
 
+## Second Edition, revised printing — November 20, 2026
+
+Chapter 22 uses QueueLab, an open-source engineering support experiment, to explain post-training and why the shadow run grades decisions against records, not just the shape of a reply. SmolLM2 improved on the fictional test; Falcon earned no pass. Appendix F links to the scorecard and replay, and all current book formats carry the same case and illustration.
+
 ## Shadow Run field sheet — November 2, 2026
 
 The [one-page Shadow Run field sheet](https://assafbar2.github.io/the-support-machine/shadow-run/) now has a dedicated page with a preview, direct PDF download, and a guide for using it with a team. It is featured alongside the prompt library on the homepage and in the README, with links from the reader, skill page, and shadow-run prompts. The original talk handout and published book files are unchanged.
