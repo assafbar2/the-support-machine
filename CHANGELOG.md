@@ -1,5 +1,9 @@
 # Changelog
 
+## Second Edition, QueueLab replay link — November 20, 2026
+
+Chapter 22 links directly to the QueueLab replay beside the case, and Appendix F and the README make it easier to find. The replay shows saved model runs from before and after fine-tuning. The results and illustration are unchanged.
+
 ## Second Edition, QueueLab clarification — November 20, 2026
 
 Chapter 22 and Appendix F now lead with the test setup: QueueLab simulates an engineering support queue, and each model investigates the same fictional cases before and after fine-tuning. The results and illustration are unchanged. The web reader and all current book downloads and skill copies use the revised text.
